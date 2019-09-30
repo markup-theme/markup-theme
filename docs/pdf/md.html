@@ -100,7 +100,7 @@
           <div class="body" role="main">
             
   <div class="section" id="formatting-guide-markdown">
-<span id="formatting-guide-markdown"></span><h1>Formatting Guide: Markdown<a class="headerlink" href="#formatting-guide-markdown" title="Permalink to this headline">¶</a></h1>
+<h1>Formatting Guide: Markdown<a class="headerlink" href="#formatting-guide-markdown" title="Permalink to this headline">¶</a></h1>
 <p>This is the style guide for the Markdown as it may be used with the MARKUP theme.</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id1"><span class="std std-ref">Admonitions</span></a></li>
@@ -125,7 +125,7 @@
 <li><a class="reference internal" href="#id20"><span class="std std-ref">Additional Resources</span></a></li>
 </ul>
 <div class="section" id="markdown-for-sphinx">
-<span id="markdown-for-sphinx"></span><h2>Markdown for Sphinx<a class="headerlink" href="#markdown-for-sphinx" title="Permalink to this headline">¶</a></h2>
+<h2>Markdown for Sphinx<a class="headerlink" href="#markdown-for-sphinx" title="Permalink to this headline">¶</a></h2>
 <p>Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown <em>and</em> Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.</p>
 <p>To enable the use of Markdown with a Sphinx documentation project, install the Recommonmark plugin, and then adjust your Sphinx project’s configuration file.</p>
 <p>First install Recommonmark:</p>
@@ -158,7 +158,7 @@
 </pre></div>
 </div>
 <div class="section" id="evaluate-restructuredtext">
-<span id="evaluate-restructuredtext"></span><h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
+<h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
 <p>Configuring Remarkdown enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code>, which creates a bridge from Markdown that allows standard reStructuredText processing, including the use of directives. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. note:: This is the note directive in a Markdown topic. Naming the code block `eval_rst` allows the contents of that code block to be processed as if it were reStructuredText despite being in a Markdown file. Pretty cool!
@@ -173,11 +173,11 @@
 </div>
 </div>
 <div class="section" id="admonitions">
-<span id="admonitions"></span><span id="id1"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
 <p>Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.</p>
 <p>You can apply the same admonition styles as reStructuredText by using raw HTML or by using a Sphinx directive.</p>
 <div class="section" id="attention">
-<span id="attention"></span><h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
+<h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
 <p>Attentions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition attention&quot;</span><span class="p">&gt;</span>
@@ -203,7 +203,7 @@
 </div>
 </div>
 <div class="section" id="caution">
-<span id="caution"></span><h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
+<h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
 <p>Cautions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition caution&quot;</span><span class="p">&gt;</span>
@@ -229,7 +229,7 @@
 </div>
 </div>
 <div class="section" id="custom-admonitions">
-<span id="custom-admonitions"></span><h3>Custom Admonitions<a class="headerlink" href="#custom-admonitions" title="Permalink to this headline">¶</a></h3>
+<h3>Custom Admonitions<a class="headerlink" href="#custom-admonitions" title="Permalink to this headline">¶</a></h3>
 <p>This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.</p>
 <p><strong>Raw HTML</strong></p>
 <p>A custom admonition may be defined using raw HTML. Change the admonition title to what you want it to say.</p>
@@ -260,7 +260,7 @@
 </div>
 </div>
 <div class="section" id="danger">
-<span id="danger"></span><h3>Danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h3>
+<h3>Danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h3>
 <p>Danger can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition danger&quot;</span><span class="p">&gt;</span>
@@ -286,7 +286,7 @@
 </div>
 </div>
 <div class="section" id="error">
-<span id="error"></span><h3>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<h3>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
 <p>Error can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition error&quot;</span><span class="p">&gt;</span>
@@ -312,7 +312,7 @@
 </div>
 </div>
 <div class="section" id="hint">
-<span id="hint"></span><h3>Hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
+<h3>Hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
 <p>Hints can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition hint&quot;</span><span class="p">&gt;</span>
@@ -338,7 +338,7 @@
 </div>
 </div>
 <div class="section" id="important">
-<span id="important"></span><h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
+<h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
 <p>Important can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition important&quot;</span><span class="p">&gt;</span>
@@ -364,7 +364,7 @@
 </div>
 </div>
 <div class="section" id="note">
-<span id="note"></span><h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
 <p>Notes can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span><span class="p">&gt;</span>
@@ -390,7 +390,7 @@
 </div>
 </div>
 <div class="section" id="tip">
-<span id="tip"></span><h3>Tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h3>
+<h3>Tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h3>
 <p>Tips can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition tip&quot;</span><span class="p">&gt;</span>
@@ -416,7 +416,7 @@
 </div>
 </div>
 <div class="section" id="warning">
-<span id="warning"></span><h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
+<h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
 <p>Warnings can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
@@ -443,14 +443,14 @@
 </div>
 </div>
 <div class="section" id="card-walls">
-<span id="card-walls"></span><span id="id2"></span><h2>Card Walls<a class="headerlink" href="#card-walls" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Card Walls<a class="headerlink" href="#card-walls" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Card walls are not supported in PDF formats.</p>
 </div>
 </div>
 <div class="section" id="code-blocks">
-<span id="code-blocks"></span><span id="id3"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<span id="id3"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
 <p>For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span></code> directive.</p>
 <p>Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it’s pseudocode, is formatted correctly.</p>
 <div class="admonition warning">
@@ -458,7 +458,7 @@
 <p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a <cite>.. code-block:: yaml</cite> code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the <cite>none</cite> code block to work around the problem, as it is much more forgiving.</p>
 </div>
 <div class="section" id="line-emphasis">
-<span id="line-emphasis"></span><h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
+<h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
 <p>Line emphasis with Markdown must be done using a Sphinx directive. This allows individual lines in a code block to be emphasized. The presentation is similar to a yellow highlight in a book. The following example shows how to highlight lines 3 and 5 in a code block:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. code-block:: python
@@ -482,7 +482,7 @@
 </div>
 </div>
 <div class="section" id="command-shell">
-<span id="command-shell"></span><h3>Command Shell<a class="headerlink" href="#command-shell" title="Permalink to this headline">¶</a></h3>
+<h3>Command Shell<a class="headerlink" href="#command-shell" title="Permalink to this headline">¶</a></h3>
 <p>For command shell blocks, assign <code class="docutils literal notranslate"><span class="pre">console</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -510,7 +510,7 @@ $ cr service stop
 </div>
 </div>
 <div class="section" id="config-file">
-<span id="config-file"></span><h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
+<h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
 <p>For configuration file blocks that are not in Yaml or JSON (such as <code class="docutils literal notranslate"><span class="pre">spark-defaults.conf</span></code>), assign <code class="docutils literal notranslate"><span class="pre">text</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -546,7 +546,7 @@ spark.setting.memory 20g
 </div>
 </div>
 <div class="section" id="css">
-<span id="css"></span><h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
+<h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
 <p>For CSS code blocks, assign <code class="docutils literal notranslate"><span class="pre">css</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -563,13 +563,13 @@ ul.tab-selector {
 </pre></div>
 </div>
 <p>builds as:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
-  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="p">.</span><span class="nc">tab-selector</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -590,19 +590,19 @@ ul.tab-selector {
 </pre></div>
 </div>
 <p>builds as:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
-  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="p">.</span><span class="nc">tab-selector</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="data-table">
-<span id="data-table"></span><h3>Data Table<a class="headerlink" href="#data-table" title="Permalink to this headline">¶</a></h3>
+<h3>Data Table<a class="headerlink" href="#data-table" title="Permalink to this headline">¶</a></h3>
 <p>For data tables, assign <code class="docutils literal notranslate"><span class="pre">sql</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -654,7 +654,7 @@ ul.tab-selector {
 </div>
 </div>
 <div class="section" id="html">
-<span id="html"></span><h3>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<h3>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
 <p>For HTML code blocks, assign <code class="docutils literal notranslate"><span class="pre">html</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -694,7 +694,7 @@ ul.tab-selector {
 </div>
 </div>
 <div class="section" id="javascript">
-<span id="javascript"></span><h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
+<h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
 <p>For JavaScript code blocks, assign <code class="docutils literal notranslate"><span class="pre">javascript</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -826,7 +826,7 @@ $(&#39;div.content-tabs&#39;).each(function() {
 </div>
 </div>
 <div class="section" id="json">
-<span id="json"></span><h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
 <p>For JSON code blocks, assign <code class="docutils literal notranslate"><span class="pre">json</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -890,7 +890,7 @@ $(&#39;div.content-tabs&#39;).each(function() {
 </div>
 </div>
 <div class="section" id="json-w-jinja">
-<span id="json-w-jinja"></span><h3>JSON w/Jinja<a class="headerlink" href="#json-w-jinja" title="Permalink to this headline">¶</a></h3>
+<h3>JSON w/Jinja<a class="headerlink" href="#json-w-jinja" title="Permalink to this headline">¶</a></h3>
 <p>For JSON code blocks that also embed Jinja templating, such as the nav-docs.html files that are used to build the documentation site’s left navigation structures, the standard <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">json</span></code> block will not work because the code block is not parsable as JSON. Instead, for code blocks that require a mix of JSON and Jinja templating, use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">django</span></code> as shown here:</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1020,7 +1020,7 @@ $(&#39;div.content-tabs&#39;).each(function() {
 </div>
 </div>
 <div class="section" id="lua">
-<span id="lua"></span><h3>Lua<a class="headerlink" href="#lua" title="Permalink to this headline">¶</a></h3>
+<h3>Lua<a class="headerlink" href="#lua" title="Permalink to this headline">¶</a></h3>
 <p>For Lua code blocks, assign <code class="docutils literal notranslate"><span class="pre">lua</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1037,12 +1037,12 @@ end
 </div>
 <p>builds as:</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-<span class="k">end</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">test</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
-<span class="k">end</span>
+<span class="kr">end</span>
 </pre></div>
 </div>
 <p><strong>Sphinx directive</strong></p>
@@ -1062,17 +1062,17 @@ end
 </div>
 <p>builds as:</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-<span class="k">end</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">test</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
-<span class="k">end</span>
+<span class="kr">end</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="none">
-<span id="none"></span><h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
 <p>For text that needs to be formatted as if it were a code block, but isn’t actually code, assign <code class="docutils literal notranslate"><span class="pre">none</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1128,7 +1128,7 @@ end
 </div>
 </div>
 <div class="section" id="python">
-<span id="python"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
 <p>For Python code blocks, assign <code class="docutils literal notranslate"><span class="pre">python</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1172,7 +1172,7 @@ return 0
 </div>
 </div>
 <div class="section" id="rest-api">
-<span id="rest-api"></span><h3>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h3>
+<h3>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h3>
 <p>For REST API code blocks, assign <code class="docutils literal notranslate"><span class="pre">rest</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1200,7 +1200,7 @@ https://www.yoursite.com/endpoint/{some_endpoint}
 </div>
 </div>
 <div class="section" id="restructuredtext">
-<span id="restructuredtext"></span><h3>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h3>
+<h3>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h3>
 <p>For reStructuredText code blocks, assign <code class="docutils literal notranslate"><span class="pre">rst</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1244,7 +1244,7 @@ This is some *reStructured* **Text** formatting.
 </div>
 </div>
 <div class="section" id="ruby">
-<span id="ruby"></span><h3>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h3>
+<h3>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h3>
 <p>For Ruby code blocks, assign <code class="docutils literal notranslate"><span class="pre">ruby</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1292,7 +1292,7 @@ print &quot;\n&quot;
 </div>
 </div>
 <div class="section" id="scala">
-<span id="scala"></span><h3>Scala<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h3>
+<h3>Scala<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h3>
 <p>For Scala code blocks, assign <code class="docutils literal notranslate"><span class="pre">scala</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1336,7 +1336,7 @@ object HelloWorld {
 </div>
 </div>
 <div class="section" id="shell-script">
-<span id="shell-script"></span><h3>Shell Script<a class="headerlink" href="#shell-script" title="Permalink to this headline">¶</a></h3>
+<h3>Shell Script<a class="headerlink" href="#shell-script" title="Permalink to this headline">¶</a></h3>
 <p>For shell script blocks, assign <code class="docutils literal notranslate"><span class="pre">bash</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1376,7 +1376,7 @@ object HelloWorld {
 </div>
 </div>
 <div class="section" id="yaml">
-<span id="yaml"></span><h3>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h3>
+<h3>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h3>
 <p>For YAML code blocks, assign <code class="docutils literal notranslate"><span class="pre">yaml</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
 <p>A fenced code block like this:</p>
@@ -1388,9 +1388,9 @@ config:
 </pre></div>
 </div>
 <p>builds as:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
 </pre></div>
 </div>
 <p><strong>Sphinx directive</strong></p>
@@ -1405,14 +1405,14 @@ config:
 </pre></div>
 </div>
 <p>builds as:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="yaml-w-jinja">
-<span id="yaml-w-jinja"></span><h3>YAML w/Jinja<a class="headerlink" href="#yaml-w-jinja" title="Permalink to this headline">¶</a></h3>
+<h3>YAML w/Jinja<a class="headerlink" href="#yaml-w-jinja" title="Permalink to this headline">¶</a></h3>
 <p>For YAML code blocks that also embed Jinja templating, the standard <code class="docutils literal notranslate"><span class="pre">yaml</span></code> code block will not work because the code block is not parsable as YAML. Instead, these code blocks must be able to parse a mix of YAML and Jinja templating.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">salt</span></code> as the name of the code block.</p>
 <p><strong>Fenced code block</strong></p>
@@ -1429,9 +1429,9 @@ config:
 <p>builds as:</p>
 <div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
 
-<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+<span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <p><strong>Sphinx directive</strong></p>
@@ -1450,9 +1450,9 @@ config:
 <p>builds as:</p>
 <div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
 
-<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+<span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <div class="admonition-why-salt admonition">
@@ -1464,28 +1464,28 @@ config:
 </div>
 </div>
 <div class="section" id="content-tabs">
-<span id="content-tabs"></span><span id="id4"></span><h2>Content Tabs<a class="headerlink" href="#content-tabs" title="Permalink to this headline">¶</a></h2>
+<span id="id4"></span><h2>Content Tabs<a class="headerlink" href="#content-tabs" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Content tabs are not supported in PDF formats.</p>
 </div>
 </div>
 <div class="section" id="expandos">
-<span id="expandos"></span><span id="id5"></span><h2>Expandos<a class="headerlink" href="#expandos" title="Permalink to this headline">¶</a></h2>
+<span id="id5"></span><h2>Expandos<a class="headerlink" href="#expandos" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Expandos are not supported in PDF formats.</p>
 </div>
 </div>
 <div class="section" id="font-awesome">
-<span id="font-awesome"></span><span id="id6"></span><h2>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h2>
+<span id="id6"></span><h2>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Font awesome icons may not be visible in PDF formats.</p>
 </div>
 </div>
 <div class="section" id="header-levels">
-<span id="header-levels"></span><span id="id7"></span><h2>Header Levels<a class="headerlink" href="#header-levels" title="Permalink to this headline">¶</a></h2>
+<span id="id7"></span><h2>Header Levels<a class="headerlink" href="#header-levels" title="Permalink to this headline">¶</a></h2>
 <p>There are four recommended header levels in the documentation: H1, H2, H3, H4, plus the topic title. This ensures that the right-side navigation structure does not get too deep.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Topic Title</span>
 <span class="c1">## H1</span>
@@ -1502,11 +1502,11 @@ config:
 <p>As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as <strong>Bold</strong> so that it doesn’t appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via <strong>Bold</strong> cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels. Or use H5 headers: it’s up to you!</p>
 </div>
 <div class="section" id="header-markup-length">
-<span id="header-markup-length"></span><span id="id8"></span><h2>Header Markup Length<a class="headerlink" href="#header-markup-length" title="Permalink to this headline">¶</a></h2>
+<span id="id8"></span><h2>Header Markup Length<a class="headerlink" href="#header-markup-length" title="Permalink to this headline">¶</a></h2>
 <p>The length of header markup strings is recommended to not be greater than ~40 characters. This helps prevent wrapping of headers in the right-side navigation, helps protect scannable whitespace and structure, and generally leads to a nicer presentation of topic structure. You, of course, can make your headers as long as you want if you don’t mind such things.</p>
 </div>
 <div class="section" id="horizontal-rule">
-<span id="horizontal-rule"></span><span id="id9"></span><h2>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h2>
+<span id="id9"></span><h2>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h2>
 <p>A horizontal rule is defined using three dashes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
 </pre></div>
@@ -1515,7 +1515,7 @@ config:
 <hr class="docutils" />
 </div>
 <div class="section" id="images">
-<span id="images"></span><span id="id10"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<span id="id10"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
 <p>Images may be added to the documentation, like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![description](/path/to/image)
 </pre></div>
@@ -1531,8 +1531,7 @@ config:
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;_images/busycorp.png&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;_images/busycorp.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200px&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 </div>
-<p><img alt="_images/busycorp.png" src="_images/busycorp.png" width="200px" /></p>
-<p><strong>Sphinx directive</strong></p>
+<img alt="_images/busycorp.png" src="_images/busycorp.png" width="200px" /><p><strong>Sphinx directive</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. image:: ../../images/busycorp.png
    :width: 200 px
@@ -1544,10 +1543,10 @@ config:
 <a class="reference internal image-reference" href="_images/busycorp.png"><img alt="_images/busycorp.png" class="align-left" src="_images/busycorp.png" style="width: 200px;" /></a>
 </div>
 <div class="section" id="includes">
-<span id="includes"></span><span id="id11"></span><h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<span id="id11"></span><h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
 <p>The Sphinx <code class="docutils literal notranslate"><span class="pre">includes</span></code> directive allows you to specify a path to a file (<code class="docutils literal notranslate"><span class="pre">.md</span></code>, <code class="docutils literal notranslate"><span class="pre">.rst</span></code>, or <code class="docutils literal notranslate"><span class="pre">.txt</span></code>), and then include that text at that place in the documentation. As long as the content in the shared topic is valid, it can be included anywhere across the entire documentation set.</p>
 <div class="section" id="via-file">
-<span id="via-file"></span><h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
+<h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
 <p>Inclusions may be done from standalone files. These standalone files are typically kept as a standalone file located in a dedicated directory within the docs repository, such as <code class="docutils literal notranslate"><span class="pre">/shared/some_file.rst</span></code>.</p>
 <p><strong>From Markdown</strong></p>
 <p>A valid path to a Markdown file:</p>
@@ -1578,7 +1577,7 @@ config:
 <p><em>This file is authored in simple text (.txt), intentionally italicized, and located in the `/shared` directory.</em></p>
 </div>
 <div class="section" id="via-snippet">
-<span id="via-snippet"></span><h3>via Snippet<a class="headerlink" href="#via-snippet" title="Permalink to this headline">¶</a></h3>
+<h3>via Snippet<a class="headerlink" href="#via-snippet" title="Permalink to this headline">¶</a></h3>
 <p>Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -1616,23 +1615,23 @@ config:
 </div>
 </div>
 <div class="section" id="inline-markup">
-<span id="inline-markup"></span><span id="id12"></span><h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<span id="id12"></span><h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
 <p>Paragraphs behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs and lists:</p>
 <div class="section" id="bold">
-<span id="bold"></span><h3>Bold<a class="headerlink" href="#bold" title="Permalink to this headline">¶</a></h3>
+<h3>Bold<a class="headerlink" href="#bold" title="Permalink to this headline">¶</a></h3>
 <p>Use two asterisks (<code class="docutils literal notranslate"><span class="pre">**</span></code>) around the word to apply bold formatting: <code class="docutils literal notranslate"><span class="pre">**bold**</span></code>.</p>
 </div>
 <div class="section" id="italics">
-<span id="italics"></span><h3>Italics<a class="headerlink" href="#italics" title="Permalink to this headline">¶</a></h3>
+<h3>Italics<a class="headerlink" href="#italics" title="Permalink to this headline">¶</a></h3>
 <p>Use a single asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) around the word to apply italics formatting: <code class="docutils literal notranslate"><span class="pre">*italics*</span></code>.</p>
 </div>
 <div class="section" id="code-strings">
-<span id="code-strings"></span><h3>Code Strings<a class="headerlink" href="#code-strings" title="Permalink to this headline">¶</a></h3>
+<h3>Code Strings<a class="headerlink" href="#code-strings" title="Permalink to this headline">¶</a></h3>
 <p>Use a single backtick at the beginning and end of a code string to apply inline code block formatting: <code class="docutils literal notranslate"><span class="pre">example</span></code>.</p>
 </div>
 </div>
 <div class="section" id="links">
-<span id="links"></span><span id="id13"></span><h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<span id="id13"></span><h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <p>There are three types of links:</p>
 <ul class="simple">
 <li>External</li>
@@ -1640,7 +1639,7 @@ config:
 <li>Topic</li>
 </ul>
 <div class="section" id="external">
-<span id="external"></span><h3>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h3>
+<h3>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h3>
 <p>External links are links to pages outside of the documentation project entirely or to other pages in other documentation projects that are published as part of the MARKUP theme.</p>
 <p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="p">[</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3schools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">w3css</span><span class="o">/</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3schools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">w3css</span><span class="o">/</span><span class="p">)</span>
@@ -1657,7 +1656,7 @@ config:
 <p>External links can also be <a class="reference external" href="https://www.w3schools.com/w3css/">inline</a>.</p>
 </div>
 <div class="section" id="reference">
-<span id="reference"></span><h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
 <p>Internal reference links point to specific headers within the same documentation project. There are two ways to define internal reference links:</p>
 <ul class="simple">
 <li>Using Sphinx processing, which allows linking to any header in the documentation project that has a defined reference</li>
@@ -1697,7 +1696,7 @@ config:
 <p>builds like this: <a class="reference external" href="#additional-resources">additional references</a>.</p>
 </div>
 <div class="section" id="topic">
-<span id="topic"></span><h3>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h3>
+<h3>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h3>
 <p>Internal topic links point to other topics in the same documentation project. There are two ways to define internal topic links:</p>
 <ul class="simple">
 <li>Using Sphinx processing (not recommended)</li>
@@ -1729,14 +1728,14 @@ config:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Test</span><span class="p">](</span><span class="n">test</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>builds like this: <a class="reference external" href="test">Test</a>.</p>
+<p>builds like this: <a class="reference internal" href="test.html"><span class="doc">Test</span></a>.</p>
 </div>
 </div>
 <div class="section" id="lists">
-<span id="lists"></span><span id="id14"></span><h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<span id="id14"></span><h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p>Three types of lists are available: ordered, unordered, and definition.</p>
 <div class="section" id="definition-list">
-<span id="definition-list"></span><h3>Definition List<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h3>
+<h3>Definition List<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h3>
 <p>A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is useful for describing command line parameters, API arguments, and glossary terms. This type of list requires additional Sphinx processing and isn’t native to Markdown. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 **list-item-one**
@@ -1756,7 +1755,7 @@ config:
 </dl>
 </div>
 <div class="section" id="ordered-list">
-<span id="ordered-list"></span><h3>Ordered List<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h3>
+<h3>Ordered List<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h3>
 <p>An ordered list has each list item preceded by an <code class="docutils literal notranslate"><span class="pre">1.</span></code> followed by a space. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">one</span>
 <span class="mf">1.</span> <span class="n">two</span>
@@ -1771,7 +1770,7 @@ config:
 </ol>
 </div>
 <div class="section" id="unordered-list">
-<span id="unordered-list"></span><h3>Unordered List<a class="headerlink" href="#unordered-list" title="Permalink to this headline">¶</a></h3>
+<h3>Unordered List<a class="headerlink" href="#unordered-list" title="Permalink to this headline">¶</a></h3>
 <p>An unordered list has each list item preceded by a single dash (<code class="docutils literal notranslate"><span class="pre">*</span></code>) followed by a space. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">one</span>
 <span class="o">*</span> <span class="n">two</span>
@@ -1787,7 +1786,7 @@ config:
 </div>
 </div>
 <div class="section" id="raw-html">
-<span id="raw-html"></span><span id="id15"></span><h2>Raw HTML<a class="headerlink" href="#raw-html" title="Permalink to this headline">¶</a></h2>
+<span id="id15"></span><h2>Raw HTML<a class="headerlink" href="#raw-html" title="Permalink to this headline">¶</a></h2>
 <p>If you need to force Markdown to do something in a way similar to reStructuredText, take a look at the rendered output from pages built reStructuredText and identify the specific block of HTML code that does what you need to do. Copy that, add it as raw HTML in Markdown. As long as it fits within the structure of the page at the point where it’s inserted and as long as any scripts or CSS can process it, then it should be fine.</p>
 <p>The following raw HTML:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
@@ -1804,7 +1803,7 @@ config:
 <p class="last">This is a note, inserted as raw HTML.</p>
 </div></div>
 <div class="section" id="tables">
-<span id="tables"></span><span id="id16"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<span id="id16"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
 <p>Tables are always fun! There are three types of tables:</p>
 <ol class="simple">
 <li>Grid tables</li>
@@ -1812,7 +1811,7 @@ config:
 <li>Simple tables</li>
 </ol>
 <div class="section" id="grid-table">
-<span id="grid-table"></span><h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
+<h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
 <p>Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 +------------+------------+-----------+ 
@@ -1866,7 +1865,7 @@ span rows.</td>
 </table>
 </div>
 <div class="section" id="list-table">
-<span id="list-table"></span><h3>List Table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h3>
+<h3>List Table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h3>
 <p>List tables are built like a list and must use the Sphinx <code class="docutils literal notranslate"><span class="pre">list-table</span></code> directive:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. list-table::
@@ -1883,7 +1882,7 @@ span rows.</td>
 </pre></div>
 </div>
 <p>builds as:</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="33%" />
 <col width="67%" />
@@ -1904,7 +1903,7 @@ span rows.</td>
 </table>
 </div>
 <div class="section" id="simple-table">
-<span id="simple-table"></span><h3>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h3>
+<h3>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h3>
 <p>Simple tables are simple. They focus mostly on the vertical layout. Like grid tables, they are easy when they are small.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 =====  =====  ====== 
@@ -1958,7 +1957,7 @@ True   True   True
 </div>
 </div>
 <div class="section" id="toctree">
-<span id="toctree"></span><span id="id17"></span><h2>Toctree<a class="headerlink" href="#toctree" title="Permalink to this headline">¶</a></h2>
+<span id="id17"></span><h2>Toctree<a class="headerlink" href="#toctree" title="Permalink to this headline">¶</a></h2>
 <p>A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list must be declared.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1977,11 +1976,11 @@ True   True   True
 </div>
 </div>
 <div class="section" id="topic-titles">
-<span id="topic-titles"></span><span id="id18"></span><h2>Topic Titles<a class="headerlink" href="#topic-titles" title="Permalink to this headline">¶</a></h2>
+<span id="id18"></span><h2>Topic Titles<a class="headerlink" href="#topic-titles" title="Permalink to this headline">¶</a></h2>
 <p>Topic titles are coded with a <code class="docutils literal notranslate"><span class="pre">#</span></code>, which makes them seem like an H1, but really it’s a topic title!</p>
 </div>
 <div class="section" id="unsupported">
-<span id="unsupported"></span><span id="id19"></span><h2>Unsupported<a class="headerlink" href="#unsupported" title="Permalink to this headline">¶</a></h2>
+<span id="id19"></span><h2>Unsupported<a class="headerlink" href="#unsupported" title="Permalink to this headline">¶</a></h2>
 <p>The following formatting cannot be done with this theme:</p>
 <ul class="simple">
 <li>Blockquotes. The MARKUP theme does not support blockquotes out-of-the-box. See the “Blockquotes” section in the Tutorials topic for the steps necessary to add CSS support for blockquotes.</li>
@@ -1990,7 +1989,7 @@ True   True   True
 </ul>
 </div>
 <div class="section" id="additional-resources">
-<span id="additional-resources"></span><span id="id20"></span><h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<span id="id20"></span><h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
 <p>The following resources may be useful:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developers.google.com/style/">Google Developer Documentation Style Guide</a></li>

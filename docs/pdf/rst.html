@@ -324,24 +324,24 @@ spark.setting.memory 20g
 <p>For CSS code blocks, assign <code class="docutils literal notranslate"><span class="pre">css</span></code> as the name of the code block:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">css</span>
 
-   <span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
-     <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
-     <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
-     <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-     <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-     <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
-     <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+   <span class="nt">ul</span><span class="p">.</span><span class="nc">tab-selector</span> <span class="p">{</span>
+     <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+     <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+     <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+     <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+     <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
    <span class="p">}</span>
 </pre></div>
 </div>
 <p>to create a code block like this:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
-  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
-  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="p">.</span><span class="nc">tab-selector</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -557,22 +557,22 @@ spark.setting.memory 20g
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">lua</span>
 
    <span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
-   <span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+   <span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
      <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-   <span class="k">end</span>
-   <span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+   <span class="kr">end</span>
+   <span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">test</span><span class="p">()</span>
      <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
-   <span class="k">end</span>
+   <span class="kr">end</span>
 </pre></div>
 </div>
 <p>to create a code block like this:</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-<span class="k">end</span>
-<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+<span class="kr">end</span>
+<span class="kr">function</span> <span class="nc">A</span><span class="p">:</span><span class="nf">test</span><span class="p">()</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
-<span class="k">end</span>
+<span class="kr">end</span>
 </pre></div>
 </div>
 </div>
@@ -728,15 +728,15 @@ end
 <p>For YAML code blocks, assign <code class="docutils literal notranslate"><span class="pre">yaml</span></code> as the name of the code block:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">yaml</span>
 
-   <span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+   <span class="nt">config</span><span class="p">:</span>
+     <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+     <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
 </pre></div>
 </div>
 <p>to create a code block like this:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
 </pre></div>
 </div>
 </div>
@@ -747,17 +747,17 @@ end
 
    <span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
 
-   <span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+   <span class="nt">config</span><span class="p">:</span>
+     <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+     <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <p>to create a code block like this:</p>
 <div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
 
-<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+<span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <div class="admonition-why-salt admonition">
@@ -1123,7 +1123,7 @@ abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz
 </div>
 <p>where the first line in the CSV file is the header row.</p>
 <p>This type of table will appear in the documentation like this:</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="30%" />
 <col width="70%" />
@@ -1211,7 +1211,7 @@ span rows.</td>
 </pre></div>
 </div>
 <p>with the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">list-table</span></code> in the block. The number of rows (identified by the dashes (<code class="docutils literal notranslate"><span class="pre">-</span></code>) must equal the number of integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code>. The integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> also specifies the column width, from left to right.</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="33%" />
 <col width="67%" />
