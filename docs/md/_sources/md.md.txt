@@ -74,7 +74,7 @@ app.add_transform(AutoStructify)
 
 ### Evaluate reStructuredText
 
-Configuring Remarkdown enables the use of the `eval_rst`, which creates a bridge from Markdown that allows standard reStructuredText processing, including the use of directives. For example:
+Configuring Remarkdown enables the use of the `eval_rst` directive, which creates a bridge to Markdown that allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:
 
 ~~~
 ```eval_rst
@@ -101,7 +101,7 @@ You can apply the same admonition styles as reStructuredText by using raw HTML o
 
 ### Attention
 
-Attentions can be added via raw HTML in Markdown or via a Sphinx directive.
+An attention admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -135,7 +135,7 @@ builds as:
 
 ### Caution
 
-Cautions can be added via raw HTML in Markdown or via a Sphinx directive.
+A caution admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -212,7 +212,7 @@ Which will appear in the documentation like this:
 
 ### Danger
 
-Danger can be added via raw HTML in Markdown or via a Sphinx directive.
+A danger admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -246,7 +246,7 @@ builds as:
 
 ### Error
 
-Error can be added via raw HTML in Markdown or via a Sphinx directive.
+An error admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -280,7 +280,7 @@ builds as:
 
 ### Hint
 
-Hints can be added via raw HTML in Markdown or via a Sphinx directive.
+A hint admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -314,7 +314,7 @@ builds as:
 
 ### Important
 
-Important can be added via raw HTML in Markdown or via a Sphinx directive.
+An important admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -348,7 +348,7 @@ builds as:
 
 ### Note
 
-Notes can be added via raw HTML in Markdown or via a Sphinx directive.
+A note admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -382,7 +382,7 @@ builds as:
 
 ### Tip
 
-Tips can be added via raw HTML in Markdown or via a Sphinx directive.
+A tip admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 
@@ -416,7 +416,7 @@ builds as:
 
 ### Warning
 
-Warnings can be added via raw HTML in Markdown or via a Sphinx directive.
+A warning admonition can be added via raw HTML in Markdown or via a Sphinx directive.
 
 **Raw HTML**
 

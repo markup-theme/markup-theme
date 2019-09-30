@@ -54,7 +54,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <div id="nav-icon"><i class="fas fa-bars"></i></div>
 
-      <a href="https://www.companysite.com/">
+      <a href="https://github.com/markup-theme/markup-theme">
         <img id="logo" src="_static/markup-topnav.svg" onerror="_static/markup-topnav.png"/>
       </a>
 
@@ -897,7 +897,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="evaluate-restructuredtext">
 <h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
-<p>Configuring Remarkdown enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code>, which creates a bridge from Markdown that allows standard reStructuredText processing, including the use of directives. For example:</p>
+<p>Configuring Remarkdown enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code> directive, which creates a bridge to Markdown that allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. note:: This is the note directive in a Markdown topic. Naming the code block `eval_rst` allows the contents of that code block to be processed as if it were reStructuredText despite being in a Markdown file. Pretty cool!
 ```
@@ -916,7 +916,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>You can apply the same admonition styles as reStructuredText by using raw HTML or by using a Sphinx directive.</p>
 <div class="section" id="attention">
 <h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
-<p>Attentions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>An attention admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition attention&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Attention<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -942,7 +942,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="caution">
 <h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
-<p>Cautions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A caution admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition caution&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Caution<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -999,7 +999,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="danger">
 <h3>Danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h3>
-<p>Danger can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A danger admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition danger&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1025,7 +1025,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="error">
 <h3>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
-<p>Error can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>An error admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition error&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1051,7 +1051,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="hint">
 <h3>Hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
-<p>Hints can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A hint admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition hint&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Hint<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1077,7 +1077,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="important">
 <h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
-<p>Important can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>An important admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition important&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Important<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1103,7 +1103,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="note">
 <h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
-<p>Notes can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A note admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Note<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1129,7 +1129,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="tip">
 <h3>Tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h3>
-<p>Tips can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A tip admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition tip&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Tip<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1155,7 +1155,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="warning">
 <h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
-<p>Warnings can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p>A warning admonition can be added via raw HTML in Markdown or via a Sphinx directive.</p>
 <p><strong>Raw HTML</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
