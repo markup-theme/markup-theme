@@ -1,0 +1,239 @@
+{% extends "!nav-docs.html" %}
+{% set active_product = "MARKUP Theme" %}
+{% set active_page_name = "MARKUP Theme" %}
+{% set active_version = "current" %}
+{% set active_page_icon = '<i class="fas fa-arrow-alt-circle-up fa-fw icon-left"></i>' %}
+{% set active_search_path = "../search.html" %}
+{% set navItems = [
+
+  {
+    "title": "MARKUP Theme",
+    "iconClass": "fas fa-arrow-alt-circle-up fa-fw",
+    "subItems": [
+      {
+        "title": "MARKUP Theme",
+        "iconClass": "fa-star",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About the MARKUP Theme",
+            "hasSubItems": false,
+            "url": "/index.html#markup-theme"
+          },
+          {
+            "title": "Goals",
+            "hasSubItems": false,
+            "url": "/index.html#goals"
+          },
+          {
+            "title": "Non-goals",
+            "hasSubItems": false,
+            "url": "/index.html#non-goals"
+          },
+        ],
+      },
+      {
+        "title": "FAQs",
+        "hasSubItems": false,
+        "url": "/faq.html"
+      },
+      {
+        "title": "Requirements",
+        "hasSubItems": false,
+        "url": "/index.html#requirements"
+      },
+      {
+        "title": "Set Up the Environment",
+        "hasSubItems": false,
+        "url": "/index.html#set-up-the-environment"
+      },
+      {
+        "title": "Set Up Localhost",
+        "hasSubItems": false,
+        "url": "/index.html#set-up-localhost"
+      },
+      {
+        "title": "Build the MARKUP theme",
+        "hasSubItems": false,
+        "url": "/index.html#build-the-markup-theme"
+      },
+    ]
+  },
+  {
+    "title": "Tutorials",
+    "iconClass": "fa-check-square",
+    "hasSubItems": true,
+    "subItems": [
+      {
+        "title": "About Tutorials",
+        "hasSubItems": false,
+        "url": "/tutorials.html"
+      },
+      {
+        "title": "Blockquotes",
+        "hasSubItems": false,
+        "url": "/tutorials.html#blockquotes"
+      },
+      {
+        "title": "Change Colors",
+        "hasSubItems": false,
+        "url": "/tutorials.html#change-colors"
+      },
+      {
+        "title": "Sass",
+        "hasSubItems": false,
+        "url": "/tutorials.html#sass"
+      },
+      {
+        "title": "Add Code Block Styles",
+        "hasSubItems": false,
+        "url": "/tutorials.html#add-code-block-styles"
+      },
+      {
+        "title": "Local Pygments CSS",
+        "hasSubItems": false,
+        "url": "/tutorials.html#local-pygments-css"
+      },
+      {
+        "title": "Tokens",
+        "hasSubItems": false,
+        "url": "/tutorials.html#tokens"
+      },
+      {
+        "title": "PDF Cover Pages",
+        "hasSubItems": false,
+        "url": "/tutorials.html#pdf-cover-pages"
+      },
+      {
+        "title": "Navigation Icons",
+        "iconClass": "fa-star",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Left Side",
+            "hasSubItems": false,
+            "url": "/tutorials.html#left-side"
+          },
+          {
+            "title": "Right Side",
+            "hasSubItems": false,
+            "url": "/tutorials.html#right-side"
+          },
+          {
+            "title": "Hamburger Buttom",
+            "hasSubItems": false,
+            "url": "/tutorials.html#hamburger-button"
+          },
+          {
+            "title": "Inline",
+            "hasSubItems": false,
+            "url": "/tutorials.html#inline"
+          },
+        ],
+      },
+      {
+        "title": "Upgrade the MARKUP Theme",
+        "iconClass": "fa-star",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "expando.py",
+            "hasSubItems": false,
+            "url": "/tutorials.html#expando-py-extension"
+          },
+          {
+            "title": "tabs.py",
+            "hasSubItems": false,
+            "url": "/tutorials.html#tabs-py-extension"
+          },
+          {
+            "title": "slides.py",
+            "hasSubItems": false,
+            "url": "/tutorials.html#slides-py-extension"
+          },
+        ],
+      },
+    ],
+  },
+  {
+    "title": "Site Templates",
+    "iconClass": "fa-clone",
+    "hasSubItems": true,
+    "subItems": [
+      {
+        "title": "About Site Templates",
+        "hasSubItems": false,
+        "url": "/templates.html"
+      },
+      {
+        "title": "layout.html",
+        "hasSubItems": false,
+        "url": "/templates.html#layout-html"
+      },
+      {
+        "title": "nav-docs.html",
+        "iconClass": "fa-star",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "About nav-docs.html",
+            "hasSubItems": false,
+            "url": "/templates.html#nav-docs-html"
+          },
+          {
+            "title": "Global Navigation",
+            "hasSubItems": false,
+            "url": "/templates.html#global-navigation"
+          },
+          {
+            "title": "Site-specific Navigation",
+            "hasSubItems": false,
+            "url": "/templates.html#site-specific-navigation"
+          },
+          {
+            "title": "Navigation Structure",
+            "hasSubItems": false,
+            "url": "/templates.html#navigation-structure"
+          },
+          {
+            "title": "Navigation Paths",
+            "hasSubItems": false,
+            "url": "/templates.html#navigation-paths"
+          },
+          {
+            "title": "Active Product",
+            "hasSubItems": false,
+            "url": "/templates.html#active-product"
+          },
+          {
+            "title": "Active Page Name",
+            "hasSubItems": false,
+            "url": "/templates.html#active-page-name"
+          },
+          {
+            "title": "Active Version",
+            "hasSubItems": false,
+            "url": "/templates.html#active-version"
+          },
+        ],
+      },
+      {
+        "title": "CSS Stylesheets",
+        "hasSubItems": false,
+        "url": "/templates.html#css-stylesheets"
+      },
+    ],
+  },
+  {
+    "title": "Additional Resources",
+    "iconClass": "fa-folder-open",
+    "hasSubItems": true,
+    "subItems": [
+      {
+        "title": "PDFs and Slide Decks",
+        "hasSubItems": false,
+        "url": "/resources.html"
+      },
+    ],
+  },
+] -%}

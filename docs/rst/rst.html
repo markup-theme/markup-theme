@@ -1,0 +1,2543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>Formatting Guide: reStructuredText &mdash; reStructuredText</title>
+    <link rel="stylesheet" href="_static/markup.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    './',
+    VERSION:     '',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+//    HAS_SOURCE:  true
+  };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/searchtools.js"></script>
+<script type="text/javascript" src="_static/script.js"></script>
+<script type="text/javascript" src="_static/expando.js"></script>
+<script type="text/javascript" src="_static/tabs.js"></script>
+<script type="text/javascript" src="_static/all.js"></script>
+
+
+<!--
+The all.js added here is for FontAwesome. If you want to use the CDN instead, remove the line for all.js and uncomment the section at the bottom of _config.scss and update for the correct path to the version of FontAwesome you want to use via their CDN.
+-->
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="reStructuredText" href="#" />
+    <link rel="next" title="&lt;no title&gt;" href="test.html" /> 
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+
+
+  <nav class="nav-main" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <a href="../index.html">
+            <img id="markup" height="34" src="_static/markup-logo.svg" onerror="_static/markup-logo.png"/>
+          </a>
+        </h1>
+      </div>
+
+      <div id="nav-icon"><i class="fas fa-bars"></i></div>
+
+      <a href="https://www.companysite.com/">
+        <img id="logo" src="_static/markup-topnav.svg" onerror="_static/markup-topnav.png"/>
+      </a>
+
+      <ul class="nav-links links-main">
+        <li class="nav-link">
+          <a href="../index.html">Theme and Templates</a>
+        </li>
+        <li class="nav-link is-active">
+          <a href="/rst/rst.html">reStructuredText</a>
+        </li>
+        <li class="nav-link">
+          <a href="/md/md.html">Markdown</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+    <div class="document markup-docs">
+    <!---->
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fab fa-python fa-fw icon-left"></i></i>reStructuredText</img></a>
+    </li>
+
+    <li class="main-item has-sub-items docs-search">
+      <form action=../rst/search.html method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+
+<!-- disabled in favor of right-side search block; if public docs, this option is much better? you decide! 
+
+    <li class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+-->
+
+<!--
+    <li class="version-picker">
+      Filter by product and version
+      <div class="dropdown-wrapper">
+  <div class="dropdown-select">
+    <span id="dropdown-select-product">reStructuredText</span>: <span id="dropdown-select-version">current</span>
+    <i class="fa fa-chevron-down"></i>
+  </div>
+  <ul class="dropdown-items">
+    <li class="dropdown-item">
+    <a href="/">Documentation Releases</a>
+    </li>
+    <li class="dropdown-item has-sub-items">AppName<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/abc/1-0-0/">1.0.0</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-1/">1.0.1</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-2/">1.0.2</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-3/">1.0.3</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/foo/">Release Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items">Release Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/bar_1-0">Bar 1.0</a></li>
+        <li class="dropdown-item"><a href="/release/bar_1-1">Bar 1.1</a></li>
+      </ul>
+    </li>
+    <li class="legacy-heading">Archived Docs</li>
+    <li class="dropdown-item">
+      <a href="/release/analytics/">Archived Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items legacy-item">Archived Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-8/">Bar 0.8</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-9/">Bar 0.9</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </li>
+-->   
+
+    
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Formatting Guide"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-book icon-left"></i> Formatting Guide <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html" title="About the Formatting Guide">
+            About the Formatting Guide
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Admonitions">
+            Admonitions
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#admonitions" title="About Admonitions">
+                About Admonitions
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#attention" title="Attention">
+                Attention
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#caution" title="Caution">
+                Caution
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#custom-admonitions" title="Custom Admonitions">
+                Custom Admonitions
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#danger" title="Danger">
+                Danger
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#error" title="Error">
+                Error
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#hint" title="Hint">
+                Hint
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#important" title="Important">
+                Important
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#note" title="Note">
+                Note
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#tip" title="Tip">
+                Tip
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#warning" title="Warning">
+                Warning
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#card-walls" title="Card Walls">
+            Card Walls
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Code Blocks">
+            Code Blocks
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#code-blocks" title="About Code Blocks">
+                About Code Blocks
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#line-emphasis" title="Line Emphasis">
+                Line Emphasis
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#command-shell" title="Command Shell">
+                Command Shell
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#config-file" title="Config File">
+                Config File
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#css" title="CSS">
+                CSS
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#data-table" title="Data Table">
+                Data Table
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#html" title="HTML">
+                HTML
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#javascript" title="JavaScript">
+                JavaScript
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#json" title="JSON">
+                JSON
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#json-w-jinja" title="JSON w/Jinja">
+                JSON w/Jinja
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#lua" title="Lua">
+                Lua
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#none" title="None">
+                None
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#python" title="Python">
+                Python
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#rest-api" title="REST API">
+                REST API
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#restructuredtext" title="reStructuredText">
+                reStructuredText
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#ruby" title="Ruby">
+                Ruby
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#scala" title="Scala">
+                Scala
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#shell-script" title="Shell Script">
+                Shell Script
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#yaml" title="YAML">
+                YAML
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#yaml-w-jinja" title="YAML w/Jinja">
+                YAML w/Jinja
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Content Tabs">
+            Content Tabs
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#content-tabs" title="About Content Tabs">
+                About Content Tabs
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#example-ui-tasks" title="Example: UI Tasks">
+                Example: UI Tasks
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#example-terms" title="Example: Terms">
+                Example: Terms
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Expandos">
+            Expandos
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#expandos" title="About Expandos">
+                About Expandos
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#example-faq" title="Example: FAQ">
+                Example: FAQ
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#example-content-patterns" title="Example: Content Patterns">
+                Example: Content Patterns
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#font-awesome" title="Font Awesome">
+            Font Awesome
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Headers">
+            Headers
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#header-level-1" title="Header (Level 1)">
+                Header (Level 1)
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#header-level-2" title="Header (Level 2)">
+                Header (Level 2)
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#header-level-3" title="Header (Level 3)">
+                Header (Level 3)
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#header-level-4" title="Header (Level 4)">
+                Header (Level 4)
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#header-markup-length" title="Header Markup Length">
+                Header Markup Length
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#images" title="Images">
+            Images
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Includes">
+            Includes
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#includes" title="About Includes">
+                About Includes
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#via-file" title="via File">
+                via File
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#via-snippet" title="via Snippet">
+                via Snippet
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Inline Markup">
+            Inline Markup
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#inline-markup" title="About Inline Markup">
+                About Inline Markup
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#bold" title="Bold">
+                Bold
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#italics" title="Italics">
+                Italics
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#code-strings" title="Code Strings">
+                Code Strings
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Links">
+            Links
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#links" title="About Links">
+                About Links
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#external" title="External">
+                External
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#reference" title="Reference">
+                Reference
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#topic" title="Topic">
+                Topic
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Lists">
+            Lists
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#lists" title="About Lists">
+                About Lists
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#definition-list" title="Definition List">
+                Definition List
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#ordered-list" title="Ordered List">
+                Ordered List
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#unordered-list" title="Unordered List">
+                Unordered List
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Tables">
+            Tables
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#tables" title="About Tables">
+                About Tables
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#csv-table" title="CSV Table">
+                CSV Table
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#grid-table" title="Grid Table">
+                Grid Table
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#list-table" title="List Table">
+                List Table
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/rst/rst.html#simple-table" title="Simple Table">
+                Simple Table
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#toctree" title="Toctree">
+            Toctree
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#tokens" title="Tokens">
+            Tokens
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/rst/rst.html#topic-titles" title="Topic Titles">
+            Topic Titles
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li> <!-- /for item in navItems -->
+    
+
+<!--
+    <li class="main-item dark-item">
+      <a href="feedback.html"><i class="fas fa-question-circle fa-fw icon-left"></i>Send Feedback</a>
+    </li>
+-->
+<!--
+    <li class="main-item dark-item">
+      <a href="support.html"><i class="fal fa-life-ring fa-fw icon-left"></i>Support</a>
+    </li>
+-->
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fas fa-sitemap fa-fw icon-left"></i>Site Map</a>
+    </li>
+  </ul>
+</nav>
+      <div class="documentwrapper"><div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+
+<!-- Uncomment to add an image above the right-side nav bar -->
+
+<!--  <a class="sphinxsidebar-ad" href="https://www.yoursitename.com" target="_blank">
+    <img src="_static/12345.svg" alt="alt" />
+  </a>
+-->
+
+
+<!--
+    <div id="searchbox" class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="Go">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+-->
+
+
+
+  <div class="sphinxsidebarwrapper">
+  <h3><i class="fas fa-newspaper" aria-hidden="true"></i><a href="#">&nbsp;ON THIS PAGE</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Formatting Guide: reStructuredText</a><ul>
+<li><a class="reference internal" href="#admonitions">Admonitions</a><ul>
+<li><a class="reference internal" href="#attention">Attention</a></li>
+<li><a class="reference internal" href="#caution">Caution</a></li>
+<li><a class="reference internal" href="#custom-admonitions">Custom Admonitions</a></li>
+<li><a class="reference internal" href="#danger">Danger</a></li>
+<li><a class="reference internal" href="#error">Error</a></li>
+<li><a class="reference internal" href="#hint">Hint</a></li>
+<li><a class="reference internal" href="#important">Important</a></li>
+<li><a class="reference internal" href="#note">Note</a></li>
+<li><a class="reference internal" href="#tip">Tip</a></li>
+<li><a class="reference internal" href="#warning">Warning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#card-walls">Card Walls</a></li>
+<li><a class="reference internal" href="#code-blocks">Code Blocks</a><ul>
+<li><a class="reference internal" href="#line-emphasis">Line Emphasis</a></li>
+<li><a class="reference internal" href="#command-shell">Command Shell</a></li>
+<li><a class="reference internal" href="#config-file">Config File</a></li>
+<li><a class="reference internal" href="#css">CSS</a></li>
+<li><a class="reference internal" href="#data-table">Data Table</a></li>
+<li><a class="reference internal" href="#html">HTML</a></li>
+<li><a class="reference internal" href="#javascript">JavaScript</a></li>
+<li><a class="reference internal" href="#json">JSON</a></li>
+<li><a class="reference internal" href="#json-w-jinja">JSON w/Jinja</a></li>
+<li><a class="reference internal" href="#lua">Lua</a></li>
+<li><a class="reference internal" href="#none">None</a></li>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#rest-api">REST API</a></li>
+<li><a class="reference internal" href="#restructuredtext">reStructuredText</a></li>
+<li><a class="reference internal" href="#ruby">Ruby</a></li>
+<li><a class="reference internal" href="#scala">Scala</a></li>
+<li><a class="reference internal" href="#shell-script">Shell Script</a></li>
+<li><a class="reference internal" href="#yaml">YAML</a></li>
+<li><a class="reference internal" href="#yaml-w-jinja">YAML w/Jinja</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#content-tabs">Content Tabs</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#example-ui-tasks">Example: UI Tasks</a></li>
+<li><a class="reference internal" href="#example-terms">Example: Terms</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#expandos">Expandos</a><ul>
+<li><a class="reference internal" href="#example-faq">Example: FAQ</a></li>
+<li><a class="reference internal" href="#example-content-patterns">Example: Content Patterns</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#font-awesome">Font Awesome</a></li>
+<li><a class="reference internal" href="#header-level-1">Header (Level 1)</a><ul>
+<li><a class="reference internal" href="#header-level-2">Header (Level 2)</a><ul>
+<li><a class="reference internal" href="#header-level-3">Header (Level 3)</a><ul>
+<li><a class="reference internal" href="#header-level-4">Header (Level 4)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#header-markup-length">Header Markup Length</a></li>
+<li><a class="reference internal" href="#images">Images</a></li>
+<li><a class="reference internal" href="#includes">Includes</a><ul>
+<li><a class="reference internal" href="#via-file">via File</a></li>
+<li><a class="reference internal" href="#via-snippet">via Snippet</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inline-markup">Inline Markup</a><ul>
+<li><a class="reference internal" href="#bold">Bold</a></li>
+<li><a class="reference internal" href="#italics">Italics</a></li>
+<li><a class="reference internal" href="#code-strings">Code Strings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links">Links</a><ul>
+<li><a class="reference internal" href="#external">External</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+<li><a class="reference internal" href="#topic">Topic</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lists">Lists</a><ul>
+<li><a class="reference internal" href="#definition-list">Definition List</a></li>
+<li><a class="reference internal" href="#ordered-list">Ordered List</a></li>
+<li><a class="reference internal" href="#unordered-list">Unordered List</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tables">Tables</a><ul>
+<li><a class="reference internal" href="#csv-table">CSV Table</a></li>
+<li><a class="reference internal" href="#grid-table">Grid Table</a></li>
+<li><a class="reference internal" href="#list-table">List Table</a></li>
+<li><a class="reference internal" href="#simple-table">Simple Table</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#toctree">Toctree</a></li>
+<li><a class="reference internal" href="#tokens">Tokens</a></li>
+<li><a class="reference internal" href="#topic-titles">Topic Titles</a></li>
+<li><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="formatting-guide-restructuredtext">
+<h1>Formatting Guide: reStructuredText<a class="headerlink" href="#formatting-guide-restructuredtext" title="Permalink to this headline">¶</a></h1>
+<p>This is the formatting guide for reStructuredText as it may be used with the MARKUP theme.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#format-content-admonitions"><span class="std std-ref">Admonitions</span></a></li>
+<li><a class="reference internal" href="#format-content-card-walls"><span class="std std-ref">Card Walls</span></a></li>
+<li><a class="reference internal" href="#format-content-code-blocks"><span class="std std-ref">Code Blocks</span></a></li>
+<li><a class="reference internal" href="#format-content-tabs"><span class="std std-ref">Content Tabs</span></a></li>
+<li><a class="reference internal" href="#format-content-expandos"><span class="std std-ref">Expandos</span></a></li>
+<li><a class="reference internal" href="#format-content-fontawesome"><span class="std std-ref">Font Awesome</span></a></li>
+<li><a class="reference internal" href="#format-content-header-h1"><span class="std std-ref">Headers (Levels 1-4)</span></a></li>
+<li><a class="reference internal" href="#format-content-images"><span class="std std-ref">Images</span></a></li>
+<li><a class="reference internal" href="#format-content-includes"><span class="std std-ref">Includes</span></a></li>
+<li><a class="reference internal" href="#format-content-inline-markup"><span class="std std-ref">Inline Markup</span></a></li>
+<li><a class="reference internal" href="#format-content-links"><span class="std std-ref">Links</span></a></li>
+<li><a class="reference internal" href="#format-content-lists"><span class="std std-ref">Lists</span></a></li>
+<li><a class="reference internal" href="#format-content-tables"><span class="std std-ref">Tables</span></a></li>
+<li><a class="reference internal" href="#format-content-toctree"><span class="std std-ref">Toctree</span></a></li>
+<li><a class="reference internal" href="#format-content-tokens"><span class="std std-ref">Tokens</span></a></li>
+<li><a class="reference internal" href="#format-content-topic-title"><span class="std std-ref">Topic Titles</span></a></li>
+<li><a class="reference internal" href="#format-content-additional-resources"><span class="std std-ref">Additional Resources</span></a></li>
+</ul>
+<div class="section" id="admonitions">
+<span id="format-content-admonitions"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
+<p>Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.</p>
+<div class="section" id="attention">
+<span id="format-content-admonition-attention"></span><h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">attention::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">attention</span><span class="p">::</span> The words for the attention itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">The words for the attention itself.</p>
+</div>
+</div>
+<div class="section" id="caution">
+<span id="format-content-admonition-caution"></span><h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">caution::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">caution</span><span class="p">::</span> The words for the caution itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">The words for the caution itself.</p>
+</div>
+</div>
+<div class="section" id="custom-admonitions">
+<span id="format-content-admonition-custom"></span><h3>Custom Admonitions<a class="headerlink" href="#custom-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.</p>
+<p>For a custom admonition, use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">admonition::</span> <span class="pre">some</span> <span class="pre">string</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> some string
+
+   Contents of custom admonition!
+</pre></div>
+</div>
+<p>Which will appear in the documentation like this:</p>
+<div class="admonition-some-string admonition">
+<p class="first admonition-title">some string</p>
+<p class="last">Contents of custom admonition!</p>
+</div>
+</div>
+<div class="section" id="danger">
+<span id="format-content-admonition-danger"></span><h3>Danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">danger::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">danger</span><span class="p">::</span> The words for the danger itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">The words for the danger itself.</p>
+</div>
+</div>
+<div class="section" id="error">
+<span id="format-content-admonition-error"></span><h3>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">error::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">error</span><span class="p">::</span> The words for the error itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">The words for the error itself.</p>
+</div>
+</div>
+<div class="section" id="hint">
+<span id="format-content-admonition-hint"></span><h3>Hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">hint::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">hint</span><span class="p">::</span> The words for the hint itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">The words for the hint itself.</p>
+</div>
+</div>
+<div class="section" id="important">
+<span id="format-content-admonition-important"></span><h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">important::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">important</span><span class="p">::</span> The words for the important itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The words for the important itself.</p>
+</div>
+</div>
+<div class="section" id="note">
+<span id="format-content-admonition-note"></span><h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The words for the note itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The words for the note itself.</p>
+</div>
+</div>
+<div class="section" id="tip">
+<span id="format-content-admonition-tip"></span><h3>Tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">tip::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> The words for the tip itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The words for the tip itself.</p>
+</div>
+</div>
+<div class="section" id="warning">
+<span id="format-content-admonition-warning"></span><h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">warning::</span></code> as shown here:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> The words for the warning itself.
+</pre></div>
+</div>
+<p>to create an admonition like this:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The words for the warning itself.</p>
+</div>
+</div>
+</div>
+<div class="section" id="card-walls">
+<span id="format-content-card-walls"></span><h2>Card Walls<a class="headerlink" href="#card-walls" title="Permalink to this headline">¶</a></h2>
+<p>A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that’s full of links to resources.</p>
+<div class="card-group container">
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+Getting Started</div>
+<div class="card-wall-description container">
+<p>The getting started guide is how to get started and learns you how to get started.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+Deployment Guide</div>
+<div class="card-wall-description container">
+<p>The deployment guide is the deployment guide and learns you how to deploy.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+User Guide</div>
+<div class="card-wall-description container">
+<p>The user guide is the user guide and learns you how to user.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+Admin Guide</div>
+<div class="card-wall-description container">
+<p>The admin guide is the admin guide and learns you how to admin.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+Reference</div>
+<div class="card-wall-description container">
+<p>The reference guide is the reference guide and learns you how to reference.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="card-wall container">
+<div class="card-wall-content container">
+<div class="card-wall-name container">
+Diagrams</div>
+<div class="card-wall-description container">
+<p>The diagrams guide is just a list of sweet diagrams.</p>
+<p>Links for <a class="reference internal" href="#format-content-links"><span class="std std-ref">le success</span></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="code-blocks">
+<span id="format-content-code-blocks"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<p>For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span></code> directive.</p>
+<p>Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it’s pseudocode, is formatted correctly.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">yaml</span></code> code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the <code class="docutils literal notranslate"><span class="pre">none</span></code> code block to work around the problem, as it is much more forgiving.</p>
+</div>
+<div class="section" id="line-emphasis">
+<span id="format-content-code-block-line-emphasis"></span><h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
+<p>Individual lines in a code block may be emphasized. The presentation is similar to a yellow highlight in a book. The following example shows how to highlight lines 3 and 5 in a code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:emphasize-lines:</span> <span class="nf">3,5</span>
+
+   def function(foo):
+     if (some_thing):
+       return bar
+     else:
+       return 0
+</pre></div>
+</div>
+<p>will display as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+<span class="hll">    <span class="k">return</span> <span class="n">bar</span>
+</span>  <span class="k">else</span><span class="p">:</span>
+<span class="hll">    <span class="k">return</span> <span class="mi">0</span>
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="command-shell">
+<span id="format-content-code-block-command-shell"></span><h3>Command Shell<a class="headerlink" href="#command-shell" title="Permalink to this headline">¶</a></h3>
+<p>For command shell blocks, assign <code class="docutils literal notranslate"><span class="pre">console</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> console
+
+   $ cr service stop
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cr service stop
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-file">
+<span id="format-content-code-block-config-file"></span><h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
+<p>For generic configuration file blocks, assign <code class="docutils literal notranslate"><span class="pre">text</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">text</span>
+
+   spark.setting.hours 1h
+   spark.setting.option -Duser.timezone=UTC
+   spark.setting.memory 20g
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>spark.setting.hours 1h
+spark.setting.option -Duser.timezone=UTC
+spark.setting.memory 20g
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We’re using <code class="docutils literal notranslate"><span class="pre">text</span></code> because there are not specific lexers available for all of the various configuration files. The <code class="docutils literal notranslate"><span class="pre">text</span></code> lexer allows us to style the code block similar to all of the others, but will not apply any highlighting to the formatting within the code block.</p>
+</div>
+</div>
+<div class="section" id="css">
+<span id="format-content-code-block-css"></span><h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
+<p>For CSS code blocks, assign <code class="docutils literal notranslate"><span class="pre">css</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">css</span>
+
+   <span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
+     <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+     <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+     <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+     <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+     <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
+     <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-table">
+<span id="format-content-code-block-data-table"></span><h3>Data Table<a class="headerlink" href="#data-table" title="Permalink to this headline">¶</a></h3>
+<p>Table blocks are used to show the inputs and outputs of processing data, such as with blocks reference documentation. For table code blocks, assign <code class="docutils literal notranslate"><span class="pre">sql</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">sql</span>
+
+   <span class="c1">--------- ---------</span>
+    <span class="n">column1</span>   <span class="n">column2</span>
+   <span class="c1">--------- ---------</span>
+    <span class="n">value</span>     <span class="n">value</span>
+    <span class="n">value</span>     <span class="n">value</span>
+    <span class="n">value</span>     <span class="n">value</span>
+   <span class="c1">--------- ---------</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">--------- ---------</span>
+ <span class="n">column1</span>   <span class="n">column2</span>
+<span class="c1">--------- ---------</span>
+ <span class="n">value</span>     <span class="n">value</span>
+ <span class="n">value</span>     <span class="n">value</span>
+ <span class="n">value</span>     <span class="n">value</span>
+<span class="c1">--------- ---------</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="html">
+<span id="format-content-code-block-html"></span><h3>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<p>For HTML code blocks, assign <code class="docutils literal notranslate"><span class="pre">html</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">html</span>
+
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the warning built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the warning built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript">
+<span id="format-content-code-block-javascript"></span><h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
+<p>For JavaScript code blocks, assign <code class="docutils literal notranslate"><span class="pre">javascript</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">javascript</span>
+
+   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.content-tabs&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+       <span class="kd">var</span> <span class="nx">tab_sel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="kr">class</span><span class="o">:</span> <span class="s2">&quot;tab-selector&quot;</span> <span class="p">});</span>
+       <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+       <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;right-col&#39;</span><span class="p">)){</span>
+           <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;in-right-col&#39;</span><span class="p">);</span>
+       <span class="p">}</span>
+
+       <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+           <span class="kd">var</span> <span class="nx">sel_item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
+               <span class="kr">class</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span>
+               <span class="nx">text</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
+           <span class="p">});</span>
+           <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+           <span class="k">if</span> <span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+               <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+           <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+               <span class="nx">sel_item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;selected&#39;</span><span class="p">);</span>
+           <span class="p">}</span>
+           <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">sel_item</span><span class="p">);</span>
+           <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;contenttab&#39;</span><span class="p">);</span>
+       <span class="p">});</span>
+
+       <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="nx">contenttab_sel</span><span class="p">);</span>
+       <span class="nx">contenttab_sel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+       <span class="nx">i</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+   <span class="p">});</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.content-tabs&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">tab_sel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="kr">class</span><span class="o">:</span> <span class="s2">&quot;tab-selector&quot;</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;right-col&#39;</span><span class="p">)){</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;in-right-col&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">sel_item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="kr">class</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">sel_item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;selected&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">sel_item</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;contenttab&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="nx">contenttab_sel</span><span class="p">);</span>
+    <span class="nx">contenttab_sel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<span id="format-content-code-block-json"></span><h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>For JSON code blocks, assign <code class="docutils literal notranslate"><span class="pre">json</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">json</span>
+
+   <span class="p">{</span>
+     <span class="nt">&quot;foo&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+         <span class="nt">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;two&quot;</span><span class="p">:</span> <span class="s2">&quot;abcde&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;three&quot;</span><span class="p">:</span> <span class="s2">&quot;words&quot;</span>
+       <span class="p">},</span>
+     <span class="p">]</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;foo&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;two&quot;</span><span class="p">:</span> <span class="s2">&quot;abcde&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;three&quot;</span><span class="p">:</span> <span class="s2">&quot;words&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json-w-jinja">
+<span id="format-content-code-block-json-jinja"></span><h3>JSON w/Jinja<a class="headerlink" href="#json-w-jinja" title="Permalink to this headline">¶</a></h3>
+<p>For JSON code blocks that also embed Jinja templating, such as the nav-docs.html files that are used to build the documentation site’s left navigation structures, the standard <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">json</span></code> block will not work because the code block is not parsable as JSON. Instead, for code blocks that require a mix of JSON and Jinja templating, assign <code class="docutils literal notranslate"><span class="pre">django</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">django</span>
+
+   <span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+   <span class="cp">{%</span> <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span><span class="x"></span>
+   <span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+     <span class="o">{</span>
+       <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+       <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-arrow-alt-circle-right fa-fw&quot;</span><span class="o">,</span>
+       <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+         <span class="o">{</span>
+           <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+           <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+           <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+         <span class="o">},</span>
+         <span class="o">{</span>
+           <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;FAQ&quot;</span><span class="o">,</span>
+           <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+           <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/faq.html&quot;</span>
+         <span class="o">},</span>
+         <span class="o">{</span>
+           <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Additional Resources&quot;</span><span class="o">,</span>
+           <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+           <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/resources.html&quot;</span>
+         <span class="o">},</span>
+       <span class="o">]</span>
+     <span class="o">},</span>
+   <span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-arrow-alt-circle-right fa-fw&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;FAQ&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/faq.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Additional Resources&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/resources.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition-why-django admonition">
+<p class="first admonition-title">Why django?</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">django</span></code> seems like an odd way to specify a code block that contains both Jinja and JSON.</p>
+<p>Django is a site templating language that is part of the Python world. The Sphinx themes are actually built using a combination of Django, Jinja, JSON, and other stuff. The left-side navigation, in particular, is a mix of JSON structure and Jinja variables.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">django</span></code> identifies the Pygments lexer that parses a code block that contains both Jinja and JSON.</p>
+</div>
+</div>
+<div class="section" id="lua">
+<span id="format-content-code-block-lua"></span><h3>Lua<a class="headerlink" href="#lua" title="Permalink to this headline">¶</a></h3>
+<p>For Lua code blocks, assign <code class="docutils literal notranslate"><span class="pre">lua</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">lua</span>
+
+   <span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
+   <span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+     <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+   <span class="k">end</span>
+   <span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+     <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
+   <span class="k">end</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+<span class="k">end</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="none">
+<span id="format-content-code-block-none"></span><h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p>For text that needs to be formatted as if it were a code block, but isn’t actually code, assign <code class="docutils literal notranslate"><span class="pre">none</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">none</span>
+
+<span class="s">   This is a none block. It&#39;s formatted as if it were code, but isn&#39;t actually code.</span>
+
+<span class="s">   Can include code-like things:</span>
+
+<span class="s">   function_foo()</span>
+<span class="s">     does: something</span>
+<span class="s">   end</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a none block. It&#39;s formatted as if it were code, but isn&#39;t actually code.
+
+Can include code-like things:
+
+function_foo()
+  does: something
+end
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<span id="format-content-code-block-python"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>For Python code blocks, assign <code class="docutils literal notranslate"><span class="pre">python</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
+
+   <span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+       <span class="k">return</span> <span class="n">bar</span>
+     <span class="k">else</span><span class="p">:</span>
+       <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">bar</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rest-api">
+<span id="format-content-code-block-rest-api"></span><h3>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h3>
+<p>For REST API code blocks that show how to use an endpoint, assign <code class="docutils literal notranslate"><span class="pre">rest</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> rest
+
+   https://www.yoursite.com/endpoint/{some_endpoint}
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>https://www.yoursite.com/endpoint/{some_endpoint}
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use the <a class="reference internal" href="#format-content-code-block-json"><span class="std std-ref">JSON</span></a> code block style for the JSON request/response part of the REST API.</p>
+</div>
+</div>
+<div class="section" id="restructuredtext">
+<span id="format-content-code-block-rst"></span><h3>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h3>
+<p>For reStructured Text code blocks, assign <code class="docutils literal notranslate"><span class="pre">rst</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">rst</span>
+
+   This is some <span class="ge">*reStructured*</span> <span class="gs">**Text**</span> formatting.
+
+   <span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> none
+
+      that has some(code);
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is some <span class="ge">*reStructured*</span> <span class="gs">**Text**</span> formatting.
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> none
+
+   that has some(code);
+</pre></div>
+</div>
+</div>
+<div class="section" id="ruby">
+<span id="format-content-code-block-ruby"></span><h3>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h3>
+<p>For Ruby code blocks, assign <code class="docutils literal notranslate"><span class="pre">ruby</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">ruby</span>
+
+   <span class="n">items</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span> <span class="o">]</span>
+   <span class="k">for</span> <span class="n">it</span> <span class="k">in</span> <span class="n">items</span>
+     <span class="nb">print</span> <span class="n">it</span><span class="p">,</span> <span class="s2">&quot; &quot;</span>
+   <span class="k">end</span>
+
+   <span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span> <span class="o">]</span>
+<span class="k">for</span> <span class="n">it</span> <span class="k">in</span> <span class="n">items</span>
+  <span class="nb">print</span> <span class="n">it</span><span class="p">,</span> <span class="s2">&quot; &quot;</span>
+<span class="k">end</span>
+
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scala">
+<span id="format-content-code-block-scala"></span><h3>Scala<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h3>
+<p>For Scala code blocks, assign <code class="docutils literal notranslate"><span class="pre">scala</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">scala</span>
+
+   <span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+     <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+       <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+     <span class="o">}</span>
+   <span class="o">}</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shell-script">
+<span id="format-content-code-block-script"></span><h3>Shell Script<a class="headerlink" href="#shell-script" title="Permalink to this headline">¶</a></h3>
+<p>For shell script blocks, assign <code class="docutils literal notranslate"><span class="pre">bash</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">bash</span>
+
+   <span class="c1"># The product and version information.</span>
+   <span class="nb">readonly</span> <span class="nv">MARKUP_PRODUCT</span><span class="o">=</span><span class="s2">&quot;markup-app&quot;</span>
+   <span class="nb">readonly</span> <span class="nv">MARKUP_VERSION</span><span class="o">=</span><span class="s2">&quot;1.23.45-6&quot;</span>
+   <span class="nb">readonly</span> <span class="nv">MARKUP_RELEASE_DATE</span><span class="o">=</span><span class="s2">&quot;2019-04-01&quot;</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># The product and version information.</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_PRODUCT</span><span class="o">=</span><span class="s2">&quot;markup-app&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_VERSION</span><span class="o">=</span><span class="s2">&quot;1.23.45-6&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_RELEASE_DATE</span><span class="o">=</span><span class="s2">&quot;2019-04-01&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yaml">
+<span id="format-content-code-block-yaml"></span><h3>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h3>
+<p>For YAML code blocks, assign <code class="docutils literal notranslate"><span class="pre">yaml</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">yaml</span>
+
+   <span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yaml-w-jinja">
+<span id="format-content-code-block-yaml-jinja"></span><h3>YAML w/Jinja<a class="headerlink" href="#yaml-w-jinja" title="Permalink to this headline">¶</a></h3>
+<p>For YAML code blocks that also embed Jinja templating, the standard <code class="docutils literal notranslate"><span class="pre">yaml</span></code> block will not work because the code block is not parsable as YAML. Instead, these code blocks must be able to parse a mix of YAML and Jinja templating. Assign <code class="docutils literal notranslate"><span class="pre">salt</span></code> as the name of the code block:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">salt</span>
+
+   <span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
+
+   <span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p>to create a code block like this:</p>
+<div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
+
+<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<div class="admonition-why-salt admonition">
+<p class="first admonition-title">Why salt?</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">salt</span></code> seems like an odd way to specify a code block that contains both Jinja and YAML.</p>
+<p>SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states that are to be configured and maintained. The <code class="docutils literal notranslate"><span class="pre">salt</span></code> lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">salt</span></code> identifies the Pygments lexer that parses a code block that contains both Jinja and YAML.</p>
+</div>
+</div>
+</div>
+<div class="section" id="content-tabs">
+<span id="format-content-tabs"></span><h2>Content Tabs<a class="headerlink" href="#content-tabs" title="Permalink to this headline">¶</a></h2>
+<p>Content tabs enable a way to group topics together in a compact way. Each topic is associated with a tab and, when clicked, shows that content in a content box below. The content box has a shadow applied to it to distinguish tabbed content from normal content. Use content tabs to group related topics, code styles, information sets, or concise workflows.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Content tabs may only be used in HTML outputs. For content that is output to PDF format, the content tabs will “fail gracefully” by presenting the tab title similar to an H5 header.</p>
+</div>
+<div class="section" id="usage">
+<span id="format-content-tabs-usage"></span><h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>A set of content tabs is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">content-tabs::</span></code> directive. This directive should be given a filename-based naming pattern, e.g. <code class="docutils literal notranslate"><span class="pre">style-guide-content-tab-usage</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">content-tabs</span><span class="p">::</span> style-guide-content-tab-usage
+</pre></div>
+</div>
+<p>Each tab is then defined inside <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">content-tabs::</span></code> using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">tab-container::</span> <span class="pre">name</span></code> directive, where <code class="docutils literal notranslate"><span class="pre">name</span></code> is a short string that will appear in the tab and <code class="docutils literal notranslate"><span class="pre">:title:</span> <span class="pre">title-name</span></code> define the string that will appear in the tab itself:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tab-container</span><span class="p">::</span> name1
+   <span class="nc">:title:</span> <span class="nf">name1</span>
+
+   content for tab
+
+<span class="p">..</span> <span class="ow">tab-container</span><span class="p">::</span> name2
+   <span class="nc">:title:</span> <span class="nf">name2</span>
+
+   content for tab
+
+<span class="cp">... etc.</span>
+</pre></div>
+</div>
+<p>When it’s all together, it should be similar to:</p>
+<div class="content-tabs style-guide-content-tab-usage container">
+<div class="tab-content container" id="tab-name1">
+<p class="tab-title">name1</p>
+<p>content for tab1</p>
+</div>
+<div class="tab-content container" id="tab-name2">
+<p class="tab-title">name2</p>
+<p>content for tab2</p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Keep the number of tabs in a content tab group to a small number. If a grouping requires more than 5-6 tabs, consider re-grouping the content. Keeping this to a small number also helps prevent wrapping of content tabs.</p>
+</div>
+</div>
+<div class="section" id="example-ui-tasks">
+<span id="format-content-tabs-example-tasks"></span><h3>Example: UI Tasks<a class="headerlink" href="#example-ui-tasks" title="Permalink to this headline">¶</a></h3>
+<p>The following example shows use cases for a very sophisticated user interface supported by a few exceptionally well-written task-based topics organized as a series of content tabs.</p>
+<p><strong>Example</strong></p>
+<p>This user interface is just amazing. Users can do stuff:</p>
+<div class="content-tabs style-guide-content-tab-evidence container">
+<div class="tab-content container" id="tab-button">
+<p class="tab-title">Click Button</p>
+<p><strong>To click a button</strong></p>
+<ol class="arabic simple">
+<li>Open the application.</li>
+<li>In the top navigation bar, click <strong>BUTTON</strong>.</li>
+<li>From the list, select a list item.</li>
+<li>In the <strong>ITEM</strong> pane, scroll to the bottom, and then click <strong>BUTTON</strong>.</li>
+</ol>
+</div>
+<div class="tab-content container" id="tab-box">
+<p class="tab-title">Check Box</p>
+<p><strong>To check a box</strong></p>
+<ol class="arabic simple">
+<li>Open the application.</li>
+<li>In the top navigation bar, click <strong>BUTTON</strong>.</li>
+<li>From the list, select a list item.</li>
+<li>In the <strong>ITEM</strong> pane, scroll to the bottom, and then select the <strong>CHECKBOX</strong>.</li>
+</ol>
+</div>
+<div class="tab-content container" id="tab-field">
+<p class="tab-title">Type Something</p>
+<p><strong>To type something</strong></p>
+<ol class="arabic simple">
+<li>Open the application.</li>
+<li>In the top navigation bar, click <strong>BUTTON</strong>.</li>
+<li>From the list, select a list item.</li>
+<li>In the <strong>ITEM</strong> pane, scroll to text box, select it, and then start typing.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="example-terms">
+<span id="format-content-tabs-example-terms"></span><h3>Example: Terms<a class="headerlink" href="#example-terms" title="Permalink to this headline">¶</a></h3>
+<p>This example represents an intro near the start of a longer conceptual topic that needs to introduce some important terminology. You’d use a short paragraph (like this one!), and then put each of the terms in a tab below the paragraph. This example also shows how to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to pull in paragraphs from the source glossary file.</p>
+<p><strong>Example</strong></p>
+<p>Blah blah, the following terms are important for this topic:</p>
+<div class="content-tabs style-guide-content-tab-terms container">
+<div class="tab-content container" id="tab-term-a-record">
+<p class="tab-title">A record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-aaaa-record">
+<p class="tab-title">AAAA record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-axfr-record">
+<p class="tab-title">AXFR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-ptr-record">
+<p class="tab-title">PTR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="expandos">
+<span id="format-content-expandos"></span><h2>Expandos<a class="headerlink" href="#expandos" title="Permalink to this headline">¶</a></h2>
+<p>Expandos enable content to be grouped under a title bar. When the title bar is clicked, the content expands under the title bar and is visible to the reader. When a title bar with expanded content is clicked, the content collapses under the title bar and is no longer visible.</p>
+<p>The content appears inside a box to distinguish expanded content from normal content. Use expandos for things like FAQ pages, support and troubleshooting topics, certain tutorials, and to hide certain types of content from the reader until the reader chooses to view it.</p>
+<p>An expando is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">expando::</span></code> directive. Each expando must be assigned a <code class="docutils literal notranslate"><span class="pre">:title:</span></code>, which is the string that appears in the expandable title bar on the page:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">expando</span><span class="p">::</span>
+   <span class="nc">:title:</span> <span class="nf">**This is the title**</span>
+
+   Content goes here, indented correctly, as anywhere else in a rST document.
+</pre></div>
+</div>
+<p>will appear similar to:</p>
+<p class="toggle-header"><strong>This is the title</strong></p>
+<div class="toggle-content container">
+Content goes here, indented correctly, as anywhere else in a rST document.</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may contain <strong>bold</strong> text, <em>italics</em> text, plain text, or a <strong>combination</strong> of <em>styles</em>:</p>
+<p class="toggle-header"><strong>BOLD</strong></p>
+<div class="toggle-content container">
+The title for this expando is <strong>BOLD</strong>.</div>
+<p class="toggle-header"><em>italics</em></p>
+<div class="toggle-content container">
+The title for this expando is <em>italics</em>.</div>
+<p class="toggle-header"><strong>combination</strong> of <em>styles</em></p>
+<div class="toggle-content container">
+The title for this expando has a <strong>combination</strong> of <em>styles</em>.</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may even contain a <a class="reference internal" href="#format-content-fontawesome"><span class="std std-ref">Font Awesome icon</span></a> that has been set up as a token. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">expando</span><span class="p">::</span>
+   <span class="nc">:title:</span> <span class="nf">We like the Font Awesome |fa-expando-checkbox|!</span>
+
+   This title uses the <span class="s">``|fa-expando-checkbox|``</span> token: |fa-expando-checkbox|
+   |fa-expando-checkbox| |fa-expando-checkbox|!
+</pre></div>
+</div>
+<p>will appear similar to:</p>
+<p class="toggle-header">We like the Font Awesome &nbsp; <i class="fas fa-check-square"></i> &nbsp;!</p>
+<div class="toggle-content container">
+This title uses the <code class="docutils literal notranslate"><span class="pre">|fa-expando-checkbox|</span></code> token: &nbsp; <i class="fas fa-check-square"></i> &nbsp; &nbsp; <i class="fas fa-check-square"></i> &nbsp; &nbsp; <i class="fas fa-check-square"></i> &nbsp;!</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Expando titles may not contain tokens.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Don’t use expandos within large reference topics. One of the primary use cases for a large reference topic is to enable the reader to CMD+F, and then search for a string on the page. Content that is inside a hidden expando may not be searchable in this scenario.</p>
+</div>
+<div class="section" id="example-faq">
+<span id="format-content-expando-example-faq"></span><h3>Example: FAQ<a class="headerlink" href="#example-faq" title="Permalink to this headline">¶</a></h3>
+<p>FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions.</p>
+<p class="toggle-header"><strong>How do I set up a Sphinx documentation environment?</strong></p>
+<div class="toggle-content container">
+<p>The following setup instructions assume the following:</p>
+<ul class="simple">
+<li>You are installing on Mac OS</li>
+<li>You are able to run the <cite>pip</cite> command (for non-Sass applications)</li>
+<li>You are able to install Rubygems (for Sass)</li>
+</ul>
+<p>For all other installation scenarios, the steps are similarly easy. Please refer to the linked setup docs for each application for the correct information.</p>
+<p><strong>To set up a theme environment</strong></p>
+<ol class="arabic">
+<li><p class="first"><a class="reference external" href="http://www.sphinx-doc.org/en/stable/install.html">Install Sphinx</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install sphinx
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference external" href="https://sass-lang.com/install">Install Sass</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo gem install sass
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference external" href="https://github.com/tell-k/sphinxjp.themes.revealjs#set-up">Install the RevealJS docutils plugin</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install sphinxjp.themes.revealjs
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference external" href="http://recommonmark.readthedocs.io">Install the Recommonmark docutils-compatibility bridge</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install recommonmark
+</pre></div>
+</div>
+<p>A documentation project that supports Markdown authoring must add the following elements to the <cite>conf.py</cite> file:</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys,</span> <span class="pre">os</span></code> add:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="kn">import</span> <span class="n">CommonMarkParser</span>
+<span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="n">CommonMarkParser</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Change <code class="docutils literal notranslate"><span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">'.rst'</span></code> to <code class="docutils literal notranslate"><span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">['.rst',</span> <span class="pre">'.md']</span></code>.</p>
+<p>At the bottom of the <cite>Options for HTML output</cite> configuration section, add:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">&#39;enable_eval_rst&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+<span class="p">},</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><a class="reference external" href="http://weasyprint.readthedocs.io/en/latest/install.html">Install WeasyPrint</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install weasyprint
+</pre></div>
+</div>
+<p>and then run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">weasyprint</span> <span class="pre">--version</span></code> to verify.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">$USER:admin</span> <span class="pre">/usr/local</span></code>.</p>
+</div>
+</li>
+</ol>
+</div>
+<p class="toggle-header"><strong>How do I submit a pull request via GitHub Desktop?</strong></p>
+<div class="toggle-content container">
+<p>The following steps describe how to create a pull request when using GitHub Desktop:</p>
+<p><strong>To create a pull request via GitHub desktop</strong></p>
+<ol class="arabic">
+<li><p class="first">Open GitHub Desktop and select a repository.</p>
+</li>
+<li><p class="first">From the master branch, ensure that the repository is up to date. Click <strong>Fetch Origin</strong> and then click <strong>Pull Origin</strong>.</p>
+</li>
+<li><p class="first">Select the dropdown next to <strong>Current Branch</strong>, and then choose <strong>New Branch</strong>.</p>
+</li>
+<li><p class="first">In the <strong>Create a Branch</strong> dialog box, assign the branch a unique name, such as <code class="docutils literal notranslate"><span class="pre">user-060718-feedback</span></code>, and then click <strong>Create Branch</strong>.</p>
+</li>
+<li><p class="first">Using your favorite text editor–such as TextMate on a Mac or EditPad Pro on a Windows PC–open the file you want to edit and make your changes.</p>
+</li>
+<li><p class="first">In GitHub Desktop, under <strong>Current Repository</strong> choose the <strong>Changes</strong> tab. This will show the changes you just made.</p>
+</li>
+<li><p class="first">Add short description to the <strong>Summary</strong> box, and optionally add a description. Select all of the files to be commited with this branch.</p>
+</li>
+<li><p class="first">Click <strong>Commit to [name of branch]</strong>.</p>
+</li>
+<li><p class="first">Select the dropdown next to <strong>Current Branch</strong>, choose <strong>Pull Requests</strong>, and then click the <strong>Create a pull request</strong> link.</p>
+</li>
+<li><p class="first">In the <strong>Publish Branch</strong> dialog box, click <strong>Publish Branch</strong>. This will open the GitHub web user interface.</p>
+</li>
+<li><p class="first">On the <strong>Open a pull request</strong> page, add reviewers if necessary. When finished, click <strong>Create pull request</strong>.</p>
+<p>You’re done!</p>
+</li>
+</ol>
+</div>
+<p class="toggle-header"><strong>How do I set up Localhost on a Mac?</strong></p>
+<div class="toggle-content container">
+<p>The <code class="docutils literal notranslate"><span class="pre">markup</span></code> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
+<p>Mac OS machines have built-in localhost abilities that can be enabled.</p>
+<ol class="arabic">
+<li><p class="first">Run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apachectl restart
+</pre></div>
+</div>
+</li>
+<li><p class="first">Open the configuration file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo nano /etc/apache2/httpd.conf
+</pre></div>
+</div>
+<p>Enable PHP 7.1 by removing the <code class="docutils literal notranslate"><span class="pre">#</span></code> from this line:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#LoadModule php7_module libexec/apache2/libphp7.so
+</pre></div>
+</div>
+</li>
+<li><p class="first">Restart Apache.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apachectl restart
+</pre></div>
+</div>
+</li>
+<li><p class="first">Open the configuration file:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo nano /etc/apache2/httpd.conf
+</pre></div>
+</div>
+<p>and then update <code class="docutils literal notranslate"><span class="pre">DocumentRoot</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;Directory</span></code> to have the path to the <code class="docutils literal notranslate"><span class="pre">/output</span></code> directory for the project:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/project/output/&quot;
+  &lt;Directory &quot;/path/to/project/output/&quot;&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">Restart Apache.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apachectl restart
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="example-content-patterns">
+<span id="format-content-expando-example-content-party"></span><h3>Example: Content Patterns<a class="headerlink" href="#example-content-patterns" title="Permalink to this headline">¶</a></h3>
+<p>This example shows various standard content elements–paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms–included under expandos:</p>
+<p class="toggle-header">Glossary terms!</p>
+<div class="toggle-content container">
+<p>This is a test. Can expandos have content tabs?</p>
+<div class="content-tabs style-guide-content-tab-terms container">
+<div class="tab-content container" id="tab-term-a-record">
+<p class="tab-title">A record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-aaaa-record">
+<p class="tab-title">AAAA record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-axfr-record">
+<p class="tab-title">AXFR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content container" id="tab-term-ptr-record">
+<p class="tab-title">PTR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+</div>
+<p>Looks like the answer is: YES.</p>
+</div>
+<p class="toggle-header">Simple procedures</p>
+<div class="toggle-content container">
+<p>This is text. And</p>
+<ol class="arabic">
+<li><p class="first">This</p>
+</li>
+<li><p class="first">Is</p>
+</li>
+<li><p class="first">An</p>
+</li>
+<li><p class="first">Ordered</p>
+</li>
+<li><p class="first">List</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">with_a</span> <span class="o">=</span> <span class="s1">&#39;code sample&#39;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<p class="toggle-header">Grouped procedures</p>
+<div class="toggle-content container">
+<p>This section groups a series of procedures as tabbed content.</p>
+<div class="content-tabs style-guide-content-tab-terms container">
+<div class="tab-content container" id="tab-term-a-record">
+<p class="tab-title">This is</p>
+<p><strong>To do the first step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content container" id="tab-term-aaaa-record">
+<p class="tab-title">a procedure</p>
+<p><strong>To do the second step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content container" id="tab-term-axfr-record">
+<p class="tab-title">with a series</p>
+<p><strong>To do the third step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content container" id="tab-term-ptr-record">
+<p class="tab-title">of steps</p>
+<p><strong>To do the fourth step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="font-awesome">
+<span id="format-content-fontawesome"></span><h2>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h2>
+<p>The docs themes use the <a class="reference external" href="https://fontawesome.com/download">free-for-web Font Awesome library</a> as a local font library, primarily to add some flair to the left-side navigation. It’s possible (though should be done sparingly) to place Font Awesome icons inline within paragraphs, like this: &nbsp; <i class="fas fa-meh"></i> &nbsp;.</p>
+<p>This requires the tokens file to have an entry similar to:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. |fa-meh| raw:: html
+
+    &amp;nbsp; &lt;i class=&quot;fas fa-meh&quot;&gt;&lt;/i&gt; &amp;nbsp;
+</pre></div>
+</div>
+<p>after which <code class="docutils literal notranslate"><span class="pre">|fa-meh|</span></code> used inline in a paragraph results in &nbsp; <i class="fas fa-meh"></i> &nbsp;.</p>
+</div>
+<div class="section" id="header-level-1">
+<span id="format-content-header-h1"></span><h2>Header (Level 1)<a class="headerlink" href="#header-level-1" title="Permalink to this headline">¶</a></h2>
+<p>An H1 header appears in the documentation like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">H1 Headers</span>
+<span class="gh">==================================================</span>
+An H1 header appears in the documentation like this.
+</pre></div>
+</div>
+<p>Which will appear in the documentation like the actual header for this section.</p>
+<div class="section" id="header-level-2">
+<span id="format-content-header-h2"></span><h3>Header (Level 2)<a class="headerlink" href="#header-level-2" title="Permalink to this headline">¶</a></h3>
+<p>An H2 header appears in the documentation like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">H2 Headers</span>
+<span class="gh">--------------------------------------------------</span>
+An H2 header appears in the documentation like this.
+</pre></div>
+</div>
+<p>Which will appear in the documentation like the actual header for this section.</p>
+<div class="section" id="header-level-3">
+<span id="format-content-header-h3"></span><h4>Header (Level 3)<a class="headerlink" href="#header-level-3" title="Permalink to this headline">¶</a></h4>
+<p>An H3 header appears in the documentation like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">H3 Headers</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++</span>
+An H3 header appears in the documentation like this.
+</pre></div>
+</div>
+<p>Which will appear in the documentation like the actual header for this section.</p>
+<div class="section" id="header-level-4">
+<span id="format-content-header-h4"></span><h5>Header (Level 4)<a class="headerlink" href="#header-level-4" title="Permalink to this headline">¶</a></h5>
+<p>An H4 header appears in the documentation like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">H4 Headers</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+An H4 header appears in the documentation like this.
+</pre></div>
+</div>
+<p>Which will appear in the documentation like the actual header for this section.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="header-markup-length">
+<span id="format-content-header-markup-length"></span><h2>Header Markup Length<a class="headerlink" href="#header-markup-length" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx requires the length of the header to be at least the same length as the content string that defines the header.</p>
+<p>Short headers, short title markup. Makes sense!</p>
+<p>That said, in large files, it’s easier to scan the structure of the content when you can actually see where the headers are. That’s why the header markup strings are recommended to be 50 characters long:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Short</span> <span class="n">title</span>
+<span class="o">==================================================</span>
+</pre></div>
+</div>
+<p>This makes it easier to see the structure of the file when scrolling up and down a long topic page. This is pretty much the only reason to use consistent header markup length. Copy, paste, done.</p>
+</div>
+<div class="section" id="images">
+<span id="format-content-images"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>Images may be embedded in the documentation using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> directive. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../../images/busycorp.svg
+   <span class="nc">:width:</span> <span class="nf">600 px</span>
+   <span class="nc">:align:</span> <span class="nf">left</span>
+</pre></div>
+</div>
+<p>with the <code class="docutils literal notranslate"><span class="pre">:width:</span></code> and <code class="docutils literal notranslate"><span class="pre">:align:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">image</span></code> in the block.</p>
+<p>This image will appear in the documentation like this:</p>
+<a class="reference internal image-reference" href="_images/busycorp.svg"><div align="left" class="align-left"><img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="600px" /></div>
+</a>
+<p>Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.</p>
+</div>
+<div class="section" id="includes">
+<span id="format-content-includes"></span><h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>Inclusions are a great way to single-source content. Write it in one place, publish it in many. There are two ways to handle inclusions, though both require using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive.</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#format-content-include-via-file"><span class="std std-ref">via File</span></a></li>
+<li><a class="reference internal" href="#format-content-include-via-snippet"><span class="std std-ref">via Snippet</span></a></li>
+</ol>
+<div class="section" id="via-file">
+<span id="format-content-include-via-file"></span><h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
+<p>Inclusions may be done from standalone files. These standalone files are typically kept as a standalone file located in a dedicated directory within the docs repository, such as <code class="docutils literal notranslate"><span class="pre">/shared/some_file.rst</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> is used to declare the path to that file. At build time, the contents of the included file are built into the location specified by the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive.</p>
+<p>For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">includes</span><span class="p">::</span> ../../includes/terms.rst
+</pre></div>
+</div>
+<p>will pull in the contents of that file right into the location of the directive.</p>
+</div>
+<div class="section" id="via-snippet">
+<span id="format-content-include-via-snippet"></span><h3>via Snippet<a class="headerlink" href="#via-snippet" title="Permalink to this headline">¶</a></h3>
+<p>Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Snippets may not be used within the same file. The “target for that snippet” may not be the same file as the origin. This will cause a rendering issue in the output.</p>
+</div>
+<p>These types of inclusions require two steps:</p>
+<ol class="arabic">
+<li><p class="first">Declare a start and an end for the snippet; this declaration must be unique across the entire documentation repository.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>To help ensure unique snippet identifiers are built in the output, ensure that the snippet identifiers are directly assocaited with the name of the source directory and source file. These identifiers don’t have to be long (though they can be), but they must be unique within a doc set.</p>
+<p class="last">For example, a file locatated at <code class="docutils literal notranslate"><span class="pre">internal_docs/source/tips.rst</span></code> should have snippet identifiers like <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">internal-docs-tips-some-identifier-start</span></code> or <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">internal-docs-tips-some-identifier-end</span></code>.</p>
+</div>
+</li>
+<li><p class="first">Specify the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive, along with the <code class="docutils literal notranslate"><span class="pre">:start-after:</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span></code> attributes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">:start-after:</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span></code> attributes effectively use a unique code comment located in the file defined by the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to know the start and end of the snippet to be included.</p>
+</li>
+</ol>
+<p>For example, a snippet is defined in <code class="docutils literal notranslate"><span class="pre">docs/source/snippet.rst</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is the file named snippet.rst. It has a few paragraphs and a
+reusable snippet.
+
+Paragraph one.
+
+<span class="cp">.. docs-snippet-p2-start</span>
+
+Paragraph two.
+
+<span class="cp">.. docs-snippet-p2-end</span>
+
+Paragraph three.
+</pre></div>
+</div>
+<p>This snippet can be included in other files like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Some content.
+
+<span class="p">..</span> <span class="ow">include</span><span class="p">::</span> ../../docs/source/snippet.rst
+   <span class="nc">:start-after:</span> <span class="nf">.. docs-snippet-p2-start</span>
+   <span class="nc">:end-before:</span> <span class="nf">.. docs-snippet-p2-end</span>
+
+Some more content.
+</pre></div>
+</div>
+<p>This should result in a file that looks similar to:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Some content.
+
+Paragraph two.
+
+Some more content.
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Snippets may be sourced from large file that contain lists. For example, let’s say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.</p>
+<p class="last">In this case, all glossary terms can be created and managed from a single file like <code class="docutils literal notranslate"><span class="pre">shared/terms.rst</span></code> in which the snippet start-end pairs are defined and the glossary terms are managed. Then each <code class="docutils literal notranslate"><span class="pre">glossary.rst</span></code> file across the docs set can use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to pull in the terms it needs.</p>
+</div>
+</div>
+</div>
+<div class="section" id="inline-markup">
+<span id="format-content-inline-markup"></span><h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<p>Use any of these formatting options within paragraphs and lists:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#format-content-inline-markup-bold"><span class="std std-ref">Bold</span></a></li>
+<li><a class="reference internal" href="#format-content-inline-markup-italics"><span class="std std-ref">Italics</span></a></li>
+<li><a class="reference internal" href="#format-content-inline-markup-code"><span class="std std-ref">Code Strings</span></a></li>
+</ul>
+<div class="section" id="bold">
+<span id="format-content-inline-markup-bold"></span><h3>Bold<a class="headerlink" href="#bold" title="Permalink to this headline">¶</a></h3>
+<p>Use two asterisks (<code class="docutils literal notranslate"><span class="pre">**</span></code>) around the word to apply bold formatting: <code class="docutils literal notranslate"><span class="pre">**bold**</span></code></p>
+</div>
+<div class="section" id="italics">
+<span id="format-content-inline-markup-italics"></span><h3>Italics<a class="headerlink" href="#italics" title="Permalink to this headline">¶</a></h3>
+<p>Use a single asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) around the word to apply italics formatting: <code class="docutils literal notranslate"><span class="pre">*italics*</span></code>. For example: <em>this is italicized content</em>.</p>
+</div>
+<div class="section" id="code-strings">
+<span id="format-content-inline-markup-code"></span><h3>Code Strings<a class="headerlink" href="#code-strings" title="Permalink to this headline">¶</a></h3>
+<p>Use two backticks around the code string to apply code block formatting. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">``inline code string``</span>
+</pre></div>
+</div>
+<p>renders as shown above at the start of this list item.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An inline code string should only be used within lists and paragraphs for function names, commands for command-line tools, and so on, and only in a way where the contents of that code string reads normally in a sentence. Use the code-block directive for anything else.</p>
+</div>
+</div>
+</div>
+<div class="section" id="links">
+<span id="format-content-links"></span><h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p>There are three types of links:</p>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#format-content-links-external"><span class="std std-ref">External</span></a></li>
+<li><a class="reference internal" href="#format-content-links-reference"><span class="std std-ref">Reference</span></a></li>
+<li><a class="reference internal" href="#format-content-links-topic"><span class="std std-ref">Topic</span></a></li>
+</ol>
+<div class="section" id="external">
+<span id="format-content-links-external"></span><h3>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h3>
+<p>Ideally, external links should just be the full URL: <a class="reference external" href="http://www.yoursite.com">http://www.yoursite.com</a>, for example.</p>
+<p>In some cases the external URL is too big and/or you want to embed the external link naturally within a sentence:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`some link text here </span><span class="si">&lt;http://www.yoursite.com&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+<p>For example: <a class="reference external" href="http://www.yoursite.com">some link text here</a></p>
+<p>In some cases, Sphinx will throw warnings and errors if there are too many external links in the docs to the same places, so use a double underscore (<code class="docutils literal notranslate"><span class="pre">__</span></code>) at the end of the external link to stop those warnings/errors.</p>
+<p>Linking topics together:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">:ref:</span></code> links to an anchor on a page in the doc set, as long as the anchor is specified correctly immediately above the header for the section to which you want to link. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`format-content-code-block-yaml`</span>
+</pre></div>
+</div>
+<p>will link to the header tagged with:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="cp">.. `_format-content-code-block-yaml`</span>
+</pre></div>
+</div>
+<p>There can be only one header with that name in the entire collection. The link itself resolves to the header string, which is why we want to limit use of this type of linking to only things that resolve exactly, such as function names, commands, settings groups, and so on.</p>
+</div>
+<div class="section" id="reference">
+<span id="format-content-links-reference"></span><h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to link to internal headers across the doc set. First, a pre-requisite: the header to which the link is targeted must have an anchor. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_anchor-name:</span>
+
+<span class="gh">Internal Reference</span>
+<span class="gh">--------------------------------------------------</span>
+There are two ways to link to internal headers across the doc set.
+First, a pre-requisite: the header that is the target of the link
+must be tagged:
+</pre></div>
+</div>
+<p>where the internal reference is the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">_anchor-name:</span></code>. The string “anchor-name” must be unique across the entire doc set, so the required pattern for these is &lt;file-name-header-name&gt;, like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_format-content-code-block-yaml:</span>
+</pre></div>
+</div>
+<p>and then there are two ways to link to that anchor. The first will pull in the header name as the link:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:ref:</span><span class="nv">`format-content-code-block-yaml`</span>
+</pre></div>
+</div>
+<p>and the second will use the string you put there and will not pull in the header name as the link:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This links to some information about using
+<span class="na">:ref:</span><span class="nv">`YAML code blocks &lt;format-content-code-block-yaml&gt;`</span>
+in your documentation.
+</pre></div>
+</div>
+<p>These first example renders like this: <a class="reference internal" href="#format-content-code-block-yaml"><span class="std std-ref">YAML</span></a>. The second example is preferred and looks like the next sentence. This links to some information about using <a class="reference internal" href="#format-content-code-block-yaml"><span class="std std-ref">YAML code blocks</span></a> in your documentation.</p>
+</div>
+<div class="section" id="topic">
+<span id="format-content-links-topic"></span><h3>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to link to internal topics across the doc set. The first will pull in the topic name as the link:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`blocks`</span>
+</pre></div>
+</div>
+<p>and the second will use the string you put there and will not pull in the header name as the link:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This links to some information about using <span class="na">:doc:</span><span class="nv">`blocks &lt;/blocks&gt;`</span>
+to build a pipeline.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="lists">
+<span id="format-content-lists"></span><h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Three types of lists are available:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#format-content-list-definition"><span class="std std-ref">Definition List</span></a></li>
+<li><a class="reference internal" href="#format-content-list-ordered"><span class="std std-ref">Ordered List</span></a></li>
+<li><a class="reference internal" href="#format-content-list-unordered"><span class="std std-ref">Unordered List</span></a></li>
+</ul>
+<div class="section" id="definition-list">
+<span id="format-content-list-definition"></span><h3>Definition List<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h3>
+<p>A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is used to describe settings—such as command line parameters, API arguments, glossary terms, and so on. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gs">**list_item_one**</span>
+   The description must be indented three spaces.
+
+<span class="gs">**list_item_two**</span>
+   The description must be indented three spaces.
+</pre></div>
+</div>
+<p>Which will appear in the documentation like this:</p>
+<dl class="docutils">
+<dt><strong>list_item_one</strong></dt>
+<dd>The description must be indented three spaces.</dd>
+<dt><strong>list_item_two</strong></dt>
+<dd>The description must be indented three spaces.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A definition list may contain a definition list. For example, some configuration settings (already in a definition list) have specific additional settings that must also be in a definition lists. These must be indented and must use the correct amount of white space.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A definition list title may not contain <a class="reference internal" href="#format-content-inline-markup"><span class="std std-ref">inline markup</span></a>.</p>
+</div>
+</div>
+<div class="section" id="ordered-list">
+<span id="format-content-list-ordered"></span><h3>Ordered List<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h3>
+<p>An ordered list has each list item preceded by an <code class="docutils literal notranslate"><span class="pre">#.</span></code> followed by a space. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">#.</span> one
+<span class="m">#.</span> two
+<span class="m">#.</span> three
+</pre></div>
+</div>
+<p>Which will appear in the documentation like this:</p>
+<ol class="arabic simple">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+</div>
+<div class="section" id="unordered-list">
+<span id="format-content-list-unordered"></span><h3>Unordered List<a class="headerlink" href="#unordered-list" title="Permalink to this headline">¶</a></h3>
+<p>An unordered list has each list item preceded by an <code class="docutils literal notranslate"><span class="pre">*</span></code> followed by a space. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="m">*</span> one
+<span class="m">*</span> two
+<span class="m">*</span> three
+</pre></div>
+</div>
+<p>Which will appear in the documentation like this:</p>
+<ul class="simple">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tables">
+<span id="format-content-tables"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<p>Tables are always fun! This theme supports the following table types:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#format-content-table-csv"><span class="std std-ref">CSV tables</span></a></li>
+<li><a class="reference internal" href="#format-content-table-grid"><span class="std std-ref">Grid tables</span></a></li>
+<li><a class="reference internal" href="#format-content-table-list"><span class="std std-ref">List tables</span></a></li>
+<li><a class="reference internal" href="#format-content-table-simple"><span class="std std-ref">Simple tables</span></a></li>
+</ul>
+<p>You can see from the examples below that there are slight differences between how you can set up the tables to get various table structures. Some table types are more fun than others.</p>
+<p>There is no right or wrong way to build a table, as long as the build doesn’t fail and your readers can see all of the information in the table. Therefore, use the table that’s easiest for you. That said, for tables that have a lot of data in them, consider importing that data to a CSV table or use a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.</p>
+<div class="section" id="csv-table">
+<span id="format-content-table-csv"></span><h3>CSV Table<a class="headerlink" href="#csv-table" title="Permalink to this headline">¶</a></h3>
+<p>Tables may be built from a CSV file as long as the CSV file is available to Sphinx at build time.</p>
+<p>Tables built from a CSV file use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">csv-table::</span></code> directive. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span>
+   <span class="nc">:file:</span> <span class="nf">../../misc/test.csv</span>
+   <span class="nc">:widths:</span> <span class="nf">30, 70</span>
+   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+</pre></div>
+</div>
+<p>with the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">csv-table</span></code> in the block. The <code class="docutils literal notranslate"><span class="pre">:file:</span></code> must be the path to a CSV file that is available to Sphinx at build time.</p>
+<p>A CSV file is similar to:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Header1,Header2
+12345,67890
+abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz
+</pre></div>
+</div>
+<p>where the first line in the CSV file is the header row.</p>
+<p>This type of table will appear in the documentation like this:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header1</th>
+<th class="head">Header2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>12345</td>
+<td>67890</td>
+</tr>
+<tr class="row-odd"><td>abcdefghijklmnopqrstuvwxyz</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grid-table">
+<span id="format-content-table-grid"></span><h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
+<p>Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
+</pre></div>
+</div>
+<p>builds as:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list-table">
+<span id="format-content-table-list"></span><h3>List Table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h3>
+<p>A list-table is built using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">list-table::</span></code> directive.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span>
+   <span class="nc">:widths:</span> <span class="nf">200 400</span>
+   <span class="nc">:header-rows:</span> <span class="nf">1</span>
+
+   <span class="m">*</span> - columnName
+     <span class="m">-</span> columnName
+   <span class="m">*</span> - <span class="gs">**item1**</span>
+     <span class="m">-</span> description
+   <span class="m">*</span> - <span class="gs">**item2**</span>
+     <span class="m">-</span> description
+</pre></div>
+</div>
+<p>with the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">list-table</span></code> in the block. The number of rows (identified by the dashes (<code class="docutils literal notranslate"><span class="pre">-</span></code>) must equal the number of integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code>. The integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> also specifies the column width, from left to right.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">columnName</th>
+<th class="head">columnName</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>item1</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>item2</strong></td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simple-table">
+<span id="format-content-table-simple"></span><h3>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h3>
+<p>Simple tables are … simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+</pre></div>
+</div>
+<p>builds as:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="toctree">
+<span id="format-content-toctree"></span><h2>Toctree<a class="headerlink" href="#toctree" title="Permalink to this headline">¶</a></h2>
+<p>A Sphinx project must declare all of the topics that are part of it, which means at least one <cite>toctree</cite> list must be declared.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because the Market theme doesn’t build its left navigation automatically from the header structures in topics and because there’s no Previous/Next linking, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the toctree on the root page for the project (default: <cite>index</cite>) and add to that toctree an alphabetical list of the topics in the collection.</p>
+</div>
+<p>A toctree is similar to:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. Hide the TOC from this file.
+
+.. toctree::
+   :hidden:
+
+   test
+</pre></div>
+</div>
+<p>View the source for this file to see the toctree that is used for this document collection.</p>
+</div>
+<div class="section" id="tokens">
+<span id="format-content-tokens"></span><h2>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h2>
+<p>Tokens are defined in the file <code class="docutils literal notranslate"><span class="pre">names.txt</span></code> located at <code class="docutils literal notranslate"><span class="pre">/tokens</span></code>. Each token is defined similar to:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|company_name|</span> <span class="ow">replace</span><span class="p">::</span> YourCompanyName
+</pre></div>
+</div>
+<p>When used in a sentence, use the <code class="docutils literal notranslate"><span class="pre">|company_name|</span></code> token to replace that with the string that follows <code class="docutils literal notranslate"><span class="pre">replace::</span></code>. For example: MARKUP (is the replacement string for <code class="docutils literal notranslate"><span class="pre">|theme|</span></code>).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Tokens may not be used in the left-side navigation template (<code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code>).</p>
+</div>
+<p>The following example tokens exist at <code class="docutils literal notranslate"><span class="pre">/tokens/names.txt</span></code>:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">|company_name|</span></code> =&gt; YourCompanyName</li>
+<li><code class="docutils literal notranslate"><span class="pre">|theme|</span></code> =&gt; MARKUP</li>
+<li><code class="docutils literal notranslate"><span class="pre">|md|</span></code> =&gt; Markdown</li>
+<li><code class="docutils literal notranslate"><span class="pre">|rst|</span></code> =&gt; reStructuredText</li>
+</ul>
+<p>Use tokens in headers or topic titles carefully. Sphinx will build them correctly in the topic, but anchor references from the left-side navigation will not work unless the anchor reference specifies the token. For example, a token named <code class="docutils literal notranslate"><span class="pre">|abc|</span></code> used for a title must be specified in the left navigation as <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;/path/to/file.html#abc&quot;</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tokens can really slow the build down if there are too many of them. Sphinx will check each file for tokens, and then check the tokens file to look for matches. Every time this happens, a kitten dies. As such, you should keep the tokens file as small as possible.</p>
+</div>
+</div>
+<div class="section" id="topic-titles">
+<span id="format-content-topic-title"></span><h2>Topic Titles<a class="headerlink" href="#topic-titles" title="Permalink to this headline">¶</a></h2>
+<p>An topic title header appears in the documentation like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">==================================================</span>
+<span class="gh">Topic Title</span>
+<span class="gh">==================================================</span>
+</pre></div>
+</div>
+<p>Which will appear in the documentation like the actual topic title for this topic.</p>
+</div>
+<div class="section" id="additional-resources">
+<span id="format-content-additional-resources"></span><h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<p>The following resources may be useful:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developers.google.com/style/">Google Developer Documentation Style Guide</a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="footer" role="contentinfo">
+
+<!--
+-->
+            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
+            </div>
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,2014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>Formatting Guide: Markdown &mdash; HTML Output for PDF</title>
+    <link rel="stylesheet" href="_static/markup.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    './',
+    VERSION:     '',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+//    HAS_SOURCE:  true
+  };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/searchtools.js"></script>
+<script type="text/javascript" src="_static/script.js"></script>
+<script type="text/javascript" src="_static/all.js"></script>
+
+
+    <link rel="top" title="HTML Output for PDF" href="pdf.html" /> 
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+
+
+
+  <nav class="nav-images" role="navigation" data-topbar>
+    <div class="nav-inner">
+        <img id="coverbg" src="_static/cover.png"/>
+    </div>
+<!--
+    <div class="nav-inner">
+        <img id="logo" src="_static/esentire-detect.png"/>
+    </div>
+-->
+  </nav>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <nav class="nav-pdf-title">
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <span>Formatting Guide: Markdown</span>
+        </h1>
+      </div>
+    </div>
+  </nav>
+
+  <br/>
+  <br/>
+
+
+<!--
+  <nav class="nav-footer" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <span>FOOTERFOOTERFOOTER</span>
+        </h1>
+      </div>
+    </div>
+  </nav>
+
+-->
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+
+
+    <div class="document markup-docs">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="formatting-guide-markdown">
+<span id="formatting-guide-markdown"></span><h1>Formatting Guide: Markdown<a class="headerlink" href="#formatting-guide-markdown" title="Permalink to this headline">¶</a></h1>
+<p>This is the style guide for the Markdown as it may be used with the MARKUP theme.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1"><span class="std std-ref">Admonitions</span></a></li>
+<li><a class="reference internal" href="#id2"><span class="std std-ref">Card Walls</span></a></li>
+<li><a class="reference internal" href="#id3"><span class="std std-ref">Code Blocks</span></a></li>
+<li><a class="reference internal" href="#id4"><span class="std std-ref">Content Tabs</span></a></li>
+<li><a class="reference internal" href="#id5"><span class="std std-ref">Expandos</span></a></li>
+<li><a class="reference internal" href="#id6"><span class="std std-ref">Font Awesome</span></a></li>
+<li><a class="reference internal" href="#id7"><span class="std std-ref">Header Levels</span></a></li>
+<li><a class="reference internal" href="#id8"><span class="std std-ref">Header Markup Length</span></a></li>
+<li><a class="reference internal" href="#id9"><span class="std std-ref">Horizontal Rule</span></a></li>
+<li><a class="reference internal" href="#id10"><span class="std std-ref">Images</span></a></li>
+<li><a class="reference internal" href="#id11"><span class="std std-ref">Includes</span></a></li>
+<li><a class="reference internal" href="#id12"><span class="std std-ref">Inline Markup</span></a></li>
+<li><a class="reference internal" href="#id13"><span class="std std-ref">Links</span></a></li>
+<li><a class="reference internal" href="#id14"><span class="std std-ref">Lists</span></a></li>
+<li><a class="reference internal" href="#id15"><span class="std std-ref">Raw HTML</span></a></li>
+<li><a class="reference internal" href="#id16"><span class="std std-ref">Tables</span></a></li>
+<li><a class="reference internal" href="#id17"><span class="std std-ref">Toctree</span></a></li>
+<li><a class="reference internal" href="#id18"><span class="std std-ref">Topic Titles</span></a></li>
+<li><a class="reference internal" href="#id19"><span class="std std-ref">Unsupported</span></a></li>
+<li><a class="reference internal" href="#id20"><span class="std std-ref">Additional Resources</span></a></li>
+</ul>
+<div class="section" id="markdown-for-sphinx">
+<span id="markdown-for-sphinx"></span><h2>Markdown for Sphinx<a class="headerlink" href="#markdown-for-sphinx" title="Permalink to this headline">¶</a></h2>
+<p>Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown <em>and</em> Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.</p>
+<p>To enable the use of Markdown with a Sphinx documentation project, install the Recommonmark plugin, and then adjust your Sphinx project’s configuration file.</p>
+<p>First install Recommonmark:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install commonmark recommonmark</span>
+</pre></div>
+</div>
+<p>In the project’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> files, add the following at the top under <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys,</span> <span class="pre">os</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="kn">import</span> <span class="n">CommonMarkParser</span>
+<span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="n">CommonMarkParser</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and then change:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="s1">&#39;.rst&#39;</span>
+</pre></div>
+</div>
+<p>to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.rst&#39;</span><span class="p">,</span> <span class="s1">&#39;.md&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>At the bottom of the <code class="docutils literal notranslate"><span class="pre">Options</span> <span class="pre">for</span> <span class="pre">HTML</span> <span class="pre">output</span></code> configuration section, add:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">&#39;enable_eval_rst&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+<span class="p">},</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="evaluate-restructuredtext">
+<span id="evaluate-restructuredtext"></span><h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
+<p>Configuring Remarkdown enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code>, which creates a bridge from Markdown that allows standard reStructuredText processing, including the use of directives. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. note:: This is the note directive in a Markdown topic. Naming the code block `eval_rst` allows the contents of that code block to be processed as if it were reStructuredText despite being in a Markdown file. Pretty cool!
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the note directive in a Markdown topic. Naming the code block <cite>eval_rst</cite> allows the contents of that code block to be processed as if it were reStructuredText despite being in a Markdown file. Pretty cool!</p>
+</div>
+</div>
+</div>
+<div class="section" id="admonitions">
+<span id="admonitions"></span><span id="id1"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
+<p>Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.</p>
+<p>You can apply the same admonition styles as reStructuredText by using raw HTML or by using a Sphinx directive.</p>
+<div class="section" id="attention">
+<span id="attention"></span><h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
+<p>Attentions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition attention&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Attention<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the attention built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">The text for the attention built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. attention:: This is the text for the attention built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">This is the text for the attention built from a directive.</p>
+</div>
+</div>
+<div class="section" id="caution">
+<span id="caution"></span><h3>Caution<a class="headerlink" href="#caution" title="Permalink to this headline">¶</a></h3>
+<p>Cautions can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition caution&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Caution<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the caution built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">The text for the caution built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. caution:: This is the text for the caution built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">This is the text for the caution built from a directive.</p>
+</div>
+</div>
+<div class="section" id="custom-admonitions">
+<span id="custom-admonitions"></span><h3>Custom Admonitions<a class="headerlink" href="#custom-admonitions" title="Permalink to this headline">¶</a></h3>
+<p>This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.</p>
+<p><strong>Raw HTML</strong></p>
+<p>A custom admonition may be defined using raw HTML. Change the admonition title to what you want it to say.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition custom&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Custom admonition<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>Contents of custom admonition.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition custom">
+<p class="first admonition-title">Custom admonition</p>
+<p class="last">Contents of custom admonition!</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: none
+
+   .. admonition:: Custom admonition
+
+      Contents of custom admonition!
+```
+</pre></div>
+</div>
+<p>Which will appear in the documentation like this:</p>
+<div class="admonition-custom-admonition admonition">
+<p class="first admonition-title">Custom admonition</p>
+<p class="last">Contents of custom admonition!</p>
+</div>
+</div>
+<div class="section" id="danger">
+<span id="danger"></span><h3>Danger<a class="headerlink" href="#danger" title="Permalink to this headline">¶</a></h3>
+<p>Danger can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition danger&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Danger<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the danger built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">The text for the danger built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. danger:: This is the text for the danger built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">This is the text for the danger built from a directive.</p>
+</div>
+</div>
+<div class="section" id="error">
+<span id="error"></span><h3>Error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p>Error can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition error&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the error built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">The text for the error built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. error:: This is the text for the error built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">This is the text for the error built from a directive.</p>
+</div>
+</div>
+<div class="section" id="hint">
+<span id="hint"></span><h3>Hint<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
+<p>Hints can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition hint&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Hint<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the hint built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">The text for the hint built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. hint:: This is the text for the hint built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">This is the text for the hint built from a directive.</p>
+</div>
+</div>
+<div class="section" id="important">
+<span id="important"></span><h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
+<p>Important can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition important&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Important<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the important built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The text for the important built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. important:: This is the text for the important built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">This is the text for the important built from a directive.</p>
+</div>
+</div>
+<div class="section" id="note">
+<span id="note"></span><h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>Notes can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Note<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the note built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The text for the note built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. note:: This is the text for the note built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is the text for the note built from a directive.</p>
+</div>
+</div>
+<div class="section" id="tip">
+<span id="tip"></span><h3>Tip<a class="headerlink" href="#tip" title="Permalink to this headline">¶</a></h3>
+<p>Tips can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition tip&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Tip<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the tip built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The text for the tip built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. tip:: This is the text for the tip built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This is the text for the tip built from a directive.</p>
+</div>
+</div>
+<div class="section" id="warning">
+<span id="warning"></span><h3>Warning<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h3>
+<p>Warnings can be added via raw HTML in Markdown or via a Sphinx directive.</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the warning built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The text for the warning built from raw HTML.</p>
+</div><p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. warning:: This is the text for the warning built from a directive.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is the text for the warning built from a directive.</p>
+</div>
+</div>
+</div>
+<div class="section" id="card-walls">
+<span id="card-walls"></span><span id="id2"></span><h2>Card Walls<a class="headerlink" href="#card-walls" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Card walls are not supported in PDF formats.</p>
+</div>
+</div>
+<div class="section" id="code-blocks">
+<span id="code-blocks"></span><span id="id3"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<p>For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span></code> directive.</p>
+<p>Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it’s pseudocode, is formatted correctly.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a <cite>.. code-block:: yaml</cite> code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the <cite>none</cite> code block to work around the problem, as it is much more forgiving.</p>
+</div>
+<div class="section" id="line-emphasis">
+<span id="line-emphasis"></span><h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
+<p>Line emphasis with Markdown must be done using a Sphinx directive. This allows individual lines in a code block to be emphasized. The presentation is similar to a yellow highlight in a book. The following example shows how to highlight lines 3 and 5 in a code block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: python
+   :emphasize-lines: 3,5
+   
+   def function(foo):
+     if (some_thing):
+       return bar
+     else:
+       return 0
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+<span class="hll">    <span class="k">return</span> <span class="n">bar</span>
+</span>  <span class="k">else</span><span class="p">:</span>
+<span class="hll">    <span class="k">return</span> <span class="mi">0</span>
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="command-shell">
+<span id="command-shell"></span><h3>Command Shell<a class="headerlink" href="#command-shell" title="Permalink to this headline">¶</a></h3>
+<p>For command shell blocks, assign <code class="docutils literal notranslate"><span class="pre">console</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```console
+$ cr service stop
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cr service stop
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: console
+
+   $ cr service stop
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cr service stop
+</pre></div>
+</div>
+</div>
+<div class="section" id="config-file">
+<span id="config-file"></span><h3>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">¶</a></h3>
+<p>For configuration file blocks that are not in Yaml or JSON (such as <code class="docutils literal notranslate"><span class="pre">spark-defaults.conf</span></code>), assign <code class="docutils literal notranslate"><span class="pre">text</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```text
+spark.setting.hours 1h
+spark.setting.option -Duser.timezone=UTC
+spark.setting.memory 20g
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>spark.setting.hours 1h
+spark.setting.option -Duser.timezone=UTC
+spark.setting.memory 20g
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: text
+
+   spark.setting.hours 1h
+   spark.setting.option -Duser.timezone=UTC
+   spark.setting.memory 20g
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>spark.setting.hours 1h
+spark.setting.option -Duser.timezone=UTC
+spark.setting.memory 20g
+</pre></div>
+</div>
+</div>
+<div class="section" id="css">
+<span id="css"></span><h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
+<p>For CSS code blocks, assign <code class="docutils literal notranslate"><span class="pre">css</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```css
+ul.tab-selector {
+  display: block;
+  list-style-type: none;
+  margin: 10 0 10px;
+  padding: 0;
+  line-height: normal;
+  overflow: auto;
+}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: css
+
+   ul.tab-selector {
+     display: block;
+     list-style-type: none;
+     margin: 10 0 10px;
+     padding: 0;
+     line-height: normal;
+     overflow: auto;
+   }
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="nc">.tab-selector</span> <span class="p">{</span>
+  <span class="nb">display</span><span class="o">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nb">list-style-type</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nb">margin</span><span class="o">:</span> <span class="m">10</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nb">line-height</span><span class="o">:</span> <span class="nb">normal</span><span class="p">;</span>
+  <span class="nb">overflow</span><span class="o">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-table">
+<span id="data-table"></span><h3>Data Table<a class="headerlink" href="#data-table" title="Permalink to this headline">¶</a></h3>
+<p>For data tables, assign <code class="docutils literal notranslate"><span class="pre">sql</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```sql
+--------- ---------
+ column1   column2 
+--------- ---------
+ value     value   
+ value     value   
+ value     value  
+--------- ---------
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">--------- ---------</span>
+ <span class="n">column1</span>   <span class="n">column2</span> 
+<span class="c1">--------- ---------</span>
+ <span class="n">value</span>     <span class="n">value</span>   
+ <span class="n">value</span>     <span class="n">value</span>   
+ <span class="n">value</span>     <span class="n">value</span>  
+<span class="c1">--------- ---------</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: sql
+
+   --------- ---------
+    column1   column2 
+   --------- ---------
+    value     value   
+    value     value   
+    value     value  
+   --------- ---------
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">--------- ---------</span>
+ <span class="n">column1</span>   <span class="n">column2</span> 
+<span class="c1">--------- ---------</span>
+ <span class="n">value</span>     <span class="n">value</span>   
+ <span class="n">value</span>     <span class="n">value</span>   
+ <span class="n">value</span>     <span class="n">value</span>  
+<span class="c1">--------- ---------</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="html">
+<span id="html"></span><h3>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<p>For HTML code blocks, assign <code class="docutils literal notranslate"><span class="pre">html</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```html
+&lt;div class=&quot;admonition warning&quot;&gt;
+  &lt;p class=&quot;first admonition-title&quot;&gt;Warning&lt;/p&gt;
+  &lt;p class=&quot;last&quot;&gt;The text for the warning built from raw HTML.&lt;/p&gt;
+&lt;/div&gt;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the warning built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: html
+
+   &lt;div class=&quot;admonition warning&quot;&gt;
+     &lt;p class=&quot;first admonition-title&quot;&gt;Warning&lt;/p&gt;
+     &lt;p class=&quot;last&quot;&gt;The text for the warning built from raw HTML.&lt;/p&gt;
+   &lt;/div&gt;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition warning&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Warning<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>The text for the warning built from raw HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript">
+<span id="javascript"></span><h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
+<p>For JavaScript code blocks, assign <code class="docutils literal notranslate"><span class="pre">javascript</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```javascript
+$(&#39;div.content-tabs&#39;).each(function() {
+    var tab_sel = $(&#39;&lt;ul /&gt;&#39;, { class: &quot;tab-selector&quot; });
+    var i = 0;
+
+    if ($(this).hasClass(&#39;right-col&#39;)){
+        tab_sel.addClass(&#39;in-right-col&#39;);
+    }
+
+    $(&#39;.tab-content&#39;, this).each(function() {
+        var sel_item = $(&#39;&lt;li /&gt;&#39;, {
+            class: $(this).attr(&#39;id&#39;),
+            text: $(this).find(&#39;.tab-title&#39;).text()
+        });
+        $(this).find(&#39;.tab-title&#39;).remove();
+        if (i++) {
+            $(this).hide();
+        } else {
+            sel_item.addClass(&#39;selected&#39;);
+        }
+        tab_sel.append(sel_item);
+        $(this).addClass(&#39;contenttab&#39;);
+    });
+
+    $(&#39;.tab-content&#39;, this).eq(0).before(contenttab_sel);
+    contenttab_sel = null;
+    i = null;
+});
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.content-tabs&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">tab_sel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="kr">class</span><span class="o">:</span> <span class="s2">&quot;tab-selector&quot;</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;right-col&#39;</span><span class="p">)){</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;in-right-col&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">sel_item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="kr">class</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">sel_item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;selected&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">sel_item</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;contenttab&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="nx">contenttab_sel</span><span class="p">);</span>
+    <span class="nx">contenttab_sel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: javascript
+
+   $(&#39;div.content-tabs&#39;).each(function() {
+       var tab_sel = $(&#39;&lt;ul /&gt;&#39;, { class: &quot;tab-selector&quot; });
+       var i = 0;
+
+       if ($(this).hasClass(&#39;right-col&#39;)){
+           tab_sel.addClass(&#39;in-right-col&#39;);
+       }
+
+       $(&#39;.tab-content&#39;, this).each(function() {
+           var sel_item = $(&#39;&lt;li /&gt;&#39;, {
+               class: $(this).attr(&#39;id&#39;),
+               text: $(this).find(&#39;.tab-title&#39;).text()
+           });
+           $(this).find(&#39;.tab-title&#39;).remove();
+           if (i++) {
+               $(this).hide();
+           } else {
+               sel_item.addClass(&#39;selected&#39;);
+           }
+           tab_sel.append(sel_item);
+           $(this).addClass(&#39;contenttab&#39;);
+       });
+
+       $(&#39;.tab-content&#39;, this).eq(0).before(contenttab_sel);
+       contenttab_sel = null;
+       i = null;
+   });
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.content-tabs&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">tab_sel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="kr">class</span><span class="o">:</span> <span class="s2">&quot;tab-selector&quot;</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;right-col&#39;</span><span class="p">)){</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;in-right-col&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">sel_item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;li /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="kr">class</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">),</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;.tab-title&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">sel_item</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;selected&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">tab_sel</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">sel_item</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;contenttab&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="nx">contenttab_sel</span><span class="p">);</span>
+    <span class="nx">contenttab_sel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<span id="json"></span><h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>For JSON code blocks, assign <code class="docutils literal notranslate"><span class="pre">json</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```json
+{
+  &quot;foo&quot;:
+    [
+      {
+        &quot;one&quot;: &quot;12345&quot;,
+        &quot;two&quot;: &quot;abcde&quot;,
+        &quot;three&quot;: &quot;words&quot;
+      },
+    ]
+}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;foo&quot;</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;two&quot;</span><span class="p">:</span> <span class="s2">&quot;abcde&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;three&quot;</span><span class="p">:</span> <span class="s2">&quot;words&quot;</span>
+      <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: json
+
+   {
+     &quot;foo&quot;:
+       [
+         {
+           &quot;one&quot;: &quot;12345&quot;,
+           &quot;two&quot;: &quot;abcde&quot;,
+           &quot;three&quot;: &quot;words&quot;
+         },
+       ]
+   }
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;foo&quot;</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;two&quot;</span><span class="p">:</span> <span class="s2">&quot;abcde&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;three&quot;</span><span class="p">:</span> <span class="s2">&quot;words&quot;</span>
+      <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json-w-jinja">
+<span id="json-w-jinja"></span><h3>JSON w/Jinja<a class="headerlink" href="#json-w-jinja" title="Permalink to this headline">¶</a></h3>
+<p>For JSON code blocks that also embed Jinja templating, such as the nav-docs.html files that are used to build the documentation site’s left navigation structures, the standard <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">json</span></code> block will not work because the code block is not parsable as JSON. Instead, for code blocks that require a mix of JSON and Jinja templating, use <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">django</span></code> as shown here:</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```django
+{% extends &quot;!nav-docs.html&quot; %}
+{% set some_jinja = &quot;12345&quot; %}
+{% set navItems = [
+  {
+    &quot;title&quot;: &quot;Start Here&quot;,
+    &quot;iconClass&quot;: &quot;fas fa-arrow-alt-circle-right fa-fw&quot;,
+    &quot;subItems&quot;: [
+      {
+        &quot;title&quot;: &quot;Start Here&quot;,
+        &quot;hasSubItems&quot;: false,
+        &quot;url&quot;: &quot;/some_file.html&quot;
+      },
+      {
+        &quot;title&quot;: &quot;FAQ&quot;,
+        &quot;hasSubItems&quot;: false,
+        &quot;url&quot;: &quot;/faq.html&quot;
+      },
+      {
+        &quot;title&quot;: &quot;Additional Resources&quot;,
+        &quot;hasSubItems&quot;: false,
+        &quot;url&quot;: &quot;/resources.html&quot;
+      },
+    ]
+  },
+] -%}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-arrow-alt-circle-right fa-fw&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;FAQ&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/faq.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Additional Resources&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/resources.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: django
+
+   {% extends &quot;!nav-docs.html&quot; %}
+   {% set some_jinja = &quot;12345&quot; %}
+   {% set navItems = [
+     {
+       &quot;title&quot;: &quot;Start Here&quot;,
+       &quot;iconClass&quot;: &quot;fas fa-arrow-alt-circle-right fa-fw&quot;,
+       &quot;subItems&quot;: [
+         {
+           &quot;title&quot;: &quot;Start Here&quot;,
+           &quot;hasSubItems&quot;: false,
+           &quot;url&quot;: &quot;/some_file.html&quot;
+         },
+         {
+           &quot;title&quot;: &quot;FAQ&quot;,
+           &quot;hasSubItems&quot;: false,
+           &quot;url&quot;: &quot;/faq.html&quot;
+         },
+         {
+           &quot;title&quot;: &quot;Additional Resources&quot;,
+           &quot;hasSubItems&quot;: false,
+           &quot;url&quot;: &quot;/resources.html&quot;
+         },
+       ]
+     },
+   ] -%}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-arrow-alt-circle-right fa-fw&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;FAQ&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/faq.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Additional Resources&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/resources.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="admonition-why-django admonition">
+<p class="first admonition-title">Why django?</p>
+<p>Using <cite>django</cite> seems like an odd way to specify a code block that contains both Jinja and JSON.</p>
+<p>Django is a site templating language that is part of the Python world. The Sphinx themes are actually built using a combination of Django, Jinja, JSON, and other stuff. The left-side navigation, in particular, is a mix of JSON structure and Jinja variables.</p>
+<p class="last"><cite>django</cite> identifies the Pygments lexer that parses a code block that contains both Jinja and JSON.</p>
+</div>
+</div>
+<div class="section" id="lua">
+<span id="lua"></span><h3>Lua<a class="headerlink" href="#lua" title="Permalink to this headline">¶</a></h3>
+<p>For Lua code blocks, assign <code class="docutils literal notranslate"><span class="pre">lua</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```lua
+A = class()
+function A:init(x)
+  self.x = x
+end
+function A:test()
+  print(self.x)
+end
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+<span class="k">end</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: lua
+
+   A = class()
+   function A:init(x)
+     self.x = x
+   end
+   function A:test()
+     print(self.x)
+   end
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">class</span><span class="p">()</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">init</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+<span class="k">end</span>
+<span class="k">function</span> <span class="nf">A</span><span class="p">:</span><span class="n">test</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">x</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="none">
+<span id="none"></span><h3>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p>For text that needs to be formatted as if it were a code block, but isn’t actually code, assign <code class="docutils literal notranslate"><span class="pre">none</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```none
+This is a none block. It&#39;s formatted as if it were code, 
+but isn&#39;t actually code.
+
+Can include code-like things:
+
+function_foo()
+  it_does: something
+end
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a none block. It&#39;s formatted as if it were code, 
+but isn&#39;t actually code.
+
+Can include code-like things:
+
+function_foo()
+  it_does: something
+end
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: none
+
+   This is a none block. It&#39;s formatted as if it were code, 
+   but isn&#39;t actually code.
+
+   Can include code-like things:
+
+   function_foo()
+     it_does: something
+   end
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a none block. It&#39;s formatted as if it were code, 
+but isn&#39;t actually code.
+
+Can include code-like things:
+
+function_foo()
+  it_does: something
+end
+</pre></div>
+</div>
+</div>
+<div class="section" id="python">
+<span id="python"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>For Python code blocks, assign <code class="docutils literal notranslate"><span class="pre">python</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+def function(foo):
+  if (some_thing):
+    return bar
+  else:
+return 0
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">bar</span>
+  <span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: python
+
+   def function(foo):
+     if (some_thing):
+       return bar
+     else:
+   return 0
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">bar</span>
+  <span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rest-api">
+<span id="rest-api"></span><h3>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h3>
+<p>For REST API code blocks, assign <code class="docutils literal notranslate"><span class="pre">rest</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```rest
+https://www.yoursite.com/endpoint/{some_endpoint}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>https://www.yoursite.com/endpoint/{some_endpoint}
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: rest
+
+   https://www.yoursite.com/endpoint/{some_endpoint}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>https://www.yoursite.com/endpoint/{some_endpoint}
+</pre></div>
+</div>
+</div>
+<div class="section" id="restructuredtext">
+<span id="restructuredtext"></span><h3>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h3>
+<p>For reStructuredText code blocks, assign <code class="docutils literal notranslate"><span class="pre">rst</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```rst
+This is some *reStructured* **Text** formatting.
+
+.. code-block:: none
+
+   that has some(code);
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is some <span class="ge">*reStructured*</span> <span class="gs">**Text**</span> formatting.
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> none
+
+   that has some(code);
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: rst
+
+   This is some *reStructured* **Text** formatting.
+
+   .. code-block:: none
+
+      that has some(code);
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is some <span class="ge">*reStructured*</span> <span class="gs">**Text**</span> formatting.
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> none
+
+   that has some(code);
+</pre></div>
+</div>
+</div>
+<div class="section" id="ruby">
+<span id="ruby"></span><h3>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h3>
+<p>For Ruby code blocks, assign <code class="docutils literal notranslate"><span class="pre">ruby</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```ruby
+items = [ &#39;one&#39;, 1, &#39;two&#39;, 2.0 ]
+for it in items
+  print it, &quot; &quot;
+end
+
+print &quot;\n&quot;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span> <span class="o">]</span>
+<span class="k">for</span> <span class="n">it</span> <span class="k">in</span> <span class="n">items</span>
+  <span class="nb">print</span> <span class="n">it</span><span class="p">,</span> <span class="s2">&quot; &quot;</span>
+<span class="k">end</span>
+
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: ruby
+
+   items = [ &#39;one&#39;, 1, &#39;two&#39;, 2.0 ]
+   for it in items
+     print it, &quot; &quot;
+   end
+
+   print &quot;\n&quot;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span> <span class="o">]</span>
+<span class="k">for</span> <span class="n">it</span> <span class="k">in</span> <span class="n">items</span>
+  <span class="nb">print</span> <span class="n">it</span><span class="p">,</span> <span class="s2">&quot; &quot;</span>
+<span class="k">end</span>
+
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scala">
+<span id="scala"></span><h3>Scala<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h3>
+<p>For Scala code blocks, assign <code class="docutils literal notranslate"><span class="pre">scala</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```scala
+object HelloWorld {
+  def main(args: Array[String]) {
+    println(&quot;Hello, world!&quot;)
+  }
+}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: scala
+
+   object HelloWorld {
+     def main(args: Array[String]) {
+       println(&quot;Hello, world!&quot;)
+     }
+   }
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shell-script">
+<span id="shell-script"></span><h3>Shell Script<a class="headerlink" href="#shell-script" title="Permalink to this headline">¶</a></h3>
+<p>For shell script blocks, assign <code class="docutils literal notranslate"><span class="pre">bash</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```bash
+ # The product and version information.
+ readonly MARKUP_PRODUCT=&quot;markup-app&quot;
+ readonly MARKUP_VERSION=&quot;1.23.45-6&quot;
+ readonly MARKUP_RELEASE_DATE=&quot;2019-04-01&quot;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1"># The product and version information.</span>
+ <span class="nb">readonly</span> <span class="nv">MARKUP_PRODUCT</span><span class="o">=</span><span class="s2">&quot;markup-app&quot;</span>
+ <span class="nb">readonly</span> <span class="nv">MARKUP_VERSION</span><span class="o">=</span><span class="s2">&quot;1.23.45-6&quot;</span>
+ <span class="nb">readonly</span> <span class="nv">MARKUP_RELEASE_DATE</span><span class="o">=</span><span class="s2">&quot;2019-04-01&quot;</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: bash
+
+   # The product and version information.
+   readonly MARKUP_PRODUCT=&quot;markup-app&quot;
+   readonly MARKUP_VERSION=&quot;1.23.45-6&quot;
+   readonly MARKUP_RELEASE_DATE=&quot;2019-04-01&quot;
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># The product and version information.</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_PRODUCT</span><span class="o">=</span><span class="s2">&quot;markup-app&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_VERSION</span><span class="o">=</span><span class="s2">&quot;1.23.45-6&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_RELEASE_DATE</span><span class="o">=</span><span class="s2">&quot;2019-04-01&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yaml">
+<span id="yaml"></span><h3>YAML<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h3>
+<p>For YAML code blocks, assign <code class="docutils literal notranslate"><span class="pre">yaml</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```yaml
+config:
+  - some_setting: &#39;value&#39;
+  - some_other_setting: 12345
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: yaml
+
+   config:
+     - some_setting: &#39;value&#39;
+     - some_other_setting: 12345
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="yaml-w-jinja">
+<span id="yaml-w-jinja"></span><h3>YAML w/Jinja<a class="headerlink" href="#yaml-w-jinja" title="Permalink to this headline">¶</a></h3>
+<p>For YAML code blocks that also embed Jinja templating, the standard <code class="docutils literal notranslate"><span class="pre">yaml</span></code> code block will not work because the code block is not parsable as YAML. Instead, these code blocks must be able to parse a mix of YAML and Jinja templating.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">salt</span></code> as the name of the code block.</p>
+<p><strong>Fenced code block</strong></p>
+<p>A fenced code block like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```salt
+{%- set some_jinja = &quot;12345&quot; %}
+
+config:
+  - some_setting: &#39;value&#39;
+  - some_other_setting: {{ some_jinja }}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
+
+<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<p><strong>Sphinx directive</strong></p>
+<p>A code block specified by a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. code-block:: salt
+
+   {%- set some_jinja = &quot;12345&quot; %}
+
+   config:
+     - some_setting: &#39;value&#39;
+     - some_other_setting: {{ some_jinja }}
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
+
+<span class="l l-Scalar l-Scalar-Plain">config</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_setting</span><span class="p p-Indicator">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">some_other_setting</span><span class="p p-Indicator">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+<div class="admonition-why-salt admonition">
+<p class="first admonition-title">Why salt?</p>
+<p>Using <cite>salt</cite> seems like an odd way to specify a code block that contains both Jinja and YAML.</p>
+<p>SaltStack is a configuration management tool similar to Ansible, Chef, and Puppet. SaltStack uses a mix of Jinja and YAML to define system states that are to be configured and maintained. The <cite>salt</cite> lexer exists in Pygments originally because of how SaltStack defines system states, their use of Python and documentation built via Sphinx, and the need for a lexer that could parse a file with code samples that contain both Jinja and YAML.</p>
+<p class="last"><cite>salt</cite> identifies the Pygments lexer that parses a code block that contains both Jinja and YAML.</p>
+</div>
+</div>
+</div>
+<div class="section" id="content-tabs">
+<span id="content-tabs"></span><span id="id4"></span><h2>Content Tabs<a class="headerlink" href="#content-tabs" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Content tabs are not supported in PDF formats.</p>
+</div>
+</div>
+<div class="section" id="expandos">
+<span id="expandos"></span><span id="id5"></span><h2>Expandos<a class="headerlink" href="#expandos" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Expandos are not supported in PDF formats.</p>
+</div>
+</div>
+<div class="section" id="font-awesome">
+<span id="font-awesome"></span><span id="id6"></span><h2>Font Awesome<a class="headerlink" href="#font-awesome" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Font awesome icons may not be visible in PDF formats.</p>
+</div>
+</div>
+<div class="section" id="header-levels">
+<span id="header-levels"></span><span id="id7"></span><h2>Header Levels<a class="headerlink" href="#header-levels" title="Permalink to this headline">¶</a></h2>
+<p>There are four recommended header levels in the documentation: H1, H2, H3, H4, plus the topic title. This ensures that the right-side navigation structure does not get too deep.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Topic Title</span>
+<span class="c1">## H1</span>
+<span class="c1">### H2</span>
+<span class="c1">#### H3</span>
+<span class="c1">##### H4</span>
+</pre></div>
+</div>
+<p>The CSS for the MARKUP theme understands headers below H4; however it’s recommended to not use headers below that level for some (aesthetic) reasons:</p>
+<ol class="simple">
+<li>The left-side navigation supports 3 levels.</li>
+<li>The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side columm.</li>
+</ol>
+<p>As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as <strong>Bold</strong> so that it doesn’t appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via <strong>Bold</strong> cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels. Or use H5 headers: it’s up to you!</p>
+</div>
+<div class="section" id="header-markup-length">
+<span id="header-markup-length"></span><span id="id8"></span><h2>Header Markup Length<a class="headerlink" href="#header-markup-length" title="Permalink to this headline">¶</a></h2>
+<p>The length of header markup strings is recommended to not be greater than ~40 characters. This helps prevent wrapping of headers in the right-side navigation, helps protect scannable whitespace and structure, and generally leads to a nicer presentation of topic structure. You, of course, can make your headers as long as you want if you don’t mind such things.</p>
+</div>
+<div class="section" id="horizontal-rule">
+<span id="horizontal-rule"></span><span id="id9"></span><h2>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h2>
+<p>A horizontal rule is defined using three dashes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+</pre></div>
+</div>
+<p>and builds as:</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="images">
+<span id="images"></span><span id="id10"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>Images may be added to the documentation, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![description](/path/to/image)
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![Campaign Stages](../../images/busycorp.png)
+</pre></div>
+</div>
+<p>builds as:</p>
+<p><img alt="Campaign Stages" src="_images/busycorp.png" /></p>
+<p>The size and position of the image not is easily specified using Markdown. If you need to be more specific about image size and placement, use either raw HTML or use the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive in Sphinx:</p>
+<p><strong>Raw HTML</strong></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;_images/busycorp.png&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;_images/busycorp.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200px&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p><img alt="_images/busycorp.png" src="_images/busycorp.png" width="200px" /></p>
+<p><strong>Sphinx directive</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. image:: ../../images/busycorp.png
+   :width: 200 px
+   :align: left
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<a class="reference internal image-reference" href="_images/busycorp.png"><img alt="_images/busycorp.png" class="align-left" src="_images/busycorp.png" style="width: 200px;" /></a>
+</div>
+<div class="section" id="includes">
+<span id="includes"></span><span id="id11"></span><h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>The Sphinx <code class="docutils literal notranslate"><span class="pre">includes</span></code> directive allows you to specify a path to a file (<code class="docutils literal notranslate"><span class="pre">.md</span></code>, <code class="docutils literal notranslate"><span class="pre">.rst</span></code>, or <code class="docutils literal notranslate"><span class="pre">.txt</span></code>), and then include that text at that place in the documentation. As long as the content in the shared topic is valid, it can be included anywhere across the entire documentation set.</p>
+<div class="section" id="via-file">
+<span id="via-file"></span><h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
+<p>Inclusions may be done from standalone files. These standalone files are typically kept as a standalone file located in a dedicated directory within the docs repository, such as <code class="docutils literal notranslate"><span class="pre">/shared/some_file.rst</span></code>.</p>
+<p><strong>From Markdown</strong></p>
+<p>A valid path to a Markdown file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. include:: ../../shared/shared.md
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<p><em>This file is authored in Markdown (.md), intentionally italicized, and located in the `/shared` directory.</em></p>
+<p><strong>From reStructuredText</strong></p>
+<p>A valid path to a reStructuredText file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. include:: ../../shared/shared.rst
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<p><em>This file is authored in RestructuredText (.rst), intentionally italicized, and located in the `/shared` directory.</em></p>
+<p><strong>From text</strong></p>
+<p>A valid path to a text file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. include:: ../../shared/shared.txt
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<p><em>This file is authored in simple text (.txt), intentionally italicized, and located in the `/shared` directory.</em></p>
+</div>
+<div class="section" id="via-snippet">
+<span id="via-snippet"></span><h3>via Snippet<a class="headerlink" href="#via-snippet" title="Permalink to this headline">¶</a></h3>
+<p>Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Snippets may not be used within the same file. The “target for that snippet” may not be the same file as the origin. This will cause a rendering issue in the output.</p>
+</div>
+<p>These types of inclusions require two steps:</p>
+<ol>
+<li><p class="first">Declare a start and an end for the snippet; this declaration must be unique across the entire documentation repository.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p>To help ensure unique snippet identifiers are built in the output, ensure that the snippet identifiers are directly assocaited with the name of the source directory and source file. These identifiers don’t have to be long (though they can be), but they must be unique within a doc set.</p>
+<p class="last">For example, a file locatated at <cite>internal_docs/source/tips.rst</cite> should have snippet identifiers like <cite>.. internal-docs-tips-some-identifier-start</cite> or <cite>.. internal-docs-tips-some-identifier-end</cite>.</p>
+</div>
+</li>
+<li><p class="first">Specify the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive, along with the <code class="docutils literal notranslate"><span class="pre">:start-after:</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span></code> attributes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">:start-after:</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span></code> attributes effectively use a unique code comment located in the file defined by the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to know the start and end of the snippet to be included.</p>
+</li>
+</ol>
+<p><strong>From terms.rst as a snippet</strong></p>
+<p>A valid path to the terms.rst file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. include:: ../../shared/terms.rst
+   :start-after: .. term-test-start
+   :end-before: .. term-test-end
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Snippets may be sourced from large file that contain lists. For example, let’s say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.</p>
+<p class="last">In this case, all glossary terms can be created and managed from a single file like <cite>shared/terms.rst</cite> in which the snippet start-end pairs are defined and the glossary terms are managed. Then each <cite>glossary.rst</cite> file across the docs set can use the <cite>.. includes::</cite> directive to pull in the terms it needs.</p>
+</div>
+</div>
+</div>
+<div class="section" id="inline-markup">
+<span id="inline-markup"></span><span id="id12"></span><h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<p>Paragraphs behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs and lists:</p>
+<div class="section" id="bold">
+<span id="bold"></span><h3>Bold<a class="headerlink" href="#bold" title="Permalink to this headline">¶</a></h3>
+<p>Use two asterisks (<code class="docutils literal notranslate"><span class="pre">**</span></code>) around the word to apply bold formatting: <code class="docutils literal notranslate"><span class="pre">**bold**</span></code>.</p>
+</div>
+<div class="section" id="italics">
+<span id="italics"></span><h3>Italics<a class="headerlink" href="#italics" title="Permalink to this headline">¶</a></h3>
+<p>Use a single asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) around the word to apply italics formatting: <code class="docutils literal notranslate"><span class="pre">*italics*</span></code>.</p>
+</div>
+<div class="section" id="code-strings">
+<span id="code-strings"></span><h3>Code Strings<a class="headerlink" href="#code-strings" title="Permalink to this headline">¶</a></h3>
+<p>Use a single backtick at the beginning and end of a code string to apply inline code block formatting: <code class="docutils literal notranslate"><span class="pre">example</span></code>.</p>
+</div>
+</div>
+<div class="section" id="links">
+<span id="links"></span><span id="id13"></span><h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p>There are three types of links:</p>
+<ul class="simple">
+<li>External</li>
+<li>Reference</li>
+<li>Topic</li>
+</ul>
+<div class="section" id="external">
+<span id="external"></span><h3>External<a class="headerlink" href="#external" title="Permalink to this headline">¶</a></h3>
+<p>External links are links to pages outside of the documentation project entirely or to other pages in other documentation projects that are published as part of the MARKUP theme.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="p">[</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3schools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">w3css</span><span class="o">/</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3schools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">w3css</span><span class="o">/</span><span class="p">)</span>
+
+<span class="n">External</span> <span class="n">links</span> <span class="n">can</span> <span class="n">also</span> <span class="n">be</span> <span class="p">[</span><span class="n">placed</span> <span class="n">inline</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3schools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">w3css</span><span class="o">/</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://www.w3schools.com/w3css/">https://www.w3schools.com/w3css/</a></li>
+</ul>
+</div>
+<p>External links can also be <a class="reference external" href="https://www.w3schools.com/w3css/">inline</a>.</p>
+</div>
+<div class="section" id="reference">
+<span id="reference"></span><h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<p>Internal reference links point to specific headers within the same documentation project. There are two ways to define internal reference links:</p>
+<ul class="simple">
+<li>Using Sphinx processing, which allows linking to any header in the documentation project that has a defined reference</li>
+<li>Markdown links style, but only for headers that exist on the same page</li>
+</ul>
+<p><strong>Sphinx Internal References</strong></p>
+<p>Using internal reference links requires Sphinx processing for both defining the reference for the header and also the link to it.</p>
+<p>A reference is defined like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. _additional-resources:
+```
+</pre></div>
+</div>
+<p>(See the raw source for the “Additional Resources” section at the bottom of this page for additional details.)</p>
+<p>The link to that reference may be defined to automatically pick up the header for that section, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+:ref:`additional-resources`
+```
+</pre></div>
+</div>
+<p>or may be defined with an arbitrary string, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+:ref:`Read more about authoring in Markdown, building using Sphinx, and
+      publishing with the MARKUP theme! &lt;additional-resources&gt;`
+```
+</pre></div>
+</div>
+<p>These links build as:</p>
+<p><a class="reference internal" href="#id20"><span class="std std-ref">Additional Resources</span></a></p>
+<p>and:</p>
+<p><a class="reference internal" href="#id20"><span class="std std-ref">Read more about authoring in Markdown, building using Sphinx, and publishing with the MARKUP theme!</span></a></p>
+<p><strong>Markdown Internal References</strong></p>
+<p>Markdown allows internal reference linking only to a header that is on the same page. For example: <a class="reference external" href="#links">Links</a>. An internal reference link that is defined like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">additional</span> <span class="n">references</span><span class="p">](</span><span class="c1">#additional-resources)</span>
+</pre></div>
+</div>
+<p>builds like this: <a class="reference external" href="#additional-resources">additional references</a>.</p>
+</div>
+<div class="section" id="topic">
+<span id="topic"></span><h3>Topic<a class="headerlink" href="#topic" title="Permalink to this headline">¶</a></h3>
+<p>Internal topic links point to other topics in the same documentation project. There are two ways to define internal topic links:</p>
+<ul class="simple">
+<li>Using Sphinx processing (not recommended)</li>
+<li>Markdown links style (recommended)</li>
+</ul>
+<p><strong>Sphinx Internal References</strong></p>
+<p>A link to another topic within the same documentation project may be done using Sphinx processing.</p>
+<p>The link to that topic may be defined to automatically pick up the topic title:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+:doc:`test`
+```
+</pre></div>
+</div>
+<p>or may be defined with an arbitrary string, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+:doc:`This link is just a test! &lt;test&gt;`
+```
+</pre></div>
+</div>
+<p>These links build as:</p>
+<p><a class="reference internal" href="test.html"><span class="doc">&lt;no title&gt;</span></a></p>
+<p>and:</p>
+<p><a class="reference internal" href="test.html"><span class="doc">This link is just a test!</span></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The test topic `test.md` does not have a title! This is why the link just above this note shows as `<no title>`.</p>
+</div><p><strong>Markdown Internal Topic</strong></p>
+<p>Markdown defines internal topic links to other topics within the same documentation project. An internal topic link that is defined like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Test</span><span class="p">](</span><span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>builds like this: <a class="reference external" href="test">Test</a>.</p>
+</div>
+</div>
+<div class="section" id="lists">
+<span id="lists"></span><span id="id14"></span><h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Three types of lists are available: ordered, unordered, and definition.</p>
+<div class="section" id="definition-list">
+<span id="definition-list"></span><h3>Definition List<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h3>
+<p>A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is useful for describing command line parameters, API arguments, and glossary terms. This type of list requires additional Sphinx processing and isn’t native to Markdown. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+**list-item-one**
+   The description must be indented three spaces.
+
+**list-item-two**
+   The description must be indented three spaces.
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<dl class="docutils">
+<dt><strong>list-item-one</strong></dt>
+<dd>The description must be indented three spaces.</dd>
+<dt><strong>list-item-two</strong></dt>
+<dd>The description must be indented three spaces.</dd>
+</dl>
+</div>
+<div class="section" id="ordered-list">
+<span id="ordered-list"></span><h3>Ordered List<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h3>
+<p>An ordered list has each list item preceded by an <code class="docutils literal notranslate"><span class="pre">1.</span></code> followed by a space. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">one</span>
+<span class="mf">1.</span> <span class="n">two</span>
+<span class="mf">1.</span> <span class="n">three</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<ol class="simple">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+</div>
+<div class="section" id="unordered-list">
+<span id="unordered-list"></span><h3>Unordered List<a class="headerlink" href="#unordered-list" title="Permalink to this headline">¶</a></h3>
+<p>An unordered list has each list item preceded by a single dash (<code class="docutils literal notranslate"><span class="pre">*</span></code>) followed by a space. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">one</span>
+<span class="o">*</span> <span class="n">two</span>
+<span class="o">*</span> <span class="n">three</span>
+</pre></div>
+</div>
+<p>builds as:</p>
+<ul class="simple">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+</div>
+</div>
+<div class="section" id="raw-html">
+<span id="raw-html"></span><span id="id15"></span><h2>Raw HTML<a class="headerlink" href="#raw-html" title="Permalink to this headline">¶</a></h2>
+<p>If you need to force Markdown to do something in a way similar to reStructuredText, take a look at the rendered output from pages built reStructuredText and identify the specific block of HTML code that does what you need to do. Copy that, add it as raw HTML in Markdown. As long as it fits within the structure of the page at the point where it’s inserted and as long as any scripts or CSS can process it, then it should be fine.</p>
+<p>The following raw HTML:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;first admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p class=&quot;last&quot;&gt;This is a note, inserted as raw HTML.&lt;/p&gt;
+&lt;/div&gt;
+```
+</pre></div>
+</div>
+<p>builds as</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a note, inserted as raw HTML.</p>
+</div></div>
+<div class="section" id="tables">
+<span id="tables"></span><span id="id16"></span><h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<p>Tables are always fun! There are three types of tables:</p>
+<ol class="simple">
+<li>Grid tables</li>
+<li>List tables</li>
+<li>Simple tables</li>
+</ol>
+<div class="section" id="grid-table">
+<span id="grid-table"></span><h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
+<p>Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
++------------+------------+-----------+ 
+| Header 1   | Header 2   | Header 3  | 
++============+============+===========+ 
+| body row 1 | column 2   | column 3  | 
++------------+------------+-----------+ 
+| body row 2 | Cells may span columns.| 
++------------+------------+-----------+ 
+| body row 3 | Cells may  | - Cells   | 
++------------+ span rows. | - contain | 
+| body row 4 |            | - blocks. | 
++------------+------------+-----------+
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list-table">
+<span id="list-table"></span><h3>List Table<a class="headerlink" href="#list-table" title="Permalink to this headline">¶</a></h3>
+<p>List tables are built like a list and must use the Sphinx <code class="docutils literal notranslate"><span class="pre">list-table</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. list-table::
+   :widths: 200 400
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **item1**
+     - description
+   * - **item2**
+     - description
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">columnName</th>
+<th class="head">columnName</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>item1</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>item2</strong></td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simple-table">
+<span id="simple-table"></span><h3>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h3>
+<p>Simple tables are simple. They focus mostly on the vertical layout. Like grid tables, they are easy when they are small.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+=====  =====  ====== 
+   Inputs     Output 
+------------  ------ 
+  A      B    A or B 
+=====  =====  ====== 
+False  False  False 
+True   False  True 
+False  True   True 
+True   True   True 
+=====  =====  ======
+```
+</pre></div>
+</div>
+<p>builds as:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="toctree">
+<span id="toctree"></span><span id="id17"></span><h2>Toctree<a class="headerlink" href="#toctree" title="Permalink to this headline">¶</a></h2>
+<p>A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list must be declared.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because the MARKUP theme doesn’t build its left navigation automatically from the header structures in topics, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the toctree on the root page for the project (default: <cite>index</cite>) and add to that toctree all of the topics in the collection.</p>
+</div>
+<p>This is done using a Sphinx directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. Hide the TOC from this file.
+
+.. toctree::
+   :hidden:
+
+   test
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="topic-titles">
+<span id="topic-titles"></span><span id="id18"></span><h2>Topic Titles<a class="headerlink" href="#topic-titles" title="Permalink to this headline">¶</a></h2>
+<p>Topic titles are coded with a <code class="docutils literal notranslate"><span class="pre">#</span></code>, which makes them seem like an H1, but really it’s a topic title!</p>
+</div>
+<div class="section" id="unsupported">
+<span id="unsupported"></span><span id="id19"></span><h2>Unsupported<a class="headerlink" href="#unsupported" title="Permalink to this headline">¶</a></h2>
+<p>The following formatting cannot be done with this theme:</p>
+<ul class="simple">
+<li>Blockquotes. The MARKUP theme does not support blockquotes out-of-the-box. See the “Blockquotes” section in the Tutorials topic for the steps necessary to add CSS support for blockquotes.</li>
+<li>Tokens</li>
+<li>Card walls, content tabs, and expandos in PDF output</li>
+</ul>
+</div>
+<div class="section" id="additional-resources">
+<span id="additional-resources"></span><span id="id20"></span><h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<p>The following resources may be useful:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developers.google.com/style/">Google Developer Documentation Style Guide</a></li>
+<li><a class="reference external" href="http://spec.commonmark.org/">CommonMark Specification</a></li>
+<li><a class="reference external" href="https://github.com/rtfd/recommonmark">Recommonmark plugin</a> and <a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/">Recommonmark documentation</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+  </body>
+</html>

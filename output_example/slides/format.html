@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title align="left">About Slide Decks &mdash; Presentations</title>
+
+    
+
+    
+<link rel="stylesheet" href="_static/css/reveal.min.css">
+<link rel="stylesheet" href="_static/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="_static/lib/css/zenburn.css">
+<link rel="stylesheet" href="_static/revealjs.css" type="text/css" />
+      <link rel="shortcut icon" href="_static/favicon.ico"/>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if(window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '_static/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="_static/lib/js/html5shiv.js"></script>
+    <![endif]-->
+      <script type="text/javascript" src="_static/language_data.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides" align="left">
+        
+  <div class="section" id="about-slide-decks">
+<h1>About Slide Decks<a class="headerlink" href="#about-slide-decks" title="Permalink to this headline">¶</a></h1>
+<section>
+<section class="first" data-transition="none">
+<img alt="_images/slides_splash.png" class="first" src="_images/slides_splash.png" />
+<aside class="last notes">
+This is a speaker note. Hit “s” on the keyboard to view them.</aside>
+</section>
+<section data-transition="none">
+<h2>What are slide decks?</h2>
+Slide decks built from with the MARKUP theme can build simple reveal.js presentations using the same authoring and build processes as the MARKUP theme</section>
+<section data-transition="none">
+<h2>Some Slide Basics</h2>
+<p class="first">Slides use a very small subset of the Sphinx directive set:</p>
+<ul class="simple">
+<li>Paragraphs, including <strong>bold</strong>, <em>italics</em>, and <code class="docutils literal notranslate"><span class="pre">code</span></code></li>
+<li>Ordered and unordered lists</li>
+<li>Fully qualified URLs</li>
+<li>Code blocks, both by themselves and within ordered lists</li>
+<li>Images</li>
+<li>Notes, warnings</li>
+<li>Fragments, which load part of a slide page</li>
+<li>Speaker notes via <code class="docutils literal notranslate"><span class="pre">rv_note</span></code> directive. Hit the “s” key on the keyboard to view speaker notes.</li>
+</ul>
+<aside class="last notes">
+This is a speaker note.</aside>
+</section>
+<section data-transition="none">
+<h2>Code Blocks</h2>
+<p class="first">Code blocks use the same directives as the reStructuredText pages. For example, YAML code:</p>
+<div class="last highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">section</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">property</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
+  <span class="l l-Scalar l-Scalar-Plain">etc...</span>
+</pre></div>
+</div>
+</section>
+<section data-transition="none">
+<h2>Fragments</h2>
+<p class="fragment first">Hit the next arrow…</p>
+<div class="fragment last"><ol>
+<li class="fragment"><code>fragment one</code></li>
+<li class="fragment"><em>fragment two</em></li>
+<li class="fragment"><strong>fragment three</strong></li>
+</ol></div></section>
+<section data-transition="none">
+<h2>Images</h2>
+<img alt="_images/busycorp.png" class="first last" src="_images/busycorp.png" />
+</section>
+<section data-transition="none">
+<h2>Notes and Warnings</h2>
+<p class="first">Notes and warnings! (Use sparingly.)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a note.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is a warning!</p>
+</div>
+<p class="last">(You can use other admonitions as well.)</p>
+</section>
+<section data-transition="none">
+<h2>Speaker Notes</h2>
+<p class="first">You can use speaker notes by adding the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rv_note::</span></code> directive to a slide.</p>
+<p>Hit “s” on your keyboard to view the notes.</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>.. rv_note::
+
+   This is a speaker note. You found this from your keyboard&#39;s &quot;s&quot; key.
+</pre></div>
+</div>
+</section>
+<section data-transition="none">
+<h2>What else?</h2>
+Slide decks can use most of the formatting available to reStructuredText authoring. The CSS for the slide decks is more sparse than the CSS for the Markdown and reStructuredText pages, but still shares a similar look and feel.</section>
+<section data-transition="none">
+<h2>Questions?</h2>
+<img alt="_images/slides_questions.png" class="first last" src="_images/slides_questions.png" />
+</section>
+<section class="last" data-transition="none">
+<h2>Let's Hack!</h2>
+<img alt="_images/slides_hack.png" class="first last" src="_images/slides_hack.png" />
+</section>
+</section>
+</div>
+
+
+      </div>
+    </div>
+    
+<script src="_static/js/jquery.min.js"></script>
+<script src="_static/lib/js/head.min.js"></script>
+<script src="_static/js/reveal.min.js"></script>
+<script src="_static/js/fontawesome-all.js"></script>
+    <script>
+
+      // change DOM for reveal.js
+      $("div.section h1").remove();
+      var content = $("div.section").html();
+      $("div.section").remove();
+      $("div.slides").html(content);
+
+      Reveal.initialize({
+        width: 1440,
+        height: 900,
+
+        margin: 0.3,
+
+        minScale: 0.2,
+        maxScale: 1.0,
+
+        controls: true,
+        progress: false,
+        history: false,
+        center: false,
+
+        keyboard : true,
+        overview: false,
+        touch: true,
+        loop: false,
+        rtl: false,
+        fragments: true,
+
+        autoSlide: 0,
+        mouseWheel: false,
+        rollingLinks: true,
+        previewLinks: false,
+
+        transitionSpeed: "default",
+        backgroundTransition: "default",
+
+        slideNumber: false,
+        embedded: false,
+        autoSlideStoppable: true,
+        hideAddressBar: true,
+
+        parallaxBackgroundImage: "",
+        parallaxBackgroundSize: "",
+
+        focusBodyOnPageVisiblityChange: true,
+
+        viewDistance: 3,
+
+        theme: Reveal.getQueryHash().theme || "slides",
+        transition: Reveal.getQueryHash().transition || "default",
+
+        
+
+        dependencies: [
+           { src: '_static/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+           { src: '_static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '_static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: '_static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+           { src: '_static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+           { src: '_static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+    
+  </body>
+</html>

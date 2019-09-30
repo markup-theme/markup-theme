@@ -1,0 +1,25 @@
+.. true tokens for feature/product names
+
+.. |company_name| replace:: YourCompanyName
+.. |theme| replace:: MARKUP
+.. |md| replace:: Markdown
+.. |rst| replace:: reStructuredText
+
+
+
+
+.. |fa-index-diamond| raw:: html
+
+   <i class="fas fa-diamond fa-xs" data-fa-transform="shrink-5"></i>
+
+.. |fa-meh| raw:: html
+
+    &nbsp; <i class="fas fa-meh"></i> &nbsp;
+
+.. |fa-trademark| raw:: html
+
+   <i class="far fa-registered"></i>
+
+.. |fa-expando-checkbox| raw:: html
+
+    &nbsp; <i class="fas fa-check-square"></i> &nbsp;
