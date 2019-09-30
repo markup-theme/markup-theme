@@ -1,0 +1,177 @@
+/* Colors
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+
+/*
+ * #102542 << YANKEES BLUE
+ * #cdd7d6 << LIGHT GRAY
+ * #f15156 << SUNSET ORANGE
+ * #b3a394 << TUSCANY
+ * #ffffff << WHITE
+ */
+
+/*
+ * 1e2022 << dark >>
+ * 52616b << medium >>
+ * c9d6df << light >>
+ * f0f5f9 << lightest >>
+ */
+
+ /*
+  * The following are the primary colors. Use red and yellow sparingly.
+  */
+
+ $markup-red: #f06543;
+ $markup-dark-blue: #1e2022;
+ $markup-blue-grey: #c9d6df;
+ $markup-bright-yellow: #f9e784;
+
+
+ /*
+  * The following defines the shades of the grey palette, based on #8a8a8d.
+  */
+ 
+ $markup-lightest-grey: #e8e8e8;
+ $markup-lighter-grey: #d1d1d1;
+ $markup-light-grey: #bababa;
+ $markup-normal-grey: #a3a3a3;
+ $markup-more-grey: #8c8c8c;
+ $markup-dark-grey: #747474;
+ $markup-darker-grey: #686868;
+ $markup-darkest-grey: #4a4a4a;
+ $markup-almost-black: #0f0f0f;
+
+
+ /*
+  * The following map directly to Sphinx directives; the colors are the tetrad colors for #5d9acd, #378f6e, and #e68c42;
+  */
+
+ $markup-code-block-none: #93a1aa;
+ $markup-code-block-bash: #345995;
+ $markup-code-block-console: #216869;
+ $markup-code-block-css: #51344d;
+ $markup-code-block-django: #8fcb9b;
+ $markup-code-block-html: #eac435;
+ $markup-code-block-javascript: #e01a4f;
+ $markup-code-block-json: #c3acc3;
+ $markup-code-block-lua: #48639c;
+ $markup-code-block-markdown: #ccc7b9;
+ $markup-code-block-python: #464655;
+ $markup-code-block-rest: #be7c4d;
+ $markup-code-block-rst: #ccc7b9;
+ $markup-code-block-ruby: #f15946;
+ $markup-code-block-sass: #eee5e9;
+ $markup-code-block-scala: #ff99c8;
+ $markup-code-block-salt: #3e8989;
+ $markup-code-block-sql: #84acce;
+ $markup-code-block-text: #49a078;
+ $markup-code-block-yaml: #94958b;
+
+ /*
+  * The highlight for code blocks is in the file pygments.css
+  * at .highlight .hll { background-color: #f9e784 }
+  */
+
+ $markup-code-block-future1: #c8d59f;
+ $markup-code-block-future2: #fe5f55;
+ $markup-code-block-future3: #594157;
+ $markup-code-block-future4: #d7d9b1;
+ $markup-code-block-future5: #92dce5;
+ $markup-code-block-future6: #b8c5d6;
+ $markup-code-block-future7: #eaf9d9;
+ $markup-code-block-future8: #daddd8;
+ $markup-code-block-future9: #b9d6f2;
+ $markup-code-block-future10: #626868;
+
+
+
+ /*
+  * The following map directly to Sphinx admonitions; the colors are variations of the tetrad colors for #a93439
+  */
+
+ $markup-attention: #92140c;
+ $markup-caution: #e63462;
+ $markup-custom: #52616b;
+ $markup-danger: #9e2b25;
+ $markup-error: #726da8;
+ $markup-hint: #3d5a6c;
+ $markup-important: #48639c;
+ $markup-note: #52616b;
+ $markup-tip: #317b22;
+ $markup-warning: #f06543;
+
+ /*
+  * The following map directly to navigation and default styles; these are a mix of primary, secondary, and tetrad colors
+  */
+
+ $markup-companyname: #1e2022;
+ $markup-header: #1e2022;
+ $markup-header-underline: #1e2022;
+ $markup-left-nav-active: #0353a4;
+ $markup-nav-rollover: #98999a;
+ $markup-link: #1e2022;
+ $markup-none: #ffffff;
+ $markup-rollover: #c9d6df;
+ $markup-subheaders: #ffffff;
+ $markup-table-border: #1e2022;
+ $markup-sidebar: #1e2022;
+ $markup-white: #ffffff;
+
+ $markup-lightbluegrey-background: #fbfcfd;
+ $markup-bluegrey-background: #edf2f5;
+
+
+ /*
+  * The following defines the content tabs directive.
+  */
+
+ $markup-tab-selected-color: #0353a4;
+ $markup-tab-selected-text: #ffffff;
+ $markup-tab-normal-color: #f0f5f9;
+ $markup-tab-normal-text: #1e2022;
+ $markup-tab-hover: #c9d6df;
+ $markup-tab-box-shadow: #d7dad7;
+
+
+ /*
+  * The following defines the expando directive.
+  */
+
+ $markup-expando-border-color: #d7dad7;
+ $markup-expando-text-color: #1e2022;
+ $markup-expando-openclose-color: #1e2022;
+
+
+
+
+
+/* Fonts
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $primary: 
+ *   Open Sans is used for the top global navigation and the grey nav on the left,
+ *   as well as the global flyout menu on the right (hidden by default).
+ *
+ * $secondary: 
+ *   Open Sans is used for the body text and the Table of Contents on the right.
+ * 
+ * $mono: 
+ *   Consolas is used for monospace text. 
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900);
+$primary: "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$secondary: "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$mono: "Consolas", "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+
+
+/* Icons
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Use Font Awesome CDN for iconography; if this, then update javascripts.html to not use the all.js
+ * Read more about use here: https://fortawesome.github.io/Font-Awesome/icons/
+ * 
+ * This theme does not use the Font Awesome CDN. Instead, the file is loaded via Javascript and is
+ * part of the /static collection of files built into the theme. This ensures that icons are local
+ * to the documentation set and that users who do not have an Internet connection will still see them.
+ * 
+ * @import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);
+ */

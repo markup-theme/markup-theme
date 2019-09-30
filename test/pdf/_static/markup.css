@@ -1,0 +1,1096 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+/* Colors
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+
+
+
+ /*
+  * The following are the primary colors. Use red and yellow sparingly.
+  */
+/*
+ * The following defines the shades of the grey palette, based on #8a8a8d.
+ */
+/*
+ * The following map directly to Sphinx directives; the colors are the tetrad colors for #5d9acd, #378f6e, and #e68c42;
+ */
+/*
+ * The highlight for code blocks is in the file pygments.css
+ * at .highlight .hll { background-color: #f9e784 }
+ */
+/*
+ * The following map directly to Sphinx admonitions; the colors are variations of the tetrad colors for #a93439
+ */
+/*
+ * The following map directly to navigation and default styles; these are a mix of primary, secondary, and tetrad colors
+ */
+/*
+ * The following defines the content tabs directive.
+ */
+/*
+ * The following defines the expando directive.
+ */
+/* Fonts
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * $primary: 
+ *   Montserrat is used for the top global navigation and the grey nav on the left,
+ *   as well as the global flyout menu on the right (hidden by default).
+ *
+ * $secondary: 
+ *   Helvetica Neue is used for the body text and the Table of Contents on the right.
+ * 
+ * $mono: 
+ *   Consolas is used for monospace text. 
+ */
+/*
+ * markup.css_t
+ * ~~~~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- MARKUP theme.
+ *
+ * :copyright: None.
+ * :license: This work is licensed under a Creative Commons 
+ * Attribution 3.0 Unported License
+ *
+ */
+/* -- the background color for the whole page and the borders for the topic page, header, footer */
+/* -- IMPORTANT -- color is the color of the text on div.document; must be $markup-dark-blue or $markup-dark-grey */
+body {
+  font-family: "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.00em;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  width: 100%;
+  min-width: 270px; }
+
+/* -- the actual topic background, must be white all the time no exceptions */
+div.document {
+  background-color: #ffffff;
+  text-align: left;
+  background-image: url(contents.png);
+  background-repeat: repeat-x;
+  max-width: 1295px;
+  margin: 0 auto;
+  width: 100%; }
+
+/* -- the vertical line between the topics and the TOC */
+div.bodywrapper {
+  margin: 0; }
+  div.bodywrapper img {
+    max-width: 100%; }
+
+div.documentwrapper {
+  background: #ffffff; }
+
+div.body-wrap {
+  width: 100%;
+  background: white; }
+
+div.body {
+  margin: 0;
+  padding: 0.5em 20px 20px 20px; }
+
+div.related {
+  font-size: 1em; }
+
+/* -- the borders above and below the header and footer */
+div.related ul {
+  background-color: #ffffff;
+  height: 1.8em;
+  border-top: 4px solid #bababa;
+  border-bottom: 4px solid #bababa; }
+
+div.related ul li {
+  margin: 0;
+  padding: 0;
+  height: 2em;
+  float: left; }
+
+div.related ul li.right {
+  float: right;
+  margin-right: 5px; }
+
+/* -- the Sphinx-specific navigation text located just below the header and just above the footer */
+div.related ul li a {
+  margin: 0;
+  padding: 0 8px 0 5px;
+  line-height: 1.75em;
+  color: #1e2022; }
+
+div.related ul li a:hover {
+  color: #f06543; }
+
+div.sphinxsidebarwrapper {
+  padding: 0; }
+
+div.sphinxsidebarwrapper > ul > li {
+  list-style-type: none; }
+
+div.sphinxsidebar {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0.5em 15px 15px 0;
+  width: 250px;
+  float: right;
+  font-size: 1em;
+  text-align: left; }
+
+/* -- The colors of the TOC sidebar; h3 is headers, a is the text links and both should be same color */
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+  margin: 1em 0 0.5em 0;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.2em 0 0.1em 0.6em;
+  color: #ffffff;
+  background-color: #1e2022; }
+
+div.sphinxsidebar a {
+  padding: 0.1em 0 0.1em 0.5em;
+  text-decoration: none; }
+
+div.sphinxsidebar h3 a {
+  color: #ffffff; }
+
+div.sphinxsidebar ul {
+  padding-left: 1.5em;
+  padding: 0;
+  line-height: 130%;
+  list-style-type: disc; }
+
+div.sphinxsidebar ul ul {
+  margin-left: 22px; }
+
+/*
+ * footer
+ * ~~~~~~~~~~~~~~~~~~~
+ *
+ */
+div.footer {
+  background-color: #ffffff;
+  color: #1e2022;
+  padding: 3px 20px 3px 20px;
+  clear: both;
+  font-size: 0.8em;
+  text-align: left; }
+
+/* -- body styles ----------------------------------------------------------- */
+p {
+  margin: 0.5em 0 0.5em 0; }
+
+.documentwrapper img {
+  margin: 0.5em; }
+
+.literal {
+  font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.015em;
+  line-height: 100%;
+  padding: 0.0em;
+  border: 0px solid #ffffff;
+  border-bottom: 1px solid #747474;
+  background-color: white;
+  margin: 0 0 0.5em 0; }
+
+a {
+  color: #1e2022;
+  text-decoration: none; }
+
+a:hover {
+  color: #c9d6df;
+  text-decoration: none; }
+
+dd {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  margin-left: 30px; }
+
+dl {
+  margin-bottom: 15px; }
+
+strong {
+  font-weight: bold; }
+
+div.body a {
+  text-decoration: underline; }
+
+div.body a:hover {
+  color: #c9d6df;
+  text-decoration: underline; }
+
+em {
+  font-style: italic; }
+
+/* -- header styles, basically colored underlines and decreasing border bottom sizes */
+/* -- h1 is the topic title and the rest of the headers go from there */
+.markup-docs h1 {
+  padding: 0.4em 0 0.15em 0;
+  font-size: 1.85em;
+  font-weight: bold;
+  color: #1e2022;
+  border-bottom: solid 5px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+.markup-docs h2 {
+  padding: 0.9em 0 0.15em 0;
+  font-size: 1.65em;
+  font-weight: bold;
+  color: #1e2022;
+  border-bottom: solid 4px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+.markup-docs h3 {
+  padding: 0.9em 0 0.15em 0;
+  font-size: 1.45em;
+  font-weight: bold;
+  color: #1e2022;
+  border-bottom: solid 0.5px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+.markup-docs h4 {
+  padding: 0.7em 0 0.15em 0;
+  font-size: 1.25em;
+  color: #1e2022;
+  border-bottom: solid 0px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+.markup-docs h5 {
+  padding: 0.7em 0 0.15em 0;
+  font-size: 1.15em;
+  color: #1e2022;
+  border-bottom: solid 0px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+div.body h1 a, div.body h2 a, div.body h3 a, div.body h4 a, div.body h5 a, div.body h6 a {
+  color: #ffffff !important; }
+
+h1 a.anchor, h2 a.anchor, h3 a.anchor, h4 a.anchor, h5 a.anchor, h6 a.anchor {
+  display: none;
+  margin: 0 0 0 0.3em;
+  padding: 0 0.2em 0 0.2em;
+  color: #ffffff !important; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor,
+h5:hover a.anchor, h6:hover a.anchor {
+  display: inline; }
+
+h1 a.anchor:hover, h2 a.anchor:hover, h3 a.anchor:hover, h4 a.anchor:hover,
+h5 a.anchor:hover, h6 a.anchor:hover {
+  color: #ffffff;
+  background-color: #ffffff; }
+
+a.headerlink {
+  color: #ffffff !important;
+  font-size: 1em;
+  margin-left: 6px;
+  padding: 0 4px 0 4px;
+  text-decoration: none !important; }
+
+a.headerlink:hover {
+  background-color: #ffffff;
+  color: #ffffff !important; }
+
+cite, code, tt {
+  font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 0.95em;
+  letter-spacing: 0.01em; }
+
+tt {
+  background-color: #bababa;
+  border-bottom: 1px solid #bababa;
+  color: #1e2022; }
+
+tt.descname, tt.descclassname, tt.xref {
+  border: 0; }
+
+hr {
+  border: 1px solid #1e2022;
+  margin: 2em; }
+
+a tt {
+  border: 0;
+  color: #f06543; }
+
+a tt:hover {
+  color: #f06543; }
+
+pre {
+  font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 0.95em;
+  letter-spacing: 0.015em;
+  line-height: 110%;
+  padding: .5em;
+  border: 2px solid #e8e8e8;
+  border-color: #e8e8e8;
+  background-color: #ffffff;
+  margin: 0 0 0.5em 0; }
+
+pre a {
+  color: inherit;
+  text-decoration: underline; }
+
+td.linenos pre {
+  padding: 0.5em 0; }
+
+/* -- has $markup-red for testing */
+div.quotebar {
+  background-color: #f06543;
+  max-width: 250px;
+  float: right;
+  padding: 2px 7px;
+  border: 1px solid #f06543; }
+
+/* -- has $markup-red for testing */
+div.topic {
+  background-color: #f06543; }
+
+/* -- table styles */
+div.section {
+  max-width: 100%; }
+
+table.docutils {
+  max-width: 100%;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 4px;
+  margin: 0 0 0.5em 0; }
+
+table.docutils tr {
+  max-width: 100%; }
+
+table.docutils th {
+  padding: 1px 8px 1px 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #1e2022;
+  background-color: #1e2022;
+  color: #ffffff;
+  font-weight: bold;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+table.docutils td {
+  padding: 5px 5px 5px 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px dashed #1e2022; }
+
+table.docutils td, table.docutils th {
+  white-space: normal; }
+
+table.field-list td, table.field-list th {
+  border: 0 !important; }
+
+table.footnote td, table.footnote th {
+  border: 0 !important; }
+
+th {
+  text-align: left;
+  padding-right: 5px; }
+
+table.citation {
+  border-left: solid 1px #bababa;
+  margin-left: 1px; }
+
+table.citation td {
+  border-bottom: none; }
+
+div.admonition, div.note, div.warning, div.hint, div.tip, div.attention, div.caution, div.danger, div.error, div.important {
+  font-size: 1em;
+  margin: 1em 0 1em 0;
+  border: 2px solid #52616b;
+  background-color: #ffffff;
+  padding: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+div.admonition p, div.note p, div.warning p, div.hint p, div.tip p, div.attention p, div.caution p, div.danger p, div.error p, div.important p {
+  margin: 0.5em 1em 0.5em 1em;
+  padding: 0; }
+
+div.admonition pre, div.note pre, div.warning pre, div.hint pre, div.tip pre, div.attention pre, div.caution pre, div.danger pre, div.error pre, div.important pre {
+  margin: 0.4em 1em 0.4em 1em; }
+
+div.admonition p.admonition-title,
+div.note p.admonition-title,
+div.warning p.admonition-title,
+div.hint p.admonition-title,
+div.tip p.admonition-title,
+div.attention p.admonition-title,
+div.caution p.admonition-title,
+div.danger p.admonition-title,
+div.error p.admonition-title,
+div.important p.admonition-title {
+  margin: 0;
+  padding: 0.1em 0 0.1em 0.5em;
+  color: #ffffff;
+  border-bottom: 0px solid #ffffff;
+  font-weight: bold;
+  background-color: #52616b; }
+
+div.note {
+  border: 2px solid #52616b; }
+
+div.note p.admonition-title {
+  color: #ffffff;
+  background-color: #52616b;
+  border-bottom-color: #52616b; }
+
+div.admonition ul, div.admonition ol,
+div.note ul, div.note ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.warning {
+  border: 2px solid #f06543; }
+
+div.warning p.admonition-title {
+  color: #ffffff;
+  background-color: #f06543;
+  border-bottom-color: #f06543; }
+
+div.admonition ul, div.admonition ol,
+div.warning ul, div.warning ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.hint {
+  border: 2px solid #3d5a6c; }
+
+div.hint p.admonition-title {
+  color: #ffffff;
+  background-color: #3d5a6c;
+  border-bottom-color: #3d5a6c; }
+
+div.admonition ul, div.admonition ol,
+div.hint ul, div.hint ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.tip {
+  border: 2px solid #317b22; }
+
+div.tip p.admonition-title {
+  color: #ffffff;
+  background-color: #317b22;
+  border-bottom-color: #317b22; }
+
+div.admonition ul, div.admonition ol,
+div.tip ul, div.tip ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.attention {
+  border: 2px solid #92140c; }
+
+div.attention p.admonition-title {
+  color: #ffffff;
+  background-color: #92140c;
+  border-bottom-color: #92140c; }
+
+div.admonition ul, div.admonition ol,
+div.attention ul, div.attention ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.caution {
+  border: 2px solid #e63462; }
+
+div.caution p.admonition-title {
+  color: #ffffff;
+  background-color: #e63462;
+  border-bottom-color: #e63462; }
+
+div.admonition ul, div.admonition ol,
+div.caution ul, div.caution ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.danger {
+  border: 2px solid #9e2b25; }
+
+div.danger p.admonition-title {
+  color: #ffffff;
+  background-color: #9e2b25;
+  border-bottom-color: #9e2b25; }
+
+div.admonition ul, div.admonition ol,
+div.danger ul, div.danger ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.error {
+  border: 2px solid #726da8; }
+
+div.error p.admonition-title {
+  color: #ffffff;
+  background-color: #726da8;
+  border-bottom-color: #726da8; }
+
+div.admonition ul, div.admonition ol,
+div.error ul, div.error ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.important {
+  border: 2px solid #48639c; }
+
+div.important p.admonition-title {
+  color: #ffffff;
+  background-color: #48639c;
+  border-bottom-color: #48639c; }
+
+div.admonition ul, div.admonition ol,
+div.important ul, div.important ol {
+  margin: 0.1em 0.5em 0.5em 3em;
+  padding: 0; }
+
+div.versioninfo {
+  margin: 1em 0 0 0;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  padding: 8px;
+  line-height: 1.3em;
+  font-size: 0.9em; }
+
+.viewcode-back {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+
+/* -- styles for code-block differentiation by color, top-right title */
+div.viewcode-block:target {
+  background-color: #ffffff;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8; }
+
+.scrollable.container {
+  width: auto; }
+
+.scrollable {
+  position: relative; }
+
+.highlight {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-none,
+.highlight-bash,
+.highlight-console,
+.highlight-css,
+.highlight-django,
+.highlight-html,
+.highlight-javascript,
+.highlight-json,
+.highlight-lua,
+.highlight-markdown,
+.highlight-python,
+.highlight-rest,
+.highlight-rst,
+.highlight-ruby,
+.highlight-salt,
+.highlight-sass,
+.highlight-scala,
+.highlight-sql,
+.highlight-text,
+.highlight-yaml {
+  position: relative;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-none:before,
+.highlight-bash:before,
+.highlight-console:before,
+.highlight-css:before,
+.highlight-django:before,
+.highlight-html:before,
+.highlight-javascript:before,
+.highlight-json:before,
+.highlight-lua:before,
+.highlight-markdown:before,
+.highlight-python:before,
+.highlight-rest:before,
+.highlight-rst:before,
+.highlight-ruby:before,
+.highlight-salt:before,
+.highlight-sass:before,
+.highlight-scala:before,
+.highlight-sql:before,
+.highlight-text:before,
+.highlight-yaml:before {
+  z-index: 10;
+  font-size: 9px;
+  padding: .2em .6em;
+  text-align: center;
+  color: #747474;
+  display: block;
+  position: absolute;
+  border-radius: 0 3px 0 3px;
+  border-top: none;
+  border-right: none;
+  background-color: #e8e8e8;
+  top: 0;
+  right: 0;
+  height: 12px; }
+
+.highlight-none pre {
+  border-color: #d1d1d1;
+  background-color: #ffffff;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-bash:before {
+  content: 'SCRIPT';
+  background-color: #345995;
+  color: #ffffff; }
+
+.highlight-bash pre {
+  border-color: #345995;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-console:before {
+  content: 'SHELL';
+  background-color: #216869;
+  color: #ffffff; }
+
+.highlight-console pre {
+  border-color: #216869;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-css:before {
+  content: 'CSS';
+  background-color: #51344d;
+  color: #ffffff; }
+
+.highlight-css pre {
+  border-color: #51344d;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-django:before {
+  content: 'JSON w/JINJA';
+  background-color: #8fcb9b;
+  color: #ffffff; }
+
+.highlight-django pre {
+  border-color: #8fcb9b;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-html:before {
+  content: 'HTML';
+  background-color: #eac435;
+  color: #ffffff; }
+
+.highlight-html pre {
+  border-color: #eac435;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-javascript:before {
+  content: 'JAVASCRIPT';
+  background-color: #e01a4f;
+  color: #ffffff; }
+
+.highlight-javascript pre {
+  border-color: #e01a4f;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-json:before {
+  content: 'JSON';
+  background-color: #c3acc3;
+  color: #ffffff; }
+
+.highlight-json pre {
+  border-color: #c3acc3;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-lua:before {
+  content: 'LUA';
+  background-color: #48639c;
+  color: #ffffff; }
+
+.highlight-lua pre {
+  border-color: #48639c;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-markdown:before {
+  content: 'MARKDOWN';
+  background-color: #ccc7b9;
+  color: #ffffff; }
+
+.highlight-markdown pre {
+  border-color: #ccc7b9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-python:before {
+  content: 'PYTHON';
+  background-color: #464655;
+  color: #ffffff; }
+
+.highlight-python pre {
+  border-color: #464655;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-rest:before {
+  content: 'REST API';
+  background-color: #be7c4d;
+  color: #ffffff; }
+
+.highlight-rest pre {
+  border-color: #be7c4d;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-rst:before {
+  content: 'RST';
+  background-color: #ccc7b9;
+  color: #ffffff; }
+
+.highlight-rst pre {
+  border-color: #ccc7b9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-ruby:before {
+  content: 'RUBY';
+  background-color: #f15946;
+  color: #ffffff; }
+
+.highlight-ruby pre {
+  border-color: #f15946;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-salt:before {
+  content: 'YAML w/JINJA';
+  background-color: #3e8989;
+  color: #ffffff; }
+
+.highlight-salt pre {
+  border-color: #3e8989;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-sass:before {
+  content: 'SASS';
+  background-color: #eee5e9;
+  color: #ffffff; }
+
+.highlight-sass pre {
+  border-color: #eee5e9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-scala:before {
+  content: 'SCALA';
+  background-color: #ff99c8;
+  color: #ffffff; }
+
+.highlight-scala pre {
+  border-color: #ff99c8;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-sql:before {
+  content: 'TABLE';
+  background-color: #84acce;
+  color: #ffffff; }
+
+.highlight-sql pre {
+  border-color: #84acce;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-text:before {
+  content: 'CONFIG FILE';
+  background-color: #49a078;
+  color: #ffffff; }
+
+.highlight-text pre {
+  border-color: #49a078;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.highlight-yaml:before {
+  content: 'YAML';
+  background-color: #94958b;
+  color: #ffffff; }
+
+.highlight-yaml pre {
+  border-color: #94958b;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+/* The following group of styles controls the content tab directive */
+/* They are updated to fail gracefully for PDF output by a) printing */
+/* down the page, b) applying tab title as an H5 header, and c) keeping */
+/* the rest of the behavior mostly as-is. */
+ul.contenttab-selector {
+  display: block;
+  list-style-type: none;
+  margin: 10px 0px 10px;
+  padding: 0;
+  line-height: normal;
+  overflow: auto; }
+
+ul.contenttab-selector li {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 5px 5px 0px 0px;
+  padding: 5px 10px;
+  float: left;
+  background-color: #f0f5f9;
+  color: #1e2022;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+ul.contenttab-selector li:hover {
+  background-color: #c9d6df;
+  color: #ffffff; }
+
+ul.contenttab-selector li.selected {
+  background-color: #0353a4;
+  color: #ffffff; }
+
+ul.contenttab-selector li.selected:hover {
+  background-color: #c9d6df;
+  color: #ffffff; }
+
+.content-tabs {
+  margin: 20px 0 20px 0; }
+
+.tab-content {
+  clear: none;
+  padding: 10px 10px 3px 10px;
+  /*    box-shadow: 1px 3px 12px $markup-tab-box-shadow; */ }
+
+.tab-title {
+  padding: 0.7em 0 0.15em 0;
+  font-size: 1.15em;
+  color: #1e2022;
+  border-bottom: solid 0px #1e2022;
+  margin: 0 0 0.5em 0; }
+
+/* The previous group of styles controls the content tab directive */
+/* The following group of styles controls the expando directive */
+/* The following group of styles controls the expando directive */
+.toggle-tab {
+  margin-bottom: 40px; }
+
+.toggle-header {
+  display: block;
+  clear: none;
+  margin: 5px 5px 0px 0px;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #d7dad7;
+  color: #1e2022;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px; }
+
+/* toggle content values are from https://www.toptal.com/designers/htmlarrows/
+ * using heavy right/left pointing angle quotation mark ornament
+*/
+.toggle-header:before {
+  content: " \276F\276F\00a0\00a0";
+  color: #1e2022;
+  font-size: 12px; }
+
+.toggle-header.open:before {
+  content: " \276E\276E\00a0\00a0"; }
+
+.toggle-content {
+  display: none;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: 2px solid #d7dad7;
+  border-left: 2px solid #d7dad7;
+  border-right: 2px solid #d7dad7;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+/* The previous group of styles controls the expando directive */
+/* The previous group of styles controls the expando directive */
+.downloads .nav-main {
+  margin-bottom: 20px; }
+
+nav.nav-images {
+  width: 100%;
+  min-height: 500px;
+  background: #ffffff;
+  border-bottom: #ffffff; }
+
+nav.nav-pdf-title {
+  position: absolute;
+  top: 714px;
+  left: 10px;
+  width: 90%;
+  min-height: 71px;
+  background: #ffffff; }
+  nav.nav-pdf-title h1 {
+    margin: 0;
+    padding: 20px 0 0 20px;
+    text-transform: none;
+    font-family: "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff; }
+    nav.nav-pdf-title h1 span {
+      color: #0f0f0f; }
+
+nav.nav-footer {
+  position: absolute;
+  top: 800px;
+  left: 4px;
+  width: 100%;
+  min-height: 52px;
+  background: #ffffff; }
+  nav.nav-footer h1 {
+    margin: 0;
+    padding: 20px 0 0 20px;
+    text-transform: none;
+    font-family: "Open+Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff; }
+    nav.nav-footer h1 span {
+      color: #1e2022; }
+
+.nav-inner {
+  max-width: 1295px;
+  margin: 0 auto;
+  position: relative; }
+
+#coverbg {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 720px;
+  height: 1050px; }
+  #coverbg img {
+    width: 100%;
+    height: 100%; }
+
+#logo {
+  position: absolute;
+  top: 368px;
+  left: 378px;
+  width: 258px;
+  height: 70px; }
+  #logo img {
+    width: 100%;
+    height: 100%; }
+
+.left {
+  float: left; }
+
+/*# sourceMappingURL=markup.css_t.map */
