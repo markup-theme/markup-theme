@@ -1302,29 +1302,29 @@ Blah blah, the following terms are important for this topic:
 
 .. content-tabs:: style-guide-content-tab-terms
 
-   .. tab-container:: term-a-record
-      :title: A record
+   .. tab-container:: term-a
+      :title: Aaaaa
 
       .. include:: ../../shared/terms.rst
          :start-after: .. term-test-start
          :end-before: .. term-test-end
 
-   .. tab-container:: term-aaaa-record
-      :title: AAAA record
+   .. tab-container:: term-b
+      :title: Bbbbb
 
       .. include:: ../../shared/terms.rst
          :start-after: .. term-test-start
          :end-before: .. term-test-end
 
-   .. tab-container:: term-axfr-record
-      :title: AXFR record
+   .. tab-container:: term-c
+      :title: Ccccc
 
       .. include:: ../../shared/terms.rst
          :start-after: .. term-test-start
          :end-before: .. term-test-end
 
-   .. tab-container:: term-ptr-record
-      :title: PTR record
+   .. tab-container:: term-d
+      :title: Ddddd
 
       .. include:: ../../shared/terms.rst
          :start-after: .. term-test-start
