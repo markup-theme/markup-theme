@@ -8,13 +8,15 @@
 Tutorials
 ==================================================
 
-This section contains tutorials and tutorial-like things! They range from examples of customizing and extending the MARKUP theme to documentation of what's necessary to keep the them running. We put these here in part because much of customizing and working with Sphinx is some degree of inscrutable or opaque and there just aren't enough examples out there.
+This section contains tutorials and tutorial-like things! They range from examples of customizing and extending the |theme| theme to documentation of what's necessary to keep the them running. We put these here in part because much of customizing and working with Sphinx is some degree of inscrutable or opaque and there just aren't enough examples out there.
 
+
+.. _tutorials-blockquotes:
 
 Blockquotes
 ==================================================
 
-The MARKUP theme does not support blockquote styles for Markdown by default. This support can be added easily. Blockquotes are added to Markdown like this:
+The |theme| theme does not support blockquote styles for Markdown by default. This support can be added easily. Blockquotes are added to Markdown like this:
 
 .. code-block:: none
 
@@ -22,7 +24,7 @@ The MARKUP theme does not support blockquote styles for Markdown by default. Thi
 
 but without the supporting CSS the text is presented plainly.
 
-To add support for blockquotes, you'll need to update the CSS for the MARKUP theme (for both HTML and PDF).
+To add support for blockquotes, you'll need to update the CSS for the |theme| theme (for both HTML and PDF).
 
 **To add CSS to support blockquotes**
 
@@ -54,6 +56,8 @@ To add support for blockquotes, you'll need to update the CSS for the MARKUP the
 #. Update the CSS to your preferences. Change the color, margin size, etc.
 #. When finished with the ``_themes/markup/static/`` directory, repeat these steps exactly for the ``_themes/markup_pdf/static/`` directory to ensure this style is also available for PDF printing.
 
+
+.. _tutorials-change-colors:
 
 Change Colors
 ==================================================
@@ -104,15 +108,9 @@ What, you don't like the colors on this site? Want to use your organization's co
    You can change these however you want. Do one or two at a time, test as you go. As you save the CSS files, Sass will verify the output is done correctly and will report any errors with the syntax. You'll need to look at the output to make sure you've got the colors you want.
 
 
+.. _tutorials-code-block-styles:
 
-
-Sass
-==================================================
-
-The MARKUP theme is already set up to use `Sass <https://sass-lang.com/>`__. You will need to `download Sass <https://sass-lang.com/install>`__ to make changes to the style sheet. Recommended! You could switch this to be managed by your other favorite CSS manager, like `Less <http://lesscss.org/>`__. But we don't provide any tips on how to do that.
-
-
-Add Code Block Styles
+Code Block Styles
 ==================================================
 
 A new color style for code blocks can be easily added. There are three spots in the ``_sphinx.scss`` file that require updates for new code blocks, along with a new entry in ``_config.scss``.
@@ -227,12 +225,53 @@ The following example shows how to add code block styles for everybody's favorit
    .. tip:: For darker colors, choose ``$markup-white`` and or lighter colors consider choosing ``$markup-almost-black`` for the text color, which is defined by ``color`` in the first CSS block.
 
 
+.. _tutorials-font-awesome-icons:
 
+Font Awesome Icons
+==================================================
+
+Font Awesome is an `open source icon library <https://fontawesome.com/license/free>`__ that offers a free standard set of icons. The |theme| theme uses a single unmodified CSS and a single unmodified JavaScript file from the Font Awesome Free for the Web library.
+
+**Upgrade the Font Awesome Free for the Web library**
+
+#. Navigate to https://fontawesome.com/start.
+#. Click Download.
+#. On the next page, click the **Font Awesome Free for the Web** button.
+#. When the download is complete, open it. Copy the following files: ``all.css`` and ``all.js``.
+#. Paste these files into ``_themes/markup/static/``.
+
+**Use Font Awesome Pro**
+
+#. Navigate to https://fontawesome.com/pro.
+#. Purchase a subscription for Font Awesome Pro. 
+#. Download the icon library.
+#. When the download is complete, open it. Copy the following files: ``all.css`` and ``all.js``.
+#. Paste these files into ``_themes/markup/static/``.
+
+
+.. _tutorials-github-pages:
+
+GitHub Pages
+==================================================
+
+You can host the output of a Sphinx project on GitHub pages:
+
+#. Create a directory named ``/docs`` as a top-level directory in your documentation project.
+#. In the ``/docs`` directory, add a file named ``.nojekyll``. This file should be empty.
+#. Build your Sphinx output to the ``/docs`` directory.
+#. In GitHub, choose **Settings** and then under **GitHub Pages** select the ``master branch /docs folder`` option. The **Settings** page will refresh with the URL for the published HTML. For example: https://markup-theme.github.io/markup-theme/.
+#. Check in your project.
+#. A few minutes later you should see the HTML at the URL specified under **GitHub Pages**.
+
+.. note:: You may need to update the linking paths used in the site for the ``nav-docs``, ``layout``, and ``search`` files, as the GitHub path generated by GitHub pages adds a directory to the path that is the same name as the project. For example, the ``/markup-theme/`` part of the ``https://markup-theme.github.io/markup-theme/`` is added and this may affect how URLs are defined across the site.
+
+
+.. _tutorials-local-pygments-css:
 
 Local Pygments CSS
 ==================================================
 
-Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__ that is used by the MARKUP theme to prettify source code. Pygments has the following BSD license:
+Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__ that is used by the |theme| theme to prettify source code. Pygments has the following BSD license:
 
 .. code-block:: none
 
@@ -262,7 +301,7 @@ Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-The MARKUP theme puts a copy of pygments.css into the ``_themes/markup/static/`` directory to provide local control for two CSS settings:
+The |theme| theme puts a copy of pygments.css into the ``_themes/markup/static/`` directory to provide local control for two CSS settings:
 
 .. code-block:: css
 
@@ -271,117 +310,23 @@ The MARKUP theme puts a copy of pygments.css into the ``_themes/markup/static/``
 
 They are located at the top of the CSS file. The reason why this is done is to be able to apply a preferred color to code line highlights and to prevent the default grey background for code blocks from appearing in situations where code blocks appear inside admonitions, by changing it to white.
 
-It's a somewhat clumsy workaround, but figuring out how to override two specific CSS settings in Pygments was harder and (at this time) seems impossible. If you don't want to use a local copy of pygments.css, just remove it from the MARKUP theme. The default yellow highlight is probably fine and the instance of code blocks appearing inside admonitions should be uncommon. If you want to keep it, you may need to grab an updated copy of pygments.css and re-do these two changes when Pygments itself is upgraded.
+It's a somewhat clumsy workaround, but figuring out how to override two specific CSS settings in Pygments was harder and (at this time) seems impossible. If you don't want to use a local copy of pygments.css, just remove it from the |theme| theme. The default yellow highlight is probably fine and the instance of code blocks appearing inside admonitions should be uncommon. If you want to keep it, you may need to grab an updated copy of pygments.css and re-do these two changes when Pygments itself is upgraded.
 
 
-Font Awesome Icon Library
-==================================================
-
-Font Awesome is an `open source icon library <https://fontawesome.com/license/free>`__ that offers a free standard set of icons. The MARKUP theme uses a single unmodified CSS and a single unmodified JavaScript file from the Font Awesome Free for the Web library.
-
-**Upgrade the Font Awesome Free for the Web library**
-
-#. Navigate to https://fontawesome.com/start.
-#. Click Download.
-#. On the next page, click the **Font Awesome Free for the Web** button.
-#. When the download is complete, open it. Copy the following files: ``all.css`` and ``all.js``.
-#. Paste these files into ``_themes/markup/static/``.
-
-**Use Font Awesome Pro**
-
-#. Navigate to https://fontawesome.com/pro.
-#. Purchase a subscription for Font Awesome Pro. 
-#. Download the icon library.
-#. When the download is complete, open it. Copy the following files: ``all.css`` and ``all.js``.
-#. Paste these files into ``_themes/markup/static/``.
-
-
-
-GitHub Pages
-==================================================
-
-You can host the output of a Sphinx project on GitHub pages:
-
-#. Create a directory named ``/docs`` as a top-level directory in your documentation project.
-#. In the ``/docs`` directory, add a file named ``.nojekyll``. This file should be empty.
-#. Build your Sphinx output to the ``/docs`` directory.
-#. In GitHub, choose **Settings** and then under **GitHub Pages** select the ``master branch /docs folder`` option. The **Settings** page will refresh with the URL for the published HTML. For example: https://markup-theme.github.io/markup-theme/.
-#. Check in your project.
-#. A few minutes later you should see the HTML at the URL specified under **GitHub Pages**.
-
-.. note:: You may need to update the linking paths used in the site for the ``nav-docs``, ``layout``, and ``search`` files, as the GitHub path generated by GitHub pages adds a directory to the path that is the same name as the project. For example, the ``/markup-theme/`` part of the ``https://markup-theme.github.io/markup-theme/`` is added and this may affect how URLs are defined across the site.
-
-
-PDF Cover Pages
-==================================================
-
-PDF generation relies on two images located in the ``markup_pdf/_static`` directory:
-
-* cover-test.png
-* markup-logo.png
-
-Both of these images should be replaced with your preferred PDF cover and company logo. Replace ``cover-test.png`` with any PNG image you want, and then update ``markup-logo.png`` with your company's logo.
-
-If you change any of these names, be sure to update these names in the ``_themes/markup_pdf/layout.html`` file also. While you're in there, fix the copyright statement at the bottom to say your company name and your company URL.
-
-You can move around the ``markup-logo.png`` file by adjusting the ``top``, ``left``, ``width``, and ``height`` settings for ``#logo`` in the ``_nav.scss`` file ``markup_pdf`` theme.
-
-
-Tokens
-==================================================
-
-The MARKUP theme has an example of tokens built into the theme. Open the ``/markup_theme/tokens/names.txt`` to see examples of tokens. For example:
-
-.. code-block:: none
-
-   .. |company_name| replace:: YourCompanyName
-   .. |theme| replace:: MARKUP
-   .. |md| replace:: Markdown
-   .. |rst| replace:: reStructuredText
-
-The format for defining a token is:
-
-.. code-block:: none
-
-   .. |token| replace:: some-string
-
-where
-
-* ``|token|`` defines the string (with pipes ``|`` on either side) within your |rst| files
-* ``replace::`` tells Sphinx the string that will replace the token
-* ``some-string`` defines the string that will be populated by Sphinx at build-time
-
-Tokens are useful for ensuring consistency of naming. They work best with short names, but can be used for complete sentences.
-
-.. tip:: If you create too many tokens, this may slow your build down. In some cases, with lots of tokens, quite a bit. So use them carefully and for things where using a token makes sense.
-
-Another example of using tokens is to create situations where Font Awesome icons can be used inline within reStructuredText topics. For example:
-
-.. code-block:: none
-
-   .. |fa-index-diamond| raw:: html
-
-      <i class="fas fa-diamond fa-xs" data-fa-transform="shrink-5"></i>
-
-which then appears like this:
-
-some string |fa-index-diamond| some string |fa-index-diamond| some string
-
-A location in the docs where something like this is useful is a front page in which all of the topics are listed, sort of line an index. See https://docs.djangoproject.com/en/2.2/ and the ``|`` character they use. Instead, MARKUP theme sets it as a diamond icon from Font Awesome.
-
-.. note:: Markdown topics can use the ``<i class>`` string directly inline and do not require a token.
-
+.. _tutorials-navigation-icons:
 
 Navigation Icons
 ==================================================
 
-The MARKUP theme is configured to use Font Awesome icons in the following locations:
+The |theme| theme is configured to use Font Awesome icons in the following locations:
 
 * Throughout the left-side navigation at the first level of headers.
 * At the top of the right-side navigation.
 * For the hamburger button.
 * Inline in paragraphs (via special steps in reStructuredText files or via HTML tags in Markdown).
 
+
+.. _tutorials-navigation-icons-left-side:
 
 Left Side
 --------------------------------------------------
@@ -390,7 +335,7 @@ The site-specific nav-docs.html file uses Font Awesome to apply icons to the lef
 
 **Font Awesome icons**
 
-The standard way the MARKUP theme adds Font Awesome icons to the left-side navigation uses the ``iconClass`` line to specify which icon to use:
+The standard way the |theme| theme adds Font Awesome icons to the left-side navigation uses the ``iconClass`` line to specify which icon to use:
 
 .. code-block:: django
    :emphasize-lines: 3
@@ -447,6 +392,8 @@ You can use custom icons--such as a company or product logo--instead, as long as
    },
 
 
+.. _tutorials-navigation-icons-right-side:
+
 Right Side
 --------------------------------------------------
 
@@ -479,6 +426,8 @@ You may comment it out if you don't want to use the icon:
    {{ toc }}
 
 
+.. _tutorials-navigation-icons-hamburger:
+
 Hamburger Button
 --------------------------------------------------
 
@@ -491,6 +440,8 @@ A `hamburger button <https://en.wikipedia.org/wiki/Hamburger_button>`__ appears 
 This icon is set globally via ``_themes/markup/layout.html`` and per-site via ``_templates/layout.html``. In general, this icon is probably best left alone.
 
 
+.. _tutorials-navigation-icons-inline:
+
 Inline
 --------------------------------------------------
 
@@ -502,14 +453,90 @@ You can create inline Font Awesome icons.
 See the guides for reStructuredText and Markdown for more information.
 
 
-Upgrade the MARKUP Theme
+
+.. _tutorials-pdf-cover-pages:
+
+PDF Cover Pages
 ==================================================
 
-The following sections are less tutorial and more documentation of changes that were necessary to the extensions included with the MARKUP theme so they may be run with certain versions of Sphinx.
+PDF generation relies on two images located in the ``markup_pdf/_static`` directory:
+
+* cover-test.png
+* markup-logo.png
+
+Both of these images should be replaced with your preferred PDF cover and company logo. Replace ``cover-test.png`` with any PNG image you want, and then update ``markup-logo.png`` with your company's logo.
+
+If you change any of these names, be sure to update these names in the ``_themes/markup_pdf/layout.html`` file also. While you're in there, fix the copyright statement at the bottom to say your company name and your company URL.
+
+You can move around the ``markup-logo.png`` file by adjusting the ``top``, ``left``, ``width``, and ``height`` settings for ``#logo`` in the ``_nav.scss`` file ``markup_pdf`` theme.
+
+
+.. _tutorials-sass:
+
+Sass
+==================================================
+
+The |theme| theme is already set up to use `Sass <https://sass-lang.com/>`__. You will need to `download Sass <https://sass-lang.com/install>`__ to make changes to the style sheet. Recommended! You could switch this to be managed by your other favorite CSS manager, like `Less <http://lesscss.org/>`__. But we don't provide any tips on how to do that.
+
+
+.. _tutorials-tokens:
+
+Tokens
+==================================================
+
+The |theme| theme has an example of tokens built into the theme. Open the ``/markup_theme/tokens/names.txt`` to see examples of tokens. For example:
+
+.. code-block:: none
+
+   .. |company_name| replace:: YourCompanyName
+   .. |theme| replace:: MARKUP
+   .. |md| replace:: Markdown
+   .. |rst| replace:: reStructuredText
+
+The format for defining a token is:
+
+.. code-block:: none
+
+   .. |token| replace:: some-string
+
+where
+
+* ``|token|`` defines the string (with pipes ``|`` on either side) within your |rst| files
+* ``replace::`` tells Sphinx the string that will replace the token
+* ``some-string`` defines the string that will be populated by Sphinx at build-time
+
+Tokens are useful for ensuring consistency of naming. They work best with short names, but can be used for complete sentences.
+
+.. tip:: If you create too many tokens, this may slow your build down. In some cases, with lots of tokens, quite a bit. So use them carefully and for things where using a token makes sense.
+
+Another example of using tokens is to create situations where Font Awesome icons can be used inline within reStructuredText topics. For example:
+
+.. code-block:: none
+
+   .. |fa-index-circle| raw:: html
+
+      <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i>
+
+which then appears like this:
+
+some string |fa-index-circle| some string |fa-index-circle| some string
+
+A location in the docs where something like this is useful is a front page in which all of the topics are listed, sort of line an index. See https://docs.djangoproject.com/en/2.2/ and the ``|`` character they use. Instead, the |theme| theme sets it as a circle icon from Font Awesome.
+
+.. note:: Markdown topics can use the ``<i class>`` string directly inline and do not require a token.
+
+
+
+.. _tutorials-upgrade-theme:
+
+Upgrade the Theme
+==================================================
+
+The following sections are less tutorial and more documentation of changes that were necessary to the extensions included with the |theme| theme so they may be run with certain versions of Sphinx.
 
 .. admonition:: Sphinx 1.5.1
 
-   Sphinx 1.5.1 is, effectively, the starting point for the MARKUP theme.
+   Sphinx 1.5.1 is, effectively, the starting point for the |theme| theme.
 
 .. admonition:: Sphinx 1.8.5
 
