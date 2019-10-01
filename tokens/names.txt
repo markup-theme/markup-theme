@@ -8,9 +8,9 @@
 
 
 
-.. |fa-index-diamond| raw:: html
+.. |fa-index-circle| raw:: html
 
-   <i class="fas fa-diamond fa-xs" data-fa-transform="shrink-5"></i>
+   <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i>
 
 .. |fa-meh| raw:: html
 
