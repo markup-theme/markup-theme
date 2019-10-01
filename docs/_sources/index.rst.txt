@@ -29,14 +29,14 @@ Format w/Markdown
 ==================================================
 
 **Admonitions**
-   `About Admonitions </md/md.html#admonitions>`_
+   `About Admonitions </markup-theme/md/md.html#admonitions>`__
 
 
 Format w/reStructuredText
 ==================================================
 
 **Admonitions**
-   `About Admonitions </rst/rst.html#admonitions>`_
+   `About Admonitions </markup-theme/rst/rst.html#admonitions>`__
 
 
 
