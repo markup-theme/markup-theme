@@ -31,6 +31,8 @@ This is the style guide for the Markdown as it may be used with the MARKUP theme
 
 Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown *and* Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.
 
+### Recommonmark Plugin
+
 To enable the use of Markdown with a Sphinx documentation project, install the Recommonmark plugin, and then adjust your Sphinx project's configuration file.
 
 First install Recommonmark:
@@ -2934,8 +2936,16 @@ Topic titles are coded with a `#`, which makes them seem like an H1, but really 
 
 The following formatting cannot be done with this theme:
 
-* Blockquotes. The MARKUP theme does not support blockquotes out-of-the-box. See the "Blockquotes" tutorial under "Theme and Templates" for the steps necessary to add CSS support for blockquotes.
+* Blockquotes
 * Tokens
+
+### Blockquotes
+
+The MARKUP theme does not support blockquotes out-of-the-box. See the "Blockquotes" tutorial under for the steps necessary to add CSS support for blockquotes.
+
+### Tokens
+
+There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically authored inline within paragraphs.
 
 
 ```eval_rst
