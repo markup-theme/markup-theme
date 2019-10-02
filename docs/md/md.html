@@ -740,6 +740,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
   <ul>
 <li><a class="reference internal" href="#">Formatting Guide: Markdown</a><ul>
 <li><a class="reference internal" href="#markdown-for-sphinx">Markdown for Sphinx</a><ul>
+<li><a class="reference internal" href="#recommonmark-plugin">Recommonmark Plugin</a></li>
 <li><a class="reference internal" href="#evaluate-restructuredtext">Evaluate reStructuredText</a></li>
 </ul>
 </li>
@@ -826,7 +827,11 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </li>
 <li><a class="reference internal" href="#toctree">Toctree</a></li>
 <li><a class="reference internal" href="#topic-titles">Topic Titles</a></li>
-<li><a class="reference internal" href="#unsupported">Unsupported</a></li>
+<li><a class="reference internal" href="#unsupported">Unsupported</a><ul>
+<li><a class="reference internal" href="#blockquotes">Blockquotes</a></li>
+<li><a class="reference internal" href="#tokens">Tokens</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
 </ul>
 </li>
@@ -865,6 +870,8 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <div class="section" id="markdown-for-sphinx">
 <h2>Markdown for Sphinx<a class="headerlink" href="#markdown-for-sphinx" title="Permalink to this headline">¶</a></h2>
 <p>Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown <em>and</em> Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.</p>
+<div class="section" id="recommonmark-plugin">
+<h3>Recommonmark Plugin<a class="headerlink" href="#recommonmark-plugin" title="Permalink to this headline">¶</a></h3>
 <p>To enable the use of Markdown with a Sphinx documentation project, install the Recommonmark plugin, and then adjust your Sphinx project’s configuration file.</p>
 <p>First install Recommonmark:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install commonmark recommonmark</span>
@@ -894,6 +901,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <span class="p">},</span> <span class="bp">True</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_transform</span><span class="p">(</span><span class="n">AutoStructify</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 <div class="section" id="evaluate-restructuredtext">
 <h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
@@ -3121,9 +3129,17 @@ True   True   True
 <span id="id19"></span><h2>Unsupported<a class="headerlink" href="#unsupported" title="Permalink to this headline">¶</a></h2>
 <p>The following formatting cannot be done with this theme:</p>
 <ul class="simple">
-<li>Blockquotes. The MARKUP theme does not support blockquotes out-of-the-box. See the “Blockquotes” tutorial under “Theme and Templates” for the steps necessary to add CSS support for blockquotes.</li>
+<li>Blockquotes</li>
 <li>Tokens</li>
 </ul>
+<div class="section" id="blockquotes">
+<h3>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">¶</a></h3>
+<p>The MARKUP theme does not support blockquotes out-of-the-box. See the “Blockquotes” tutorial under for the steps necessary to add CSS support for blockquotes.</p>
+</div>
+<div class="section" id="tokens">
+<h3>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h3>
+<p>There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically authored inline within paragraphs.</p>
+</div>
 </div>
 <div class="section" id="additional-resources">
 <span id="id20"></span><h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
