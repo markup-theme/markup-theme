@@ -49,8 +49,8 @@ Format w/Markdown
 **Font Awesome**
    `About Font Awesome </markup-theme/md/md.html#font-awesome>`__
 
-**Headers (Levels 1 - 4)**
-   `Header (Level 1) </markup-theme/md/md.html#header-level-1>`__ |fa-index-circle| `Header (Level 2) </markup-theme/md/md.html#header-level-2>`__ |fa-index-circle| `Header (Level 3) </markup-theme/md/md.html#header-level-3>`__ |fa-index-circle| `Header (Level 4) </markup-theme/md/md.html#header-level-4>`__ |fa-index-circle| `Header Markup Length </markup-theme/md/md.html#header-markup-length>`__
+**Headers**
+   `Header Levels </markup-theme/md/md.html#header-levels>`__ |fa-index-circle| `Header Markup Length </markup-theme/md/md.html#header-markup-length>`__
 
 **Horizontal Rule**
    `About Horizontal Rules </markup-theme/md/md.html#horizontal-rule>`__
@@ -68,7 +68,7 @@ Format w/Markdown
    `About Links </markup-theme/md/md.html#links>`__ |fa-index-circle| `External </markup-theme/md/md.html#external>`__ |fa-index-circle| `Reference </markup-theme/md/md.html#reference>`__ |fa-index-circle| `Topic </markup-theme/md/md.html#topic>`__
 
 **Lists**
-   `About Lists </markup-theme/md/md.html#lists>`__ |fa-index-circle| `Definition </markup-theme/md/md.html#definition>`__ |fa-index-circle| `Ordered </markup-theme/md/md.html#ordered>`__ |fa-index-circle| `Unordered </markup-theme/md/md.html#unordered>`__
+   `About Lists </markup-theme/md/md.html#lists>`__ |fa-index-circle| `Definition </markup-theme/md/md.html#definition-list>`__ |fa-index-circle| `Ordered </markup-theme/md/md.html#ordered-list>`__ |fa-index-circle| `Unordered </markup-theme/md/md.html#unordered-list>`__
 
 **Raw HTML**
    `About Raw HTML </markup-theme/md/md.html#raw-html>`__
@@ -80,7 +80,7 @@ Format w/Markdown
    `About Toctree </markup-theme/md/md.html#toctree>`__
 
 **Topic Titles**
-   `About Titles </markup-theme/md/md.html#titles>`__
+   `About Titles </markup-theme/md/md.html#topic-titles>`__
 
 **Unsupported**
    `Blockquotes </markup-theme/md/md.html#blockquotes>`__ |fa-index-circle| `Tokens </markup-theme/md/md.html#tokens>`__
@@ -123,7 +123,7 @@ Format w/reStructuredText
    `About Links </markup-theme/rst/rst.html#links>`__ |fa-index-circle| `External </markup-theme/rst/rst.html#external>`__ |fa-index-circle| `Reference </markup-theme/rst/rst.html#reference>`__ |fa-index-circle| `Topic </markup-theme/rst/rst.html#topic>`__
 
 **Lists**
-   `About Lists </markup-theme/rst/rst.html#lists>`__ |fa-index-circle| `Definition </markup-theme/rst/rst.html#definition>`__ |fa-index-circle| `Ordered </markup-theme/rst/rst.html#ordered>`__ |fa-index-circle| `Unordered </markup-theme/rst/rst.html#unordered>`__
+   `About Lists </markup-theme/rst/rst.html#lists>`__ |fa-index-circle| `Definition </markup-theme/rst/rst.html#definition-list>`__ |fa-index-circle| `Ordered </markup-theme/rst/rst.html#ordered-list>`__ |fa-index-circle| `Unordered </markup-theme/rst/rst.html#unordered-list>`__
 
 **Tables**
    `About Tables </markup-theme/rst/rst.html#tables>`__ |fa-index-circle| `CSV Table </markup-theme/rst/rst.html#csv-table>`__ |fa-index-circle| `Grid Table </markup-theme/rst/rst.html#grid-table>`__ |fa-index-circle| `List Table </markup-theme/rst/rst.html#list-table>`__ |fa-index-circle| `Simple Table </markup-theme/rst/rst.html#simple-table>`__
@@ -132,7 +132,7 @@ Format w/reStructuredText
    `About Toctree </markup-theme/rst/rst.html#toctree>`__
 
 **Topic Titles**
-   `About Titles </markup-theme/rst/rst.html#titles>`__
+   `About Titles </markup-theme/rst/rst.html#topic-titles>`__
 
 
 .. Hide the TOC from this file.
