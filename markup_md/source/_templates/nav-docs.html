@@ -6,406 +6,473 @@
 {% set active_search_path = "/markup-theme/md/search.html" %}
 {% set navItems = [
 
+
   {
-    "title": "Formatting Guide",
-    "iconClass": "fa-book",
+    "title": "Admonitions",
+    "iconClass": "fa-comments",
     "subItems": [
       {
-        "title": "About the Formatting Guide",
+        "title": "About Admonitions",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html"
+        "url": "/markup-theme/rst/rst.html#admonitions"
       },
       {
-        "title": "Admonitions",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Admonitions",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#admonitions"
-          },
-          {
-            "title": "Attention",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#attention"
-          },
-          {
-            "title": "Caution",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#caution"
-          },
-          {
-            "title": "Custom Admonitions",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#custom-admonitions"
-          },
-          {
-            "title": "Danger",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#danger"
-          },
-          {
-            "title": "Error",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#error"
-          },
-          {
-            "title": "Hint",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#hint"
-          },
-          {
-            "title": "Important",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#important"
-          },
-          {
-            "title": "Note",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#note"
-          },
-          {
-            "title": "Tip",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#tip"
-          },
-          {
-            "title": "Warning",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#warning"
-          },
-
-        ]
-      },
-      {
-        "title": "Card Walls",
+        "title": "Attention",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#card-walls"
+        "url": "/markup-theme/rst/rst.html#attention"
       },
       {
-        "title": "Code Blocks",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Code Blocks",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#code-blocks"
-          },
-          {
-            "title": "Line Emphasis",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#line-emphasis"
-          },
-          {
-            "title": "Command Shell",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#command-shell"
-          },
-          {
-            "title": "Config File",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#config-file"
-          },
-          {
-            "title": "CSS",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#css"
-          },
-          {
-            "title": "Data Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#data-table"
-          },
-          {
-            "title": "HTML",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#html"
-          },
-          {
-            "title": "JavaScript",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#javascript"
-          },
-          {
-            "title": "JSON",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#json"
-          },
-          {
-            "title": "JSON w/Jinja",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#json-w-jinja"
-          },
-          {
-            "title": "Lua",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#lua"
-          },
-          {
-            "title": "None",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#none"
-          },
-          {
-            "title": "Python",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#python"
-          },
-          {
-            "title": "REST API",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#rest-api"
-          },
-          {
-            "title": "reStructuredText",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#restructuredtext"
-          },
-          {
-            "title": "Ruby",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#ruby"
-          },
-          {
-            "title": "Scala",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#scala"
-          },
-          {
-            "title": "Shell Script",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#shell-script"
-          },
-          {
-            "title": "YAML",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#yaml"
-          },
-          {
-            "title": "YAML w/Jinja",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#yaml-w-jinja"
-          },
-        ]
-      },
-      {
-        "title": "Content Tabs",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Content Tabs",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#content-tabs"
-          },
-          {
-            "title": "Example: UI Tasks",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#example-ui-tasks"
-          },
-          {
-            "title": "Example: Terms",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#example-terms"
-          },
-        ]
-      },
-      {
-        "title": "Expandos",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Expandos",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#expandos"
-          },
-          {
-            "title": "Example: FAQ",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#example-faq"
-          },
-          {
-            "title": "Example: Content Patterns",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#example-content-patterns"
-          },
-        ]
-      },
-      {
-        "title": "Font Awesome",
+        "title": "Caution",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#font-awesome"
+        "url": "/markup-theme/rst/rst.html#caution"
       },
       {
-        "title": "Headers",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Header Levels",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#header-levels"
-          },
-          {
-            "title": "Header Markup Length",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#header-markup-length"
-          },
-        ]
-      },
-      {
-        "title": "Horizontal Rule",
+        "title": "Custom Admonitions",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#horizontal-rule"
+        "url": "/markup-theme/rst/rst.html#custom-admonitions"
       },
       {
-        "title": "Images",
+        "title": "Danger",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#images"
+        "url": "/markup-theme/rst/rst.html#danger"
       },
       {
-        "title": "Includes",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Includes",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#includes"
-          },
-          {
-            "title": "via File",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#via-file"
-          },
-          {
-            "title": "via Snippet",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#via-snippet"
-          },
-        ]
-      },
-      {
-        "title": "Inline Markup",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Inline Markup",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#inline-markup"
-          },
-          {
-            "title": "Bold",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#bold"
-          },
-          {
-            "title": "Italics",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#italics"
-          },
-          {
-            "title": "Code Strings",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#code-strings"
-          },
-        ]
-      },
-      {
-        "title": "Links",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Links",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#links"
-          },
-          {
-            "title": "External",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#external"
-          },
-          {
-            "title": "Reference",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#reference"
-          },
-          {
-            "title": "Topic",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#topic"
-          },
-        ]
-      },
-      {
-        "title": "Lists",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Lists",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#lists"
-          },
-          {
-            "title": "Definition List",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#definition-list"
-          },
-          {
-            "title": "Ordered List",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#ordered-list"
-          },
-          {
-            "title": "Unordered List",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#unordered-list"
-          },
-        ]
-      },
-      {
-        "title": "Raw HTML",
+        "title": "Error",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#raw-html"
+        "url": "/markup-theme/rst/rst.html#error"
       },
       {
-        "title": "Tables",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Tables",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#tables"
-          },
-          {
-            "title": "Grid Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#grid-table"
-          },
-          {
-            "title": "List Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#list-table"
-          },
-          {
-            "title": "Simple Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/md/md.html#simple-table"
-          },
-        ]
-      },
-      {
-        "title": "Toctree",
+        "title": "Hint",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#toctree"
+        "url": "/markup-theme/rst/rst.html#hint"
       },
       {
-        "title": "Topic Titles",
+        "title": "Important",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#topic-titles"
+        "url": "/markup-theme/rst/rst.html#important"
       },
       {
-        "title": "Unsupported",
+        "title": "Note",
         "hasSubItems": false,
-        "url": "/markup-theme/md/md.html#unsupported"
+        "url": "/markup-theme/rst/rst.html#note"
+      },
+      {
+        "title": "Tip",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#tip"
+      },
+      {
+        "title": "Warning",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#warning"
       },
     ]
   },
+
+  {
+    "title": "Card Walls",
+    "iconClass": "fa-th-large",
+    "subItems": [
+      {
+        "title": "About Card Walls",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#card-walls"
+      },
+    ]
+  },
+
+  {
+    "title": "Code Blocks",
+    "iconClass": "fa-code",
+    "subItems": [
+      {
+        "title": "About Code Blocks",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#code-blocks"
+      },
+      {
+        "title": "Line Emphasis",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#line-emphasis"
+      },
+      {
+        "title": "Command Shell",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#command-shell"
+      },
+      {
+        "title": "Config File",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#config-file"
+      },
+      {
+        "title": "CSS",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#css"
+      },
+      {
+        "title": "Data Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#data-table"
+      },
+      {
+        "title": "HTML",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#html"
+      },
+      {
+        "title": "JavaScript",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#javascript"
+      },
+      {
+        "title": "JSON",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#json"
+      },
+      {
+        "title": "JSON w/Jinja",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#json-w-jinja"
+      },
+      {
+        "title": "Lua",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#lua"
+      },
+      {
+        "title": "None",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#none"
+      },
+      {
+        "title": "Python",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#python"
+      },
+      {
+        "title": "REST API",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#rest-api"
+      },
+      {
+        "title": "reStructuredText",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#restructuredtext"
+      },
+      {
+        "title": "Ruby",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#ruby"
+      },
+      {
+        "title": "Scala",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#scala"
+      },
+      {
+        "title": "Shell Script",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#shell-script"
+      },
+      {
+        "title": "YAML",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#yaml"
+      },
+      {
+        "title": "YAML w/Jinja",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#yaml-w-jinja"
+      },
+    ]
+  },
+
+  {
+    "title": "Content Tabs",
+    "iconClass": "fa-folder",
+    "subItems": [
+      {
+        "title": "About Content Tabs",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#content-tabs"
+      },
+      {
+        "title": "Usage",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#usage"
+      },
+      {
+        "title": "Example: UI Tasks",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-ui-tasks"
+      },
+      {
+        "title": "Example: Terms",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-terms"
+      },
+    ]
+  },
+
+  {
+    "title": "Expandos",
+    "iconClass": "fa-expand",
+    "subItems": [
+      {
+        "title": "About Expandos",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#expandos"
+      },
+      {
+        "title": "Example: FAQ",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-faq"
+      },
+      {
+        "title": "Example: Content Patterns",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#content-patterns"
+      },
+    ]
+  },
+
+  {
+    "title": "Font Awesome",
+    "iconClass": "fa-flag",
+    "subItems": [
+      {
+        "title": "About Font Awesome",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#font-awesome"
+      },
+    ]
+  },
+
+  {
+    "title": "Headers",
+    "iconClass": "fa-hashtag",
+    "subItems": [
+      {
+        "title": "Header Levels",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-levels"
+      },
+      {
+        "title": "Header Markup Length",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-markup-length"
+      },
+    ]
+  },
+
+  {
+    "title": "Horizontal Rule",
+    "iconClass": "fa-minus",
+    "subItems": [
+      {
+        "title": "About Horizontal Rules",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#horizontal-rules"
+      },
+    ]
+  },
+
+  {
+    "title": "Images",
+    "iconClass": "fa-images",
+    "subItems": [
+      {
+        "title": "About Images",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#images"
+      },
+    ]
+  },
+
+  {
+    "title": "Includes",
+    "iconClass": "fa-wave-square",
+    "subItems": [
+      {
+        "title": "About Includes",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#includes"
+      },
+      {
+        "title": "via File",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#via-file"
+      },
+      {
+        "title": "via Snippet",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#via-snippet"
+      },
+    ]
+  },
+
+  {
+    "title": "Inline Markup",
+    "iconClass": "fa-pen-square",
+    "subItems": [
+      {
+        "title": "About Inline Markup",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#inline-markup"
+      },
+      {
+        "title": "Bold",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#bold"
+      },
+      {
+        "title": "Italics",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#italics"
+      },
+      {
+        "title": "Code Strings",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#code-strings"
+      },
+    ]
+  },
+
+  {
+    "title": "Links",
+    "iconClass": "fa-link",
+    "subItems": [
+      {
+        "title": "About Links",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#links"
+      },
+      {
+        "title": "External",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#external"
+      },
+      {
+        "title": "Reference",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#reference"
+      },
+      {
+        "title": "Topic",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#topic"
+      },
+    ]
+  },
+
+  {
+    "title": "Lists",
+    "iconClass": "fa-bars",
+    "subItems": [
+      {
+        "title": "About Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#lists"
+      },
+      {
+        "title": "Definition Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#definition-lists"
+      },
+      {
+        "title": "Ordered Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#ordered-lists"
+      },
+      {
+        "title": "Unordered Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#unordered-lists"
+      },
+    ]
+  },
+
+  {
+    "title": "Raw HTML",
+    "iconClass": "fa-file-code",
+    "subItems": [
+      {
+        "title": "About Raw HTML",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#raw-html"
+      },
+    ]
+  },
+
+  {
+    "title": "Tables",
+    "iconClass": "fa-th",
+    "subItems": [
+      {
+        "title": "About Tables",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#tables"
+      },
+      {
+        "title": "Grid Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#grid-table"
+      },
+      {
+        "title": "List Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#list-table"
+      },
+      {
+        "title": "Simple Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#simple-table"
+      },
+    ]
+  },
+
+  {
+    "title": "Toctree",
+    "iconClass": "fa-cube",
+    "subItems": [
+      {
+        "title": "About Toctree",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#toctree"
+      },
+    ]
+  },
+
+  {
+    "title": "Topic Titles",
+    "iconClass": "fa-passport",
+    "subItems": [
+      {
+        "title": "About Topic Titles",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#topic-titles"
+      },
+    ]
+  },
+
+  {
+    "title": "Unsupported",
+    "iconClass": "fa-surprise",
+    "subItems": [
+      {
+        "title": "Blockquotes",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#blockquotes"
+      },
+      {
+        "title": "Tokens",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#tokens"
+      },
+    ]
+  },
+
+
+
 ] -%}

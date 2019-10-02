@@ -7,415 +7,465 @@
 {% set navItems = [
 
   {
-    "title": "Formatting Guide",
-    "iconClass": "fa-book",
+    "title": "Admonitions",
+    "iconClass": "fa-comments",
     "subItems": [
       {
-        "title": "About the Formatting Guide",
+        "title": "About Admonitions",
         "hasSubItems": false,
-        "url": "/markup-theme/rst/rst.html"
+        "url": "/markup-theme/rst/rst.html#admonitions"
       },
       {
-        "title": "Admonitions",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Admonitions",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#admonitions"
-          },
-          {
-            "title": "Attention",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#attention"
-          },
-          {
-            "title": "Caution",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#caution"
-          },
-          {
-            "title": "Custom Admonitions",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#custom-admonitions"
-          },
-          {
-            "title": "Danger",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#danger"
-          },
-          {
-            "title": "Error",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#error"
-          },
-          {
-            "title": "Hint",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#hint"
-          },
-          {
-            "title": "Important",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#important"
-          },
-          {
-            "title": "Note",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#note"
-          },
-          {
-            "title": "Tip",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#tip"
-          },
-          {
-            "title": "Warning",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#warning"
-          },
+        "title": "Attention",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#attention"
+      },
+      {
+        "title": "Caution",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#caution"
+      },
+      {
+        "title": "Custom Admonitions",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#custom-admonitions"
+      },
+      {
+        "title": "Danger",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#danger"
+      },
+      {
+        "title": "Error",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#error"
+      },
+      {
+        "title": "Hint",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#hint"
+      },
+      {
+        "title": "Important",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#important"
+      },
+      {
+        "title": "Note",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#note"
+      },
+      {
+        "title": "Tip",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#tip"
+      },
+      {
+        "title": "Warning",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#warning"
+      },
+    ]
+  },
 
-        ]
-      },
+  {
+    "title": "Card Walls",
+    "iconClass": "fa-th-large",
+    "subItems": [
       {
-        "title": "Card Walls",
+        "title": "About Card Walls",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#card-walls"
       },
+    ]
+  },
+
+  {
+    "title": "Code Blocks",
+    "iconClass": "fa-code",
+    "subItems": [
       {
-        "title": "Code Blocks",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Code Blocks",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#code-blocks"
-          },
-          {
-            "title": "Line Emphasis",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#line-emphasis"
-          },
-          {
-            "title": "Command Shell",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#command-shell"
-          },
-          {
-            "title": "Config File",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#config-file"
-          },
-          {
-            "title": "CSS",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#css"
-          },
-          {
-            "title": "Data Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#data-table"
-          },
-          {
-            "title": "HTML",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#html"
-          },
-          {
-            "title": "JavaScript",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#javascript"
-          },
-          {
-            "title": "JSON",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#json"
-          },
-          {
-            "title": "JSON w/Jinja",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#json-w-jinja"
-          },
-          {
-            "title": "Lua",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#lua"
-          },
-          {
-            "title": "None",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#none"
-          },
-          {
-            "title": "Python",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#python"
-          },
-          {
-            "title": "REST API",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#rest-api"
-          },
-          {
-            "title": "reStructuredText",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#restructuredtext"
-          },
-          {
-            "title": "Ruby",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#ruby"
-          },
-          {
-            "title": "Scala",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#scala"
-          },
-          {
-            "title": "Shell Script",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#shell-script"
-          },
-          {
-            "title": "YAML",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#yaml"
-          },
-          {
-            "title": "YAML w/Jinja",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#yaml-w-jinja"
-          },
-        ]
+        "title": "About Code Blocks",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#code-blocks"
       },
       {
-        "title": "Content Tabs",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Content Tabs",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#content-tabs"
-          },
-          {
-            "title": "Example: UI Tasks",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#example-ui-tasks"
-          },
-          {
-            "title": "Example: Terms",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#example-terms"
-          },
-        ]
+        "title": "Line Emphasis",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#line-emphasis"
       },
       {
-        "title": "Expandos",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Expandos",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#expandos"
-          },
-          {
-            "title": "Example: FAQ",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#example-faq"
-          },
-          {
-            "title": "Example: Content Patterns",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#example-content-patterns"
-          },
-        ]
+        "title": "Command Shell",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#command-shell"
       },
       {
-        "title": "Font Awesome",
+        "title": "Config File",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#config-file"
+      },
+      {
+        "title": "CSS",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#css"
+      },
+      {
+        "title": "Data Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#data-table"
+      },
+      {
+        "title": "HTML",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#html"
+      },
+      {
+        "title": "JavaScript",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#javascript"
+      },
+      {
+        "title": "JSON",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#json"
+      },
+      {
+        "title": "JSON w/Jinja",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#json-w-jinja"
+      },
+      {
+        "title": "Lua",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#lua"
+      },
+      {
+        "title": "None",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#none"
+      },
+      {
+        "title": "Python",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#python"
+      },
+      {
+        "title": "REST API",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#rest-api"
+      },
+      {
+        "title": "reStructuredText",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#restructuredtext"
+      },
+      {
+        "title": "Ruby",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#ruby"
+      },
+      {
+        "title": "Scala",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#scala"
+      },
+      {
+        "title": "Shell Script",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#shell-script"
+      },
+      {
+        "title": "YAML",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#yaml"
+      },
+      {
+        "title": "YAML w/Jinja",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#yaml-w-jinja"
+      },
+    ]
+  },
+
+  {
+    "title": "Content Tabs",
+    "iconClass": "fa-folder",
+    "subItems": [
+      {
+        "title": "About Content Tabs",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#content-tabs"
+      },
+      {
+        "title": "Usage",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#usage"
+      },
+      {
+        "title": "Example: UI Tasks",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-ui-tasks"
+      },
+      {
+        "title": "Example: Terms",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-terms"
+      },
+    ]
+  },
+
+  {
+    "title": "Expandos",
+    "iconClass": "fa-expand",
+    "subItems": [
+      {
+        "title": "About Expandos",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#expandos"
+      },
+      {
+        "title": "Example: FAQ",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#example-faq"
+      },
+      {
+        "title": "Example: Content Patterns",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#content-patterns"
+      },
+    ]
+  },
+
+  {
+    "title": "Font Awesome",
+    "iconClass": "fa-flag",
+    "subItems": [
+      {
+        "title": "About Font Awesome",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#font-awesome"
       },
+    ]
+  },
+
+  {
+    "title": "Headers",
+    "iconClass": "fa-heading",
+    "subItems": [
       {
-        "title": "Headers",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "Header (Level 1)",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#header-level-1"
-          },
-          {
-            "title": "Header (Level 2)",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#header-level-2"
-          },
-          {
-            "title": "Header (Level 3)",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#header-level-3"
-          },
-          {
-            "title": "Header (Level 4)",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#header-level-4"
-          },
-          {
-            "title": "Header Markup Length",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#header-markup-length"
-          },
-        ]
+        "title": "About Headers",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-level-1"
       },
       {
-        "title": "Images",
+        "title": "Headers (Level 1)",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-level-1"
+      },
+      {
+        "title": "Headers (Level 2)",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-level-2"
+      },
+      {
+        "title": "Headers (Level 3)",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-level-3"
+      },
+      {
+        "title": "Headers (Level 4)",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-level-4"
+      },
+      {
+        "title": "Header Markup Length",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#header-markup-length"
+      },
+    ]
+  },
+
+  {
+    "title": "Images",
+    "iconClass": "fa-images",
+    "subItems": [
+      {
+        "title": "About Images",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#images"
       },
+    ]
+  },
+
+  {
+    "title": "Includes",
+    "iconClass": "fa-wave-square",
+    "subItems": [
       {
-        "title": "Includes",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Includes",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#includes"
-          },
-          {
-            "title": "via File",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#via-file"
-          },
-          {
-            "title": "via Snippet",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#via-snippet"
-          },
-        ]
+        "title": "About Includes",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#includes"
       },
       {
-        "title": "Inline Markup",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Inline Markup",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#inline-markup"
-          },
-          {
-            "title": "Bold",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#bold"
-          },
-          {
-            "title": "Italics",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#italics"
-          },
-          {
-            "title": "Code Strings",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#code-strings"
-          },
-        ]
+        "title": "via File",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#via-file"
       },
       {
-        "title": "Links",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Links",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#links"
-          },
-          {
-            "title": "External",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#external"
-          },
-          {
-            "title": "Reference",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#reference"
-          },
-          {
-            "title": "Topic",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#topic"
-          },
-        ]
+        "title": "via Snippet",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#via-snippet"
+      },
+    ]
+  },
+
+  {
+    "title": "Inline Markup",
+    "iconClass": "fa-pen-square",
+    "subItems": [
+      {
+        "title": "About Inline Markup",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#inline-markup"
       },
       {
-        "title": "Lists",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Lists",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#lists"
-          },
-          {
-            "title": "Definition List",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#definition-list"
-          },
-          {
-            "title": "Ordered List",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#ordered-list"
-          },
-          {
-            "title": "Unordered List",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#unordered-list"
-          },
-        ]
+        "title": "Bold",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#bold"
       },
       {
-        "title": "Tables",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "About Tables",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#tables"
-          },
-          {
-            "title": "CSV Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#csv-table"
-          },
-          {
-            "title": "Grid Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#grid-table"
-          },
-          {
-            "title": "List Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#list-table"
-          },
-          {
-            "title": "Simple Table",
-            "hasSubItems": false,
-            "url": "/markup-theme/rst/rst.html#simple-table"
-          },
-        ]
+        "title": "Italics",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#italics"
       },
       {
-        "title": "Toctree",
+        "title": "Code Strings",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#code-strings"
+      },
+    ]
+  },
+
+  {
+    "title": "Links",
+    "iconClass": "fa-link",
+    "subItems": [
+      {
+        "title": "About Links",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#links"
+      },
+      {
+        "title": "External",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#external"
+      },
+      {
+        "title": "Reference",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#reference"
+      },
+      {
+        "title": "Topic",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#topic"
+      },
+    ]
+  },
+
+  {
+    "title": "Lists",
+    "iconClass": "fa-bars",
+    "subItems": [
+      {
+        "title": "About Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#lists"
+      },
+      {
+        "title": "Definition Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#definition-lists"
+      },
+      {
+        "title": "Ordered Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#ordered-lists"
+      },
+      {
+        "title": "Unordered Lists",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#unordered-lists"
+      },
+    ]
+  },
+
+  {
+    "title": "Tables",
+    "iconClass": "fa-th",
+    "subItems": [
+      {
+        "title": "About Tables",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#tables"
+      },
+      {
+        "title": "CSV Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#csv-table"
+      },
+      {
+        "title": "Grid Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#grid-table"
+      },
+      {
+        "title": "List Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#list-table"
+      },
+      {
+        "title": "Simple Table",
+        "hasSubItems": false,
+        "url": "/markup-theme/rst/rst.html#simple-table"
+      },
+    ]
+  },
+
+  {
+    "title": "Toctree",
+    "iconClass": "fa-cube",
+    "subItems": [
+      {
+        "title": "About Toctree",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#toctree"
       },
+    ]
+  },
+
+  {
+    "title": "Tokens",
+    "iconClass": "fa-infinity",
+    "subItems": [
       {
-        "title": "Tokens",
+        "title": "About Tokens",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#tokens"
       },
+    ]
+  },
+
+  {
+    "title": "Topic Titles",
+    "iconClass": "fa-passport",
+    "subItems": [
       {
-        "title": "Topic Titles",
+        "title": "About Topic Titles",
         "hasSubItems": false,
         "url": "/markup-theme/rst/rst.html#topic-titles"
       },
     ]
   },
+
 ] -%}
