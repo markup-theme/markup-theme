@@ -64,14 +64,22 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <ul class="nav-links links-main">
         <li class="nav-link">
-          <a href="../index.html">Theme and Templates</a>
+          <a href="../index.html">About MARKUP</a>
         </li>
-        <li class="nav-link is-active">
-          <a href="/markup-theme/rst/rst.html">reStructuredText</a>
-        </li>
+
         <li class="nav-link">
-          <a href="/markup-theme/md/md.html">Markdown</a>
+          <div class="nav-dropdown">
+            <a href="/markup-theme/index.html">Formatting Guides</a>
+            <div class="nav-dropdown-content">
+              <div class="menu-link">
+                <a href="/markup-theme/md/md.html"> &nbsp; <i class="fab fa-markdown fa-fw icon-left"></i> &nbsp; Markdown</a>
+              </div>
+              <div class="menu-link">
+                <a href="/markup-theme/rst/rst.html"> &nbsp; <i class="fab fa-python fa-fw icon-left"></i> &nbsp; reStructuredText</a>
+              </div>
+            </div>
         </li>
+
       </ul>
 
     </div>
@@ -156,9 +164,9 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="Formatting Guide"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Admonitions"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-book icon-left"></i> Formatting Guide <!-- endif -->
+        <i class="fa fa-comments icon-left"></i> Admonitions <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -167,538 +175,770 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
       <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html" title="About the Formatting Guide">
-            About the Formatting Guide
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Admonitions">
-            Admonitions
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#admonitions" title="About Admonitions">
-                About Admonitions
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#attention" title="Attention">
-                Attention
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#caution" title="Caution">
-                Caution
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#custom-admonitions" title="Custom Admonitions">
-                Custom Admonitions
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#danger" title="Danger">
-                Danger
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#error" title="Error">
-                Error
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#hint" title="Hint">
-                Hint
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#important" title="Important">
-                Important
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#note" title="Note">
-                Note
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tip" title="Tip">
-                Tip
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#warning" title="Warning">
-                Warning
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#card-walls" title="Card Walls">
-            Card Walls
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Code Blocks">
-            Code Blocks
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#code-blocks" title="About Code Blocks">
-                About Code Blocks
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#line-emphasis" title="Line Emphasis">
-                Line Emphasis
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#command-shell" title="Command Shell">
-                Command Shell
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#config-file" title="Config File">
-                Config File
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#css" title="CSS">
-                CSS
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#data-table" title="Data Table">
-                Data Table
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#html" title="HTML">
-                HTML
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#javascript" title="JavaScript">
-                JavaScript
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#json" title="JSON">
-                JSON
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#json-w-jinja" title="JSON w/Jinja">
-                JSON w/Jinja
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#lua" title="Lua">
-                Lua
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#none" title="None">
-                None
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#python" title="Python">
-                Python
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#rest-api" title="REST API">
-                REST API
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#restructuredtext" title="reStructuredText">
-                reStructuredText
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#ruby" title="Ruby">
-                Ruby
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#scala" title="Scala">
-                Scala
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#shell-script" title="Shell Script">
-                Shell Script
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#yaml" title="YAML">
-                YAML
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#yaml-w-jinja" title="YAML w/Jinja">
-                YAML w/Jinja
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Content Tabs">
-            Content Tabs
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#content-tabs" title="About Content Tabs">
-                About Content Tabs
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-ui-tasks" title="Example: UI Tasks">
-                Example: UI Tasks
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-terms" title="Example: Terms">
-                Example: Terms
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Expandos">
-            Expandos
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#expandos" title="About Expandos">
-                About Expandos
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-faq" title="Example: FAQ">
-                Example: FAQ
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-content-patterns" title="Example: Content Patterns">
-                Example: Content Patterns
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#font-awesome" title="Font Awesome">
-            Font Awesome
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Headers">
-            Headers
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-1" title="Header (Level 1)">
-                Header (Level 1)
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-2" title="Header (Level 2)">
-                Header (Level 2)
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-3" title="Header (Level 3)">
-                Header (Level 3)
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-4" title="Header (Level 4)">
-                Header (Level 4)
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-markup-length" title="Header Markup Length">
-                Header Markup Length
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#images" title="Images">
-            Images
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Includes">
-            Includes
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#includes" title="About Includes">
-                About Includes
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#via-file" title="via File">
-                via File
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#via-snippet" title="via Snippet">
-                via Snippet
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Inline Markup">
-            Inline Markup
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#inline-markup" title="About Inline Markup">
-                About Inline Markup
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#bold" title="Bold">
-                Bold
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#italics" title="Italics">
-                Italics
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#code-strings" title="Code Strings">
-                Code Strings
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Links">
-            Links
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#links" title="About Links">
-                About Links
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#external" title="External">
-                External
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#reference" title="Reference">
-                Reference
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#topic" title="Topic">
-                Topic
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Lists">
-            Lists
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#lists" title="About Lists">
-                About Lists
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#definition-list" title="Definition List">
-                Definition List
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#ordered-list" title="Ordered List">
-                Ordered List
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#unordered-list" title="Unordered List">
-                Unordered List
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Tables">
-            Tables
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tables" title="About Tables">
-                About Tables
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#csv-table" title="CSV Table">
-                CSV Table
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#grid-table" title="Grid Table">
-                Grid Table
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#list-table" title="List Table">
-                List Table
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/rst/rst.html#simple-table" title="Simple Table">
-                Simple Table
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#toctree" title="Toctree">
-            Toctree
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#admonitions" title="About Admonitions">
+            About Admonitions
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tokens" title="Tokens">
-            Tokens
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#attention" title="Attention">
+            Attention
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#topic-titles" title="Topic Titles">
-            Topic Titles
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#caution" title="Caution">
+            Caution
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#custom-admonitions" title="Custom Admonitions">
+            Custom Admonitions
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#danger" title="Danger">
+            Danger
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#error" title="Error">
+            Error
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#hint" title="Hint">
+            Hint
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#important" title="Important">
+            Important
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#note" title="Note">
+            Note
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tip" title="Tip">
+            Tip
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#warning" title="Warning">
+            Warning
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Card Walls"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-th-large icon-left"></i> Card Walls <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#card-walls" title="About Card Walls">
+            About Card Walls
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Code Blocks"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-code icon-left"></i> Code Blocks <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#code-blocks" title="About Code Blocks">
+            About Code Blocks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#line-emphasis" title="Line Emphasis">
+            Line Emphasis
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#command-shell" title="Command Shell">
+            Command Shell
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#config-file" title="Config File">
+            Config File
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#css" title="CSS">
+            CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#data-table" title="Data Table">
+            Data Table
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#html" title="HTML">
+            HTML
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#javascript" title="JavaScript">
+            JavaScript
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#json" title="JSON">
+            JSON
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#json-w-jinja" title="JSON w/Jinja">
+            JSON w/Jinja
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#lua" title="Lua">
+            Lua
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#none" title="None">
+            None
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#python" title="Python">
+            Python
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#rest-api" title="REST API">
+            REST API
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#restructuredtext" title="reStructuredText">
+            reStructuredText
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#ruby" title="Ruby">
+            Ruby
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#scala" title="Scala">
+            Scala
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#shell-script" title="Shell Script">
+            Shell Script
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#yaml" title="YAML">
+            YAML
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#yaml-w-jinja" title="YAML w/Jinja">
+            YAML w/Jinja
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Content Tabs"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-folder icon-left"></i> Content Tabs <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#content-tabs" title="About Content Tabs">
+            About Content Tabs
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#usage" title="Usage">
+            Usage
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-ui-tasks" title="Example: UI Tasks">
+            Example: UI Tasks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-terms" title="Example: Terms">
+            Example: Terms
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Expandos"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-expand icon-left"></i> Expandos <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#expandos" title="About Expandos">
+            About Expandos
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#example-faq" title="Example: FAQ">
+            Example: FAQ
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#content-patterns" title="Example: Content Patterns">
+            Example: Content Patterns
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Font Awesome"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-flag icon-left"></i> Font Awesome <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#font-awesome" title="About Font Awesome">
+            About Font Awesome
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Headers"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-heading icon-left"></i> Headers <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-1" title="About Headers">
+            About Headers
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-1" title="Headers (Level 1)">
+            Headers (Level 1)
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-2" title="Headers (Level 2)">
+            Headers (Level 2)
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-3" title="Headers (Level 3)">
+            Headers (Level 3)
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-level-4" title="Headers (Level 4)">
+            Headers (Level 4)
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#header-markup-length" title="Header Markup Length">
+            Header Markup Length
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Images"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-images icon-left"></i> Images <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#images" title="About Images">
+            About Images
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Includes"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-wave-square icon-left"></i> Includes <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#includes" title="About Includes">
+            About Includes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#via-file" title="via File">
+            via File
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#via-snippet" title="via Snippet">
+            via Snippet
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Inline Markup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-pen-square icon-left"></i> Inline Markup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#inline-markup" title="About Inline Markup">
+            About Inline Markup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#bold" title="Bold">
+            Bold
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#italics" title="Italics">
+            Italics
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#code-strings" title="Code Strings">
+            Code Strings
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Links"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-link icon-left"></i> Links <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#links" title="About Links">
+            About Links
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#external" title="External">
+            External
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#reference" title="Reference">
+            Reference
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#topic" title="Topic">
+            Topic
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Lists"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-bars icon-left"></i> Lists <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#lists" title="About Lists">
+            About Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#definition-lists" title="Definition Lists">
+            Definition Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#ordered-lists" title="Ordered Lists">
+            Ordered Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#unordered-lists" title="Unordered Lists">
+            Unordered Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tables"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-th icon-left"></i> Tables <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tables" title="About Tables">
+            About Tables
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#csv-table" title="CSV Table">
+            CSV Table
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#grid-table" title="Grid Table">
+            Grid Table
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#list-table" title="List Table">
+            List Table
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#simple-table" title="Simple Table">
+            Simple Table
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Toctree"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-cube icon-left"></i> Toctree <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#toctree" title="About Toctree">
+            About Toctree
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tokens"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-infinity icon-left"></i> Tokens <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#tokens" title="About Tokens">
+            About Tokens
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Topic Titles"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-passport icon-left"></i> Topic Titles <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/rst/rst.html#topic-titles" title="About Topic Titles">
+            About Topic Titles
           </a>
         </li>
 

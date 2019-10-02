@@ -159,3 +159,45 @@ nav.nav-main {
     right: 0;
   }
 }
+
+
+
+/* The container <div> positions the dropdown content */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Shows the dropdown menu on hover */
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+/* The content in the dropdown (hidden by default) */
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $markup-bluegrey-background;
+  min-width: 200px;
+  line-height: 34px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.nav-dropdown-content a {
+  color: darken($markup-almost-black, 10%);
+  border-bottom: 1px solid $markup-white;
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Changes the color of dropdown links on hover */
+.nav-dropdown-content a:hover {
+  color: $markup-white;
+  background-color: $markup-topnav-rollover;
+  border-bottom: 1px solid $markup-white;
+}
+
+

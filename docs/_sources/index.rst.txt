@@ -5,12 +5,22 @@
 
 
 ==================================================
-MARKUP Theme
+About the MARKUP Theme
 ==================================================
 
-The MARKUP theme is a theme for use with Sphinx projects. The MARKUP theme is open source and is uses the `Attribution 3.0 Unported (CC BY 3.0) <https://creativecommons.org/licenses/by/3.0/>`__ license.
+The MARKUP theme is a theme for use with Sphinx projects. The MARKUP theme is open source and is uses the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__ license.
 
-About the MARKUP Theme
+This site shows off the capabilities of the |theme| theme, including:
+
+* Multiple sites that act as a collection of documentation
+* Formatting guides for both Markdown and reStructuredText authoring
+* Tutorials and documentation of various components within the theme
+* Left-side and top-level navigation
+* Search
+* Hosted on GitHub pages
+
+
+Start Here
 ==================================================
 
 :doc:`about` |fa-index-circle| :ref:`Why the MARKUP theme? <about-markup-why>` |fa-index-circle| :ref:`Goals <about-markup-why-goals>` |fa-index-circle| :ref:`Non-goals <about-markup-why-non-goals>`
