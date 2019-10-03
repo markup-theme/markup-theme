@@ -5,7 +5,7 @@
 
 
 ==================================================
-Set up |theme|
+|theme| Theme Setup
 ==================================================
 
 The |theme| theme is not a plugin for Sphinx and is not installed to your system. Instead, it is downloaded as a complete set of directories and files from GitHub.
