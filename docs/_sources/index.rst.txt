@@ -31,7 +31,7 @@ Start Here
 **About the MARKUP theme**
    :doc:`about` |fa-index-circle| :ref:`Why MARKUP? <about-markup-why>` |fa-index-circle| :ref:`Goals <about-markup-goals>` |fa-index-circle| :ref:`Non-goals <about-markup-non-goals>`
 
-**Set up MARKUP**
+**MARKUP Theme Setup**
    :doc:`setup` |fa-index-circle| :ref:`Required <setup-required>` |fa-index-circle| :ref:`Recommended <setup-recommended>` |fa-index-circle| :ref:`Download theme <setup-download>` |fa-index-circle| :ref:`Environment setup <setup-environment>` |fa-index-circle| :ref:`Localhost setup <setup-localhost>` |fa-index-circle| :ref:`Build the theme <setup-build>` |fa-index-circle| :ref:`Output directories <setup-output-directories>`
 
 **Sass**
