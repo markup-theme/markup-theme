@@ -7,28 +7,37 @@
 {% set navItems = [
 
   {
-    "title": "MARKUP Theme",
-    "iconClass": "fas fa-arrow-alt-circle-up fa-fw",
+    "title": "Start Here",
+    "iconClass": "fas fa-arrow-alt-circle-right fa-fw",
     "subItems": [
       {
-        "title": "MARKUP Theme",
-        "iconClass": "fa-star",
+        "title": "Site Index",
+        "hasSubItems": false,
+        "url": "/markup-theme/index.html"
+      },
+      {
+        "title": "MARKUP Theme Overview",
         "hasSubItems": true,
         "subItems": [
           {
             "title": "About the MARKUP Theme",
             "hasSubItems": false,
-            "url": "/markup-theme/index.html#markup-theme"
+            "url": "/markup-theme/about.html"
+          },
+          {
+            "title": "Why MARKUP?",
+            "hasSubItems": false,
+            "url": "/markup-theme/about.html#why-markup"
           },
           {
             "title": "Goals",
             "hasSubItems": false,
-            "url": "/markup-theme/index.html#goals"
+            "url": "/markup-theme/about.html#goals"
           },
           {
             "title": "Non-goals",
             "hasSubItems": false,
-            "url": "/markup-theme/index.html#non-goals"
+            "url": "/markup-theme/about.html#non-goals"
           },
         ],
       },
@@ -37,38 +46,96 @@
         "hasSubItems": false,
         "url": "/markup-theme/faq.html"
       },
+    ]
+  },
+
+  {
+    "title": "Theme Setup",
+    "iconClass": "far fa-check-circle",
+    "hasSubItems": true,
+    "subItems": [
       {
-        "title": "Requirements",
+        "title": "About Theme Setup",
         "hasSubItems": false,
-        "url": "/markup-theme/index.html#requirements"
+        "url": "/markup-theme/setup.html"
+      },
+      {
+        "title": "Required",
+        "hasSubItems": false,
+        "url": "/markup-theme/setup.html#required"
+      },
+      {
+        "title": "Recommended",
+        "hasSubItems": false,
+        "url": "/markup-theme/setup.html#recommended"
+      },
+      {
+        "title": "Download Theme",
+        "hasSubItems": false,
+        "url": "/markup-theme/setup.html#download-theme"
       },
       {
         "title": "Environment Setup",
         "hasSubItems": false,
-        "url": "/markup-theme/index.html#environment-setup"
+        "url": "/markup-theme/setup.html#environment-setup"
       },
       {
         "title": "Localhost Setup",
         "hasSubItems": false,
-        "url": "/markup-theme/index.html#localhost-setup"
+        "url": "/markup-theme/setup.html#localhost-setup"
       },
       {
         "title": "Build the Theme",
         "hasSubItems": false,
-        "url": "/markup-theme/index.html#build-the-theme"
+        "url": "/markup-theme/setup.html#build-the-theme"
       },
-    ]
+      {
+        "title": "Output Directories",
+        "hasSubItems": false,
+        "url": "/markup-theme/setup.html#output-directories"
+      },
+    ],
   },
+
   {
-    "title": "Tutorials",
-    "iconClass": "fa-check-square",
+    "title": "Sass",
+    "iconClass": "fab fa-sass",
     "hasSubItems": true,
     "subItems": [
       {
-        "title": "About Tutorials",
+        "title": "About Sass",
         "hasSubItems": false,
-        "url": "/markup-theme/tutorials.html"
+        "url": "/markup-theme/css.html"
       },
+      {
+        "title": "Sassy CSS",
+        "hasSubItems": false,
+        "url": "/markup-theme/css.html#sassy-css"
+      },
+      {
+        "title": "Sass Updates for MARKUP",
+        "hasSubItems": true,
+        "subItems": [
+          {
+            "title": "Site Colors",
+            "hasSubItems": false,
+            "url": "/markup-theme/css.html#site-colors"
+          },
+          {
+            "title": "Config Path",
+            "hasSubItems": false,
+            "url": "/markup-theme/css.html#config-path"
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    "title": "Tutorials",
+    "iconClass": "fa-chalkboard-teacher",
+    "hasSubItems": true,
+    "subItems": [
       {
         "title": "Blockquotes",
         "hasSubItems": false,
@@ -101,7 +168,6 @@
       },
       {
         "title": "Navigation Icons",
-        "iconClass": "fa-star",
         "hasSubItems": true,
         "subItems": [
           {
@@ -132,39 +198,13 @@
         "url": "/markup-theme/tutorials.html#pdf-cover-pages"
       },
       {
-        "title": "Sass",
-        "hasSubItems": false,
-        "url": "/markup-theme/tutorials.html#sass"
-      },
-      {
         "title": "Tokens",
         "hasSubItems": false,
         "url": "/markup-theme/tutorials.html#tokens"
       },
-      {
-        "title": "Upgrade the MARKUP Theme",
-        "iconClass": "fa-star",
-        "hasSubItems": true,
-        "subItems": [
-          {
-            "title": "expando.py",
-            "hasSubItems": false,
-            "url": "/markup-theme/tutorials.html#expando-py-extension"
-          },
-          {
-            "title": "tabs.py",
-            "hasSubItems": false,
-            "url": "/markup-theme/tutorials.html#tabs-py-extension"
-          },
-          {
-            "title": "slides.py",
-            "hasSubItems": false,
-            "url": "/markup-theme/tutorials.html#slides-py-extension"
-          },
-        ],
-      },
     ],
   },
+
   {
     "title": "Site Templates",
     "iconClass": "fa-clone",
@@ -182,7 +222,6 @@
       },
       {
         "title": "nav-docs.html",
-        "iconClass": "fa-star",
         "hasSubItems": true,
         "subItems": [
           {
@@ -227,16 +266,13 @@
           },
         ],
       },
-      {
-        "title": "CSS Stylesheets",
-        "hasSubItems": false,
-        "url": "/markup-theme/templates.html#css-stylesheets"
-      },
     ],
   },
+
+
   {
     "title": "Additional Resources",
-    "iconClass": "fa-folder-open",
+    "iconClass": "fa-archive",
     "hasSubItems": true,
     "subItems": [
       {
