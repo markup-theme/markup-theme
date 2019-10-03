@@ -552,7 +552,11 @@ For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for co
 Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it's pseudocode, is formatted correctly.
 
 ```eval_rst
-.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a `.. code-block:: yaml` code block, the build will fail because Jinja templating is not YAML. Use a `none` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
+.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail.
+
+   For example, if a code block contains YAML and Jinja and is defined by a `.. code-block:: yaml` code block, the build will fail because Jinja templating is not YAML.
+
+   Use a `none` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
 ```
 
 ### Line Emphasis

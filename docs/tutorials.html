@@ -36,7 +36,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="MARKUP Theme" href="index.html" />
-    <link rel="up" title="About the MARKUP Theme" href="about.html" />
+    <link rel="next" title="Upgrade the Theme" href="upgrades.html" />
     <link rel="prev" title="Site Templates" href="templates.html" /> 
   </head>
   <body role="document">
@@ -162,37 +162,51 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="MARKUP Theme"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fas fa-arrow-alt-circle-up fa-fw icon-left"></i> MARKUP Theme <!-- endif -->
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
 
 
-      <ul class="sub-items">
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
-          <div class="has-sub-items-content" title="MARKUP Theme">
-            MARKUP Theme
+          <div class="has-sub-items-content" title="MARKUP Theme Overview">
+            MARKUP Theme Overview
             <i class="fa fa-chevron-down"></i>
           </div>
           <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#markup-theme" title="About the MARKUP Theme">
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About the MARKUP Theme">
                 About the MARKUP Theme
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#goals" title="Goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-markup" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
                 Goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#non-goals" title="Non-goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
                 Non-goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
@@ -207,18 +221,56 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Theme Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> Theme Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#requirements" title="Requirements">
-            Requirements
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About Theme Setup">
+            About Theme Setup
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#environment-setup" title="Environment Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download Theme">
+            Download Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
             Environment Setup
           </a>
         </li>
@@ -226,7 +278,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#localhost-setup" title="Localhost Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
             Localhost Setup
           </a>
         </li>
@@ -234,8 +286,16 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#build-the-theme" title="Build the Theme">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-the-theme" title="Build the Theme">
             Build the Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
           </a>
         </li>
 
@@ -245,9 +305,9 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     </li>
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-check-square icon-left"></i> Tutorials <!-- endif -->
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -256,12 +316,57 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
       <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html" title="About Tutorials">
-            About Tutorials
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
@@ -355,49 +460,12 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#sass" title="Sass">
-            Sass
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
             Tokens
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Upgrade the MARKUP Theme">
-            Upgrade the MARKUP Theme
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#expando-py-extension" title="expando.py">
-                expando.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#tabs-py-extension" title="tabs.py">
-                tabs.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#slides-py-extension" title="slides.py">
-                slides.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -486,15 +554,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
           </ul>
         
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/templates.html#css-stylesheets" title="CSS Stylesheets">
-            CSS Stylesheets
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -502,7 +562,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-folder-open icon-left"></i> Additional Resources <!-- endif -->
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -579,14 +639,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </ul>
 </li>
 <li><a class="reference internal" href="#pdf-cover-pages">PDF Cover Pages</a></li>
-<li><a class="reference internal" href="#sass">Sass</a></li>
 <li><a class="reference internal" href="#tokens">Tokens</a></li>
-<li><a class="reference internal" href="#upgrade-the-theme">Upgrade the Theme</a><ul>
-<li><a class="reference internal" href="#expando-py-extension">expando.py Extension</a></li>
-<li><a class="reference internal" href="#tabs-py-extension">tabs.py Extension</a></li>
-<li><a class="reference internal" href="#slides-py-extension">slides.py Extension</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -983,10 +1036,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <p>If you change any of these names, be sure to update these names in the <code class="docutils literal notranslate"><span class="pre">_themes/markup_pdf/layout.html</span></code> file also. While you’re in there, fix the copyright statement at the bottom to say your company name and your company URL.</p>
 <p>You can move around the <code class="docutils literal notranslate"><span class="pre">markup-logo.png</span></code> file by adjusting the <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code>, and <code class="docutils literal notranslate"><span class="pre">height</span></code> settings for <code class="docutils literal notranslate"><span class="pre">#logo</span></code> in the <code class="docutils literal notranslate"><span class="pre">_nav.scss</span></code> file <code class="docutils literal notranslate"><span class="pre">markup_pdf</span></code> theme.</p>
 </div>
-<div class="section" id="sass">
-<span id="tutorials-sass"></span><h2>Sass<a class="headerlink" href="#sass" title="Permalink to this headline">¶</a></h2>
-<p>The MARKUP theme is already set up to use <a class="reference external" href="https://sass-lang.com/">Sass</a>. You will need to <a class="reference external" href="https://sass-lang.com/install">download Sass</a> to make changes to the style sheet. Recommended! You could switch this to be managed by your other favorite CSS manager, like <a class="reference external" href="http://lesscss.org/">Less</a>. But we don’t provide any tips on how to do that.</p>
-</div>
 <div class="section" id="tokens">
 <span id="tutorials-tokens"></span><h2>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h2>
 <p>The MARKUP theme has an example of tokens built into the theme. Open the <code class="docutils literal notranslate"><span class="pre">/markup_theme/tokens/names.txt</span></code> to see examples of tokens. For example:</p>
@@ -1023,807 +1072,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Markdown topics can use the <code class="docutils literal notranslate"><span class="pre">&lt;i</span> <span class="pre">class&gt;</span></code> string directly inline and do not require a token.</p>
-</div>
-</div>
-<div class="section" id="upgrade-the-theme">
-<span id="tutorials-upgrade-theme"></span><h2>Upgrade the Theme<a class="headerlink" href="#upgrade-the-theme" title="Permalink to this headline">¶</a></h2>
-<p>The following sections are less tutorial and more documentation of changes that were necessary to the extensions included with the MARKUP theme so they may be run with certain versions of Sphinx.</p>
-<div class="admonition-sphinx-1-5-1 admonition">
-<p class="first admonition-title">Sphinx 1.5.1</p>
-<p class="last">Sphinx 1.5.1 is, effectively, the starting point for the MARKUP theme.</p>
-</div>
-<div class="admonition-sphinx-1-8-5 admonition">
-<p class="first admonition-title">Sphinx 1.8.5</p>
-<p>The following issues were discovered when upgrading to Sphinx 1.8.5:</p>
-<ol class="last arabic simple">
-<li>The expando.py and tabs.py extensions needed to be updated to use the logger module. This was resolved by updating both extensions to import the logger module, and then to use the logger instead of <code class="docutils literal notranslate"><span class="pre">app.info('done')</span></code>.</li>
-<li>The sphinxjp.theme.revealjs theme broke in an automated CI/CD environment because (for whatever reason) it was not installable with Sphinx 1.8.5. We didn’t try to debug that specific issue. Instead, this was resolved by moving the <code class="docutils literal notranslate"><span class="pre">directives.py</span></code> file from that theme to the <code class="docutils literal notranslate"><span class="pre">_ext</span></code> directory, renaming it <code class="docutils literal notranslate"><span class="pre">slides.py</span></code>, and deprecating the use of a standalone <code class="docutils literal notranslate"><span class="pre">compat.py</span></code> file. This was done against Sphinx 1.5.1 prior to upgrading and resolved the problem (for now).</li>
-</ol>
-</div>
-<div class="admonition-sphinx-2-0-1 admonition">
-<p class="first admonition-title">Sphinx 2.0.1</p>
-<p>The following issues were discovered when upgrading to Sphinx 2.0.1:</p>
-<ol class="last arabic simple">
-<li>TBD. The scope of potential changes for 2.0.1 are unknown. They may be substantial or they may be easy.</li>
-</ol>
-</div>
-<div class="section" id="expando-py-extension">
-<h3>expando.py Extension<a class="headerlink" href="#expando-py-extension" title="Permalink to this headline">¶</a></h3>
-<p>The following tabs highlight changes made to the expando extension as part of Sphinx upgrades. The highlighted changes show the difference between the selected version and the previous version.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This extension was repurposed from the <a class="reference external" href="https://github.com/ulrobix/sphinxcontrib-contentui">contentui theme</a>, a BSD-licensed open source project available on GitHub.</p>
-</div>
-<div class="content-tabs expando-upgrades-by-version docutils container">
-<div class="tab-content docutils container" id="tab-sphinx151">
-<p class="tab-title">Sphinx 1.5.1</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;expando.js&#39;</span>
-
-<span class="k">class</span> <span class="nc">ToggleDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Locate content within vertical expandable sections.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">()</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-content&#39;</span><span class="p">)</span>
-
-        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-header&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="n">StringList</span><span class="p">([</span><span class="n">header</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">par</span><span class="p">,</span> <span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;expando&#39;</span><span class="p">,</span> <span class="n">ToggleDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="tab-content docutils container" id="tab-sphinx185">
-<p class="tab-title">Sphinx 1.8.5</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-<span class="hll"><span class="kn">from</span> <span class="nn">sphinx.util</span> <span class="kn">import</span> <span class="n">logging</span>
-</span>
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;expando.js&#39;</span>
-
-<span class="k">class</span> <span class="nc">ToggleDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Locate content within vertical expandable sections.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">()</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-content&#39;</span><span class="p">)</span>
-
-        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-header&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-            <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="n">StringList</span><span class="p">([</span><span class="n">header</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">par</span><span class="p">,</span> <span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-<span class="hll">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Copying expando JavaScript... &#39;</span><span class="p">,</span> <span class="n">nonl</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span>    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-<span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-</span>
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;expando&#39;</span><span class="p">,</span> <span class="n">ToggleDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="tabs-py-extension">
-<h3>tabs.py Extension<a class="headerlink" href="#tabs-py-extension" title="Permalink to this headline">¶</a></h3>
-<p>The following tabs highlight changes made to the tabs extension as part of Sphinx upgrades. The highlighted changes show the difference between the selected version and the previous version.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This extension was repurposed from the <a class="reference external" href="https://github.com/ulrobix/sphinxcontrib-contentui">contentui theme</a>, a BSD-licensed open source project available on GitHub.</p>
-</div>
-<div class="content-tabs tabs-upgrades-by-version docutils container">
-<div class="tab-content docutils container" id="tab-sphinx151">
-<p class="tab-title">Sphinx 1.5.1</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-
-
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;tabs.js&#39;</span>
-
-
-<span class="k">class</span> <span class="nc">ContentTabsDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Group content with horizontal tabs.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;content-tabs&#39;</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-            <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">ContentTabsContainerDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Allow content to exist within tabs.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;ids&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-content&#39;</span><span class="p">)</span>
-
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-title&#39;</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">+=</span> <span class="n">par</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;content-tabs&#39;</span><span class="p">,</span>  <span class="n">ContentTabsDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;tab-container&#39;</span><span class="p">,</span> <span class="n">ContentTabsContainerDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="tab-content docutils container" id="tab-sphinx185">
-<p class="tab-title">Sphinx 1.8.5</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-<span class="hll"><span class="kn">from</span> <span class="nn">sphinx.util</span> <span class="kn">import</span> <span class="n">logging</span>
-</span>
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;tabs.js&#39;</span>
-
-
-<span class="k">class</span> <span class="nc">ContentTabsDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Group content with horizontal tabs.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;content-tabs&#39;</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-            <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">ContentTabsContainerDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Allow content to exist within tabs.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;ids&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-content&#39;</span><span class="p">)</span>
-
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tab-title&#39;</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">+=</span> <span class="n">par</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-<span class="hll">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Copying tabs JavaScript... &#39;</span><span class="p">,</span> <span class="n">nonl</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span>    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-<span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-</span>
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;content-tabs&#39;</span><span class="p">,</span>  <span class="n">ContentTabsDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;tab-container&#39;</span><span class="p">,</span> <span class="n">ContentTabsContainerDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="slides-py-extension">
-<h3>slides.py Extension<a class="headerlink" href="#slides-py-extension" title="Permalink to this headline">¶</a></h3>
-<p>The following tabs highlight changes made to the slides extension as part of Sphinx upgrades. The highlighted changes show the difference between the selected version and the previous version.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The changes made for 1.5.1 are in comparison to the <code class="docutils literal notranslate"><span class="pre">compat.py</span></code> and <code class="docutils literal notranslate"><span class="pre">directives.py</span></code> files in the <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes.revealjs">open source project</a>. The open source license statement was added to the top of slides.py, along with the highlighted changes.</p>
-</div>
-<div class="content-tabs expando-upgrades-by-version docutils container">
-<div class="tab-content docutils container" id="tab-sphinx151">
-<p class="tab-title">Sphinx 1.5.1</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    sphinxjp.themes.revealjs.directives</span>
-<span class="sd">    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="sd">    :author: tell-k &lt;ffk2005@gmail.com&gt;</span>
-<span class="sd">    :copyright: tell-k. All Rights Reserved.</span>
-
-<span class="sd">    Permission is hereby granted, free of charge, to any person</span>
-<span class="sd">    obtaining a copy of this software and associated documentation</span>
-<span class="sd">    files (the &quot;Software&quot;), to deal in the Software without</span>
-<span class="sd">    restriction, including without limitation the rights to use,</span>
-<span class="sd">    copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
-<span class="sd">    copies of the Software, and to permit persons to whom the</span>
-<span class="sd">    Software is furnished to do so, subject to the following</span>
-<span class="sd">    conditions:</span>
-
-<span class="sd">    The above copyright notice and this permission notice shall be</span>
-<span class="sd">    included in all copies or substantial portions of the Software.</span>
-
-<span class="sd">    THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,</span>
-<span class="sd">    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES</span>
-<span class="sd">    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND</span>
-<span class="sd">    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT</span>
-<span class="sd">    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,</span>
-<span class="sd">    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span>
-<span class="sd">    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR</span>
-<span class="sd">    OTHER DEALINGS IN THE SOFTWARE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="hll"><span class="c1">#added from compat.py</span>
-</span><span class="hll"><span class="kn">import</span> <span class="nn">sys</span>
-</span><span class="hll"><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span> <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="nb">unicode</span>  <span class="c1"># NOQA</span>
-</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="hll"><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-</span><span class="kn">from</span> <span class="nn">docutils.parsers.rst.roles</span> <span class="kn">import</span> <span class="n">set_classes</span>
-<span class="hll"><span class="c1">#removed from sphinxjp.themes.revealjs import compat</span>
-</span>
-<span class="hll"><span class="n">__docformat__</span> <span class="o">=</span> <span class="s1">&#39;reStructuredText&#39;</span>
-</span>
-
-<span class="k">class</span> <span class="nc">revealjs</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; node for revealjs &quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">rv_code</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; node for revealjs code section &quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">rv_small</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; node for revealjs small text section &quot;&quot;&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">rv_note</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; node for revealjs presentation note &quot;&quot;&quot;</span>
-
-
-<span class="k">def</span> <span class="nf">heading</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; directives choices for heading tag &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">directives</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">argument</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;h2&#39;</span><span class="p">,</span> <span class="s1">&#39;h3&#39;</span><span class="p">,</span> <span class="s1">&#39;h4&#39;</span><span class="p">,</span> <span class="s1">&#39;h5&#39;</span><span class="p">,</span> <span class="s1">&#39;h6&#39;</span><span class="p">))</span>
-
-
-<span class="k">class</span> <span class="nc">RevealjsDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Reveal.JS slide entry  &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">100</span>
-    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
-
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">class_option</span><span class="p">,</span>
-        <span class="s1">&#39;noheading&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">flag</span><span class="p">,</span>
-        <span class="s1">&#39;title-heading&#39;</span><span class="p">:</span> <span class="n">heading</span><span class="p">,</span>
-        <span class="s1">&#39;subtitle&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;subtitle-heading&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-autoslide&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-markdown&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-transition&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-transition-speed&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-background&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-repeat&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-size&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-transition&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-state&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator-vertical&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator-notes&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-        <span class="s1">&#39;data-charset&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="n">node_class</span> <span class="o">=</span> <span class="n">revealjs</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; build revealjs node &quot;&quot;&quot;</span>
-
-        <span class="n">set_classes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_class</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="s2">&quot;data-markdown&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">:</span>
-            <span class="n">node</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">)</span>
-
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;noheading&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;noheading&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-
-        <span class="n">options_list</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s1">&#39;id&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;title-heading&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;subtitle-heading&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-autoslide&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-transition&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-transition-speed&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-background&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-background-repeat&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-background-size&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-background-transition&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-state&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-markdown&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-separator&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-separator-vertical&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-separator-notes&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;data-charset&#39;</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options_list</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">option</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
-                <span class="n">node</span><span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">RvSmallDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Create small text tag.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
-
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">class_option</span><span class="p">,</span>
-    <span class="p">}</span>
-    <span class="n">node_class</span> <span class="o">=</span> <span class="n">rv_small</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; build rv_small node &quot;&quot;&quot;</span>
-
-        <span class="n">set_classes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_class</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">RvNoteDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Directive for a notes tag.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
-
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">class_option</span><span class="p">,</span>
-    <span class="p">}</span>
-    <span class="n">node_class</span> <span class="o">=</span> <span class="n">rv_note</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; build rv_note node &quot;&quot;&quot;</span>
-        <span class="n">set_classes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_class</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_name</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">class</span> <span class="nc">RvCodeDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Directive for a code block with highlight.js</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">node_class</span> <span class="o">=</span> <span class="n">rv_code</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; build rv_code node &quot;&quot;&quot;</span>
-        <span class="n">set_classes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assert_has_content</span><span class="p">()</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_class</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">visit_revealjs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build start tag for revealjs &quot;&quot;&quot;</span>
-    <span class="n">section_attr</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">markdown_headings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;h1&quot;</span><span class="p">:</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;h2&quot;</span><span class="p">:</span> <span class="s2">&quot;##&quot;</span><span class="p">,</span> <span class="s2">&quot;h3&quot;</span><span class="p">:</span> <span class="s2">&quot;###&quot;</span><span class="p">,</span>
-                         <span class="s2">&quot;h4&quot;</span><span class="p">:</span> <span class="s2">&quot;####&quot;</span><span class="p">,</span> <span class="s2">&quot;h5&quot;</span><span class="p">:</span> <span class="s2">&quot;#####&quot;</span><span class="p">,</span> <span class="s2">&quot;h6&quot;</span><span class="p">:</span> <span class="s2">&quot;######&quot;</span><span class="p">}</span>
-
-    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">):</span>
-        <span class="n">section_attr</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;ids&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)]})</span>
-
-    <span class="n">attr_list</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="s1">&#39;data-autoslide&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-transition&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-transition-speed&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-background&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-repeat&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-size&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-background-transition&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-state&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-markdown&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator-vertical&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-separator-notes&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;data-charset&#39;</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">attr_list</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">section_attr</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">attr</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)})</span>
-
-    <span class="n">title</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;noheading&#39;</span><span class="p">):</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
-
-    <span class="n">title_heading</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title-heading&#39;</span><span class="p">,</span> <span class="s1">&#39;h2&#39;</span><span class="p">)</span>
-    <span class="n">subtitle</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;subtitle&quot;</span><span class="p">)</span>
-    <span class="n">subtitle_heading</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subtitle-heading&#39;</span><span class="p">,</span> <span class="s1">&#39;h3&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data-markdown&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-
-<span class="hll">        <span class="n">title_base</span> <span class="o">=</span> <span class="n">text</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%(heading)s</span><span class="s2"> </span><span class="si">%(title)s</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</span>        <span class="n">title_text</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
-            <span class="n">title_text</span> <span class="o">=</span> <span class="n">title_base</span> <span class="o">%</span> <span class="nb">dict</span><span class="p">(</span>
-                <span class="n">heading</span><span class="o">=</span><span class="n">markdown_headings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">title_heading</span><span class="p">),</span>
-                <span class="n">title</span><span class="o">=</span><span class="n">title</span>
-            <span class="p">)</span>
-
-        <span class="n">subtitle_text</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="k">if</span> <span class="n">subtitle</span><span class="p">:</span>
-            <span class="n">subtitle_text</span> <span class="o">=</span> <span class="n">title_base</span> <span class="o">%</span> <span class="nb">dict</span><span class="p">(</span>
-                <span class="n">heading</span><span class="o">=</span><span class="n">markdown_headings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">subtitle_heading</span><span class="p">),</span>
-                <span class="n">title</span><span class="o">=</span><span class="n">subtitle</span>
-            <span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-<span class="hll">        <span class="n">title_base</span> <span class="o">=</span> <span class="n">text</span><span class="p">(</span><span class="s2">&quot;&lt;</span><span class="si">%(heading)s</span><span class="s2">&gt;</span><span class="si">%(title)s</span><span class="s2">&lt;/</span><span class="si">%(heading)s</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</span>        <span class="n">title_text</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
-            <span class="n">title_text</span> <span class="o">=</span> <span class="n">title_base</span> <span class="o">%</span> <span class="nb">dict</span><span class="p">(</span>
-                <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
-                <span class="n">heading</span><span class="o">=</span><span class="n">title_heading</span><span class="p">)</span>
-
-        <span class="n">subtitle_text</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="k">if</span> <span class="n">subtitle</span><span class="p">:</span>
-            <span class="n">subtitle_text</span> <span class="o">=</span> <span class="n">title_base</span> <span class="o">%</span> <span class="nb">dict</span><span class="p">(</span>
-                <span class="n">title</span><span class="o">=</span><span class="n">subtitle</span><span class="p">,</span>
-                <span class="n">heading</span><span class="o">=</span><span class="n">subtitle_heading</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data-markdown&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">section_attr</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data-markdown&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
-<span class="hll">            <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;script type=&#39;text/template&#39;&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</span>            <span class="k">if</span> <span class="n">title_text</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title_text</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">subtitle_text</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subtitle_text</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">rawsource</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;/script&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;section&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">section_attr</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">title_text</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title_text</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">subtitle_text</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subtitle_text</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_first_last</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">depart_revealjs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build end tag for revealjs &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&lt;/section&gt;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">visit_rv_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build start tag for rv_code &quot;&quot;&quot;</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">))</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;code data-trim contenteditable&gt;&quot;</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">rawsource</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">depart_rv_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build end tag for rv_code &quot;&quot;&quot;</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;/code&gt;&quot;</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;/pre&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">visit_rv_small</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build start tag for rv_small &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;small&#39;</span><span class="p">))</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">set_first_last</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">depart_rv_small</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build end tag for rv_small&quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;/small&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">visit_rv_note</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build start tag for rv_note &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">starttag</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;aside&#39;</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;notes&#39;</span><span class="p">}))</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">set_first_last</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">depart_rv_note</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; build end tag for rv_note &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&lt;/aside&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Initialize &quot;&quot;&quot;</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Initializing RevealJS theme directives&#39;</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">revealjs</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_revealjs</span><span class="p">,</span> <span class="n">depart_revealjs</span><span class="p">))</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">rv_code</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_rv_code</span><span class="p">,</span> <span class="n">depart_rv_code</span><span class="p">))</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">rv_note</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_rv_note</span><span class="p">,</span> <span class="n">depart_rv_note</span><span class="p">))</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">rv_small</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_rv_small</span><span class="p">,</span> <span class="n">depart_rv_small</span><span class="p">))</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;revealjs&#39;</span><span class="p">,</span> <span class="n">RevealjsDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;rv_code&#39;</span><span class="p">,</span> <span class="n">RvCodeDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;rv_note&#39;</span><span class="p">,</span> <span class="n">RvNoteDirective</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;rv_small&#39;</span><span class="p">,</span> <span class="n">RvSmallDirective</span><span class="p">)</span>
-    <span class="k">return</span>
-</pre></div>
-</div>
-</div>
-<div class="tab-content docutils container" id="tab-sphinx185">
-<p class="tab-title">Sphinx 1.8.5</p>
-<p>No additional changes were necessary for this extension to run in Sphinx 1.8.5.</p>
-</div>
-</div>
 </div>
 </div>
 </div>

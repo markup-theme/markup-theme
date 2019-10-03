@@ -161,37 +161,51 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="MARKUP Theme"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fas fa-arrow-alt-circle-up fa-fw icon-left"></i> MARKUP Theme <!-- endif -->
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
 
 
-      <ul class="sub-items">
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
-          <div class="has-sub-items-content" title="MARKUP Theme">
-            MARKUP Theme
+          <div class="has-sub-items-content" title="MARKUP Theme Overview">
+            MARKUP Theme Overview
             <i class="fa fa-chevron-down"></i>
           </div>
           <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#markup-theme" title="About the MARKUP Theme">
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About the MARKUP Theme">
                 About the MARKUP Theme
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#goals" title="Goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-markup" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
                 Goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#non-goals" title="Non-goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
                 Non-goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
@@ -206,18 +220,56 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Theme Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> Theme Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#requirements" title="Requirements">
-            Requirements
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About Theme Setup">
+            About Theme Setup
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#environment-setup" title="Environment Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download Theme">
+            Download Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
             Environment Setup
           </a>
         </li>
@@ -225,7 +277,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#localhost-setup" title="Localhost Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
             Localhost Setup
           </a>
         </li>
@@ -233,8 +285,16 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#build-the-theme" title="Build the Theme">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-the-theme" title="Build the Theme">
             Build the Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
           </a>
         </li>
 
@@ -244,9 +304,9 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     </li>
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-check-square icon-left"></i> Tutorials <!-- endif -->
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -255,12 +315,57 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
       <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html" title="About Tutorials">
-            About Tutorials
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
@@ -354,49 +459,12 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#sass" title="Sass">
-            Sass
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
             Tokens
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Upgrade the MARKUP Theme">
-            Upgrade the MARKUP Theme
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#expando-py-extension" title="expando.py">
-                expando.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#tabs-py-extension" title="tabs.py">
-                tabs.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#slides-py-extension" title="slides.py">
-                slides.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -485,15 +553,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
           </ul>
         
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/templates.html#css-stylesheets" title="CSS Stylesheets">
-            CSS Stylesheets
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -501,7 +561,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-folder-open icon-left"></i> Additional Resources <!-- endif -->
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -581,23 +641,29 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>The MARKUP theme is a theme for use with Sphinx projects. The MARKUP theme is open source and is uses the <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a> license.</p>
 <p>This site shows off the capabilities of the MARKUP theme, including:</p>
 <ul class="simple">
-<li>Multiple sites that act as a collection of documentation</li>
-<li>Formatting guides for both Markdown and reStructuredText authoring</li>
-<li>Tutorials and documentation of various components within the theme</li>
-<li>Left-side and top-level navigation</li>
+<li>Multiple sites that act as a single collection of documentation</li>
+<li>Custom left-side and top-level navigation</li>
 <li>Search</li>
 <li>Hosted on GitHub pages</li>
+<li>Formatting guides for both Markdown and reStructuredText authoring</li>
+<li>Tutorials for extending the MARKUP theme</li>
+<li>Documentation of various components within the MARKUP theme</li>
 </ul>
 <div class="section" id="start-here">
 <h2>Start Here<a class="headerlink" href="#start-here" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="about.html"><span class="doc">About the MARKUP Theme</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-why"><span class="std std-ref">Why the MARKUP theme?</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-why-goals"><span class="std std-ref">Goals</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-why-non-goals"><span class="std std-ref">Non-goals</span></a></p>
 <dl class="docutils">
-<dt><strong>Get Started</strong></dt>
-<dd><a class="reference internal" href="about.html#about-requirements"><span class="std std-ref">Requirements</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-recommended"><span class="std std-ref">Recommendations</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-setup-environment"><span class="std std-ref">Environment Setup</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-setup-localhost"><span class="std std-ref">Localhost Setup</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-build-theme"><span class="std std-ref">Build the MARKUP Theme</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-build-theme-output-directories"><span class="std std-ref">Output Directories</span></a></dd>
+<dt><strong>About the MARKUP theme</strong></dt>
+<dd><a class="reference internal" href="about.html"><span class="doc">About the MARKUP Theme</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-why"><span class="std std-ref">Why MARKUP?</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-goals"><span class="std std-ref">Goals</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="about.html#about-markup-non-goals"><span class="std std-ref">Non-goals</span></a></dd>
+<dt><strong>Set up MARKUP</strong></dt>
+<dd><a class="reference internal" href="setup.html"><span class="doc">Set up MARKUP</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-required"><span class="std std-ref">Required</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-recommended"><span class="std std-ref">Recommended</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-download"><span class="std std-ref">Download theme</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-environment"><span class="std std-ref">Environment setup</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-localhost"><span class="std std-ref">Localhost setup</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-build"><span class="std std-ref">Build the theme</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="setup.html#setup-output-directories"><span class="std std-ref">Output directories</span></a></dd>
+<dt><strong>Sass</strong></dt>
+<dd><a class="reference internal" href="css.html"><span class="doc">Sass</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="css.html#css-sassy"><span class="std std-ref">Sassy CSS</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="css.html#css-sassy-files"><span class="std std-ref">Sassy CSS Files</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="css.html#css-sass-updates"><span class="std std-ref">Sass Updates</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="css.html#css-sass-update-site-colors"><span class="std std-ref">Site Colors</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="css.html#css-sass-update-config-path"><span class="std std-ref">Config Path</span></a></dd>
 <dt><strong>Tutorials</strong></dt>
-<dd><a class="reference internal" href="tutorials.html#tutorials-blockquotes"><span class="std std-ref">Blockquotes</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-change-colors"><span class="std std-ref">Change Colors</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-code-block-styles"><span class="std std-ref">Code Block Styles</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-font-awesome-icons"><span class="std std-ref">Font Awesome Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-github-pages"><span class="std std-ref">GitHub Pages</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-local-pygments-css"><span class="std std-ref">Local Pygments CSS</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-pdf-cover-pages"><span class="std std-ref">PDF Cover Pages</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-sass"><span class="std std-ref">Sass</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-tokens"><span class="std std-ref">Tokens</span></a></dd>
-<dt><strong>Customize Icons</strong></dt>
-<dd><a class="reference internal" href="tutorials.html#tutorials-navigation-icons"><span class="std std-ref">Navigation Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-left-side"><span class="std std-ref">Left-side Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-right-side"><span class="std std-ref">Right-side Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-hamburger"><span class="std std-ref">Hamburger Icon</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-inline"><span class="std std-ref">Inline Icons</span></a></dd>
+<dd><p class="first"><a class="reference internal" href="tutorials.html"><span class="doc">Tutorials</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-blockquotes"><span class="std std-ref">Blockquotes</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-change-colors"><span class="std std-ref">Change Colors</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-code-block-styles"><span class="std std-ref">Code Block Styles</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-font-awesome-icons"><span class="std std-ref">Font Awesome Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-github-pages"><span class="std std-ref">GitHub Pages</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-local-pygments-css"><span class="std std-ref">Pygments CSS</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-pdf-cover-pages"><span class="std std-ref">PDF Cover Pages</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-tokens"><span class="std std-ref">Tokens</span></a></p>
+<p class="last"><a class="reference internal" href="tutorials.html#tutorials-navigation-icons"><span class="std std-ref">Navigation Icons</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-left-side"><span class="std std-ref">Left-side</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-right-side"><span class="std std-ref">Right-side</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-hamburger"><span class="std std-ref">Hamburger</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="tutorials.html#tutorials-navigation-icons-inline"><span class="std std-ref">Inline</span></a></p>
+</dd>
+<dt><strong>Site templates</strong></dt>
+<dd><a class="reference internal" href="templates.html"><span class="doc">Site Templates</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-layout"><span class="std std-ref">layout.html</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-block-nav-main"><span class="std std-ref">{% block nav_main %}</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-nav-docs"><span class="std std-ref">nav-docs.html</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-global-navigation"><span class="std std-ref">Global navigation</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-site-navigation"><span class="std std-ref">Site navigation</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-navigation-structure"><span class="std std-ref">Navigation structure</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-navigation-paths"><span class="std std-ref">Navigation paths</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-active-product"><span class="std std-ref">Active product</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-active-page-name"><span class="std std-ref">Active page name</span></a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference internal" href="templates.html#templates-active-version"><span class="std std-ref">Active version</span></a></dd>
 </dl>
 </div>
 <div class="section" id="format-w-markdown">

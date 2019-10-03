@@ -8,31 +8,43 @@
 About the MARKUP Theme
 ==================================================
 
-The MARKUP theme is a theme for use with Sphinx projects. The MARKUP theme is open source and is uses the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__ license.
+.. index-markup-intro-start
+
+The |theme| theme is a theme for use with Sphinx projects. The |theme| theme is open source and is uses the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__ license.
+
+.. index-markup-intro-end
 
 This site shows off the capabilities of the |theme| theme, including:
 
-* Multiple sites that act as a collection of documentation
-* Formatting guides for both Markdown and reStructuredText authoring
-* Tutorials and documentation of various components within the theme
-* Left-side and top-level navigation
+* Multiple sites that act as a single collection of documentation
+* Custom left-side and top-level navigation
 * Search
 * Hosted on GitHub pages
+* Formatting guides for both Markdown and reStructuredText authoring
+* Tutorials for extending the |theme| theme
+* Documentation of various components within the |theme| theme
 
 
 Start Here
 ==================================================
 
-:doc:`about` |fa-index-circle| :ref:`Why the MARKUP theme? <about-markup-why>` |fa-index-circle| :ref:`Goals <about-markup-why-goals>` |fa-index-circle| :ref:`Non-goals <about-markup-why-non-goals>`
+**About the MARKUP theme**
+   :doc:`about` |fa-index-circle| :ref:`Why MARKUP? <about-markup-why>` |fa-index-circle| :ref:`Goals <about-markup-goals>` |fa-index-circle| :ref:`Non-goals <about-markup-non-goals>`
 
-**Get Started**
-   :ref:`Requirements <about-requirements>` |fa-index-circle| :ref:`Recommendations <about-recommended>` |fa-index-circle| :ref:`Environment Setup <about-setup-environment>` |fa-index-circle| :ref:`Localhost Setup <about-setup-localhost>` |fa-index-circle| :ref:`Build the MARKUP Theme <about-build-theme>` |fa-index-circle| :ref:`Output Directories <about-build-theme-output-directories>`
+**Set up MARKUP**
+   :doc:`setup` |fa-index-circle| :ref:`Required <setup-required>` |fa-index-circle| :ref:`Recommended <setup-recommended>` |fa-index-circle| :ref:`Download theme <setup-download>` |fa-index-circle| :ref:`Environment setup <setup-environment>` |fa-index-circle| :ref:`Localhost setup <setup-localhost>` |fa-index-circle| :ref:`Build the theme <setup-build>` |fa-index-circle| :ref:`Output directories <setup-output-directories>`
+
+**Sass**
+   :doc:`css` |fa-index-circle| :ref:`Sassy CSS <css-sassy>` |fa-index-circle| :ref:`Sassy CSS Files <css-sassy-files>` |fa-index-circle| :ref:`Sass Updates <css-sass-updates>` |fa-index-circle| :ref:`Site Colors <css-sass-update-site-colors>` |fa-index-circle| :ref:`Config Path <css-sass-update-config-path>`
 
 **Tutorials**
-   :ref:`Blockquotes <tutorials-blockquotes>` |fa-index-circle| :ref:`Change Colors <tutorials-change-colors>` |fa-index-circle| :ref:`Code Block Styles <tutorials-code-block-styles>` |fa-index-circle| :ref:`Font Awesome Icons <tutorials-font-awesome-icons>` |fa-index-circle| :ref:`GitHub Pages <tutorials-github-pages>` |fa-index-circle| :ref:`Local Pygments CSS <tutorials-local-pygments-css>` |fa-index-circle| :ref:`PDF Cover Pages <tutorials-pdf-cover-pages>` |fa-index-circle| :ref:`Sass <tutorials-sass>` |fa-index-circle| :ref:`Tokens <tutorials-tokens>`
+   :doc:`tutorials` |fa-index-circle| :ref:`Blockquotes <tutorials-blockquotes>` |fa-index-circle| :ref:`Change Colors <tutorials-change-colors>` |fa-index-circle| :ref:`Code Block Styles <tutorials-code-block-styles>` |fa-index-circle| :ref:`Font Awesome Icons <tutorials-font-awesome-icons>` |fa-index-circle| :ref:`GitHub Pages <tutorials-github-pages>` |fa-index-circle| :ref:`Pygments CSS <tutorials-local-pygments-css>` |fa-index-circle| :ref:`PDF Cover Pages <tutorials-pdf-cover-pages>` |fa-index-circle| :ref:`Tokens <tutorials-tokens>`
 
-**Customize Icons**
-   :ref:`Navigation Icons <tutorials-navigation-icons>` |fa-index-circle| :ref:`Left-side Icons <tutorials-navigation-icons-left-side>` |fa-index-circle| :ref:`Right-side Icons <tutorials-navigation-icons-right-side>` |fa-index-circle| :ref:`Hamburger Icon <tutorials-navigation-icons-hamburger>` |fa-index-circle| :ref:`Inline Icons <tutorials-navigation-icons-inline>`
+   :ref:`Navigation Icons <tutorials-navigation-icons>` |fa-index-circle| :ref:`Left-side <tutorials-navigation-icons-left-side>` |fa-index-circle| :ref:`Right-side <tutorials-navigation-icons-right-side>` |fa-index-circle| :ref:`Hamburger <tutorials-navigation-icons-hamburger>` |fa-index-circle| :ref:`Inline <tutorials-navigation-icons-inline>`
+
+
+**Site templates**
+   :doc:`templates` |fa-index-circle| :ref:`layout.html <templates-layout>` |fa-index-circle| :ref:`{% block nav_main %} <templates-block-nav-main>` |fa-index-circle| :ref:`nav-docs.html <templates-nav-docs>` |fa-index-circle| :ref:`Global navigation <templates-global-navigation>` |fa-index-circle| :ref:`Site navigation <templates-site-navigation>` |fa-index-circle| :ref:`Navigation structure <templates-navigation-structure>` |fa-index-circle| :ref:`Navigation paths <templates-navigation-paths>` |fa-index-circle| :ref:`Active product <templates-active-product>` |fa-index-circle| :ref:`Active page name <templates-active-page-name>` |fa-index-circle| :ref:`Active version <templates-active-version>`
 
 
 Format w/Markdown
@@ -151,7 +163,10 @@ Format w/reStructuredText
    :hidden:
 
    about
+   css
    faq
    resources
+   setup
    templates
    tutorials
+   upgrades

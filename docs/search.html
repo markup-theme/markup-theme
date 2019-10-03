@@ -165,37 +165,51 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="MARKUP Theme"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fas fa-arrow-alt-circle-up fa-fw icon-left"></i> MARKUP Theme <!-- endif -->
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
 
 
-      <ul class="sub-items">
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
-          <div class="has-sub-items-content" title="MARKUP Theme">
-            MARKUP Theme
+          <div class="has-sub-items-content" title="MARKUP Theme Overview">
+            MARKUP Theme Overview
             <i class="fa fa-chevron-down"></i>
           </div>
           <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#markup-theme" title="About the MARKUP Theme">
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About the MARKUP Theme">
                 About the MARKUP Theme
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#goals" title="Goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-markup" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
                 Goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#non-goals" title="Non-goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
                 Non-goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
@@ -210,18 +224,56 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Theme Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> Theme Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#requirements" title="Requirements">
-            Requirements
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About Theme Setup">
+            About Theme Setup
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#environment-setup" title="Environment Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download Theme">
+            Download Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
             Environment Setup
           </a>
         </li>
@@ -229,7 +281,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#localhost-setup" title="Localhost Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
             Localhost Setup
           </a>
         </li>
@@ -237,8 +289,16 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#build-the-theme" title="Build the Theme">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-the-theme" title="Build the Theme">
             Build the Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
           </a>
         </li>
 
@@ -248,9 +308,9 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     </li>
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-check-square icon-left"></i> Tutorials <!-- endif -->
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -259,12 +319,57 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
       <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html" title="About Tutorials">
-            About Tutorials
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
@@ -358,49 +463,12 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#sass" title="Sass">
-            Sass
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
             Tokens
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Upgrade the MARKUP Theme">
-            Upgrade the MARKUP Theme
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#expando-py-extension" title="expando.py">
-                expando.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#tabs-py-extension" title="tabs.py">
-                tabs.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#slides-py-extension" title="slides.py">
-                slides.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -489,15 +557,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
           </ul>
         
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/templates.html#css-stylesheets" title="CSS Stylesheets">
-            CSS Stylesheets
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -505,7 +565,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-folder-open icon-left"></i> Additional Resources <!-- endif -->
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>

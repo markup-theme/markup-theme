@@ -1315,7 +1315,9 @@ Diagrams</div>
 <p>Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it’s pseudocode, is formatted correctly.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">yaml</span></code> code block, the build will fail because Jinja templating is not YAML. Use a <code class="docutils literal notranslate"><span class="pre">none</span></code> code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.</p>
+<p>Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, a Sphinx build may fail.</p>
+<p>For example, if a code block contains YAML and Jinja and is defined by a <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span> <span class="pre">yaml</span></code> code block, the build will fail because Jinja templating is not YAML.</p>
+<p class="last">Use a <code class="docutils literal notranslate"><span class="pre">none</span></code> code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.</p>
 </div>
 <div class="section" id="line-emphasis">
 <span id="format-content-code-block-line-emphasis"></span><h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
@@ -2546,6 +2548,10 @@ to build a pipeline.
 </pre></div>
 </div>
 <p>with the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">csv-table</span></code> in the block. The <code class="docutils literal notranslate"><span class="pre">:file:</span></code> must be the path to a CSV file that is available to Sphinx at build time.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The MARKUP theme has an example of a CSV file in the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory. In fact, it’s the same one for the <code class="docutils literal notranslate"><span class="pre">:file</span></code> parameter in the CSV table directive!</p>
+</div>
 <p>A CSV file is similar to:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Header1,Header2
 12345,67890

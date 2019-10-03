@@ -36,9 +36,8 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="MARKUP Theme" href="index.html" />
-    <link rel="up" title="About the MARKUP Theme" href="about.html" />
     <link rel="next" title="Tutorials" href="tutorials.html" />
-    <link rel="prev" title="Resources" href="resources.html" /> 
+    <link rel="prev" title="Set up MARKUP" href="setup.html" /> 
   </head>
   <body role="document">
     <div class="body-wrap">
@@ -163,37 +162,51 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="MARKUP Theme"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fas fa-arrow-alt-circle-up fa-fw icon-left"></i> MARKUP Theme <!-- endif -->
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
 
 
-      <ul class="sub-items">
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
-          <div class="has-sub-items-content" title="MARKUP Theme">
-            MARKUP Theme
+          <div class="has-sub-items-content" title="MARKUP Theme Overview">
+            MARKUP Theme Overview
             <i class="fa fa-chevron-down"></i>
           </div>
           <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#markup-theme" title="About the MARKUP Theme">
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About the MARKUP Theme">
                 About the MARKUP Theme
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#goals" title="Goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-markup" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
                 Goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
-              <a class="nav-docs-link" href="/markup-theme/index.html#non-goals" title="Non-goals">
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
                 Non-goals
               </a>
             </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
@@ -208,18 +221,56 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Theme Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> Theme Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#requirements" title="Requirements">
-            Requirements
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About Theme Setup">
+            About Theme Setup
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#environment-setup" title="Environment Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download Theme">
+            Download Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
             Environment Setup
           </a>
         </li>
@@ -227,7 +278,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#localhost-setup" title="Localhost Setup">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
             Localhost Setup
           </a>
         </li>
@@ -235,8 +286,16 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/index.html#build-the-theme" title="Build the Theme">
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-the-theme" title="Build the Theme">
             Build the Theme
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
           </a>
         </li>
 
@@ -246,9 +305,9 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     </li>
     <li class="main-item has-sub-items">
 
-      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-check-square icon-left"></i> Tutorials <!-- endif -->
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -257,12 +316,57 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
       <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html" title="About Tutorials">
-            About Tutorials
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
           </a>
         </li>
 
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
 
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
@@ -356,49 +460,12 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#sass" title="Sass">
-            Sass
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
             Tokens
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems -->
-
-        <li class="has-sub-items">
-          <div class="has-sub-items-content" title="Upgrade the MARKUP Theme">
-            Upgrade the MARKUP Theme
-            <i class="fa fa-chevron-down"></i>
-          </div>
-          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#expando-py-extension" title="expando.py">
-                expando.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#tabs-py-extension" title="tabs.py">
-                tabs.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
-
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/tutorials.html#slides-py-extension" title="slides.py">
-                slides.py
-              </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
-
-          </ul>
-        
-        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -487,15 +554,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
           </ul>
         
-        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/templates.html#css-stylesheets" title="CSS Stylesheets">
-            CSS Stylesheets
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
 
       </ul>
     </li>
@@ -503,7 +562,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
       <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
 
-        <i class="fa fa-folder-open icon-left"></i> Additional Resources <!-- endif -->
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
 
         <i class="fa fa-chevron-down"></i>
       </div>
@@ -580,7 +639,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <li><a class="reference internal" href="#active-version">Active Version</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#css-stylesheets">CSS Stylesheets</a></li>
 </ul>
 </li>
 </ul>
@@ -595,7 +653,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>Site templates control how the MARKUP theme is built. There are global templates and site-specific templates. There are templates that focus on specific navigation areas of the site output.</p>
 <p>The MARKUP theme relies on the global templates generally, and then uses site-specific templates for page layout, left-side navigation, and search.</p>
 <div class="section" id="layout-html">
-<h2>layout.html<a class="headerlink" href="#layout-html" title="Permalink to this headline">¶</a></h2>
+<span id="templates-layout"></span><h2>layout.html<a class="headerlink" href="#layout-html" title="Permalink to this headline">¶</a></h2>
 <p>The layout.html file controls the site layout, including the locations in which all navigation elements, sub-templates, and everything else should go. The global layout.html file is in <code class="docutils literal notranslate"><span class="pre">_themes/markup/layout.html</span></code> and is overridden in the MARKUP theme by site-specific layout.html files, each of which are located at <code class="docutils literal notranslate"><span class="pre">&lt;site-directory&gt;/sources/_templates/layout.html</span></code>.</p>
 <p>It’s an important file and each docs collection gets its own for the following reasons:</p>
 <ol class="arabic simple">
@@ -605,7 +663,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>Ideally, the top-level navigation and user experience is the same for all of the primary topic collections. But this should not always be true.</p>
 <p>The layout.html file has some important sections, detailed below.</p>
 <div class="section" id="block-nav-main">
-<h3>{% block nav_main %}<a class="headerlink" href="#block-nav-main" title="Permalink to this headline">¶</a></h3>
+<span id="templates-block-nav-main"></span><h3>{% block nav_main %}<a class="headerlink" href="#block-nav-main" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">nav_main</span></code> block is what defines the navigation structure that appears across the top of the documentation web site, along with the site logo and the icon used for the hamburger button.</p>
 <p>For example:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-main&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;navigation&quot;</span> <span class="na">data-topbar</span><span class="p">&gt;</span>
@@ -650,7 +708,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 </div>
 <div class="section" id="nav-docs-html">
-<h2>nav-docs.html<a class="headerlink" href="#nav-docs-html" title="Permalink to this headline">¶</a></h2>
+<span id="templates-nav-docs"></span><h2>nav-docs.html<a class="headerlink" href="#nav-docs-html" title="Permalink to this headline">¶</a></h2>
 <p>The nav-docs.html a JSON file defines the structure of the left-side navigation. This structure is defined in two locations:</p>
 <ol class="arabic simple">
 <li>A global nav-docs.html file located in <code class="docutils literal notranslate"><span class="pre">_themes/markup/nav-docs.html</span></code>. Most of the global nav-docs.html file is not directly visible in the final output.</li>
@@ -663,7 +721,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p class="last">A well-designed docs site will have a very static left-side navigation. So outside of the process of adding items to it and occasionally moving things around or handling a deprecation, they should be very static. The JSON syntax is a bit tricky, but once you get the hang of it, the effort to maintain it is minimal, but with the added benefit of people on your team reviewing it closely every time a change is made.</p>
 </div>
 <div class="section" id="global-navigation">
-<h3>Global Navigation<a class="headerlink" href="#global-navigation" title="Permalink to this headline">¶</a></h3>
+<span id="templates-global-navigation"></span><h3>Global Navigation<a class="headerlink" href="#global-navigation" title="Permalink to this headline">¶</a></h3>
 <p>The global nav-docs.html file defines the form of the left-side navigation structure. Most of this structure is replaced by the contents of the site-specific nav-docs.html file with the exception of some global links that are placed at the bottom of the navigation.</p>
 <p>The section after the final <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">endblock</span> <span class="pre">%}</span></code> in the global nav-docs.html file defines a series of links that appear underneath the site-specific navigation structure. Each of these elements has the following structure:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;main-item dark-item&quot;</span><span class="p">&gt;</span>
@@ -690,7 +748,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>This could be links to other docs collections, marketing resource pages, training sites, or whatever you want.</p>
 </div>
 <div class="section" id="site-specific-navigation">
-<h3>Site-specific Navigation<a class="headerlink" href="#site-specific-navigation" title="Permalink to this headline">¶</a></h3>
+<span id="templates-site-navigation"></span><h3>Site-specific Navigation<a class="headerlink" href="#site-specific-navigation" title="Permalink to this headline">¶</a></h3>
 <p>The site-specific nav-docs.html file has a lot of important details. It specifies:</p>
 <ul class="simple">
 <li>The name of the docs collection</li>
@@ -724,7 +782,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 </div>
 <div class="section" id="navigation-structure">
-<h3>Navigation Structure<a class="headerlink" href="#navigation-structure" title="Permalink to this headline">¶</a></h3>
+<span id="templates-navigation-structure"></span><h3>Navigation Structure<a class="headerlink" href="#navigation-structure" title="Permalink to this headline">¶</a></h3>
 <p>The left navigation structure is limited to up to four levels, the first being a mandatory (and arbitrary) group name. Levels two through four are available for linking to topics and/or anchor references in the doc collection or for defining additional groups of topics. The following example shows the available structural options, with the various level options highlighted:</p>
 <div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
 <span class="hll"><span class="x">  &quot;title&quot;: &quot;Level 1 Group&quot;,</span>
@@ -782,7 +840,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>How you decide to define the left-side structure is up to you. One approach the MARKUP theme takes is to rougly map the headers in the topics to the left-side navigation, where a topic title might be a level 1 grouping. But this depends on how you decide to organize your content.</p>
 </div>
 <div class="section" id="navigation-paths">
-<h3>Navigation Paths<a class="headerlink" href="#navigation-paths" title="Permalink to this headline">¶</a></h3>
+<span id="templates-navigation-paths"></span><h3>Navigation Paths<a class="headerlink" href="#navigation-paths" title="Permalink to this headline">¶</a></h3>
 <p>The navigation paths specified by the <code class="docutils literal notranslate"><span class="pre">url</span></code> setting are HTML paths:</p>
 <ul class="simple">
 <li>For topics in the same collection, use <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;/topic_name.html&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;/topic_name.html#anchor&quot;</span></code>.</li>
@@ -791,7 +849,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </ul>
 </div>
 <div class="section" id="active-product">
-<h3>Active Product<a class="headerlink" href="#active-product" title="Permalink to this headline">¶</a></h3>
+<span id="templates-active-product"></span><h3>Active Product<a class="headerlink" href="#active-product" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">active_product</span></code> setting specifies the name of the product for which this documentation collection exists.</p>
 <div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_product</span> <span class="o">=</span> <span class="s2">&quot;MARKUP Theme&quot;</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
@@ -802,7 +860,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 </div>
 <div class="section" id="active-page-name">
-<h3>Active Page Name<a class="headerlink" href="#active-page-name" title="Permalink to this headline">¶</a></h3>
+<span id="templates-active-page-name"></span><h3>Active Page Name<a class="headerlink" href="#active-page-name" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">active_page_name</span></code> setting specifies the first entry at the top of the left navigation.</p>
 <div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_page_name</span> <span class="o">=</span> <span class="s2">&quot;MARKUP Theme&quot;</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
@@ -813,7 +871,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 </div>
 <div class="section" id="active-version">
-<h3>Active Version<a class="headerlink" href="#active-version" title="Permalink to this headline">¶</a></h3>
+<span id="templates-active-version"></span><h3>Active Version<a class="headerlink" href="#active-version" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">active_version</span></code> setting specifies the application version to which this documentation collection applies. For example: “current” (for the current version of the active product) or “1.1.1”, “1.1.2”, etc.</p>
 <div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_version</span> <span class="o">=</span> <span class="s2">&quot;current&quot;</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
@@ -830,25 +888,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p class="last">and then open <code class="docutils literal notranslate"><span class="pre">/_themes/markup/version-picker.html</span></code> and configure that file to populate the structure of the drop-down menu. This file is a simple HTML unordered list that groups content sets together. It’s flexible. Play around with it and see what you prefer.</p>
 </div>
 </div>
-</div>
-<div class="section" id="css-stylesheets">
-<h2>CSS Stylesheets<a class="headerlink" href="#css-stylesheets" title="Permalink to this headline">¶</a></h2>
-<p>CSS stylesheets are managed using Sass: <a class="reference external" href="http://sass-lang.com/install">http://sass-lang.com/install</a>. The Sass templates are located in the theme: <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/scss</span></code>. Sass must be installed, and then run from the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static</span></code> directory using the following command:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sass --watch scss/markup.scss:markup.css_t
-</pre></div>
-</div>
-<p>After Sass is running, open the Sass template files in a text editor and make changes. Sass will update changes made in the templates to the CSS file for the theme. The <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/scss</span></code> directory has the following files:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">_config.scss</span></code> defines template variables for managing colors, fonts, and some other things.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_nav-docs.scss</span></code> defines the styles and presentation for the left-side navigation tree.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_nav.scss</span></code> defines the navigation that exists across the top of the site.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_reset.scss</span></code> should not be modified; it’s the backup file in case (for whatever reason) a style doesn’t work.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_sidebar-ad.scss</span></code> should not be modified.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_sphinx.scss</span></code> defines the styles and presentation for the actual documentation page.</li>
-<li><code class="docutils literal notranslate"><span class="pre">_version-picker.scss</span></code> is unused in the current theme.</li>
-<li><code class="docutils literal notranslate"><span class="pre">markup.scss</span></code> should only be modified when additiona custom underscore-prefixed pages are added to the Sass templates directory</li>
-</ul>
-<p>The underscore-prefixed files are aggregated into the file located at <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/markup.css_t</span></code> and are managed by the <code class="docutils literal notranslate"><span class="pre">markup.scss</span></code> file to generate the CSS file that is used by the theme for presenting the layout of the docs website.</p>
 </div>
 </div>
 

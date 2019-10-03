@@ -13,7 +13,7 @@ Site templates control how the MARKUP theme is built. There are global templates
 The MARKUP theme relies on the global templates generally, and then uses site-specific templates for page layout, left-side navigation, and search.
 
 
-
+.. _templates-layout:
 
 layout.html
 ==================================================
@@ -28,6 +28,8 @@ Ideally, the top-level navigation and user experience is the same for all of the
 
 The layout.html file has some important sections, detailed below.
 
+
+.. _templates-block-nav-main:
 
 {% block nav_main %}
 --------------------------------------------------
@@ -76,6 +78,8 @@ The highlighted sections show where site-specific customizations should be made.
 .. hint:: Don't forget to make sure the ``<li class="nav-link is-active">`` part is set to the correct site.
 
 
+.. _templates-nav-docs:
+
 nav-docs.html
 ==================================================
 The nav-docs.html a JSON file defines the structure of the left-side navigation. This structure is defined in two locations:
@@ -89,6 +93,8 @@ The nav-docs.html a JSON file defines the structure of the left-side navigation.
 
    A well-designed docs site will have a very static left-side navigation. So outside of the process of adding items to it and occasionally moving things around or handling a deprecation, they should be very static. The JSON syntax is a bit tricky, but once you get the hang of it, the effort to maintain it is minimal, but with the added benefit of people on your team reviewing it closely every time a change is made.
 
+
+.. _templates-global-navigation:
 
 Global Navigation
 --------------------------------------------------
@@ -122,6 +128,8 @@ There can be as many of these as you want. For example:
 
 This could be links to other docs collections, marketing resource pages, training sites, or whatever you want.
 
+
+.. _templates-site-navigation:
 
 Site-specific Navigation
 --------------------------------------------------
@@ -159,6 +167,8 @@ For example:
      },
    ] -%}
 
+
+.. _templates-navigation-structure:
 
 Navigation Structure
 --------------------------------------------------
@@ -218,6 +228,8 @@ Up to four levels may be specified, in just about any order you want.
 How you decide to define the left-side structure is up to you. One approach the MARKUP theme takes is to rougly map the headers in the topics to the left-side navigation, where a topic title might be a level 1 grouping. But this depends on how you decide to organize your content.
 
 
+.. _templates-navigation-paths:
+
 Navigation Paths
 --------------------------------------------------
 The navigation paths specified by the ``url`` setting are HTML paths:
@@ -226,6 +238,8 @@ The navigation paths specified by the ``url`` setting are HTML paths:
 * For topics in a different collection that's part of the larger docs site use a path similar to ``"url": "../../path-to/topic-name.html"`` or ``"url": "../../path-to/topic-name.html#anchor"``.
 * The URL may also be an arbitrary URL that links to anywhere else: ``"url": "https://your-site.com/topic-name.html"``.
 
+
+.. _templates-active-product:
 
 Active Product
 --------------------------------------------------
@@ -238,6 +252,8 @@ The ``active_product`` setting specifies the name of the product for which this 
 .. warning:: This setting is unused and should (for now) contain the same exact string as the ``active_page_name`` setting.
 
 
+.. _templates-active-page-name:
+
 Active Page Name
 --------------------------------------------------
 The ``active_page_name`` setting specifies the first entry at the top of the left navigation.
@@ -248,6 +264,8 @@ The ``active_page_name`` setting specifies the first entry at the top of the lef
 
 .. warning:: This setting is required and should be consistent with product naming and strings that are specified in ``layout.html``.
 
+
+.. _templates-active-version:
 
 Active Version
 --------------------------------------------------
@@ -267,29 +285,5 @@ The ``active_version`` setting specifies the application version to which this d
       </li>
 
    and then open ``/_themes/markup/version-picker.html`` and configure that file to populate the structure of the drop-down menu. This file is a simple HTML unordered list that groups content sets together. It's flexible. Play around with it and see what you prefer.
-
-
-
-
-CSS Stylesheets
-==================================================
-CSS stylesheets are managed using Sass: http://sass-lang.com/install. The Sass templates are located in the theme: ``_themes/markup/static/scss``. Sass must be installed, and then run from the ``_themes/markup/static`` directory using the following command:
-
-.. code-block:: console
-
-   $ sass --watch scss/markup.scss:markup.css_t
-
-After Sass is running, open the Sass template files in a text editor and make changes. Sass will update changes made in the templates to the CSS file for the theme. The ``_themes/markup/static/scss`` directory has the following files:
-
-* ``_config.scss`` defines template variables for managing colors, fonts, and some other things.
-* ``_nav-docs.scss`` defines the styles and presentation for the left-side navigation tree.
-* ``_nav.scss`` defines the navigation that exists across the top of the site.
-* ``_reset.scss`` should not be modified; it's the backup file in case (for whatever reason) a style doesn't work.
-* ``_sidebar-ad.scss`` should not be modified.
-* ``_sphinx.scss`` defines the styles and presentation for the actual documentation page.
-* ``_version-picker.scss`` is unused in the current theme.
-* ``markup.scss`` should only be modified when additiona custom underscore-prefixed pages are added to the Sass templates directory
-
-The underscore-prefixed files are aggregated into the file located at ``_themes/markup/static/markup.css_t`` and are managed by the ``markup.scss`` file to generate the CSS file that is used by the theme for presenting the layout of the docs website.
 
 
