@@ -5,7 +5,7 @@
 
 
 ==================================================
-About the |theme| Theme
+About |theme|
 ==================================================
 
 .. include:: index.rst
@@ -22,11 +22,11 @@ Sphinx is a great tool that is mostly used for software engineering projects and
 
 Sphinx is also a great tool that can handle many other types of technical writing projects and can scale beyond documenting a single tool or application.
 
-The |theme| theme exists to provide an alternative to default Sphinx behaviors and navigation patterns found in all of the currently available (and popular!) themes.
+|theme| exists to provide an alternative to default Sphinx behaviors and navigation patterns found in all of the currently available (and popular!) themes.
 
-The |theme| theme is designed to provide a navigation structure that supports multiple sites within the same cohesive navigation spaces, built with the idea that content that exists within a single document collection can also be reused across any of the others.
+|theme| is designed to provide a navigation structure that supports multiple sites within the same cohesive navigation spaces, built with the idea that content that exists within a single document collection can also be reused across any of the others.
 
-In many ways, the |theme| theme is targeted for use by technical writers (and technical writing teams) and is designed to support documenting many tools and applications.
+In many ways, |theme| is targeted for use by technical writers (and technical writing teams) and is designed to support documenting many tools and applications.
 
 
 .. _about-markup-goals:
@@ -40,7 +40,7 @@ Goals
 * Provide output that can be easily integrated into your company's public-facing or internal-facing websites
 * Extend easily. Customize the navigation, add CSS support for new elements, change the colors and add your brand
 * Focus on a useful subset of formatting options
-* Open source licensed. You may use it for free and may customize it however you want; some components of the |theme| theme are pulled in from other open source projects.
+* Open source licensed. You may use it for free and may customize it however you want; some components of |theme| are pulled in from other open source projects.
 * Support the Commonmark Markdown standard via a plugin; this plugin enables side-by-side use of reStructuredText and Markdown and gives Markdown pages access to the docutils library
 
 

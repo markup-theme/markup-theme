@@ -1,7 +1,7 @@
 
 # Formatting Guide: Markdown
 
-This is the formatting guide for Markdown as it may be used with the MARKUP theme.
+This is the formatting guide for Markdown as it may be used with MARKUP.
 
 ```eval_rst
 * :ref:`admonitions`
@@ -29,7 +29,7 @@ This is the formatting guide for Markdown as it may be used with the MARKUP them
 
 ## Markdown for Sphinx
 
-Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown *and* Sphinx directive formatting within the same file, which makes available to Markdown-based topics the more powerful aspects of Sphinx formatting and content management.
+Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by MARKUP.) The Recommonmark plugin enables the ability to use Markdown *and* Sphinx directive formatting within the same file, which makes available to Markdown-based topics the more powerful aspects of Sphinx formatting and content management.
 
 ### Recommonmark Plugin
 
@@ -171,7 +171,7 @@ builds as:
 
 ### Custom Admonitions
 
-The MARKUP theme uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
+MARKUP uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
 
 **Raw HTML**
 
@@ -2270,7 +2270,7 @@ This example shows various standard content elements--paragraphs, bold, italic, 
 
 ## Font Awesome
 
-You can use Font Awesome icons inline (<i class="fas fa-heart"></i>). The MARKUP theme is configured to use the [free-for-web Font Awesome library](https://fontawesome.com/download). For example:
+You can use Font Awesome icons inline (<i class="fas fa-heart"></i>). MARKUP is configured to use the [free-for-web Font Awesome library](https://fontawesome.com/download). For example:
 
 ```none
 "This icon <i class="fas fa-heart"></i> is inline."
@@ -2298,7 +2298,7 @@ There are four recommended header levels in the documentation: H1, H2, H3, H4, p
 ##### H4
 ```
 
-The CSS for the MARKUP theme understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
+The CSS for MARKUP understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
 
 1. The left-side navigation supports 3 levels.
 1. The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side columm.
@@ -2535,7 +2535,7 @@ There are three types of links:
 
 ### External
 
-External links are links to pages outside of the documentation project entirely or to other pages in other documentation projects that are published as part of the MARKUP theme.
+External links are links to pages outside of the documentation project entirely or to other pages in other documentation projects that are published as part of MARKUP.
 
 For example:
 
@@ -2552,7 +2552,7 @@ builds as:
 External links can also be [placed inline](https://www.w3schools.com/w3css/).
 
 ```eval_rst
-.. note:: For "external" links to pages in other docs collections within the MARKUP theme, the full path does not need to be specified. Instead, only the relative path is required. For example:
+.. note:: For "external" links to pages in other docs collections within MARKUP, the full path does not need to be specified. Instead, only the relative path is required. For example:
 
    .. code-block:: none
 
@@ -2594,7 +2594,7 @@ or may be defined with an arbitrary string, like this:
 
 ~~~
 ```eval_rst
-:ref:`Read more about authoring in Markdown, building using Sphinx, and publishing with the MARKUP theme! <additional-resources>`
+:ref:`Read more about authoring in Markdown, building using Sphinx, and publishing with MARKUP! <additional-resources>`
 ```
 ~~~
 
@@ -2607,7 +2607,7 @@ These links build as:
 and:
 
 ```eval_rst
-:ref:`Read more about authoring in Markdown, building using Sphinx, and publishing with the MARKUP theme! <additional-resources>`
+:ref:`Read more about authoring in Markdown, building using Sphinx, and publishing with MARKUP! <additional-resources>`
 ```
 
 **Markdown Internal References**
@@ -2906,7 +2906,7 @@ True   True   True
 A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one `toctree` list must be declared.
 
 ```eval_rst
-.. note:: Because the MARKUP theme doesn't build its left navigation automatically from the header structures in topics, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no "previous" or "next" links in the MARKUP theme.)
+.. note:: Because MARKUP doesn't build its left navigation automatically from the header structures in topics, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no "previous" or "next" links in MARKUP.)
 ```
 
 This is done using a Sphinx directive:
@@ -2961,7 +2961,7 @@ The following formatting cannot be done with this theme:
 
 ### Blockquotes
 
-The MARKUP theme does not support out-of-the-box blockquotes. See the [blockquotes tutorial](https://markup-theme.github.io/markup-theme/tutorials.html#blockquotes) for the steps necessary to add CSS support for blockquotes.
+MARKUP does not support out-of-the-box blockquotes. See the [blockquotes tutorial](https://markup-theme.github.io/markup-theme/tutorials.html#blockquotes) for the steps necessary to add CSS support for blockquotes.
 
 ### Tokens
 
