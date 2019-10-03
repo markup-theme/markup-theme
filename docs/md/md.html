@@ -1104,7 +1104,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
             
   <div class="section" id="formatting-guide-markdown">
 <h1>Formatting Guide: Markdown<a class="headerlink" href="#formatting-guide-markdown" title="Permalink to this headline">¶</a></h1>
-<p>This is the style guide for the Markdown as it may be used with the MARKUP theme.</p>
+<p>This is the formatting guide for Markdown as it may be used with the MARKUP theme.</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id1"><span class="std std-ref">Admonitions</span></a></li>
 <li><a class="reference internal" href="#id2"><span class="std std-ref">Card Walls</span></a></li>
@@ -1129,7 +1129,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </ul>
 <div class="section" id="markdown-for-sphinx">
 <h2>Markdown for Sphinx<a class="headerlink" href="#markdown-for-sphinx" title="Permalink to this headline">¶</a></h2>
-<p>Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown <em>and</em> Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.</p>
+<p>Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown <em>and</em> Sphinx directive formatting within the same file, which makes available to Markdown-based topics the more powerful aspects of Sphinx formatting and content management.</p>
 <div class="section" id="recommonmark-plugin">
 <h3>Recommonmark Plugin<a class="headerlink" href="#recommonmark-plugin" title="Permalink to this headline">¶</a></h3>
 <p>To enable the use of Markdown with a Sphinx documentation project, install the Recommonmark plugin, and then adjust your Sphinx project’s configuration file.</p>
@@ -1165,7 +1165,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="evaluate-restructuredtext">
 <h3>Evaluate reStructuredText<a class="headerlink" href="#evaluate-restructuredtext" title="Permalink to this headline">¶</a></h3>
-<p>Configuring Remarkdown enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code> directive, which creates a bridge to Markdown that allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:</p>
+<p>Configuring Recommonmark enables the use of the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code> directive within Markdown topics, which allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. note:: This is the note directive in a Markdown topic. Naming the code block `eval_rst` allows the contents of that code block to be processed as if it were reStructuredText despite being in a Markdown file. Pretty cool!
 ```
@@ -1180,7 +1180,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="admonitions">
 <span id="id1"></span><h2>Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h2>
-<p>Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.</p>
+<p>Admonitions are notes, warnings, and other types of alerts to give to readers. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the other admonitions sparingly, or at least in a consistent manner.</p>
 <p>You can apply the same admonition styles as reStructuredText by using raw HTML or by using a Sphinx directive.</p>
 <div class="section" id="attention">
 <h3>Attention<a class="headerlink" href="#attention" title="Permalink to this headline">¶</a></h3>
@@ -1236,11 +1236,11 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="custom-admonitions">
 <h3>Custom Admonitions<a class="headerlink" href="#custom-admonitions" title="Permalink to this headline">¶</a></h3>
-<p>This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.</p>
+<p>The MARKUP theme uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.</p>
 <p><strong>Raw HTML</strong></p>
 <p>A custom admonition may be defined using raw HTML. Change the admonition title to what you want it to say.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition custom&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Custom admonition<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;first admonition-title&quot;</span><span class="p">&gt;</span>Custom admonition title<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;last&quot;</span><span class="p">&gt;</span>Contents of custom admonition.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
@@ -1248,21 +1248,21 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p>builds as:</p>
 <div class="admonition custom">
 <p class="first admonition-title">Custom admonition</p>
-<p class="last">Contents of custom admonition!</p>
+<p class="last">Contents of custom admonition.</p>
 </div><p><strong>Sphinx directive</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. code-block:: none
 
-   .. admonition:: Custom admonition
+   .. admonition:: Custom admonition title
 
-      Contents of custom admonition!
+      Contents of custom admonition.
 ```
 </pre></div>
 </div>
 <p>Which will appear in the documentation like this:</p>
-<div class="admonition-custom-admonition admonition">
-<p class="first admonition-title">Custom admonition</p>
-<p class="last">Contents of custom admonition!</p>
+<div class="admonition-custom-admonition-title admonition">
+<p class="first admonition-title">Custom admonition title</p>
+<p class="last">Contents of custom admonition.</p>
 </div>
 </div>
 <div class="section" id="danger">
@@ -1450,7 +1450,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="card-walls">
 <span id="id2"></span><h2>Card Walls<a class="headerlink" href="#card-walls" title="Permalink to this headline">¶</a></h2>
-<p>A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that’s full of links to resources.</p>
+<p>A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that’s full of links to resources. A card may contain standard inline formatting (plain text, bold, italics, and so on, along with links to topics in other parts of the documentation collection). A card wall may be placed inline on a page. It may also be used as a index page, where the only contents on the index page are cards in the card wall.</p>
 <div class="card-group docutils container">
 <div class="card-wall docutils container">
 <div class="card-wall-content docutils container">
@@ -1505,10 +1505,14 @@ The diagrams guide is just a list of sweet diagrams.</div>
 <div class="section" id="code-blocks">
 <span id="id3"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
 <p>For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code-block::</span></code> directive.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Code block types in the MARKUP are generalized. For example: the <code class="docutils literal notranslate"><span class="pre">text</span></code> type is used for general text files <strong>including</strong> configuration files and the <code class="docutils literal notranslate"><span class="pre">sql</span></code> type is used for general data tables. You may customize this to make them more specific and/or add more types to the code block styling options.</p>
+</div>
 <p>Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it’s pseudocode, is formatted correctly.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a <cite>.. code-block:: yaml</cite> code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the <cite>none</cite> code block to work around the problem, as it is much more forgiving.</p>
+<p class="last">Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn’t pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a <cite>.. code-block:: yaml</cite> code block, the build will fail because Jinja templating is not YAML. Use a <cite>none</cite> code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.</p>
 </div>
 <div class="section" id="line-emphasis">
 <h3>Line Emphasis<a class="headerlink" href="#line-emphasis" title="Permalink to this headline">¶</a></h3>
@@ -2654,7 +2658,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="example-faq">
 <h3>Example: FAQ<a class="headerlink" href="#example-faq" title="Permalink to this headline">¶</a></h3>
-<p>FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions.</p>
+<p>FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.</p>
 <p class="toggle-header"><strong>How do I set up a Sphinx documentation environment?</strong></p>
 <div class="toggle-content docutils container">
 <p>The following setup instructions assume the following:</p>
@@ -2985,7 +2989,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p>Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Snippets may not be used within the same file. The “target for that snippet” may not be the same file as the origin. This will cause a rendering issue in the output.</p>
+<p class="last">Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.</p>
 </div>
 <p>These types of inclusions require two steps:</p>
 <ol>
@@ -3020,7 +3024,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="inline-markup">
 <span id="id12"></span><h2>Inline Markup<a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
-<p>Paragraphs behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs and lists:</p>
+<p>Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs, lists, tables, and so on:</p>
 <div class="section" id="bold">
 <h3>Bold<a class="headerlink" href="#bold" title="Permalink to this headline">¶</a></h3>
 <p>Use two asterisks (<code class="docutils literal notranslate"><span class="pre">**</span></code>) around the word to apply bold formatting: <code class="docutils literal notranslate"><span class="pre">**bold**</span></code>.</p>
@@ -3031,7 +3035,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="code-strings">
 <h3>Code Strings<a class="headerlink" href="#code-strings" title="Permalink to this headline">¶</a></h3>
-<p>Use a single backtick at the beginning and end of a code string to apply inline code block formatting: <code class="docutils literal notranslate"><span class="pre">example</span></code>.</p>
+<p>Use a single backtick at the beginning and end of a code string to apply inline code block formatting.</p>
 </div>
 </div>
 <div class="section" id="links">
@@ -3058,6 +3062,14 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </ul>
 </div>
 <p>External links can also be <a class="reference external" href="https://www.w3schools.com/w3css/">placed inline</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For “external” links to pages in other docs collections within the MARKUP theme, the full path does not need to be specified. Instead, only the relative path is required. For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`About Admonitions &lt;/markup-theme/rst/rst.html#admonitions&gt;`__
+</pre></div>
+</div>
+<p class="last">will link to <a class="reference external" href="/markup-theme/rst/rst.html#admonitions">About Admonitions</a>.</p>
+</div>
 </div>
 <div class="section" id="reference">
 <h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
@@ -3213,6 +3225,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <li>List tables</li>
 <li>Simple tables</li>
 </ol>
+<p>There is no right or wrong way to build a table, as long as the build doesn’t fail and your readers can see all of the information in the table. Therefore, use the table that’s easiest for you. That said, for tables that have a lot of data in them, consider using a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.</p>
 <div class="section" id="grid-table">
 <h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
 <p>Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.</p>
@@ -3364,7 +3377,7 @@ True   True   True
 <p>A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list must be declared.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Because the MARKUP theme doesn’t build its left navigation automatically from the header structures in topics, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the toctree on the root page for the project (default: <cite>index</cite>) and add to that toctree all of the topics in the collection.</p>
+<p class="last">Because the MARKUP theme doesn’t build its left navigation automatically from the header structures in topics, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the toctree on the root page for the project (default: <cite>index</cite>) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no “previous” or “next” links in the MARKUP theme.)</p>
 </div>
 <p>This is done using a Sphinx directive:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
@@ -3394,7 +3407,7 @@ True   True   True
 </ul>
 <div class="section" id="blockquotes">
 <h3>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">¶</a></h3>
-<p>The MARKUP theme does not support blockquotes out-of-the-box. See the “Blockquotes” tutorial under for the steps necessary to add CSS support for blockquotes.</p>
+<p>The MARKUP theme does not support out-of-the-box blockquotes. See the <a class="reference external" href="markup-theme/tutorials.html#blockquotes">blockquotes tutorial</a> for the steps necessary to add CSS support for blockquotes.</p>
 </div>
 <div class="section" id="tokens">
 <h3>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h3>

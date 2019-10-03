@@ -39,7 +39,7 @@ Admonitions
 
 .. format-content-admonitions-start
 
-Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.
+Admonitions are notes and warnings, and other types of alerts to give to readers. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the other adminitions sparingly, or at least in a consistent manner.
 
 .. format-content-admonitions-end
 
@@ -94,21 +94,21 @@ Custom Admonitions
 
 .. format-content-custom-start
 
-This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.
+The |theme| theme uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
 
 For a custom admonition, use ``.. admonition:: some string`` as shown here:
 
 .. code-block:: rst
 
-   .. admonition:: some string
+   .. admonition:: Custom admonition title
 
-      Contents of custom admonition!
+      Contents of custom admonition.
 
 Which will appear in the documentation like this:
 
-.. admonition:: some string
+.. admonition:: Custom admonition title
 
-   Contents of custom admonition!
+   Contents of custom admonition.
 
 .. format-content-custom-end
 
@@ -269,7 +269,7 @@ Card Walls
 
 .. format-content-card-walls-start
 
-A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that's full of links to resources.
+A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that's full of links to resources. A card may contain standard inline formatting (plain text, bold, italics, and so on, along with links to topics in other parts of the documentation collection). A card wall may be placed inline on a page. It may also be used as a index page, where the only contents on the index page are cards in the card wall.
 
 
 .. container:: card-group
@@ -376,13 +376,15 @@ Code Blocks
 
 For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the ``.. code-block::`` directive.
 
+.. note:: Code block types in the |theme| are generalized. For example: the ``text`` type is used for general text files **including** configuration files and the ``sql`` type is used for general data tables. You may customize this to make them more specific and/or add more types to the code block styling options.
+
 Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it's pseudocode, is formatted correctly.
 
 .. format-content-code-blocks-end
 
 .. format-content-code-blocks-warning-start
 
-.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the ``none`` code block to work around the problem, as it is much more forgiving.
+.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML. Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
 
 .. format-content-code-blocks-warning-end
 
@@ -1418,7 +1420,7 @@ Example: FAQ
 
 .. format-content-expando-example-faq-start
 
-FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions.
+FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.
 
 .. expando::
    :title: **How do I set up a Sphinx documentation environment?**
@@ -1703,6 +1705,13 @@ after which ``|fa-meh|`` used inline in a paragraph results in |fa-meh|.
 Header (Level 1)
 ==================================================
 
+.. note:: The CSS for the MARKUP theme understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
+
+   #. The left-side navigation supports 3 levels.
+   #. The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side columm.
+
+   As such, H4 headers are as much formatting as they are organization. Anything below H4 is recommended to be formatted as **Bold** so that it doesn't appear in the right-side navigation, but still looks on the page as if it were an H5 header. Headers formatted via **Bold** cannot be linked from the left-side navigation because only headers generate an anchor reference. Consider also reformatting the structure of your page to minimize the depth of the header levels. Or use H5 headers: it's up to you!
+
 .. format-content-header-h1-start
 
 An H1 header appears in the documentation like this:
@@ -1877,7 +1886,7 @@ via Snippet
 
 Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
 
-.. warning:: Snippets may not be used within the same file. The "target for that snippet" may not be the same file as the origin. This will cause a rendering issue in the output.
+.. warning:: Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.
 
 These types of inclusions require two steps:
 
@@ -1948,7 +1957,7 @@ Inline Markup
 
 .. format-content-inline-markup-start
 
-Use any of these formatting options within paragraphs and lists:
+Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs, lists, tables, and so on:
 
 * :ref:`format-content-inline-markup-bold`
 * :ref:`format-content-inline-markup-italics`

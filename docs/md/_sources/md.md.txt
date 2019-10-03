@@ -1,7 +1,7 @@
 
 # Formatting Guide: Markdown
 
-This is the style guide for the Markdown as it may be used with the MARKUP theme.
+This is the formatting guide for Markdown as it may be used with the MARKUP theme.
 
 ```eval_rst
 * :ref:`admonitions`
@@ -29,7 +29,7 @@ This is the style guide for the Markdown as it may be used with the MARKUP theme
 
 ## Markdown for Sphinx
 
-Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown *and* Sphinx directive formatting within the same file, which opens up to Markdown-based topics some of the more powerful aspects of Sphinx content management.
+Using Markdown with Sphinx requires the Recommonmark plugin, which enables authoring in Markdown using the CommonMark specification of Markdown. (Only the CommonMark specification of Markdown is supported by the MARKUP theme.) The Recommonmark plugin enables the ability to use Markdown *and* Sphinx directive formatting within the same file, which makes available to Markdown-based topics the more powerful aspects of Sphinx formatting and content management.
 
 ### Recommonmark Plugin
 
@@ -76,7 +76,7 @@ app.add_transform(AutoStructify)
 
 ### Evaluate reStructuredText
 
-Configuring Remarkdown enables the use of the `eval_rst` directive, which creates a bridge to Markdown that allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:
+Configuring Recommonmark enables the use of the `eval_rst` directive within Markdown topics, which allows standard reStructuredText processing, including the use of directives, within Markdown pages. For example:
 
 ~~~
 ```eval_rst
@@ -97,7 +97,7 @@ builds as:
 
 ## Admonitions
 
-Admonitions are notes and warnings. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the others sparingly, or at least in a consistent manner.
+Admonitions are notes, warnings, and other types of alerts to give to readers. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the other admonitions sparingly, or at least in a consistent manner.
 
 You can apply the same admonition styles as reStructuredText by using raw HTML or by using a Sphinx directive.
 
@@ -171,7 +171,7 @@ builds as:
 
 ### Custom Admonitions
 
-This theme uses the default admonition to enable the use of custom titles. The default admonition is styled the same as a note.
+The MARKUP theme uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
 
 **Raw HTML**
 
@@ -179,7 +179,7 @@ A custom admonition may be defined using raw HTML. Change the admonition title t
 
 ```html
 <div class="admonition custom">
-<p class="first admonition-title">Custom admonition</p>
+<p class="first admonition-title">Custom admonition title</p>
 <p class="last">Contents of custom admonition.</p>
 </div>
 ```
@@ -188,7 +188,7 @@ builds as:
 
 <div class="admonition custom">
 <p class="first admonition-title">Custom admonition</p>
-<p class="last">Contents of custom admonition!</p>
+<p class="last">Contents of custom admonition.</p>
 </div>
 
 **Sphinx directive**
@@ -197,18 +197,18 @@ builds as:
 ```eval_rst
 .. code-block:: none
 
-   .. admonition:: Custom admonition
+   .. admonition:: Custom admonition title
 
-      Contents of custom admonition!
+      Contents of custom admonition.
 ```
 ~~~
 
 Which will appear in the documentation like this:
 
 ```eval_rst
-.. admonition:: Custom admonition
+.. admonition:: Custom admonition title
 
-   Contents of custom admonition!
+   Contents of custom admonition.
 ```
 
 
@@ -457,7 +457,7 @@ builds as:
 
 ## Card Walls
 
-A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that's full of links to resources.
+A card wall is a series of cards that show content groupings, such as on the main page of a docs site or on a marketing page that's full of links to resources. A card may contain standard inline formatting (plain text, bold, italics, and so on, along with links to topics in other parts of the documentation collection). A card wall may be placed inline on a page. It may also be used as a index page, where the only contents on the index page are cards in the card wall.
 
 
 ```eval_rst
@@ -545,10 +545,14 @@ A card wall is a series of cards that show content groupings, such as on the mai
 
 For code samples (Python, YAML, JSON, Jinja, config files, and so on) and for commands run via the command line that appear in the documentation we want to set them in code blocks using variations of the `.. code-block::` directive.
 
+```eval_rst
+.. note:: Code block types in the MARKUP are generalized. For example: the ``text`` type is used for general text files **including** configuration files and the ``sql`` type is used for general data tables. You may customize this to make them more specific and/or add more types to the code block styling options.
+```
+
 Code blocks are parsed using a tool called Pygments that checks the syntax in the named code block against the lexer in Pygments to help ensure that the structure of the code in the code block, even if it's pseudocode, is formatted correctly.
 
 ```eval_rst
-.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, the build will fail. For example, if code that contains YAML and Jinja templating is added to a `.. code-block:: yaml` code block, the build will fail because Jinja templating is not YAML. The same will happen if Ruby code is put in a Python code block. And so on. If we need to add a new code block for a particular language, talk to the docs team. In some rare cases, use the `none` code block to work around the problem, as it is much more forgiving.
+.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a `.. code-block:: yaml` code block, the build will fail because Jinja templating is not YAML. Use a `none` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
 ```
 
 ### Line Emphasis
@@ -1995,7 +1999,7 @@ The `:title:` may contain **bold** text, *italics* text, plain text, or a **comb
 
 ### Example: FAQ
 
-FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions.
+FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.
 
 ```eval_rst
 .. expando::
@@ -2445,7 +2449,7 @@ builds as:
 Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
 
 ```eval_rst
-.. warning:: Snippets may not be used within the same file. The "target for that snippet" may not be the same file as the origin. This will cause a rendering issue in the output.
+.. warning:: Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.
 ```
 
 These types of inclusions require two steps:
@@ -2496,7 +2500,7 @@ builds as:
 
 ## Inline Markup
 
-Paragraphs behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs and lists:
+Paragraphs, lists, and other strings of text behave here like they do in any text editor, with line breaks before and after, the usual. Use any of these formatting options within paragraphs, lists, tables, and so on:
 
 ### Bold
 
@@ -2508,7 +2512,7 @@ Use a single asterisk (`*`) around the word to apply italics formatting: `*itali
 
 ### Code Strings
 
-Use a single backtick at the beginning and end of a code string to apply inline code block formatting: `example`.
+Use a single backtick at the beginning and end of a code string to apply inline code block formatting.
 
 
 
@@ -2542,6 +2546,16 @@ builds as:
 * [https://www.w3schools.com/w3css/](https://www.w3schools.com/w3css/)
 
 External links can also be [placed inline](https://www.w3schools.com/w3css/).
+
+```eval_rst
+.. note:: For "external" links to pages in other docs collections within the MARKUP theme, the full path does not need to be specified. Instead, only the relative path is required. For example:
+
+   .. code-block:: none
+
+      `About Admonitions </markup-theme/rst/rst.html#admonitions>`__
+
+   will link to `About Admonitions </markup-theme/rst/rst.html#admonitions>`__.
+```
 
 ### Reference
 
@@ -2767,6 +2781,8 @@ Tables are always fun! There are three types of tables:
 2. List tables
 3. Simple tables
 
+There is no right or wrong way to build a table, as long as the build doesn't fail and your readers can see all of the information in the table. Therefore, use the table that's easiest for you. That said, for tables that have a lot of data in them, consider using a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.
+
 
 ### Grid Table
 
@@ -2886,7 +2902,7 @@ True   True   True
 A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one `toctree` list must be declared.
 
 ```eval_rst
-.. note:: Because the MARKUP theme doesn't build its left navigation automatically from the header structures in topics, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree all of the topics in the collection.
+.. note:: Because the MARKUP theme doesn't build its left navigation automatically from the header structures in topics, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no "previous" or "next" links in the MARKUP theme.)
 ```
 
 This is done using a Sphinx directive:
@@ -2941,7 +2957,7 @@ The following formatting cannot be done with this theme:
 
 ### Blockquotes
 
-The MARKUP theme does not support blockquotes out-of-the-box. See the "Blockquotes" tutorial under for the steps necessary to add CSS support for blockquotes.
+The MARKUP theme does not support out-of-the-box blockquotes. See the [blockquotes tutorial](markup-theme/tutorials.html#blockquotes) for the steps necessary to add CSS support for blockquotes.
 
 ### Tokens
 
