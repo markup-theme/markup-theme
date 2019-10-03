@@ -384,7 +384,11 @@ Code blocks are parsed using a tool called Pygments that checks the syntax in th
 
 .. format-content-code-blocks-warning-start
 
-.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail. For example, if a code block contains YAML and Jinja and is defined by a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML. Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
+.. warning:: Pygments lexers check the code in a code block against a lexer. A lexer checks the structure and syntax of the code in the code block. If this check doesn't pass, a Sphinx build may fail.
+
+   For example, if a code block contains YAML and Jinja and is defined by a ``.. code-block:: yaml`` code block, the build will fail because Jinja templating is not YAML.
+
+   Use a ``none`` code block to (temporarily or permanently) work around any problems you may have with rendering code blocks, as a none block is more forgiving.
 
 .. format-content-code-blocks-warning-end
 
@@ -2293,6 +2297,8 @@ Tables built from a CSV file use the ``.. csv-table::`` directive. For example:
       :header-rows: 1
 
 with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``csv-table`` in the block. The ``:file:`` must be the path to a CSV file that is available to Sphinx at build time.
+
+.. note:: The |theme| theme has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter in the CSV table directive!
 
 A CSV file is similar to:
 
