@@ -2957,7 +2957,7 @@ The following formatting cannot be done with this theme:
 
 ### Blockquotes
 
-The MARKUP theme does not support out-of-the-box blockquotes. See the [blockquotes tutorial](markup-theme/tutorials.html#blockquotes) for the steps necessary to add CSS support for blockquotes.
+The MARKUP theme does not support out-of-the-box blockquotes. See the [blockquotes tutorial](https://markup-theme.github.io/markup-theme/tutorials.html#blockquotes) for the steps necessary to add CSS support for blockquotes.
 
 ### Tokens
 
