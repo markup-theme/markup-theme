@@ -12,7 +12,7 @@
 Formatting Guide: reStructuredText
 ==================================================
 
-This is the formatting guide for |rst| as it may be used with the |theme| theme.
+This is the formatting guide for |rst| as it may be used with |theme|.
 
 * :ref:`format-content-admonitions`
 * :ref:`format-content-card-walls`
@@ -94,7 +94,7 @@ Custom Admonitions
 
 .. format-content-custom-start
 
-The |theme| theme uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
+|theme| uses the default admonition to enable the use of custom admonition titles. The default admonition is styled the same as a note.
 
 For a custom admonition, use ``.. admonition:: some string`` as shown here:
 
@@ -1709,7 +1709,7 @@ after which ``|fa-meh|`` used inline in a paragraph results in |fa-meh|.
 Header (Level 1)
 ==================================================
 
-.. note:: The CSS for the MARKUP theme understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
+.. note:: The CSS for |theme| understands headers below H4; however it's recommended to not use headers below that level for some (aesthetic) reasons:
 
    #. The left-side navigation supports 3 levels.
    #. The right-side navigation, while built automatically from the headers that exist on that page, indents each header level, and then wraps the text when the header is longer than the width of the right-side columm.
@@ -2298,7 +2298,7 @@ Tables built from a CSV file use the ``.. csv-table::`` directive. For example:
 
 with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``csv-table`` in the block. The ``:file:`` must be the path to a CSV file that is available to Sphinx at build time.
 
-.. note:: The |theme| theme has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter in the CSV table directive!
+.. note:: |theme| has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter in the CSV table directive!
 
 A CSV file is similar to:
 

@@ -8,11 +8,11 @@
 Upgrade the Theme
 ==================================================
 
-The following sections are less tutorial and more documentation of changes that were necessary to the extensions included with the |theme| theme so they may be run with certain versions of Sphinx.
+The following sections are less tutorial and more documentation of changes that were necessary to the extensions included with |theme| so they may be run with certain versions of Sphinx.
 
 .. admonition:: Sphinx 1.5.1
 
-   Sphinx 1.5.1 is, effectively, the starting point for the |theme| theme.
+   Sphinx 1.5.1 is, effectively, the starting point for |theme|.
 
 .. admonition:: Sphinx 1.8.5
 

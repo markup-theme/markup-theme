@@ -5,10 +5,10 @@
 
 
 ==================================================
-|theme| Theme Setup
+|theme| Setup
 ==================================================
 
-The |theme| theme is not a plugin for Sphinx and is not installed to your system. Instead, it is downloaded as a complete set of directories and files from GitHub.
+|theme| is not a plugin for Sphinx and is not installed to your system. Instead, it is downloaded as a complete set of directories and files from GitHub.
 
 
 .. _setup-required:
@@ -16,7 +16,7 @@ The |theme| theme is not a plugin for Sphinx and is not installed to your system
 Required
 ==================================================
 
-The |theme| theme requires the following applications to be installed on your machine:
+|theme| requires the following applications to be installed on your machine:
 
 * Sphinx 1.8.5: https://pypi.org/project/Sphinx/1.8.5/.
 
@@ -29,13 +29,13 @@ The |theme| theme requires the following applications to be installed on your ma
 
 Recommended
 --------------------------------------------------
-The |theme| theme recommends the following:
+|theme| recommends the following:
 
 * A good text editor. For example: TextMate (https://macromates.com/), Atom (https://atom.io/), or EditPad Pro (https://www.editpadpro.com/)
 * A source code repository: either a local Git repo (https://git-scm.com/) or one hosted at Bitbucket (https://bitbucket.org/), GitHub (https://github.com/), or GitLab (https://about.gitlab.com/)
 * The ability to use http://localhost/ as part of the local development process for your documentation project
 * Access to a CI/CD environment that can automate builds from your source code repository to a location that can host the static HTML output.
-* WeasyPrint: http://weasyprint.org/ (A tool that prints PDFs from HTML output. The |theme| theme does not support LaTeX PDF builds, though you may customize the |theme| theme to support that output behavior.)
+* WeasyPrint: http://weasyprint.org/ (A tool that prints PDFs from HTML output. |theme| does not support LaTeX PDF builds, though you may customize |theme| to support that output behavior.)
 
 
 .. _setup-download:
@@ -43,7 +43,7 @@ The |theme| theme recommends the following:
 Download Theme
 ==================================================
 
-The |theme| theme can be downloaded from GitHub.
+|theme| can be downloaded from GitHub.
 
 **To download the MARKUP theme**
 
@@ -136,7 +136,7 @@ For all other installation scenarios, the steps are similarly easy. Please refer
 Localhost Setup
 ==================================================
 
-The |theme| theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
+|theme| must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
 
 Mac OS machines have built-in localhost abilities that can be enabled.
 
@@ -172,7 +172,7 @@ Mac OS machines have built-in localhost abilities that can be enabled.
 
       $ sudo nano /etc/apache2/httpd.conf
 
-   and then update ``DocumentRoot`` and ``<Directory`` to have the path to the ``/output`` directory for the |theme| theme:
+   and then update ``DocumentRoot`` and ``<Directory`` to have the path to the ``/output`` directory for |theme|:
 
    .. code-block:: text
 
@@ -189,12 +189,12 @@ Mac OS machines have built-in localhost abilities that can be enabled.
 
 .. _setup-build:
 
-Build the Theme
+Build |theme|
 ==================================================
 
-The |theme| theme includes five documentation projects that are designed to fit together to show the entire output of the |theme| theme, including linked top-level navigation, site-specific left-side navigation, presentations, and PDFs, all built from one source repository, using a common toolset, and with the same user experience.
+|theme| includes five documentation projects that are designed to fit together to show the entire output of |theme|, including linked top-level navigation, site-specific left-side navigation, presentations, and PDFs, all built from one source repository, using a common toolset, and with the same user experience.
 
-The |theme| theme has a default structure of:
+|theme| has a default structure of:
 
 ::
 
@@ -261,7 +261,7 @@ The output directories are the locations to which Sphinx will put successfully b
 
    This is the directory from which PDFs are printed.
 
-   .. note:: When you are using the |theme| theme, you do not have to use this exact process for building PDFs. What you need to do is build the HTML to a location that is available to the ``weasyprint`` command as a URL. This can at a localhost URL, a local ``file:///`` path, an actual staging URL on an internal corpnet website, a public URL, and so on. The PDF should be built from the source at that URL to a location in the ``/output`` or copied there.
+   .. note:: When you are using |theme|, you do not have to use this exact process for building PDFs. What you need to do is build the HTML to a location that is available to the ``weasyprint`` command as a URL. This can at a localhost URL, a local ``file:///`` path, an actual staging URL on an internal corpnet website, a public URL, and so on. The PDF should be built from the source at that URL to a location in the ``/output`` or copied there.
 
    To print a PDF, assuming the source HTML output is located at ``http://localhost/pdf/`` and is built to that, same directory as a PDF file, for ``md.html``:
 

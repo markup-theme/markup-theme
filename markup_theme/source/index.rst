@@ -10,19 +10,19 @@ About the MARKUP Theme
 
 .. index-markup-intro-start
 
-The |theme| theme is a theme for use with Sphinx projects. The |theme| theme is open source and is uses the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__ license.
+|theme| is a theme for use with Sphinx projects. |theme| is open source and is uses the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`__ license.
 
 .. index-markup-intro-end
 
-This site shows off the capabilities of the |theme| theme, including:
+This site shows off the capabilities of |theme|, including:
 
 * Multiple sites that act as a single collection of documentation
 * Custom left-side and top-level navigation
 * Search
 * Hosted on GitHub pages
 * Formatting guides for both Markdown and reStructuredText authoring
-* Tutorials for extending the |theme| theme
-* Documentation of various components within the |theme| theme
+* Tutorials for extending |theme|
+* Documentation of various components within |theme|
 
 
 Start Here
