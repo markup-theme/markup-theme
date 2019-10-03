@@ -232,7 +232,7 @@ Font Awesome Icons
 
 Font Awesome is an `open source icon library <https://fontawesome.com/license/free>`__ that offers a free standard set of icons. The |theme| theme uses a single unmodified CSS and a single unmodified JavaScript file from the Font Awesome Free for the Web library.
 
-.. note:: To view the icons in the Free for the Web library, see https://fontawesome.com/icons?d=gallery&m=free. You may need to upgrade the CSS and JavaScript files in the |theme| theme to use the same set that is on the Font Awesome website.
+.. note:: Use any `icon in the Free for the Web library <https://fontawesome.com/icons?d=gallery&m=free>`__. You may need to upgrade the CSS and JavaScript files in the |theme| theme to use the same set that is on the Font Awesome website.
 
 **Upgrade the Font Awesome Free for the Web library**
 
