@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
-    <title>Resources &mdash; MARKUP Theme</title>
+    <title>Style Guide &mdash; MARKUP Theme</title>
     <link rel="stylesheet" href="_static/markup.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -36,8 +36,8 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="MARKUP Theme" href="index.html" />
-    <link rel="next" title="MARKUP Setup" href="setup.html" />
-    <link rel="prev" title="FAQ" href="faq.html" /> 
+    <link rel="next" title="Site Templates" href="templates.html" />
+    <link rel="prev" title="MARKUP Setup" href="setup.html" /> 
   </head>
   <body role="document">
     <div class="body-wrap">
@@ -792,22 +792,314 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
 
   <div class="sphinxsidebarwrapper">
+  <h3><i class="fas fa-newspaper" aria-hidden="true"></i><a href="index.html">&nbsp;ON THIS PAGE</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Style Guide</a><ul>
+<li><a class="reference internal" href="#code-blocks">Code Blocks</a><ul>
+<li><a class="reference internal" href="#indentation-patterns">Indentation Patterns</a></li>
+<li><a class="reference internal" href="#command-lines">Command Lines</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#command-prompts">Command Prompts</a></li>
+<li><a class="reference internal" href="#copypasta">Copypasta</a></li>
+<li><a class="reference internal" href="#field-names-vs-field-values">Field Names vs. Field Values</a></li>
+<li><a class="reference internal" href="#future-features">Future Features</a></li>
+<li><a class="reference internal" href="#gerunds">Gerunds</a></li>
+<li><a class="reference internal" href="#glossary">Glossary</a></li>
+<li><a class="reference internal" href="#jargon">Jargon</a></li>
+<li><a class="reference internal" href="#lists-within-lists">Lists within Lists</a></li>
+<li><a class="reference internal" href="#long-titles-headers">Long Titles, Headers</a></li>
+<li><a class="reference internal" href="#oxford-or-serial-comma">Oxford (or Serial) Comma</a></li>
+<li><a class="reference internal" href="#procedures">Procedures</a><ul>
+<li><a class="reference internal" href="#do-this">Do this</a></li>
+<li><a class="reference internal" href="#not-this">Not this</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#screen-shots">Screen Shots</a></li>
+<li><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li><a class="reference internal" href="#tables-and-columns">Tables and Columns</a></li>
+<li><a class="reference internal" href="#tabs-vs-evil">Tabs vs. Evil</a></li>
+<li><a class="reference internal" href="#text-editor">Text Editor</a></li>
+<li><a class="reference internal" href="#title-vs-sentence-case">Title vs. Sentence Case</a></li>
+</ul>
+</li>
+</ul>
+
   </div>
 </div>
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="resources">
-<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
-<p>The following PDF files are available:</p>
+  <div class="section" id="style-guide">
+<h1>Style Guide<a class="headerlink" href="#style-guide" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a sample style guide. You might not like it! If that’s the case, update this to be whatever you’d want your style guide to be.</p>
+</div>
+<p>This topic is a placeholder style guide for MARKUP and contains a collection of #protips for working with MARKUP. Refer to the <a class="reference external" href="https://developers.google.com/style/">Google Developer Documentation Style Guide</a> for anything not listed here. Use this topic as a starting place for a real style guide to use with your own project(s).</p>
+<div class="section" id="code-blocks">
+<span id="style-guide-code-blocks"></span><h2>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Code blocks show code, commands, scripts, data tables, configuration files, and more. Sphinx parses code blocks using a library called Pygments, which validates the structure in the code block against what would be reasonably expected for that code type. Highlighting is applied to the built code block by Pygments CSS.</p>
+<div class="section" id="indentation-patterns">
+<h3>Indentation Patterns<a class="headerlink" href="#indentation-patterns" title="Permalink to this headline">¶</a></h3>
+<p>Use a two-character indendation pattern for code blocks as often as possible, even if this violates some arbitrary rule advocated by proponents of that coding language.</p>
+<p>For most code block types this is easy. For example, Python:</p>
+<p><strong>Do this</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subsample</span> <span class="o">=</span> <span class="n">maybe</span><span class="o">.</span><span class="n">load_table</span><span class="p">(</span>
+  <span class="n">path</span><span class="o">=</span><span class="s1">&#39;filename.csv&#39;</span><span class="p">,</span>
+  <span class="n">column</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">maybe</span><span class="o">.</span><span class="n">get_name</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Not this</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">subsample</span> <span class="o">=</span> <span class="n">maybe</span><span class="o">.</span><span class="n">load_table</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;filename.csv&#39;</span><span class="p">,</span>
+                             <span class="n">column</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">maybe</span><span class="o">.</span><span class="n">get_name</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-lines">
+<h3>Command Lines<a class="headerlink" href="#command-lines" title="Permalink to this headline">¶</a></h3>
+<p>With command lines it can be more difficult. But we should still take a presentation-first approach. Super-long command lines will never look good :(.</p>
+<p><strong>Do this</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> service add --name<span class="o">=</span><span class="s2">&quot;s3&quot;</span> --type<span class="o">=</span><span class="s2">&quot;s3&quot;</span> <span class="nv">bucket</span><span class="o">=</span><span class="s2">&quot;company_bucket&quot;</span> <span class="se">\</span>
+<span class="nv">aws_access_key_id</span><span class="o">=</span><span class="s2">&quot;KEY&quot;</span> <span class="nv">aws_secret_access_key</span><span class="o">=</span><span class="s2">&quot;KEY&quot;</span>
+</pre></div>
+</div>
+<p><strong>Not this</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> service add --name<span class="o">=</span><span class="s2">&quot;s3&quot;</span> --type<span class="o">=</span><span class="s2">&quot;s3&quot;</span> <span class="nv">bucket</span><span class="o">=</span><span class="s2">&quot;company_bucket&quot;</span> <span class="nv">aws_access_key_id</span><span class="o">=</span><span class="s2">&quot;KEY&quot;</span> <span class="nv">aws_secret_access_key</span><span class="o">=</span><span class="s2">&quot;KEY&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="command-prompts">
+<span id="style-guide-command-prompts"></span><h2>Command Prompts<a class="headerlink" href="#command-prompts" title="Permalink to this headline">¶</a></h2>
+<p>Always use the <code class="docutils literal notranslate"><span class="pre">$</span></code> symbol at the start of any command a user would enter as a command. We don’t differentiate the required role of the user (such as “administrator”) via the command prompt symbol. If a specific role is required, introduce that role in preceding text.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only use the <code class="docutils literal notranslate"><span class="pre">console</span></code> code block to show command-line prompts.</p>
+</div>
+<p>For example, do this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -h html /path/to/source /path/to/output
+</pre></div>
+</div>
+<p>and not:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sphinx-build -h html /path/to/source /path/to/output</span>
+</pre></div>
+</div>
+<p>For command prompts that <em>return</em> information, do not use the <code class="docutils literal notranslate"><span class="pre">$</span></code> for the returned information. For example, do this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -h html /path/to/source /path/to/output
+</pre></div>
+</div>
+<p>returns:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Build succeeded.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copypasta">
+<span id="style-guide-copypasta"></span><h2>Copypasta<a class="headerlink" href="#copypasta" title="Permalink to this headline">¶</a></h2>
+<p>Copying and pasting (AKA “copypasta”) from non-text file formats, such as Confluence pages and Word documents, may cause you some real pain, especially with quotations, tabs, and other invisible hidden characters. In rare cases after copypasta, the character you see in the text file isn’t the character that is actually in the text file. This is super annoying. If you copy/paste from somewhere into files used with MARKUP, expect to do some work to clean that up, such as pedantically finding all the curly quotes and replacing them with straight quotes. Or other stuff.</p>
+</div>
+<div class="section" id="field-names-vs-field-values">
+<span id="style-guide-field-names"></span><h2>Field Names vs. Field Values<a class="headerlink" href="#field-names-vs-field-values" title="Permalink to this headline">¶</a></h2>
+<p>In a user interface, the names of fields and buttons and other elements that users interact with often have names, such as <strong>Subscription ID</strong> or <strong>Custom domain names</strong>. These names will have capitalization, either title case or camel case. In general, technical documentation should follow this pattern when referencing the field names.</p>
+<p>However, everything else associated with these names–values, nouns, what-have-yous, and-so-ons!–should not follow this pattern. Instead, write this as normal plain boring words without capitalization or formatting. Zzzzz.</p>
+<p>For example:</p>
+<p>“Copy the information in the <strong>Subscription ID</strong> and save it for later. You will need the subscription ID to complete the sign-up process.”</p>
+<p>Or:</p>
+<p>“Select the <strong>Custom domain names</strong> tab. You will need to create a custom domain name that uniquely identifies this use of [some product name goes here].”</p>
+<p>There are exceptions, of course. Of course there are exceptions! The goal here is to document things using plain language. Save the jargon, extra content formatting, and capitalizations for when it truly matters.</p>
+</div>
+<div class="section" id="future-features">
+<span id="style-guide-future-features"></span><h2>Future Features<a class="headerlink" href="#future-features" title="Permalink to this headline">¶</a></h2>
+<p>Avoid trying to document future features or products, even in innocuous ways, but especially in ways that promise functionality that does not (or may never) exist.</p>
+</div>
+<div class="section" id="gerunds">
+<span id="style-guide-gerunds"></span><h2>Gerunds<a class="headerlink" href="#gerunds" title="Permalink to this headline">¶</a></h2>
+<p>In titles, headers, and navigation elements, an important goal is to create the shortest possible header (that can still be understood and/or followed by the reader). The MARKUP rewards the non-use of gerunds in the left-side navigation and in topic titles! Every time you do this, please give yourself a gold star.</p>
+<div class="admonition-famous-quotes admonition">
+<p class="first admonition-title">Famous quotes:</p>
+<p>When writing documentation ask yourself “What does the user want or need to do?”</p>
+<p class="last">The answer is never “The user wants to adding a widget.”</p>
+</div>
+</div>
+<div class="section" id="glossary">
+<span id="style-guide-glossary"></span><h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p>Ideally a glossary should exist. See the <a class="reference internal" href="tutorials.html#tutorials-glossary"><span class="std std-ref">glossary tutorial</span></a> for how to add a link to a glossary page that is a global element within the left-side navigation.</p>
+</div>
+<div class="section" id="jargon">
+<span id="style-guide-jargon"></span><h2>Jargon<a class="headerlink" href="#jargon" title="Permalink to this headline">¶</a></h2>
+<p>Por favor to not use jargon.</p>
+<div class="admonition-famous-quotes admonition">
+<p class="first admonition-title">Famous quotes:</p>
+<p>“The use of clear, simple words over needlessly complex ones can actually make authors appear more intelligent.”</p>
+<p class="last">Paraphrased from a book by Daniel Oppenheimer titled <em>Consequences of Erudite Vernacular Utilized Irrespective of Necessity: Problems with Using Long Words Needlessly</em>.</p>
+</div>
+</div>
+<div class="section" id="lists-within-lists">
+<span id="style-guide-lists-within-lists"></span><h2>Lists within Lists<a class="headerlink" href="#lists-within-lists" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Anytime you see a list within a list it’s a clear sign that content should be broken down into smaller topics. Especially if the list within a list is within a procedure.</p>
+</div>
+<p>Lists within lists add unncessary structure to documentation. These should be avoided.</p>
+<p>Any time you run into a situation where a list within a list seems to make sense, the next step is to refactor the structure of the content and/or the information to be presented to remove the secondary list elements. Does a table within the list work better? Sometimes that answer is “Yes.” Maybe a different topic structure will solve the problem. Often, that answer is “Yes!”.</p>
+<p>For example:</p>
+<p><strong>To configure this thing</strong></p>
+<ol class="arabic simple">
+<li>Configure the thing via the log file:<ol class="arabic">
+<li>Open the log file and do something.</li>
+<li>Run a command, maybe.</li>
+</ol>
+</li>
+<li>Save your work if you want to.</li>
+</ol>
+<p>presents better when it’s like this:</p>
+<p><strong>Configure via log file</strong></p>
+<ol class="arabic simple">
+<li>Open the log file and do something.</li>
+<li>Run a command, maybe.</li>
+<li>Save your work if you want to.</li>
+</ol>
+<p>Or:</p>
+<p><strong>Our favorite random list items</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="/pdf/md.pdf">Markdown Style Guide</a></li>
-<li><a class="reference external" href="/pdf/rst.pdf">reStructuredText Style Guide</a></li>
+<li>We like these ones the best:<ul>
+<li>One.</li>
+<li>Two.</li>
+<li>Three.</li>
 </ul>
-<p>The following browser-based HTML presentations are available:</p>
+</li>
+<li>But also Four sometimes.</li>
+</ul>
+<p>presents better when it’s like this:</p>
+<p><strong>Our favorite random list items</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="/slides/about_markup.html">About the MARKUP Theme</a></li>
+<li>One.</li>
+<li>Two.</li>
+<li>Three.</li>
+<li>Four (sometimes).</li>
 </ul>
+</div>
+<div class="section" id="long-titles-headers">
+<span id="style-guide-long-titles-headers"></span><h2>Long Titles, Headers<a class="headerlink" href="#long-titles-headers" title="Permalink to this headline">¶</a></h2>
+<p>Question: How do I know if my topic titles and/or headers are too long?</p>
+<p>Answer #1: If a topic title or header wraps in the right-side navigation.</p>
+<p>Answer #2: If a topic title or header, as written in the topic, wraps in the left-side navigation. The left-side navigation is not built automatically. One solution here is to create a shorter entry in the left-side navigation, and then use a longer title or header in the topic.</p>
+</div>
+<div class="section" id="oxford-or-serial-comma">
+<span id="style-guide-oxford-comma"></span><h2>Oxford (or Serial) Comma<a class="headerlink" href="#oxford-or-serial-comma" title="Permalink to this headline">¶</a></h2>
+<p>Technical documentation should follow the Google Developer’s Style Guide regarding the <a class="reference external" href="https://developers.google.com/style/commas">use of the Oxford (or serial) comma</a>: “In a series of three or more items, use a comma before the final ‘and’ or ‘or.’”.</p>
+</div>
+<div class="section" id="procedures">
+<span id="style-guide-procedures"></span><h2>Procedures<a class="headerlink" href="#procedures" title="Permalink to this headline">¶</a></h2>
+<p>Focus procedures on a single goal. For example, if two things can be set up and configured, instead of bifurcating the steps within a procedure just make two procedures.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">One way to keep procedures focused is to use no more than 9 steps.</p>
+</div>
+<div class="section" id="do-this">
+<span id="style-guide-procedures-do"></span><h3>Do this<a class="headerlink" href="#do-this" title="Permalink to this headline">¶</a></h3>
+<p><strong>To set something to yes</strong></p>
+<ol class="arabic simple">
+<li>Open something.</li>
+<li>Click on this.</li>
+<li>Click on that.</li>
+<li>Choose <strong>yes</strong>.</li>
+</ol>
+<p>and</p>
+<p><strong>To set something to no</strong></p>
+<ol class="arabic simple">
+<li>Open something.</li>
+<li>Click on this.</li>
+<li>Click on that.</li>
+<li>Choose <strong>no</strong>.</li>
+</ol>
+</div>
+<div class="section" id="not-this">
+<span id="style-guide-procedures-not"></span><h3>Not this<a class="headerlink" href="#not-this" title="Permalink to this headline">¶</a></h3>
+<p><strong>To set something</strong></p>
+<ol class="arabic">
+<li><p class="first">Open something.</p>
+</li>
+<li><p class="first">Click on this.</p>
+</li>
+<li><p class="first">Click on that.</p>
+</li>
+<li><p class="first">Choose one of the following options:</p>
+<p>If (some explanation about why yes) for yes click <strong>yes</strong>.</p>
+<p>If (some explanation about why yes) for no click <strong>no</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="screen-shots">
+<span id="style-guide-screen-shots"></span><h2>Screen Shots<a class="headerlink" href="#screen-shots" title="Permalink to this headline">¶</a></h2>
+<p>People love screen shots. Or at least think they do. Screen shots can be helpful as part of technical documentation. Some tips:</p>
+<ol class="arabic simple">
+<li>Screen shots should be in SVG and PNG format.</li>
+<li>Consider how the image will look when printed out.</li>
+<li>Images should be no larger than ~750px wide. Or less, depending on the output formats and the quality of the image.</li>
+<li>Images that are published to multiple output formats must be PNG format.</li>
+<li>Verify that images published to multiple outputs look OK.</li>
+<li>Use mockup diagrams for full-screen UIs if possible.</li>
+</ol>
+</div>
+<div class="section" id="table-of-contents">
+<span id="style-guide-tables-of-content"></span><h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<p>Table of contents built via the default behavior of the Sphinx <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive is unsupported in MARKUP for all output formats. This is because MARKUP does not automatically-generate left-side navigation.</p>
+</div>
+<div class="section" id="tables-and-columns">
+<span id="style-guide-tables"></span><h2>Tables and Columns<a class="headerlink" href="#tables-and-columns" title="Permalink to this headline">¶</a></h2>
+<p>Tables are a great way to present certain types of information. The most important consideration with regard to tables is not the information you want to put into the table, but rather what the table looks like when you are done.</p>
+<p>Put differently:</p>
+<ul class="simple">
+<li>Tables need to work for both HTML and print formats.</li>
+<li>Table widths must consider the information that will go into each column, and also the width of the page.</li>
+<li>Contents of table rows must be sensible. For example, a 5-column table. Four of the columns contain short words, port numbers, and error codes. And one of the columns contains a description that’s 30 lines long for each row. Is that a good table?</li>
+</ul>
+<p>Sometimes it’s better to break a table down into subtopics rather than rows. And sometimes it’s better to have a table that goes on for 10 pages. It just depends. As long as it looks great when you’re finished and the information presents cleanly, then it’s probably a good table.</p>
+</div>
+<div class="section" id="tabs-vs-evil">
+<span id="style-guide-tabs"></span><h2>Tabs vs. Evil<a class="headerlink" href="#tabs-vs-evil" title="Permalink to this headline">¶</a></h2>
+<p>Tabs are evil in an environment that uses reStructuredText. As such, many topics are formatted one whitespace character at a time. This can be annoying when formatting large code blocks and tables, especially if your editor of choice is the console (and not a text editor), but that’s the way it is. Tabs may break formatting. Occasionally they may even break a build.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Good news! <a class="reference external" href="https://stackoverflow.blog/2017/06/15/developers-use-spaces-make-money-use-tabs/">Developers that use spaces make more money than those who use tabs.</a> It’s on StackOverflow, so it must be true!</p>
+</div>
+</div>
+<div class="section" id="text-editor">
+<span id="style-guide-text-editor"></span><h2>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h2>
+<p>Many text editors, especially those embedded in command shell workflows, tend to create hard wrapping in the documentation similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">topic</span> <span class="n">that</span> <span class="n">has</span> <span class="n">a</span> <span class="n">hard</span> <span class="n">wrapping</span>
+<span class="n">at</span> <span class="n">forty</span> <span class="n">characters</span> <span class="k">as</span> <span class="n">an</span> <span class="n">example</span> <span class="n">of</span>
+<span class="n">hard</span> <span class="n">wrapping</span> <span class="ow">in</span> <span class="n">documentation</span><span class="o">.</span> <span class="n">This</span>
+<span class="nb">type</span> <span class="n">of</span> <span class="n">formatting</span> <span class="n">technically</span> <span class="n">builds</span>
+<span class="n">fine</span> <span class="p">(</span><span class="n">mostly</span><span class="p">),</span> <span class="n">but</span> <span class="n">it</span> <span class="n">can</span> <span class="n">introduce</span>
+<span class="n">some</span> <span class="n">challenges</span> <span class="k">with</span> <span class="n">ensuring</span> <span class="n">that</span>
+<span class="n">Sphinx</span><span class="o">-</span><span class="n">authored</span> <span class="n">content</span> <span class="n">builds</span> <span class="k">as</span>
+<span class="n">nicely</span> <span class="k">as</span> <span class="n">we</span> <span class="n">want</span> <span class="n">it</span> <span class="n">to</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>From a technical writing perspective, formatting like that is super annoying. Especially when trying to edit that content in a normal text editor. Technical writers often work on multiple topics at the same time (either via tabs in a text editor or in multiple windows) and rely on the text wrapping at the window width so they can actually see, read, and edit the content.</p>
+<p>Topics should not wrap at some arbitrary width and should instead wrap with the size of the text editor. Mostly because technical writers do not use the command shell to author and edit topics.</p>
+<div class="admonition-recommended-text-editors admonition">
+<p class="first admonition-title">Recommended Text Editors</p>
+<p>These text editors are good ones:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://atom.io/">Atom</a></li>
+<li><a class="reference external" href="https://www.editpadpro.com/">EditPad Pro</a></li>
+<li><a class="reference external" href="https://macromates.com/">TextMate</a></li>
+</ul>
+<p class="last">There are others, for sure.</p>
+</div>
+</div>
+<div class="section" id="title-vs-sentence-case">
+<span id="style-guide-title-vs-sentence-case"></span><h2>Title vs. Sentence Case<a class="headerlink" href="#title-vs-sentence-case" title="Permalink to this headline">¶</a></h2>
+<p>Only use title case in topic titles, headers, and left-side navigation elements. Everywhere else, use sentence case <em>even when</em> an application user interface, internal jargon, non-trademarked third parties use title case. MARKUP don’t care. Readability is more important than following other people’s random rules for capitalization.</p>
+<p>Title case, When Used in Paragraphs makes everything look like Jargon and it creates important-seeming Words that are <strong>Not Important</strong>. Software, in particular, is very guilty of using Too Many Capital Letters in the Documentation. Save the capital letters!</p>
+<p>tl;dr: Use sentence case everywhere except for topic titles, topic header structures, and left-side navigation.</p>
+</div>
 </div>
 
 

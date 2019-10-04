@@ -441,13 +441,13 @@ For command shell blocks, assign ``console`` as the name of the code block:
 
    .. code-block:: console
 
-      $ cr service stop
+      $ service stop
 
 to create a code block like this:
 
 .. code-block:: console
 
-   $ cr service stop
+   $ service stop
 
 .. format-content-code-block-command-shell-end
 
@@ -467,7 +467,7 @@ For generic configuration file blocks, assign ``text`` as the name of the code b
    .. code-block:: text
 
       spark.setting.hours 1h
-      spark.setting.option -Duser.timezone=UTC
+      spark.setting.option -User.timezone=UTC
       spark.setting.memory 20g
 
 to create a code block like this:
@@ -475,7 +475,7 @@ to create a code block like this:
 .. code-block:: text
 
    spark.setting.hours 1h
-   spark.setting.option -Duser.timezone=UTC
+   spark.setting.option -User.timezone=UTC
    spark.setting.memory 20g
 
 .. note:: We're using ``text`` because there are not specific lexers available for all of the various configuration files. The ``text`` lexer allows us to style the code block similar to all of the others, but will not apply any highlighting to the formatting within the code block.

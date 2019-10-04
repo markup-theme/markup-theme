@@ -599,14 +599,14 @@ A fenced code block like this:
 
 ~~~
 ```console
-$ cr service stop
+$ service stop
 ```
 ~~~
 
 builds as:
 
 ```console
-$ cr service stop
+$ service stop
 ```
 
 **Sphinx directive**
@@ -617,7 +617,7 @@ A code block specified by a Sphinx directive:
 ```eval_rst
 .. code-block:: console
 
-   $ cr service stop
+   $ service stop
 ```
 ~~~
 
@@ -626,7 +626,7 @@ builds as:
 ```eval_rst
 .. code-block:: console
 
-   $ cr service stop
+   $ service stop
 ```
 
 ### Config File
@@ -640,7 +640,7 @@ A fenced code block like this:
 ~~~
 ```text
 spark.setting.hours 1h
-spark.setting.option -Duser.timezone=UTC
+spark.setting.option -User.timezone=UTC
 spark.setting.memory 20g
 ```
 ~~~
@@ -649,7 +649,7 @@ builds as:
 
 ```text
 spark.setting.hours 1h
-spark.setting.option -Duser.timezone=UTC
+spark.setting.option -User.timezone=UTC
 spark.setting.memory 20g
 ```
 
@@ -662,7 +662,7 @@ A code block specified by a Sphinx directive:
 .. code-block:: text
 
    spark.setting.hours 1h
-   spark.setting.option -Duser.timezone=UTC
+   spark.setting.option -User.timezone=UTC
    spark.setting.memory 20g
 ```
 ~~~
@@ -673,7 +673,7 @@ builds as:
 .. code-block:: text
 
    spark.setting.hours 1h
-   spark.setting.option -Duser.timezone=UTC
+   spark.setting.option -User.timezone=UTC
    spark.setting.memory 20g
 ```
 
