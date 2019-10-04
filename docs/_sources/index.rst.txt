@@ -157,6 +157,13 @@ Format w/reStructuredText
    `About Titles </markup-theme/rst/rst.html#topic-titles>`__
 
 
+Style Guide
+==================================================
+
+:doc:`style_guide` |fa-index-circle| :ref:`style-guide-code-blocks` |fa-index-circle| :ref:`style-guide-command-prompts` |fa-index-circle| :ref:`style-guide-copypasta` |fa-index-circle| :ref:`style-guide-field-names` |fa-index-circle| :ref:`style-guide-future-features` |fa-index-circle| :ref:`style-guide-gerunds` |fa-index-circle| :ref:`style-guide-glossary` |fa-index-circle| :ref:`style-guide-jargon` |fa-index-circle| :ref:`style-guide-lists-within-lists` |fa-index-circle| :ref:`style-guide-long-titles-headers` |fa-index-circle| :ref:`style-guide-oxford-comma` |fa-index-circle| :ref:`style-guide-procedures` |fa-index-circle| :ref:`style-guide-screen-shots` |fa-index-circle| :ref:`style-guide-tables-of-content` |fa-index-circle| :ref:`style-guide-tables` |fa-index-circle| :ref:`style-guide-tabs` |fa-index-circle| :ref:`style-guide-text-editor` |fa-index-circle| :ref:`style-guide-title-vs-sentence-case`
+
+
+
 .. Hide the TOC from this file.
 
 .. toctree::
