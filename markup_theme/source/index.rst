@@ -38,7 +38,7 @@ Start Here
    :doc:`css` |fa-index-circle| :ref:`Sassy CSS <css-sassy>` |fa-index-circle| :ref:`Sassy CSS Files <css-sassy-files>` |fa-index-circle| :ref:`Sass Updates <css-sass-updates>` |fa-index-circle| :ref:`Site Colors <css-sass-update-site-colors>` |fa-index-circle| :ref:`Config Path <css-sass-update-config-path>`
 
 **Tutorials**
-   :doc:`tutorials` |fa-index-circle| :ref:`Blockquotes <tutorials-blockquotes>` |fa-index-circle| :ref:`Change Colors <tutorials-change-colors>` |fa-index-circle| :ref:`Code Block Styles <tutorials-code-block-styles>` |fa-index-circle| :ref:`Font Awesome Icons <tutorials-font-awesome-icons>` |fa-index-circle| :ref:`GitHub Pages <tutorials-github-pages>` |fa-index-circle| :ref:`Pygments CSS <tutorials-local-pygments-css>` |fa-index-circle| :ref:`PDF Cover Pages <tutorials-pdf-cover-pages>` |fa-index-circle| :ref:`Tokens <tutorials-tokens>`
+   :doc:`tutorials` |fa-index-circle| :ref:`Blockquotes <tutorials-blockquotes>` |fa-index-circle| :ref:`Change Colors <tutorials-change-colors>` |fa-index-circle| :ref:`Code Block Styles <tutorials-code-block-styles>` |fa-index-circle| :ref:`Font Awesome Icons <tutorials-font-awesome-icons>` |fa-index-circle| :ref:`GitHub Pages <tutorials-github-pages>` |fa-index-circle| :ref:`Glossary <tutorials-glossary>` |fa-index-circle| :ref:`Pygments CSS <tutorials-local-pygments-css>` |fa-index-circle| :ref:`PDF Cover Pages <tutorials-pdf-cover-pages>` |fa-index-circle| :ref:`Tokens <tutorials-tokens>`
 
    :ref:`Navigation Icons <tutorials-navigation-icons>` |fa-index-circle| :ref:`Left-side <tutorials-navigation-icons-left-side>` |fa-index-circle| :ref:`Right-side <tutorials-navigation-icons-right-side>` |fa-index-circle| :ref:`Hamburger <tutorials-navigation-icons-hamburger>` |fa-index-circle| :ref:`Inline <tutorials-navigation-icons-inline>`
 
@@ -167,6 +167,7 @@ Format w/reStructuredText
    faq
    resources
    setup
+   style_guide
    templates
    tutorials
    upgrades
