@@ -222,7 +222,7 @@ The following example shows how to add code block styles for everybody's favorit
           border-bottom-right-radius: 3px;
       }
 
-   .. tip:: For darker colors, choose ``$markup-white`` and or lighter colors consider choosing ``$markup-almost-black`` for the text color, which is defined by ``color`` in the first CSS block.
+   .. tip:: For darker background colors use ``$markup-white`` for the text color; for lighter background colors use ``$markup-almost-black``. The text color is defined by ``color`` in the first CSS block.
 
 
 .. _tutorials-font-awesome-icons:
