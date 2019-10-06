@@ -2995,7 +2995,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p>Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.</p>
+<p class="last">Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a rendering issue in the output or an error in the build.</p>
 </div>
 <p>These types of inclusions require two steps:</p>
 <ol>
@@ -3023,7 +3023,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p>Snippets may be sourced from large file that contain lists. For example, let’s say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.</p>
+<p>Snippets may be sourced from large files that contain lists. For example, let’s say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.</p>
 <p class="last">In this case, all glossary terms can be created and managed from a single file like <cite>shared/terms.rst</cite> in which the snippet start-end pairs are defined and the glossary terms are managed. Then each <cite>glossary.rst</cite> file across the docs set can use the <cite>.. includes::</cite> directive to pull in the terms it needs.</p>
 </div>
 </div>
@@ -3157,7 +3157,8 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p>Three types of lists are available: ordered, unordered, and definition.</p>
 <div class="section" id="definition-list">
 <h3>Definition List<a class="headerlink" href="#definition-list" title="Permalink to this headline">¶</a></h3>
-<p>A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is useful for describing command line parameters, API arguments, and glossary terms. This type of list requires additional Sphinx processing and isn’t native to Markdown. For example:</p>
+<p>A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list should be used to describe settings, such as command line parameters, API arguments, glossary terms, and so on.</p>
+<p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 **list-item-one**
    The description must be indented three spaces.
@@ -3177,7 +3178,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="ordered-list">
 <h3>Ordered List<a class="headerlink" href="#ordered-list" title="Permalink to this headline">¶</a></h3>
-<p>An ordered list has each list item preceded by an <code class="docutils literal notranslate"><span class="pre">1.</span></code> followed by a space. For example:</p>
+<p>An ordered list has each list item preceded by <code class="docutils literal notranslate"><span class="pre">1.</span></code> followed by a space. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">one</span>
 <span class="mf">1.</span> <span class="n">two</span>
 <span class="mf">1.</span> <span class="n">three</span>
@@ -3192,10 +3193,10 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="unordered-list">
 <h3>Unordered List<a class="headerlink" href="#unordered-list" title="Permalink to this headline">¶</a></h3>
-<p>An unordered list has each list item preceded by a single dash (<code class="docutils literal notranslate"><span class="pre">*</span></code>) followed by a space. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">one</span>
-<span class="o">*</span> <span class="n">two</span>
-<span class="o">*</span> <span class="n">three</span>
+<p>An unordered list has each list item preceded by a single dash (<code class="docutils literal notranslate"><span class="pre">-</span></code>) followed by a space. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">one</span>
+<span class="o">-</span> <span class="n">two</span>
+<span class="o">-</span> <span class="n">three</span>
 </pre></div>
 </div>
 <p>builds as:</p>
@@ -3208,7 +3209,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 <div class="section" id="raw-html">
 <span id="id15"></span><h2>Raw HTML<a class="headerlink" href="#raw-html" title="Permalink to this headline">¶</a></h2>
-<p>If you need to force Markdown to do something in a way similar to reStructuredText, take a look at the rendered output from pages built reStructuredText and identify the specific block of HTML code that does what you need to do. Copy that, add it as raw HTML in Markdown. As long as it fits within the structure of the page at the point where it’s inserted and as long as any scripts or CSS can process it, then it should be fine.</p>
+<p>You can use raw HTML in Markdown files. As long as it can be processed by Sphinx and as long as the CSS supports the output, then it should be easy. Many examples in this file use raw HTML instead of Sphinx directives (processed via the <code class="docutils literal notranslate"><span class="pre">eval_rst</span></code> code block style) to format content. Raw HTML may also be used to add external functionality to a page, such as embedding a video.</p>
 <p>The following raw HTML:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
 &lt;div class=&quot;admonition note&quot;&gt;
@@ -3231,7 +3232,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <li>List tables</li>
 <li>Simple tables</li>
 </ol>
-<p>There is no right or wrong way to build a table, as long as the build doesn’t fail and your readers can see all of the information in the table. Therefore, use the table that’s easiest for you. That said, for tables that have a lot of data in them, consider using a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.</p>
+<p>You can see from the examples below that there are slight differences between how you can set up the tables to get various table structures. Some table types are more fun than others.</p>
 <div class="section" id="grid-table">
 <h3>Grid Table<a class="headerlink" href="#grid-table" title="Permalink to this headline">¶</a></h3>
 <p>Grid tables are built by physically spacing out the table in the text file, similar to how it will appear on the page. These are easy when they are small.</p>
@@ -3303,7 +3304,7 @@ span rows.</td>
 ```
 </pre></div>
 </div>
-<p>builds as:</p>
+<p>with the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> and <code class="docutils literal notranslate"><span class="pre">:header-rows:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">list-table</span></code> in the block. The number of rows (identified by the dashes (<code class="docutils literal notranslate"><span class="pre">-</span></code>) must equal the number of integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code>. The integers specified by <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> also specifies each column’s width, from left to right.</p>
 <table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="33%" />
@@ -3380,10 +3381,10 @@ True   True   True
 </div>
 <div class="section" id="toctree">
 <span id="id17"></span><h2>Toctree<a class="headerlink" href="#toctree" title="Permalink to this headline">¶</a></h2>
-<p>A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list must be declared.</p>
+<p>A Sphinx project must declare all of the topics that are part of it within a directive named <code class="docutils literal notranslate"><span class="pre">toctree</span></code>. This is true for projects that are written entirely in Markdown that will be built by Sphinx.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Because MARKUP doesn’t build its left navigation automatically from the header structures in topics, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the toctree on the root page for the project (default: <cite>index</cite>) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no “previous” or “next” links in MARKUP.)</p>
+<p class="last">Because MARKUP doesn’t build its left navigation automatically from the header structures in topics and because there’s no previous/next linking, there’s no reason to put a <cite>toctree</cite> on more than one page. Instead, just put the <cite>toctree</cite> on the root page for the project (default root page name is <cite>index.md</cite>), and then add to that <cite>toctree</cite> an alphabetical list of every other topic in the collection.</p>
 </div>
 <p>This is done using a Sphinx directive:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
@@ -3396,17 +3397,16 @@ True   True   True
 ```
 </pre></div>
 </div>
-<p>builds the TOC, but it’s hidden.</p>
-<div class="toctree-wrapper compound">
-</div>
+<p>which defines the list of files–in this case just <code class="docutils literal notranslate"><span class="pre">test.md</span></code>–in the documentation collection. Be sure to keep <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code> as a property of <code class="docutils literal notranslate"><span class="pre">toctree</span></code>.</p>
+<p>View the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file in the <code class="docutils literal notranslate"><span class="pre">/markup_theme</span></code> directory to see a full and complete example of a toctree.</p>
 </div>
 <div class="section" id="topic-titles">
 <span id="id18"></span><h2>Topic Titles<a class="headerlink" href="#topic-titles" title="Permalink to this headline">¶</a></h2>
-<p>Topic titles are coded with a <code class="docutils literal notranslate"><span class="pre">#</span></code>, which makes them seem like an H1, but really it’s a topic title!</p>
+<p>Topic titles are coded with a <code class="docutils literal notranslate"><span class="pre">#</span></code>. This makes them seem like a level one header, but really they’re a topic title!</p>
 </div>
 <div class="section" id="unsupported">
 <span id="id19"></span><h2>Unsupported<a class="headerlink" href="#unsupported" title="Permalink to this headline">¶</a></h2>
-<p>The following formatting cannot be done with this theme:</p>
+<p>The following formatting cannot be done with MARKUP:</p>
 <ul class="simple">
 <li>Blockquotes</li>
 <li>Tokens</li>
@@ -3417,7 +3417,7 @@ True   True   True
 </div>
 <div class="section" id="tokens">
 <h3>Tokens<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h3>
-<p>There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically authored inline within paragraphs.</p>
+<p>There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically located inline within paragraphs.</p>
 </div>
 </div>
 <div class="section" id="additional-resources">

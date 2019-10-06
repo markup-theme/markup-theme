@@ -2453,7 +2453,7 @@ builds as:
 Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
 
 ```eval_rst
-.. warning:: Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.
+.. warning:: Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a rendering issue in the output or an error in the build.
 ```
 
 These types of inclusions require two steps:
@@ -2491,7 +2491,7 @@ builds as:
 ```
 
 ```eval_rst
-.. hint:: Snippets may be sourced from large file that contain lists. For example, let's say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.
+.. hint:: Snippets may be sourced from large files that contain lists. For example, let's say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.
 
    In this case, all glossary terms can be created and managed from a single file like `shared/terms.rst` in which the snippet start-end pairs are defined and the glossary terms are managed. Then each `glossary.rst` file across the docs set can use the `.. includes::` directive to pull in the terms it needs.
 ```
@@ -2687,7 +2687,9 @@ Three types of lists are available: ordered, unordered, and definition.
 
 ### Definition List
 
-A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is useful for describing command line parameters, API arguments, and glossary terms. This type of list requires additional Sphinx processing and isn't native to Markdown. For example:
+A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list should be used to describe settings, such as command line parameters, API arguments, glossary terms, and so on.
+
+For example:
 
 ~~~
 ```eval_rst
@@ -2711,7 +2713,7 @@ builds as:
 
 ### Ordered List
 
-An ordered list has each list item preceded by an `1.` followed by a space. For example:
+An ordered list has each list item preceded by `1.` followed by a space. For example:
 
 ```
 1. one
@@ -2727,19 +2729,19 @@ builds as:
 
 ### Unordered List
 
-An unordered list has each list item preceded by a single dash (`*`) followed by a space. For example:
+An unordered list has each list item preceded by a single dash (`-`) followed by a space. For example:
 
 ```
-* one
-* two
-* three
+- one
+- two
+- three
 ```
 
 builds as:
 
-* one
-* two
-* three
+- one
+- two
+- three
 
 
 
@@ -2750,7 +2752,7 @@ builds as:
 
 ## Raw HTML
 
-If you need to force Markdown to do something in a way similar to reStructuredText, take a look at the rendered output from pages built reStructuredText and identify the specific block of HTML code that does what you need to do. Copy that, add it as raw HTML in Markdown. As long as it fits within the structure of the page at the point where it's inserted and as long as any scripts or CSS can process it, then it should be fine.
+You can use raw HTML in Markdown files. As long as it can be processed by Sphinx and as long as the CSS supports the output, then it should be easy. Many examples in this file use raw HTML instead of Sphinx directives (processed via the `eval_rst` code block style) to format content. Raw HTML may also be used to add external functionality to a page, such as embedding a video.
 
 The following raw HTML:
 
@@ -2785,7 +2787,7 @@ Tables are always fun! There are three types of tables:
 2. List tables
 3. Simple tables
 
-There is no right or wrong way to build a table, as long as the build doesn't fail and your readers can see all of the information in the table. Therefore, use the table that's easiest for you. That said, for tables that have a lot of data in them, consider using a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.
+You can see from the examples below that there are slight differences between how you can set up the tables to get various table structures. Some table types are more fun than others.
 
 
 ### Grid Table
@@ -2844,7 +2846,7 @@ List tables are built like a list and must use the Sphinx `list-table` directive
 ```
 ~~~
 
-builds as:
+with the `:widths:` and `:header-rows:` attributes being aligned underneath `list-table` in the block. The number of rows (identified by the dashes (`-`) must equal the number of integers specified by `:widths:`. The integers specified by `:widths:` also specifies each column's width, from left to right.
 
 ```eval_rst
 .. list-table::
@@ -2903,10 +2905,10 @@ True   True   True
 
 ## Toctree
 
-A Sphinx project that is written entirely in Markdown still needs to declare all of the topics that are part of it, which means at least one `toctree` list must be declared.
+A Sphinx project must declare all of the topics that are part of it within a directive named `toctree`. This is true for projects that are written entirely in Markdown that will be built by Sphinx.
 
 ```eval_rst
-.. note:: Because MARKUP doesn't build its left navigation automatically from the header structures in topics, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree all of the topics in the collection, ideally alphabetically. (There are no "previous" or "next" links in MARKUP.)
+.. note:: Because MARKUP doesn't build its left navigation automatically from the header structures in topics and because there's no previous/next linking, there's no reason to put a `toctree` on more than one page. Instead, just put the `toctree` on the root page for the project (default root page name is `index.md`), and then add to that `toctree` an alphabetical list of every other topic in the collection.
 ```
 
 This is done using a Sphinx directive:
@@ -2922,18 +2924,9 @@ This is done using a Sphinx directive:
 ```
 ~~~
 
-builds the TOC, but it's hidden.
+which defines the list of files--in this case just `test.md`--in the documentation collection. Be sure to keep `:hidden:` as a property of `toctree`.
 
-```eval_rst
-.. Hide the TOC from this file.
-
-.. toctree::
-   :hidden:
-
-   test
-```
-
-
+View the `index.rst` file in the `/markup_theme` directory to see a full and complete example of a toctree.
 
 
 
@@ -2943,7 +2936,7 @@ builds the TOC, but it's hidden.
 
 ## Topic Titles
 
-Topic titles are coded with a `#`, which makes them seem like an H1, but really it's a topic title!
+Topic titles are coded with a `#`. This makes them seem like a level one header, but really they're a topic title!
 
 
 
@@ -2954,7 +2947,7 @@ Topic titles are coded with a `#`, which makes them seem like an H1, but really 
 
 ## Unsupported
 
-The following formatting cannot be done with this theme:
+The following formatting cannot be done with MARKUP:
 
 * Blockquotes
 * Tokens
@@ -2965,7 +2958,7 @@ MARKUP does not support out-of-the-box blockquotes. See the [blockquotes tutoria
 
 ### Tokens
 
-There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically authored inline within paragraphs.
+There is not an easy way to use reStructuredText-based tokens with Markdown content, as the tokens are typically located inline within paragraphs.
 
 
 ```eval_rst
