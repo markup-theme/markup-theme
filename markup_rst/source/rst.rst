@@ -1890,7 +1890,7 @@ via Snippet
 
 Inclusions may be done from within existing files as long as the target for that snippet is located in another file in the repository.
 
-.. warning:: Snippets may not be used within the same file, i.e. the target and destination may not be in the same file. This will cause a rendering issue in the output.
+.. warning:: Snippets may not be used within the same file. What this means is the source of the snippet may not also be the target for that snippet. This will cause a rendering issue in the output or an error in the build.
 
 These types of inclusions require two steps:
 
@@ -1946,7 +1946,7 @@ This should result in a file that looks similar to:
 
 .. format-content-include-via-snippet-hint-start
 
-.. hint:: Snippets may be sourced from large file that contain lists. For example, let's say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.
+.. hint:: Snippets may be sourced from large files that contain lists. For example, let's say the docs site has multiple docs collections (by application, by role, by internal vs. external, etc.) and you want each docs collection to have its own dedicated glossary to both enable consistency across doc sets for the same terms, but to also allow specific glossary terms for each doc set.
 
    In this case, all glossary terms can be created and managed from a single file like ``shared/terms.rst`` in which the snippet start-end pairs are defined and the glossary terms are managed. Then each ``glossary.rst`` file across the docs set can use the ``.. includes::`` directive to pull in the terms it needs.
 
@@ -1978,7 +1978,7 @@ Bold
 
 .. format-content-inline-markup-bold-start
 
-Use two asterisks (``**``) around the word to apply bold formatting: ``**bold**``
+Use two asterisks (``**``) around the word to apply bold formatting: ``**bold**``. For example: **this is bold content**.
 
 .. format-content-inline-markup-bold-end
 
@@ -2010,7 +2010,7 @@ Use two backticks around the code string to apply code block formatting. For exa
 
    ``inline code string``
 
-renders as shown above at the start of this list item.
+renders like this: ``inline code string``.
 
 .. note:: An inline code string should only be used within lists and paragraphs for function names, commands for command-line tools, and so on, and only in a way where the contents of that code string reads normally in a sentence. Use the code-block directive for anything else.
 
@@ -2044,7 +2044,7 @@ External
 
 .. format-content-links-external-start
 
-Ideally, external links should just be the full URL: http://www.yoursite.com, for example.
+Ideally, external links should just be the full URL: http://www.yoursite.com.
 
 In some cases the external URL is too big and/or you want to embed the external link naturally within a sentence:
 
@@ -2083,7 +2083,9 @@ Reference
 
 .. format-content-links-reference-start
 
-There are two ways to link to internal headers across the doc set. First, a pre-requisite: the header to which the link is targeted must have an anchor. For example:
+There are two ways to link to internal headers across the doc set.
+
+First, a pre-requisite: the header to which the link is targeted must have an anchor. For example:
 
 .. code-block:: rst
 
@@ -2128,13 +2130,13 @@ Topic
 
 .. format-content-links-topic-start
 
-There are two ways to link to internal topics across the doc set. The first will pull in the topic name as the link:
+There are two ways to link to internal topics. The first pulls in the topic name as a link:
 
 .. code-block:: rst
 
    :doc:`blocks`
 
-and the second will use the string you put there and will not pull in the header name as the link:
+and the second uses a string to replace (and override) the header name as the link:
 
 .. code-block:: rst
 
@@ -2170,7 +2172,9 @@ Definition List
 
 .. format-content-list-definition-start
 
-A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list is used to describe settings---such as command line parameters, API arguments, glossary terms, and so on. For example:
+A definition list is a specially formatted list that uses whitespace to indent the descriptive text underneath a word or a short phrase. This type of list should be used to describe settings, such as command line parameters, API arguments, glossary terms, and so on.
+
+For example:
 
 .. code-block:: rst
 
@@ -2210,7 +2214,7 @@ Ordered List
 
 .. format-content-list-ordered-start
 
-An ordered list has each list item preceded by an ``#.`` followed by a space. For example:
+An ordered list has each list item preceded by ``#.`` followed by a space. For example:
 
 .. code-block:: rst
 
@@ -2235,7 +2239,7 @@ Unordered List
 
 .. format-content-list-unordered-start
 
-An unordered list has each list item preceded by an ``*`` followed by a space. For example:
+An unordered list has each list item preceded by a single asterisk (``*``) followed by a space. For example:
 
 .. code-block:: rst
 
@@ -2271,12 +2275,6 @@ You can see from the examples below that there are slight differences between ho
 
 .. format-content-tables-end
 
-.. format-content-tables-ranked-start
-
-There is no right or wrong way to build a table, as long as the build doesn't fail and your readers can see all of the information in the table. Therefore, use the table that's easiest for you. That said, for tables that have a lot of data in them, consider importing that data to a CSV table or use a list table. For tables that contain small amounts of data or that require odd layouts that span columns or rows, grid and simple tables are probably easier.
-
-.. format-content-tables-ranked-end
-
 
 .. _format-content-table-csv:
 
@@ -2285,9 +2283,7 @@ CSV Table
 
 .. format-content-table-csv-start
 
-Tables may be built from a CSV file as long as the CSV file is available to Sphinx at build time.
-
-Tables built from a CSV file use the ``.. csv-table::`` directive. For example:
+Tables may be built from a CSV file as long as the CSV file is available to Sphinx at build time. For example:
 
 .. code-block:: rst
 
@@ -2298,7 +2294,7 @@ Tables built from a CSV file use the ``.. csv-table::`` directive. For example:
 
 with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``csv-table`` in the block. The ``:file:`` must be the path to a CSV file that is available to Sphinx at build time.
 
-.. note:: |theme| has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter in the CSV table directive!
+.. note:: |theme| has an example of a CSV file in the ``/misc`` directory. In fact, it's the same one for the ``:file`` parameter used in this example!
 
 A CSV file is similar to:
 
@@ -2385,7 +2381,7 @@ A list-table is built using the ``.. list-table::`` directive.
       * - **item2**
         - description
 
-with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``list-table`` in the block. The number of rows (identified by the dashes (``-``) must equal the number of integers specified by ``:widths:``. The integers specified by ``:widths:`` also specifies the column width, from left to right.
+with the ``:widths:`` and ``:header-rows:`` attributes being aligned underneath ``list-table`` in the block. The number of rows (identified by the dashes (``-``) must equal the number of integers specified by ``:widths:``. The integers specified by ``:widths:`` also specifies each column's width, from left to right.
 
 .. list-table::
    :widths: 200 400
@@ -2408,7 +2404,7 @@ Simple Table
 
 .. format-content-table-simple-start
 
-Simple tables are ... simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
+Simple tables are simple. The markup is focused mostly on the vertical layout. Like grid tables, they are easy when they are small.
 
 .. code-block:: none
 
@@ -2449,9 +2445,9 @@ Toctree
 
 .. format-content-toctree-start
 
-A Sphinx project must declare all of the topics that are part of it, which means at least one `toctree` list must be declared.
+A Sphinx project must declare all of the topics that are part of it within a directive named ``toctree``.
 
-.. note:: Because the Market theme doesn't build its left navigation automatically from the header structures in topics and because there's no Previous/Next linking, there's no reason to put a `toctree` on more than one page. Instead, just put the toctree on the root page for the project (default: `index`) and add to that toctree an alphabetical list of the topics in the collection.
+.. note:: Because |theme| doesn't build its left navigation automatically from the header structures in topics and because there's no previous/next linking, there's no reason to put a ``toctree`` on more than one page. Instead, just put the ``toctree`` on the root page for the project (default root page name is ``index.rst``), and then add to that ``toctree`` an alphabetical list of every other topic in the collection.
 
 A toctree is similar to:
 
@@ -2464,7 +2460,9 @@ A toctree is similar to:
 
       test
 
-View the source for this file to see the toctree that is used for this document collection.
+which defines the list of files--in this case just ``test.rst``--in the documentation collection. Be sure to keep ``:hidden:`` as a property of ``toctree``.
+
+View the ``index.rst`` file in the ``/markup_theme`` directory to see a full and complete example of a toctree.
 
 .. format-content-toctree-end
 
@@ -2478,13 +2476,13 @@ Tokens
 
 .. format-content-tokens-start
 
-Tokens are defined in the file ``names.txt`` located at ``/tokens``. Each token is defined similar to:
+Tokens are defined in the file ``names.txt`` located in the ``/tokens`` directory. Each token is defined similar to:
 
 .. code-block:: rst
 
    .. |company_name| replace:: YourCompanyName
 
-When used in a sentence, use the ``|company_name|`` token to replace that with the string that follows ``replace::``. For example: |theme| (is the replacement string for ``|theme|``).
+When used in a sentence, use the ``|company_name|`` token to replace that with the string that follows ``replace::``. For example: use ``|theme|`` to add |theme|.
 
 .. warning:: Tokens may not be used in the left-side navigation template (``nav-docs.html``).
 
@@ -2495,9 +2493,9 @@ The following example tokens exist at ``/tokens/names.txt``:
 * ``|md|`` => |md|
 * ``|rst|`` => |rst|
 
-Use tokens in headers or topic titles carefully. Sphinx will build them correctly in the topic, but anchor references from the left-side navigation will not work unless the anchor reference specifies the token. For example, a token named ``|abc|`` used for a title must be specified in the left navigation as ``"url": "/path/to/file.html#abc"``.
+Use tokens in headers or topic titles carefully. Sphinx will build them correctly in the topic, but anchor references from the left-side navigation will not work unless the anchor reference specifies the token. For example, a token named ``|abc|`` used for a title must be specified in the left navigation as ``"url": "/path/to/file.html#abc"``. Tokens cannot be used within :ref:`inline markup <format-content-inline-markup>`.
 
-.. note:: Tokens can really slow the build down if there are too many of them. Sphinx will check each file for tokens, and then check the tokens file to look for matches. Every time this happens, a kitten dies. As such, you should keep the tokens file as small as possible. 
+.. note:: Too many tokens can really slow builds down. Sphinx will check each file for the presence of tokens, and then check the tokens file to up each token for matching strings. The point at which tokens can slow builds down depends on a) the number of tokens and b) the number of files in each documentation collection. It should be stated that slower builds don't start to become noticeable until there are a couplefew hundred tokens and documentation collections with 60+ topics, some of which are very long reference topics. For small doc sets you may never notice any performance issues and the points at which you may notice performance issues, the benefits of using tokens and reusable strings may outweigh slower build times.
 
 .. format-content-tokens-end
 
@@ -2528,6 +2526,7 @@ Which will appear in the documentation like the actual topic title for this topi
 
 Additional Resources
 ==================================================
+
 The following resources may be useful:
 
 * `Google Developer Documentation Style Guide <https://developers.google.com/style/>`_
