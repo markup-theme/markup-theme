@@ -1,8 +1,0 @@
-// TO COMPILE CSS 
-// In command line switch to _themes/markup_pdf/static/ and run :
-// sass --watch scss/markup.scss:markup.css_t
-@import 'reset', 'config', 'sphinx', 'nav';
-
-.left {
-  float: left;
-}
