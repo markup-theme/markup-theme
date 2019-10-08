@@ -447,6 +447,7 @@ Images may be embedded in the documentation using the ``.. image::`` directive. 
 
    .. image:: ../../images/busycorp.png
       :width: 600 px
+      :alt: Welcome to Busycorp!
       :align: left
 
 with the ``:width:`` and ``:align:`` attributes being aligned underneath ``image`` in the block.
@@ -455,6 +456,7 @@ This image will appear in the documentation like this:
 
 .. image:: ../../images/busycorp.png
    :width: 600 px
+   :alt: Welcome to Busycorp!
    :align: left
 
 Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.
@@ -631,10 +633,6 @@ Tables
 .. include:: ../../markup_rst/source/rst.rst
    :start-after: .. format-content-tables-start
    :end-before: .. format-content-tables-end
-
-.. include:: ../../markup_rst/source/rst.rst
-   :start-after: .. format-content-tables-ranked-start
-   :end-before: .. format-content-tables-ranked-end
 
 
 .. _format-content-table-csv:

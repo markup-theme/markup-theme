@@ -1827,6 +1827,7 @@ Images may be embedded in the documentation using the ``.. image::`` directive. 
 
    .. image:: ../../images/busycorp.svg
       :width: 600 px
+      :alt: Welcome to Busycorp!
       :align: left
 
 with the ``:width:`` and ``:align:`` attributes being aligned underneath ``image`` in the block.
@@ -1835,6 +1836,7 @@ This image will appear in the documentation like this:
 
 .. image:: ../../images/busycorp.svg
    :width: 600 px
+   :alt: Welcome to Busycorp!
    :align: left
 
 Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.

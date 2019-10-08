@@ -2363,10 +2363,10 @@ The size and position of the image not is easily specified using Markdown. If yo
 **Raw HTML**
 
 ```html
-<img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="200px" />
+<img alt="Welcome to Busycorp!" src="_images/busycorp.svg" width="200px" />
 ```
 
-<img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="200px" />
+<img alt="Welcome to Busycorp!" src="_images/busycorp.svg" width="200px" />
 
 **Sphinx directive**
 
@@ -2374,6 +2374,7 @@ The size and position of the image not is easily specified using Markdown. If yo
 ```eval_rst
 .. image:: ../../images/busycorp.svg
    :width: 200 px
+   :alt: Welcome to Busycorp!
    :align: left
 ```
 ~~~
@@ -2383,6 +2384,7 @@ builds as:
 ```eval_rst
 .. image:: ../../images/busycorp.svg
    :width: 200 px
+   :alt: Welcome to Busycorp!
    :align: left
 ```
 
