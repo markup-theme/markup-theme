@@ -421,6 +421,14 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#large-topics-single-source" title="Large Topics, Single Source">
+            Large Topics, Single Source
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#local-pygments-css" title="Local Pygments CSS">
             Local Pygments CSS
           </a>
@@ -810,6 +818,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <li><a class="reference internal" href="#github-pages">GitHub Pages</a></li>
 <li><a class="reference internal" href="#glossary">Glossary</a></li>
 <li><a class="reference internal" href="#local-pygments-css">Local Pygments CSS</a></li>
+<li><a class="reference internal" href="#large-topics-single-source">Large Topics, Single Source</a></li>
 <li><a class="reference internal" href="#navigation-icons">Navigation Icons</a><ul>
 <li><a class="reference internal" href="#left-side">Left Side</a></li>
 <li><a class="reference internal" href="#right-side">Right Side</a></li>
@@ -1151,41 +1160,22 @@ This page contains an awesome glossary!
 </div>
 <div class="section" id="local-pygments-css">
 <span id="tutorials-local-pygments-css"></span><h2>Local Pygments CSS<a class="headerlink" href="#local-pygments-css" title="Permalink to this headline">¶</a></h2>
-<p>Pygments is an <a class="reference external" href="http://pygments.org/">open source generic syntax highlighter</a> that is used by MARKUP to prettify source code. Pygments has the following BSD license:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Copyright (c) 2006-2017 by the respective authors (see AUTHORS file).
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-* Redistributions of source code must retain the above copyright
-  notice, this list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright
-  notice, this list of conditions and the following disclaimer in the
-  documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
-</div>
-<p>MARKUP puts a copy of pygments.css into the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/</span></code> directory to provide local control for two CSS settings:</p>
+<p>Pygments is an <a class="reference external" href="http://pygments.org/">open source generic syntax highlighter</a> that is used by MARKUP to prettify source code. Pygments has an <a class="reference external" href="https://bitbucket.org/birkenfeld/pygments-main/src/default/LICENSE">open source license</a>.</p>
+<p>MARKUP puts a copy of the Pygments CSS into the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/</span></code> directory to provide local control for two CSS settings:</p>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">highlight</span> <span class="p">.</span><span class="nc">hll</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f9e784</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">highlight</span>  <span class="p">{</span> <span class="k">background</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span> <span class="p">}</span>
 </pre></div>
 </div>
 <p>They are located at the top of the CSS file. The reason why this is done is to be able to apply a preferred color to code line highlights and to prevent the default grey background for code blocks from appearing in situations where code blocks appear inside admonitions, by changing it to white.</p>
 <p>It’s a somewhat clumsy workaround, but figuring out how to override two specific CSS settings in Pygments was harder and (at this time) seems impossible. If you don’t want to use a local copy of pygments.css, just remove it from MARKUP. The default yellow highlight is probably fine and the instance of code blocks appearing inside admonitions should be uncommon. If you want to keep it, you may need to grab an updated copy of pygments.css and re-do these two changes when Pygments itself is upgraded.</p>
+</div>
+<div class="section" id="large-topics-single-source">
+<span id="tutorials-large-topics-single-source"></span><h2>Large Topics, Single Source<a class="headerlink" href="#large-topics-single-source" title="Permalink to this headline">¶</a></h2>
+<p>You can build entire sections of content by copying in paragraphs from other topics using the <code class="docutils literal notranslate"><span class="pre">includes</span></code> directive (via file or via snippet).</p>
+<p>This can be quite useful, such as for building reference topics for a collection of API entities, but also building a single topic for <em>all</em> API entities. Another example is building PDF topics that reuse most (but not all) of another topic.</p>
+<p>It’s also possible that output format differences, such as those between the HTML and PDF outputs in MARKUP, even when subtle, may not be fully compatible. This approach allows you to use single sourcing as much as possible, while also addressing output-specific requirements for certain sections that cannot be single sourced.</p>
+<p>Look in <code class="docutils literal notranslate"><span class="pre">/markup_pdf/rst.rst</span></code> to see a topic that is built almost entirely by copying in paragraphs from <code class="docutils literal notranslate"><span class="pre">/markup_rst/rst.rst</span></code>. There are some carefully crafted bespoke paragraphs wrapped in there, but most of it is pulled in via the <code class="docutils literal notranslate"><span class="pre">includes</span></code> directive.</p>
+<p>Due to the nature of how the <code class="docutils literal notranslate"><span class="pre">includes</span></code> directive works, any path that is accessible to the Sphinx build command can be a valid inclusion target. This could be other topics in other directories within the same repo (as MARKUP demonstrates) or it could be other topics in other repos.</p>
 </div>
 <div class="section" id="navigation-icons">
 <span id="tutorials-navigation-icons"></span><h2>Navigation Icons<a class="headerlink" href="#navigation-icons" title="Permalink to this headline">¶</a></h2>

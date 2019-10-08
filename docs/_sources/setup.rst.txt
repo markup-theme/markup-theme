@@ -280,5 +280,6 @@ This should build a website that looks like this:
 
 .. image:: ../../images/markupproject.png
    :width: 600 px
+   :alt: MARKUP theme
    :align: center
 

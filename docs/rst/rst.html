@@ -2281,12 +2281,13 @@ An H4 header appears in the documentation like this.
 <p>Images may be embedded in the documentation using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">image::</span></code> directive. For example:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../../images/busycorp.svg
    <span class="nc">:width:</span> <span class="nf">600 px</span>
+   <span class="nc">:alt:</span> <span class="nf">Welcome to Busycorp!</span>
    <span class="nc">:align:</span> <span class="nf">left</span>
 </pre></div>
 </div>
 <p>with the <code class="docutils literal notranslate"><span class="pre">:width:</span></code> and <code class="docutils literal notranslate"><span class="pre">:align:</span></code> attributes being aligned underneath <code class="docutils literal notranslate"><span class="pre">image</span></code> in the block.</p>
 <p>This image will appear in the documentation like this:</p>
-<a class="reference internal image-reference" href="_images/busycorp.svg"><div align="left" class="align-left"><img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="600px" /></div>
+<a class="reference internal image-reference" href="_images/busycorp.svg"><div align="left" class="align-left"><img alt="Welcome to Busycorp!" src="_images/busycorp.svg" width="600px" /></div>
 </a>
 <p>Images should be SVG when only HTML output is desired. Printing to PDF from HTML pages requires PNG images.</p>
 </div>

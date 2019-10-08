@@ -2941,19 +2941,20 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p><img alt="Campaign Stages" src="_images/busycorp.svg" /></p>
 <p>The size and position of the image not is easily specified using Markdown. If you need to be more specific about image size and placement, use either raw HTML or use the <code class="docutils literal notranslate"><span class="pre">image</span></code> directive in Sphinx:</p>
 <p><strong>Raw HTML</strong></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;_images/busycorp.svg&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;_images/busycorp.svg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200px&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Welcome to Busycorp!&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;_images/busycorp.svg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200px&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 </div>
-<img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="200px" /><p><strong>Sphinx directive</strong></p>
+<img alt="Welcome to Busycorp!" src="_images/busycorp.svg" width="200px" /><p><strong>Sphinx directive</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
 .. image:: ../../images/busycorp.svg
    :width: 200 px
+   :alt: Welcome to Busycorp!
    :align: left
 ```
 </pre></div>
 </div>
 <p>builds as:</p>
-<a class="reference internal image-reference" href="_images/busycorp.svg"><div align="left" class="align-left"><img alt="_images/busycorp.svg" src="_images/busycorp.svg" width="200px" /></div>
+<a class="reference internal image-reference" href="_images/busycorp.svg"><div align="left" class="align-left"><img alt="Welcome to Busycorp!" src="_images/busycorp.svg" width="200px" /></div>
 </a>
 </div>
 <div class="section" id="includes">

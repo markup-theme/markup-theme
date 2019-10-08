@@ -354,37 +354,9 @@ Once you have a glossary, it's easy to reuse glossary terms via the includes pat
 Local Pygments CSS
 ==================================================
 
-Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__ that is used by |theme| to prettify source code. Pygments has the following BSD license:
+Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__ that is used by |theme| to prettify source code. Pygments has an `open source license <https://bitbucket.org/birkenfeld/pygments-main/src/default/LICENSE>`__.
 
-.. code-block:: none
-
-   Copyright (c) 2006-2017 by the respective authors (see AUTHORS file).
-   All rights reserved.
-
-   Redistribution and use in source and binary forms, with or without
-   modification, are permitted provided that the following conditions are
-   met:
-
-   * Redistributions of source code must retain the above copyright
-     notice, this list of conditions and the following disclaimer.
-
-   * Redistributions in binary form must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-
-   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-|theme| puts a copy of pygments.css into the ``_themes/markup/static/`` directory to provide local control for two CSS settings:
+|theme| puts a copy of the Pygments CSS into the ``_themes/markup/static/`` directory to provide local control for two CSS settings:
 
 .. code-block:: css
 
@@ -394,6 +366,22 @@ Pygments is an `open source generic syntax highlighter <http://pygments.org/>`__
 They are located at the top of the CSS file. The reason why this is done is to be able to apply a preferred color to code line highlights and to prevent the default grey background for code blocks from appearing in situations where code blocks appear inside admonitions, by changing it to white.
 
 It's a somewhat clumsy workaround, but figuring out how to override two specific CSS settings in Pygments was harder and (at this time) seems impossible. If you don't want to use a local copy of pygments.css, just remove it from |theme|. The default yellow highlight is probably fine and the instance of code blocks appearing inside admonitions should be uncommon. If you want to keep it, you may need to grab an updated copy of pygments.css and re-do these two changes when Pygments itself is upgraded.
+
+
+.. _tutorials-large-topics-single-source:
+
+Large Topics, Single Source
+==================================================
+
+You can build entire sections of content by copying in paragraphs from other topics using the ``includes`` directive (via file or via snippet). 
+
+This can be quite useful, such as for building reference topics for a collection of API entities, but also building a single topic for *all* API entities. Another example is building PDF topics that reuse most (but not all) of another topic.
+
+It's also possible that output format differences, such as those between the HTML and PDF outputs in |theme|, even when subtle, may not be fully compatible. This approach allows you to use single sourcing as much as possible, while also addressing output-specific requirements for certain sections that cannot be single sourced.
+
+Look in ``/markup_pdf/rst.rst`` to see a topic that is built almost entirely by copying in paragraphs from ``/markup_rst/rst.rst``. There are some carefully crafted bespoke paragraphs wrapped in there, but most of it is pulled in via the ``includes`` directive.
+
+Due to the nature of how the ``includes`` directive works, any path that is accessible to the Sphinx build command can be a valid inclusion target. This could be other topics in other directories within the same repo (as |theme| demonstrates) or it could be other topics in other repos.
 
 
 .. _tutorials-navigation-icons:
