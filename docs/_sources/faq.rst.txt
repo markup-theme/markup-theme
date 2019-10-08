@@ -18,9 +18,9 @@ Some frequently asked questions and some answers:
    This required stripping out some the default Sphinx behaviors (like previous/next) and led to the de-coupling of the left-side navigation structure from the automatically-built patterns driven by the ``toctree`` directive. A way to embed non-automated links to topics alongside topics that existed within the document collection was necessary.
 
 .. expando::
-   :title: **Why is the MARKUP theme opinionated the way it is?**
+   :title: **Why is MARKUP like this?**
 
-   |theme| is opinionated the way it is because large technical writing projects are typically built using proprietary (and expensive) content management systems. The creators of |theme| don't want to use those types of tools, but still want to be able use more traditional content management patterns. Sphinx offers these things.
+   |theme| like this because large technical writing projects are typically built using proprietary (and expensive) content management systems. The creators of |theme| didn't want to use those types of tools, but still wanted to be able use more traditional content management patterns. Sphinx offers these things, but needed to bend a little to get there.
 
    While it's great that so many documentation projects can be automated from source code and that lots of people want to create great documentation, technical writers often see those processes (and the results they create) a bit differently.
 
