@@ -32,6 +32,8 @@ This is the formatting guide for |rst| as it may be used with |theme|.
 * :ref:`format-content-topic-title`
 * :ref:`format-content-additional-resources`
 
+
+
 .. _format-content-admonitions:
 
 Admonitions
@@ -1199,41 +1201,71 @@ Usage
 
 .. format-content-tabs-usage-start
 
-A set of content tabs is defined inside the ``.. content-tabs::`` directive. This directive should be given a filename-based naming pattern, e.g. ``style-guide-content-tab-usage``:
+Content tabs are defined by a series of ``container`` directives that work together to assign CSS and HTML properties. For example:
 
 .. code-block:: rst
 
-   .. content-tabs:: style-guide-content-tab-usage
+   .. container:: content-tabs
+      :name: unique-name
 
-Each tab is then defined inside ``.. content-tabs::`` using the ``.. tab-container:: name`` directive, where ``name`` is a short string that will appear in the tab and ``:title: title-name`` define the string that will appear in the tab itself:
+      .. container:: tab-content
+         :name: required-name-1
 
-.. code-block:: rst
+         .. container:: tab-title
 
-   .. tab-container:: name1
-      :title: name1
+            Tab 1
 
-      content for tab
+         .. container::
 
-   .. tab-container:: name2
-      :title: name2
+            This is the content for tab1.
 
-      content for tab
+      .. container:: tab-content
+         :name: required-name-2
 
-   ... etc.
+         .. container:: tab-title
+
+            Tab 2
+
+         .. container::
+
+            This is the content for tab2.
+
+
+where:
+
+* The ``content-tabs`` container declares a group of content tabs. The ``:name:`` property is required and must be unique. This container expects a list of one (or more) containers that specify `tab-content`.
+* The ``tab-content`` container specifies the contents for each individual tab in the tab group. This container **must** specify a ``:name:`` property and this value **must** be unique, as this value is assigned to a hidden radio button that tells the JavaScript how to knows which tab is selected by the user. Each ``tab-content`` container must specify a ``tab-title`` and a container that is not assigned a CSS property.
+* The ``tab-title`` container specifies the string that will appear in the tab.
+* The container that is not assigned a CSS property is the container that holds the content that will appear in the tab. This is a normal paragraph, in that it supports most of the same options as a paragraph would support if it were anywhere else in the documentation.
+
+.. note:: The formatting for content tabs is picky. Be sure to get everything aligned and indented under each of the `.. container::` directives.
 
 When it's all together, it should be similar to:
 
-.. content-tabs:: style-guide-content-tab-usage
+.. container:: content-tabs
+   :name: content-tabs-example
 
-   .. tab-container:: name1
-      :title: name1
+   .. container:: tab-content
+      :name: required-name-1
 
-      content for tab1
+      .. container:: tab-title
 
-   .. tab-container:: name2
-      :title: name2
+         Tab 1
 
-      content for tab2
+      .. container::
+
+         This is the content for tab1.
+
+   .. container:: tab-content
+      :name: required-name-2
+
+      .. container:: tab-title
+
+         Tab 2
+
+      .. container::
+
+         This is the content for tab2.
 
 .. format-content-tabs-usage-end
 
@@ -1258,37 +1290,56 @@ The following example shows use cases for a very sophisticated user interface su
 
 This user interface is just amazing. Users can do stuff:
 
-.. content-tabs:: style-guide-content-tab-evidence
+.. container:: content-tabs
+   :name: ui-tasks-example
 
-   .. tab-container:: button
-      :title: Click Button
+   .. container:: tab-content
+      :name: button
 
-      **To click a button**
+      .. container:: tab-title
 
-      #. Open the application.
-      #. In the top navigation bar, click **BUTTON**.
-      #. From the list, select a list item.
-      #. In the **ITEM** pane, scroll to the bottom, and then click **BUTTON**.
+         Click Button
 
-   .. tab-container:: box
-      :title: Check Box
+      .. container::
 
-      **To check a box**
+         **To click a button**
 
-      #. Open the application.
-      #. In the top navigation bar, click **BUTTON**.
-      #. From the list, select a list item.
-      #. In the **ITEM** pane, scroll to the bottom, and then select the **CHECKBOX**.
+         #. Open the application.
+         #. In the top navigation bar, click **BUTTON**.
+         #. From the list, select a list item.
+         #. In the **ITEM** pane, scroll to the bottom, and then click **BUTTON**.
 
-   .. tab-container:: field
-      :title: Type Something
+   .. container:: tab-content
+      :name: box
 
-      **To type something**
+      .. container:: tab-title
 
-      #. Open the application.
-      #. In the top navigation bar, click **BUTTON**.
-      #. From the list, select a list item.
-      #. In the **ITEM** pane, scroll to text box, select it, and then start typing.
+         Check Box
+
+      .. container::
+
+         **To check a box**
+
+         #. Open the application.
+         #. In the top navigation bar, click **BUTTON**.
+         #. From the list, select a list item.
+         #. In the **ITEM** pane, scroll to the bottom, and then select the **CHECKBOX**.
+
+   .. container:: tab-content
+      :name: field
+
+      .. container:: tab-title
+
+         Type Something
+
+      .. container::
+
+         **To type something**
+
+         #. Open the application.
+         #. In the top navigation bar, click **BUTTON**.
+         #. From the list, select a list item.
+         #. In the **ITEM** pane, scroll to text box, select it, and then start typing.
 
 .. format-content-tabs-example-tasks-end
 
@@ -1300,41 +1351,66 @@ Example: Terms
 
 .. format-content-tabs-example-terms-start
 
-This example represents an intro near the start of a longer conceptual topic that needs to introduce some important terminology. You'd use a short paragraph (like this one!), and then put each of the terms in a tab below the paragraph. This example also shows how to use the ``.. includes::`` directive to pull in paragraphs from the source glossary file.
+This example represents an intro near the start of a longer conceptual topic that needs to introduce some important terminology. You'd use a short paragraph (like this one!), and then put each of the terms in a tab below the paragraph. This example also shows how to use the ``.. includes::`` directive to pull in paragraphs from the source glossary file, which is located at ``/shared/terms.rst``.
 
 **Example**
 
 Blah blah, the following terms are important for this topic:
 
-.. content-tabs:: style-guide-content-tab-terms
+.. container:: content-tabs
+   :name: terms-example
 
-   .. tab-container:: term-a
-      :title: Aaaaa
+   .. container:: tab-content
+      :name: term-a
 
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-test-start
-         :end-before: .. term-test-end
+      .. container:: tab-title
 
-   .. tab-container:: term-b
-      :title: Bbbbb
+         Aaaaa
 
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-test-start
-         :end-before: .. term-test-end
+      .. container::
 
-   .. tab-container:: term-c
-      :title: Ccccc
+         .. include:: ../../shared/terms.rst
+            :start-after: .. term-aaaaa-start
+            :end-before: .. term-aaaaa-end
 
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-test-start
-         :end-before: .. term-test-end
+   .. container:: tab-content
+      :name: term-b
 
-   .. tab-container:: term-d
-      :title: Ddddd
+      .. container:: tab-title
 
-      .. include:: ../../shared/terms.rst
-         :start-after: .. term-test-start
-         :end-before: .. term-test-end
+         Bbbbb
+
+      .. container::
+
+         .. include:: ../../shared/terms.rst
+            :start-after: .. term-bbbbb-start
+            :end-before: .. term-bbbbb-end
+
+   .. container:: tab-content
+      :name: term-c
+
+      .. container:: tab-title
+
+         Ccccc
+
+      .. container::
+
+         .. include:: ../../shared/terms.rst
+            :start-after: .. term-ccccc-start
+            :end-before: .. term-ccccc-end
+
+   .. container:: tab-content
+      :name: term-d
+
+      .. container:: tab-title
+
+         Ddddd
+
+      .. container::
+
+         .. include:: ../../shared/terms.rst
+            :start-after: .. term-ddddd-start
+            :end-before: .. term-ddddd-end
 
 .. format-content-tabs-example-terms-end
 
@@ -1644,37 +1720,63 @@ This example shows various standard content elements--paragraphs, bold, italic, 
 
       This is a test. Can expandos have content tabs?
 
-      .. content-tabs:: style-guide-content-tab-terms
+      .. container:: content-tabs
+         :name: terms-example2
 
-         .. tab-container:: term-a-record
-            :title: A record
+         .. container:: tab-content
+            :name: term-aa
 
-            .. include:: ../../shared/terms.rst
-               :start-after: .. term-test-start
-               :end-before: .. term-test-end
+            .. container:: tab-title
 
-         .. tab-container:: term-aaaa-record
-            :title: AAAA record
+               Aaaaa
 
-            .. include:: ../../shared/terms.rst
-               :start-after: .. term-test-start
-               :end-before: .. term-test-end
+            .. container::
 
-         .. tab-container:: term-axfr-record
-            :title: AXFR record
+               .. include:: ../../shared/terms.rst
+                  :start-after: .. term-aaaaa-start
+                  :end-before: .. term-aaaaa-end
 
-            .. include:: ../../shared/terms.rst
-               :start-after: .. term-test-start
-               :end-before: .. term-test-end
+         .. container:: tab-content
+            :name: term-bb
 
-         .. tab-container:: term-ptr-record
-            :title: PTR record
+            .. container:: tab-title
 
-            .. include:: ../../shared/terms.rst
-               :start-after: .. term-test-start
-               :end-before: .. term-test-end
+               Bbbbb
+
+            .. container::
+
+               .. include:: ../../shared/terms.rst
+                  :start-after: .. term-bbbbb-start
+                  :end-before: .. term-bbbbb-end
+
+         .. container:: tab-content
+            :name: term-cc
+
+            .. container:: tab-title
+
+               Ccccc
+
+            .. container::
+
+               .. include:: ../../shared/terms.rst
+                  :start-after: .. term-ccccc-start
+                  :end-before: .. term-ccccc-end
+
+         .. container:: tab-content
+            :name: term-dd
+
+            .. container:: tab-title
+
+               Ddddd
+
+            .. container::
+
+               .. include:: ../../shared/terms.rst
+                  :start-after: .. term-ddddd-start
+                  :end-before: .. term-ddddd-end
 
       Looks like the answer is: YES.
+
 
 .. container:: toggle
 
@@ -1703,47 +1805,72 @@ This example shows various standard content elements--paragraphs, bold, italic, 
 
       Grouped procedures
 
-   .. container:: content
+   .. container::
 
       This section groups a series of procedures as tabbed content.
 
-      .. content-tabs:: style-guide-content-tab-terms
+      .. container:: content-tabs
+         :name: grouped-procedures
 
-         .. tab-container:: term-a-record
-            :title: This is
+         .. container:: tab-content
+            :name: step-1
 
-            **To do the first step**
+            .. container:: tab-title
 
-            #. Do.
-            #. Doing.
-            #. Done.
+               This is
 
-         .. tab-container:: term-aaaa-record
-            :title: a procedure
+            .. container::
 
-            **To do the second step**
+               **To do the first step**
 
-            #. Do.
-            #. Doing.
-            #. Done.
+               #. Do.
+               #. Doing.
+               #. Done.
 
-         .. tab-container:: term-axfr-record
-            :title: with a series
+         .. container:: tab-content
+            :name: step-2
 
-            **To do the third step**
+            .. container:: tab-title
 
-            #. Do.
-            #. Doing.
-            #. Done.
+               a procedure
 
-         .. tab-container:: term-ptr-record
-            :title: of steps
+            .. container::
 
-            **To do the fourth step**
+               **To do the second step**
 
-            #. Do.
-            #. Doing.
-            #. Done.
+               #. Do.
+               #. Doing.
+               #. Done.
+
+         .. container:: tab-content
+            :name: step-3
+
+            .. container:: tab-title
+
+               with a series
+
+            .. container::
+
+               **To do the third step**
+
+               #. Do.
+               #. Doing.
+               #. Done.
+
+         .. container:: tab-content
+            :name: term-d-record
+
+            .. container:: tab-title
+
+               of steps
+
+            .. container::
+
+               **To do the fourth step**
+
+               #. Do.
+               #. Doing.
+               #. Done.
 
 .. format-content-expando-example-content-party-end
 
