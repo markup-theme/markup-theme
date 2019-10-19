@@ -105,7 +105,7 @@ Format w/Markdown
    `About Titles </markup-theme/md/md.html#topic-titles>`__
 
 **Unsupported**
-   `Blockquotes </markup-theme/md/md.html#blockquotes>`__ |fa-index-circle| `Tokens </markup-theme/md/md.html#tokens>`__
+   `Blockquotes </markup-theme/md/md.html#blockquotes>`__ |fa-index-circle| `Expandos </markup-theme/md/md.html#expandos>`__ |fa-index-circle| `Tokens </markup-theme/md/md.html#tokens>`__
 
 
 Format w/reStructuredText

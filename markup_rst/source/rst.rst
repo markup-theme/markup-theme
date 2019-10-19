@@ -1359,51 +1359,87 @@ An expando is defined inside the ``.. expando::`` directive. Each expando must b
 
 .. code-block:: rst
 
-   .. expando::
-      :title: **This is the title**
+   .. container:: toggle
 
-      Content goes here, indented correctly, as anywhere else in a rST document.
+       .. container:: header
+
+          **This is the title**
+
+       .. container:: content
+
+          Content goes here, indented correctly, as anywhere else in
+          a rST document.
 
 will appear similar to:
 
-.. expando::
-   :title: **This is the title**
+.. container:: toggle
 
-   Content goes here, indented correctly, as anywhere else in a rST document.
+    .. container:: header
+
+       **This is the title**
+
+    .. container:: content
+
+       Content goes here, indented correctly, as anywhere else in a rST document.
 
 The ``:title:`` may contain **bold** text, *italics* text, plain text, or a **combination** of *styles*:
 
-.. expando::
-   :title: **BOLD**
+.. container:: toggle
 
-   The title for this expando is **BOLD**.
+    .. container:: header
 
-.. expando::
-   :title: *italics*
+       **BOLD**
 
-   The title for this expando is *italics*.
+    .. container:: content
 
-.. expando::
-   :title: **combination** of *styles*
+       The title for this expando is **BOLD**.
 
-   The title for this expando has a **combination** of *styles*.
+.. container:: toggle
+
+    .. container:: header
+
+       *italics*
+
+    .. container:: content
+
+       The title for this expando is *italics*.
+
+.. container:: toggle
+
+    .. container:: header
+
+       **combination** of *styles*
+
+    .. container:: content
+
+       The title for this expando has a **combination** of *styles*.
 
 The ``:title:`` may even contain a :ref:`Font Awesome icon <format-content-fontawesome>` that has been set up as a token. For example:
 
 .. code-block:: rst
 
-   .. expando::
-      :title: We like the Font Awesome |fa-expando-checkbox|!
+   .. container:: toggle
 
-      This title uses the ``|fa-expando-checkbox|`` token: |fa-expando-checkbox|
-      |fa-expando-checkbox| |fa-expando-checkbox|!
+       .. container:: header
+
+          We like the Font Awesome |fa-expando-checkbox|!
+
+       .. container:: content
+
+          This title uses the ``|fa-expando-checkbox|`` token:
+          |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
 
 will appear similar to:
 
-.. expando::
-   :title: We like the Font Awesome |fa-expando-checkbox|!
+.. container:: toggle
 
-   This title uses the ``|fa-expando-checkbox|`` token: |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
+    .. container:: header
+
+       We like the Font Awesome |fa-expando-checkbox|!
+
+    .. container:: content
+
+       This title uses the ``|fa-expando-checkbox|`` token: |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
 
 
 .. warning:: Expando titles may not contain tokens.
@@ -1426,150 +1462,165 @@ Example: FAQ
 
 FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.
 
-.. expando::
-   :title: **How do I set up a Sphinx documentation environment?**
+.. container:: toggle
 
-   The following setup instructions assume the following:
+    .. container:: header
 
-   * You are installing on Mac OS
-   * You are able to run the `pip` command (for non-Sass applications)
-   * You are able to install Rubygems (for Sass)
+       **How do I set up a Sphinx documentation environment?**
 
-   For all other installation scenarios, the steps are similarly easy. Please refer to the linked setup docs for each application for the correct information.
+    .. container:: content
 
-   **To set up a theme environment**
+	   The following setup instructions assume the following:
 
-   #. `Install Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`__:
+	   * You are installing on Mac OS
+	   * You are able to run the `pip` command (for non-Sass applications)
+	   * You are able to install Rubygems (for Sass)
 
-      .. code-block:: console
+	   For all other installation scenarios, the steps are similarly easy. Please refer to the linked setup docs for each application for the correct information.
 
-         $ pip install sphinx
+	   **To set up a theme environment**
 
-   #. `Install Sass <https://sass-lang.com/install>`__:
+	   #. `Install Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`__:
 
-      .. code-block:: console
+	      .. code-block:: console
 
-         $ sudo gem install sass
+	         $ pip install sphinx
 
-   #. `Install the RevealJS docutils plugin <https://github.com/tell-k/sphinxjp.themes.revealjs#set-up>`__:
+	   #. `Install Sass <https://sass-lang.com/install>`__:
 
-      .. code-block:: console
+	      .. code-block:: console
 
-         $ pip install sphinxjp.themes.revealjs 
+	         $ sudo gem install sass
 
-   #. `Install the Recommonmark docutils-compatibility bridge <http://recommonmark.readthedocs.io>`__:
+	   #. `Install the RevealJS docutils plugin <https://github.com/tell-k/sphinxjp.themes.revealjs#set-up>`__:
 
-      .. code-block:: console
+	      .. code-block:: console
 
-         $ pip install recommonmark
+	         $ pip install sphinxjp.themes.revealjs 
 
-      A documentation project that supports Markdown authoring must add the following elements to the `conf.py` file:
+	   #. `Install the Recommonmark docutils-compatibility bridge <http://recommonmark.readthedocs.io>`__:
 
-      Under ``import sys, os`` add:
+	      .. code-block:: console
 
-      .. code-block:: python
+	         $ pip install recommonmark
 
-         from recommonmark.parser import CommonMarkParser
-         from recommonmark.transform import AutoStructify
+	      A documentation project that supports Markdown authoring must add the following elements to the `conf.py` file:
 
-         source_parsers = {
-           '.md': CommonMarkParser,
-         }
+	      Under ``import sys, os`` add:
 
-      Change ``source_suffix = '.rst'`` to ``source_suffix = ['.rst', '.md']``.
+	      .. code-block:: python
 
-      At the bottom of the `Options for HTML output` configuration section, add:
+	         from recommonmark.parser import CommonMarkParser
+	         from recommonmark.transform import AutoStructify
 
-      .. code-block:: python
+	         source_parsers = {
+	           '.md': CommonMarkParser,
+	         }
 
-         def setup(app):
-         app.add_config_value('recommonmark_config', {
-           'enable_eval_rst': True,
-         }, True)
-         app.add_transform(AutoStructify)
+	      Change ``source_suffix = '.rst'`` to ``source_suffix = ['.rst', '.md']``.
 
-   #. `Install WeasyPrint <http://weasyprint.readthedocs.io/en/latest/install.html>`__:
+	      At the bottom of the `Options for HTML output` configuration section, add:
 
-      .. code-block:: console
+	      .. code-block:: python
 
-         $ pip install weasyprint
+	         def setup(app):
+	         app.add_config_value('recommonmark_config', {
+	           'enable_eval_rst': True,
+	         }, True)
+	         app.add_transform(AutoStructify)
 
-      and then run ``$ weasyprint --version`` to verify.
+	   #. `Install WeasyPrint <http://weasyprint.readthedocs.io/en/latest/install.html>`__:
 
-      .. note:: In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: ``$ sudo chown -R $USER:admin /usr/local``.
+	      .. code-block:: console
 
+	         $ pip install weasyprint
 
-.. expando::
-   :title: **How do I submit a pull request via GitHub Desktop?**
+	      and then run ``$ weasyprint --version`` to verify.
 
-   The following steps describe how to create a pull request when using GitHub Desktop:
-
-   **To create a pull request via GitHub desktop**
-
-   #. Open GitHub Desktop and select a repository.
-   #. From the master branch, ensure that the repository is up to date. Click **Fetch Origin** and then click **Pull Origin**.
-   #. Select the dropdown next to **Current Branch**, and then choose **New Branch**.
-   #. In the **Create a Branch** dialog box, assign the branch a unique name, such as ``user-060718-feedback``, and then click **Create Branch**.
-   #. Using your favorite text editor--such as TextMate on a Mac or EditPad Pro on a Windows PC--open the file you want to edit and make your changes.
-   #. In GitHub Desktop, under **Current Repository** choose the **Changes** tab. This will show the changes you just made.
-   #. Add short description to the **Summary** box, and optionally add a description. Select all of the files to be commited with this branch.
-   #. Click **Commit to [name of branch]**.
-   #. Select the dropdown next to **Current Branch**, choose **Pull Requests**, and then click the **Create a pull request** link.
-   #. In the **Publish Branch** dialog box, click **Publish Branch**. This will open the GitHub web user interface.
-   #. On the **Open a pull request** page, add reviewers if necessary. When finished, click **Create pull request**.
-
-      You're done!
+	      .. note:: In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: ``$ sudo chown -R $USER:admin /usr/local``.
 
 
-.. expando::
-   :title: **How do I set up Localhost on a Mac?**
+.. container:: toggle
 
-   The ``markup`` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
+    .. container:: header
 
-   Mac OS machines have built-in localhost abilities that can be enabled.
+       **How do I submit a pull request via GitHub Desktop?**
 
-   #. Run the following command:
+    .. container:: content
 
-      .. code-block:: console
+	   The following steps describe how to create a pull request when using GitHub Desktop:
 
-         $ sudo apachectl restart
+	   **To create a pull request via GitHub desktop**
 
-   #. Open the configuration file:
+	   #. Open GitHub Desktop and select the ``vse_docs`` repository.
+	   #. From the master branch, ensure that the repository is up to date. Click **Fetch Origin** and then click **Pull Origin**.
+	   #. Select the dropdown next to **Current Branch**, and then choose **New Branch**.
+	   #. In the **Create a Branch** dialog box, assign the branch a unique name, such as ``jscott-060718-feedback``, and then click **Create Branch**.
+	   #. Using your favorite text editor--such as TextMate on a Mac or EditPad Pro on a Windows PC--open the file you want to edit and make your changes.
+	   #. In GitHub Desktop, under **Current Repository** choose the **Changes** tab. This will show the changes you just made.
+	   #. Add short description to the **Summary** box, and optionally add a description. Select all of the files to be commited with this branch.
+	   #. Click **Commit to [name of branch]**.
+	   #. Select the dropdown next to **Current Branch**, choose **Pull Requests**, and then click the **Create a pull request** link.
+	   #. In the **Publish Branch** dialog box, click **Publish Branch**. This will open the GitHub web user interface.
+	   #. On the **Open a pull request** page, add reviewers if necessary. When finished, click **Create pull request**.
 
-      .. code-block:: console
+	      You're done!
 
-         $ sudo nano /etc/apache2/httpd.conf
 
-      Enable PHP 7.1 by removing the ``#`` from this line:
+.. container:: toggle
 
-      .. code-block:: text
+    .. container:: header
 
-         #LoadModule php7_module libexec/apache2/libphp7.so
+       **How do I set up Localhost on a Mac?**
 
-   #. Restart Apache.
+    .. container:: content
 
-      .. code-block:: console
+	   The ``esentire`` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
 
-         $ sudo apachectl restart
+	   Mac OS machines have built-in localhost abilities that can be enabled.
 
-   #. Open the configuration file:
+	   #. Run the following command:
 
-      .. code-block:: console
+	      .. code-block:: console
 
-         $ sudo nano /etc/apache2/httpd.conf
+	         $ sudo apachectl restart
 
-      and then update ``DocumentRoot`` and ``<Directory`` to have the path to the ``/output`` directory for the project:
+	   #. Open the configuration file:
 
-      .. code-block:: text
+	      .. code-block:: console
 
-         $ DocumentRoot "/path/to/project/output/"
-           <Directory "/path/to/project/output/">
+	         $ sudo nano /etc/apache2/httpd.conf
 
-   #. Restart Apache.
+	      Enable PHP 7.1 by removing the ``#`` from this line:
 
-      .. code-block:: console
+	      .. code-block:: text
 
-         $ sudo apachectl restart
+	         #LoadModule php7_module libexec/apache2/libphp7.so
+
+	   #. Restart Apache.
+
+	      .. code-block:: console
+
+	         $ sudo apachectl restart
+
+	   #. Open the configuration file:
+
+	      .. code-block:: console
+
+	         $ sudo nano /etc/apache2/httpd.conf
+
+	      and then update ``DocumentRoot`` and ``<Directory`` to have the path to the ``/output`` directory for the project:
+
+	      .. code-block:: text
+
+	         $ DocumentRoot "/path/to/esentire_project/output/"
+	           <Directory "/path/to/esentire_project/output/">
+
+	   #. Restart Apache.
+
+	      .. code-block:: console
+
+	         $ sudo apachectl restart
 
 .. format-content-expando-example-faq-end
 
@@ -1583,101 +1634,116 @@ Example: Content Patterns
 
 This example shows various standard content elements--paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms--included under expandos:
 
-.. expando::
-   :title: Glossary terms!
+.. container:: toggle
 
-   This is a test. Can expandos have content tabs?
+    .. container:: header
 
-   .. content-tabs:: style-guide-content-tab-terms
+       Glossary terms!
 
-      .. tab-container:: term-a-record
-         :title: A record
+    .. container:: content
 
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
+	   This is a test. Can expandos have content tabs?
 
-      .. tab-container:: term-aaaa-record
-         :title: AAAA record
+	   .. content-tabs:: style-guide-content-tab-terms
 
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
+	      .. tab-container:: term-a-record
+	         :title: A record
 
-      .. tab-container:: term-axfr-record
-         :title: AXFR record
+	         .. include:: ../../shared/terms.rst
+	            :start-after: .. term-test-start
+	            :end-before: .. term-test-end
 
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
+	      .. tab-container:: term-aaaa-record
+	         :title: AAAA record
 
-      .. tab-container:: term-ptr-record
-         :title: PTR record
+	         .. include:: ../../shared/terms.rst
+	            :start-after: .. term-test-start
+	            :end-before: .. term-test-end
 
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
+	      .. tab-container:: term-axfr-record
+	         :title: AXFR record
 
-   Looks like the answer is: YES.
+	         .. include:: ../../shared/terms.rst
+	            :start-after: .. term-test-start
+	            :end-before: .. term-test-end
 
-.. expando::
-   :title: Simple procedures
+	      .. tab-container:: term-ptr-record
+	         :title: PTR record
 
-   This is text. And
+	         .. include:: ../../shared/terms.rst
+	            :start-after: .. term-test-start
+	            :end-before: .. term-test-end
 
-   #. This
-   #. Is
-   #. An
-   #. Ordered
-   #. List
+	   Looks like the answer is: YES.
 
-      .. code-block:: python
+.. container:: toggle
 
-         with_a = 'code sample'
+    .. container:: header
+
+       Simple procedures
+
+    .. container:: content
+
+	   This is text. And
+
+	   #. This
+	   #. Is
+	   #. An
+	   #. Ordered
+	   #. List
+
+	      .. code-block:: python
+
+	         with_a = 'code sample'
 
 
-.. expando::
-   :title: Grouped procedures
+.. container:: toggle
 
-   This section groups a series of procedures as tabbed content.
+    .. container:: header
 
-   .. content-tabs:: style-guide-content-tab-terms
+       Grouped procedures
 
-      .. tab-container:: term-a-record
-         :title: This is
+    .. container:: content
 
-         **To do the first step**
+	   This section groups a series of procedures as tabbed content.
 
-         #. Do.
-         #. Doing.
-         #. Done.
+	   .. content-tabs:: style-guide-content-tab-terms
 
-      .. tab-container:: term-aaaa-record
-         :title: a procedure
+	      .. tab-container:: term-a-record
+	         :title: This is
 
-         **To do the second step**
+	         **To do the first step**
 
-         #. Do.
-         #. Doing.
-         #. Done.
+	         #. Do.
+	         #. Doing.
+	         #. Done.
 
-      .. tab-container:: term-axfr-record
-         :title: with a series
+	      .. tab-container:: term-aaaa-record
+	         :title: a procedure
 
-         **To do the third step**
+	         **To do the second step**
 
-         #. Do.
-         #. Doing.
-         #. Done.
+	         #. Do.
+	         #. Doing.
+	         #. Done.
 
-      .. tab-container:: term-ptr-record
-         :title: of steps
+	      .. tab-container:: term-axfr-record
+	         :title: with a series
 
-         **To do the fourth step**
+	         **To do the third step**
 
-         #. Do.
-         #. Doing.
-         #. Done.
+	         #. Do.
+	         #. Doing.
+	         #. Done.
+
+	      .. tab-container:: term-ptr-record
+	         :title: of steps
+
+	         **To do the fourth step**
+
+	         #. Do.
+	         #. Doing.
+	         #. Done.
 
 .. format-content-expando-example-content-party-end
 

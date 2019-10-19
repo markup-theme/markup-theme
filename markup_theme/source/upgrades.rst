@@ -18,7 +18,7 @@ The following sections are less tutorial and more documentation of changes that 
 
    The following issues were discovered when upgrading to Sphinx 1.8.5:
 
-   #. The expando.py and tabs.py extensions needed to be updated to use the logger module. This was resolved by updating both extensions to import the logger module, and then to use the logger instead of ``app.info('done')``.
+   #. The tabs.py extensions needed to be updated to use the logger module. This was resolved by updating both extensions to import the logger module, and then to use the logger instead of ``app.info('done')``.
    #. The sphinxjp.theme.revealjs theme broke in an automated CI/CD environment because (for whatever reason) it was not installable with Sphinx 1.8.5. We didn't try to debug that specific issue. Instead, this was resolved by moving the ``directives.py`` file from that theme to the ``_ext`` directory, renaming it ``slides.py``, and deprecating the use of a standalone ``compat.py`` file. This was done against Sphinx 1.5.1 prior to upgrading and resolved the problem (for now).
 
 .. admonition:: Sphinx 2.0.1
@@ -26,200 +26,6 @@ The following sections are less tutorial and more documentation of changes that 
    The following issues were discovered when upgrading to Sphinx 2.0.1:
 
    #. TBD. The scope of potential changes for 2.0.1 are unknown. They may be substantial or they may be easy.
-
-
-.. _upgrade-expando:
-
-expando.py Extension
-==================================================
-
-The following tabs highlight changes made to the expando extension as part of Sphinx upgrades. The highlighted changes show the difference between the selected version and the previous version.
-
-.. note:: This extension was repurposed from the `contentui theme <https://github.com/ulrobix/sphinxcontrib-contentui>`__, a BSD-licensed open source project available on GitHub.
-
-.. content-tabs:: expando-upgrades-by-version
-
-   .. tab-container:: sphinx151
-      :title: Sphinx 1.5.1
-
-      .. code-block:: python
-
-         # -*- coding: utf-8 -*-
-         """
-         Copyright (c) <year>, <copyright holder>
-         All rights reserved.
-
-         Redistribution and use in source and binary forms, with or without
-         modification, are permitted provided that the following conditions are met:
-         1. Redistributions of source code must retain the above copyright
-            notice, this list of conditions and the following disclaimer.
-         2. Redistributions in binary form must reproduce the above copyright
-            notice, this list of conditions and the following disclaimer in the
-            documentation and/or other materials provided with the distribution.
-         3. All advertising materials mentioning features or use of this software
-            must display the following acknowledgement:
-            This product includes software developed by the <organization>.
-         4. Neither the name of the <organization> nor the
-            names of its contributors may be used to endorse or promote products
-            derived from this software without specific prior written permission.
-
-         THIS SOFTWARE IS PROVIDED BY <COPYRIGHT HOLDER> ''AS IS'' AND ANY
-         EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-         WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-         DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-         DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-         (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-         LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-         ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-         (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-         SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-         """
-         import os
-         from docutils.parsers.rst import Directive, directives
-         from docutils import nodes
-         from docutils.statemachine import StringList
-         from sphinx.util.osutil import copyfile
-
-         JS_FILE = 'expando.js'
-
-         class ToggleDirective(Directive):
-             """
-             Locate content within vertical expandable sections.
-             """
-
-             has_content = True
-             option_spec = {'title': directives.unchanged}
-             optional_arguments = 1
-
-             def run(self):
-                 node = nodes.container()
-                 node['classes'].append('toggle-content')
-
-                 header = self.options["title"]
-                 par = nodes.paragraph(header)
-                 par['classes'].append('toggle-header')
-                 if self.arguments and self.arguments[0]:
-                 par['classes'].append(self.arguments[0])
-
-                 self.state.nested_parse(StringList([header]), self.content_offset, par)
-                 self.state.nested_parse(self.content, self.content_offset, node)
-
-                 return [par, node]
-
-
-         def add_assets(app):
-             app.add_javascript(JS_FILE)
-
-
-         def copy_assets(app, exception):
-             dest = os.path.join(app.builder.outdir, '_static', JS_FILE)
-             source = os.path.join(os.path.abspath(os.path.dirname(__file__)), JS_FILE)
-             copyfile(source, dest)
-             app.info('done')
-
-
-         def setup(app):
-             app.add_directive('expando', ToggleDirective)
-    
-             app.connect('builder-inited', add_assets)
-             app.connect('build-finished', copy_assets)
-
-   .. tab-container:: sphinx185
-      :title: Sphinx 1.8.5
-
-      .. code-block:: python
-         :emphasize-lines: 36,70,71,75
-
-         # -*- coding: utf-8 -*-
-         """
-         Copyright (c) <year>, <copyright holder>
-         All rights reserved.
-
-         Redistribution and use in source and binary forms, with or without
-         modification, are permitted provided that the following conditions are met:
-         1. Redistributions of source code must retain the above copyright
-            notice, this list of conditions and the following disclaimer.
-         2. Redistributions in binary form must reproduce the above copyright
-            notice, this list of conditions and the following disclaimer in the
-            documentation and/or other materials provided with the distribution.
-         3. All advertising materials mentioning features or use of this software
-            must display the following acknowledgement:
-            This product includes software developed by the <organization>.
-         4. Neither the name of the <organization> nor the
-            names of its contributors may be used to endorse or promote products
-            derived from this software without specific prior written permission.
-
-         THIS SOFTWARE IS PROVIDED BY <COPYRIGHT HOLDER> ''AS IS'' AND ANY
-         EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-         WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-         DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-         DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-         (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-         LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-         ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-         (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-         SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-         """
-         import os
-         from docutils.parsers.rst import Directive, directives
-         from docutils import nodes
-         from docutils.statemachine import StringList
-         from sphinx.util.osutil import copyfile
-         from sphinx.util import logging
-
-         JS_FILE = 'expando.js'
-
-         class ToggleDirective(Directive):
-             """
-             Locate content within vertical expandable sections.
-             """
-
-             has_content = True
-             option_spec = {'title': directives.unchanged}
-             optional_arguments = 1
-
-             def run(self):
-                 node = nodes.container()
-                 node['classes'].append('toggle-content')
-
-                 header = self.options["title"]
-                 par = nodes.paragraph(header)
-                 par['classes'].append('toggle-header')
-                 if self.arguments and self.arguments[0]:
-                     par['classes'].append(self.arguments[0])
-
-                 self.state.nested_parse(StringList([header]), self.content_offset, par)
-                 self.state.nested_parse(self.content, self.content_offset, node)
-
-                 return [par, node]
-
-
-         def add_assets(app):
-             app.add_javascript(JS_FILE)
-
-
-         def copy_assets(app, exception):
-             logger = logging.getLogger(__name__)
-             logger.info('Copying expando JavaScript... ', nonl=True)
-             dest = os.path.join(app.builder.outdir, '_static', JS_FILE)
-             source = os.path.join(os.path.abspath(os.path.dirname(__file__)), JS_FILE)
-             copyfile(source, dest)
-             logger.info('done')
-
-
-         def setup(app):
-             app.add_directive('expando', ToggleDirective)
-
-             app.connect('builder-inited', add_assets)
-             app.connect('build-finished', copy_assets)
-
-
-.. 
-..    .. tab-container:: sphinx201
-..       :title: Sphinx 2.0.1
-.. 
-..       TBD.
-.. 
 
 
 .. _upgrade-tabs:
@@ -475,7 +281,7 @@ The following tabs highlight changes made to the slides extension as part of Sph
 
 .. note:: The changes made for 1.5.1 are in comparison to the ``compat.py`` and ``directives.py`` files in the `open source project <https://github.com/tell-k/sphinxjp.themes.revealjs>`__. The open source license statement was added to the top of slides.py, along with the highlighted changes.
 
-.. content-tabs:: expando-upgrades-by-version
+.. content-tabs:: slides-upgrades-by-version
 
    .. tab-container:: sphinx151
       :title: Sphinx 1.5.1
