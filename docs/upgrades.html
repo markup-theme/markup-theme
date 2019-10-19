@@ -810,7 +810,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
   <h3><i class="fas fa-newspaper" aria-hidden="true"></i><a href="index.html">&nbsp;ON THIS PAGE</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Upgrade the Theme</a><ul>
-<li><a class="reference internal" href="#expando-py-extension">expando.py Extension</a></li>
 <li><a class="reference internal" href="#tabs-py-extension">tabs.py Extension</a></li>
 <li><a class="reference internal" href="#slides-py-extension">slides.py Extension</a></li>
 </ul>
@@ -833,7 +832,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p class="first admonition-title">Sphinx 1.8.5</p>
 <p>The following issues were discovered when upgrading to Sphinx 1.8.5:</p>
 <ol class="last arabic simple">
-<li>The expando.py and tabs.py extensions needed to be updated to use the logger module. This was resolved by updating both extensions to import the logger module, and then to use the logger instead of <code class="docutils literal notranslate"><span class="pre">app.info('done')</span></code>.</li>
+<li>The tabs.py extensions needed to be updated to use the logger module. This was resolved by updating both extensions to import the logger module, and then to use the logger instead of <code class="docutils literal notranslate"><span class="pre">app.info('done')</span></code>.</li>
 <li>The sphinxjp.theme.revealjs theme broke in an automated CI/CD environment because (for whatever reason) it was not installable with Sphinx 1.8.5. We didn’t try to debug that specific issue. Instead, this was resolved by moving the <code class="docutils literal notranslate"><span class="pre">directives.py</span></code> file from that theme to the <code class="docutils literal notranslate"><span class="pre">_ext</span></code> directory, renaming it <code class="docutils literal notranslate"><span class="pre">slides.py</span></code>, and deprecating the use of a standalone <code class="docutils literal notranslate"><span class="pre">compat.py</span></code> file. This was done against Sphinx 1.5.1 prior to upgrading and resolved the problem (for now).</li>
 </ol>
 </div>
@@ -843,187 +842,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <ol class="last arabic simple">
 <li>TBD. The scope of potential changes for 2.0.1 are unknown. They may be substantial or they may be easy.</li>
 </ol>
-</div>
-<div class="section" id="expando-py-extension">
-<span id="upgrade-expando"></span><h2>expando.py Extension<a class="headerlink" href="#expando-py-extension" title="Permalink to this headline">¶</a></h2>
-<p>The following tabs highlight changes made to the expando extension as part of Sphinx upgrades. The highlighted changes show the difference between the selected version and the previous version.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This extension was repurposed from the <a class="reference external" href="https://github.com/ulrobix/sphinxcontrib-contentui">contentui theme</a>, a BSD-licensed open source project available on GitHub.</p>
-</div>
-<div class="content-tabs expando-upgrades-by-version docutils container">
-<div class="tab-content docutils container" id="tab-sphinx151">
-<p class="tab-title">Sphinx 1.5.1</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;expando.js&#39;</span>
-
-<span class="k">class</span> <span class="nc">ToggleDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Locate content within vertical expandable sections.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">()</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-content&#39;</span><span class="p">)</span>
-
-        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-header&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="n">StringList</span><span class="p">([</span><span class="n">header</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">par</span><span class="p">,</span> <span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;expando&#39;</span><span class="p">,</span> <span class="n">ToggleDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="tab-content docutils container" id="tab-sphinx185">
-<p class="tab-title">Sphinx 1.8.5</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Copyright (c) &lt;year&gt;, &lt;copyright holder&gt;</span>
-<span class="sd">All rights reserved.</span>
-
-<span class="sd">Redistribution and use in source and binary forms, with or without</span>
-<span class="sd">modification, are permitted provided that the following conditions are met:</span>
-<span class="sd">1. Redistributions of source code must retain the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer.</span>
-<span class="sd">2. Redistributions in binary form must reproduce the above copyright</span>
-<span class="sd">   notice, this list of conditions and the following disclaimer in the</span>
-<span class="sd">   documentation and/or other materials provided with the distribution.</span>
-<span class="sd">3. All advertising materials mentioning features or use of this software</span>
-<span class="sd">   must display the following acknowledgement:</span>
-<span class="sd">   This product includes software developed by the &lt;organization&gt;.</span>
-<span class="sd">4. Neither the name of the &lt;organization&gt; nor the</span>
-<span class="sd">   names of its contributors may be used to endorse or promote products</span>
-<span class="sd">   derived from this software without specific prior written permission.</span>
-
-<span class="sd">THIS SOFTWARE IS PROVIDED BY &lt;COPYRIGHT HOLDER&gt; &#39;&#39;AS IS&#39;&#39; AND ANY</span>
-<span class="sd">EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span>
-<span class="sd">WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span>
-<span class="sd">DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; BE LIABLE FOR ANY</span>
-<span class="sd">DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span>
-<span class="sd">(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span>
-<span class="sd">LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span>
-<span class="sd">ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span>
-<span class="sd">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span>
-<span class="sd">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span><span class="p">,</span> <span class="n">directives</span>
-<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
-<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
-<span class="kn">from</span> <span class="nn">sphinx.util.osutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-<span class="hll"><span class="kn">from</span> <span class="nn">sphinx.util</span> <span class="kn">import</span> <span class="n">logging</span>
-</span>
-<span class="n">JS_FILE</span> <span class="o">=</span> <span class="s1">&#39;expando.js&#39;</span>
-
-<span class="k">class</span> <span class="nc">ToggleDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Locate content within vertical expandable sections.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">container</span><span class="p">()</span>
-        <span class="n">node</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-content&#39;</span><span class="p">)</span>
-
-        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
-        <span class="n">par</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
-        <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;toggle-header&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-            <span class="n">par</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="n">StringList</span><span class="p">([</span><span class="n">header</span><span class="p">]),</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">par</span><span class="p">,</span> <span class="n">node</span><span class="p">]</span>
-
-
-<span class="k">def</span> <span class="nf">add_assets</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_javascript</span><span class="p">(</span><span class="n">JS_FILE</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">copy_assets</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
-<span class="hll">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Copying expando JavaScript... &#39;</span><span class="p">,</span> <span class="n">nonl</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span>    <span class="n">dest</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="s1">&#39;_static&#39;</span><span class="p">,</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="n">JS_FILE</span><span class="p">)</span>
-    <span class="n">copyfile</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
-<span class="hll">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-</span>
-
-<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;expando&#39;</span><span class="p">,</span> <span class="n">ToggleDirective</span><span class="p">)</span>
-
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;builder-inited&#39;</span><span class="p">,</span> <span class="n">add_assets</span><span class="p">)</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="n">copy_assets</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="tabs-py-extension">
 <span id="upgrade-tabs"></span><h2>tabs.py Extension<a class="headerlink" href="#tabs-py-extension" title="Permalink to this headline">¶</a></h2>
@@ -1264,7 +1082,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <p class="first admonition-title">Note</p>
 <p class="last">The changes made for 1.5.1 are in comparison to the <code class="docutils literal notranslate"><span class="pre">compat.py</span></code> and <code class="docutils literal notranslate"><span class="pre">directives.py</span></code> files in the <a class="reference external" href="https://github.com/tell-k/sphinxjp.themes.revealjs">open source project</a>. The open source license statement was added to the top of slides.py, along with the highlighted changes.</p>
 </div>
-<div class="content-tabs expando-upgrades-by-version docutils container">
+<div class="content-tabs slides-upgrades-by-version docutils container">
 <div class="tab-content docutils container" id="tab-sphinx151">
 <p class="tab-title">Sphinx 1.5.1</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
@@ -1626,12 +1444,17 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
 
           </div>
-          <div class="footer" role="contentinfo">
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
 
-<!--
--->
-            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
-            </div>
         </div>
       </div>
 

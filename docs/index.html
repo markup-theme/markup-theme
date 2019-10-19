@@ -893,7 +893,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <dt><strong>Topic Titles</strong></dt>
 <dd><a class="reference external" href="/markup-theme/md/md.html#topic-titles">About Titles</a></dd>
 <dt><strong>Unsupported</strong></dt>
-<dd><a class="reference external" href="/markup-theme/md/md.html#blockquotes">Blockquotes</a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference external" href="/markup-theme/md/md.html#tokens">Tokens</a></dd>
+<dd><a class="reference external" href="/markup-theme/md/md.html#blockquotes">Blockquotes</a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference external" href="/markup-theme/md/md.html#expandos">Expandos</a> <i class="fas fa-circle fa-xs" data-fa-transform="shrink-5"></i> <a class="reference external" href="/markup-theme/md/md.html#tokens">Tokens</a></dd>
 </dl>
 </div>
 <div class="section" id="format-w-restructuredtext">
@@ -941,12 +941,17 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 
 
           </div>
-          <div class="footer" role="contentinfo">
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
 
-<!--
--->
-            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
-            </div>
         </div>
       </div>
 

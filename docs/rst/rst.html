@@ -1939,38 +1939,64 @@ end
 <p>Expandos enable content to be grouped under a title bar. When the title bar is clicked, the content expands under the title bar and is visible to the reader. When a title bar with expanded content is clicked, the content collapses under the title bar and is no longer visible.</p>
 <p>The content appears inside a box to distinguish expanded content from normal content. Use expandos for things like FAQ pages, support and troubleshooting topics, certain tutorials, and to hide certain types of content from the reader until the reader chooses to view it.</p>
 <p>An expando is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">expando::</span></code> directive. Each expando must be assigned a <code class="docutils literal notranslate"><span class="pre">:title:</span></code>, which is the string that appears in the expandable title bar on the page:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">expando</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">**This is the title**</span>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
 
-   Content goes here, indented correctly, as anywhere else in a rST document.
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+
+       <span class="gs">**This is the title**</span>
+
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+
+       Content goes here, indented correctly, as anywhere else in
+       a rST document.
 </pre></div>
 </div>
 <p>will appear similar to:</p>
-<p class="toggle-header"><strong>This is the title</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>This is the title</strong></div>
+<div class="content docutils container">
 Content goes here, indented correctly, as anywhere else in a rST document.</div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may contain <strong>bold</strong> text, <em>italics</em> text, plain text, or a <strong>combination</strong> of <em>styles</em>:</p>
-<p class="toggle-header"><strong>BOLD</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>BOLD</strong></div>
+<div class="content docutils container">
 The title for this expando is <strong>BOLD</strong>.</div>
-<p class="toggle-header"><em>italics</em></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<em>italics</em></div>
+<div class="content docutils container">
 The title for this expando is <em>italics</em>.</div>
-<p class="toggle-header"><strong>combination</strong> of <em>styles</em></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>combination</strong> of <em>styles</em></div>
+<div class="content docutils container">
 The title for this expando has a <strong>combination</strong> of <em>styles</em>.</div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may even contain a <a class="reference internal" href="#format-content-fontawesome"><span class="std std-ref">Font Awesome icon</span></a> that has been set up as a token. For example:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">expando</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">We like the Font Awesome |fa-expando-checkbox|!</span>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
 
-   This title uses the <span class="s">``|fa-expando-checkbox|``</span> token: |fa-expando-checkbox|
-   |fa-expando-checkbox| |fa-expando-checkbox|!
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+
+       We like the Font Awesome |fa-expando-checkbox|!
+
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+
+       This title uses the <span class="s">``|fa-expando-checkbox|``</span> token:
+       |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
 </pre></div>
 </div>
 <p>will appear similar to:</p>
-<p class="toggle-header">We like the Font Awesome &nbsp; <i class="fas fa-check-square"></i> &nbsp;!</p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+We like the Font Awesome &nbsp; <i class="fas fa-check-square"></i> &nbsp;!</div>
+<div class="content docutils container">
 This title uses the <code class="docutils literal notranslate"><span class="pre">|fa-expando-checkbox|</span></code> token: &nbsp; <i class="fas fa-check-square"></i> &nbsp; &nbsp; <i class="fas fa-check-square"></i> &nbsp; &nbsp; <i class="fas fa-check-square"></i> &nbsp;!</div>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">Expando titles may not contain tokens.</p>
@@ -1982,8 +2008,10 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 <div class="section" id="example-faq">
 <span id="format-content-expando-example-faq"></span><h3>Example: FAQ<a class="headerlink" href="#example-faq" title="Permalink to this headline">¶</a></h3>
 <p>FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.</p>
-<p class="toggle-header"><strong>How do I set up a Sphinx documentation environment?</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I set up a Sphinx documentation environment?</strong></div>
+<div class="content docutils container">
 <p>The following setup instructions assume the following:</p>
 <ul class="simple">
 <li>You are installing on Mac OS</li>
@@ -2044,18 +2072,21 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </li>
 </ol>
 </div>
-<p class="toggle-header"><strong>How do I submit a pull request via GitHub Desktop?</strong></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I submit a pull request via GitHub Desktop?</strong></div>
+<div class="content docutils container">
 <p>The following steps describe how to create a pull request when using GitHub Desktop:</p>
 <p><strong>To create a pull request via GitHub desktop</strong></p>
 <ol class="arabic">
-<li><p class="first">Open GitHub Desktop and select a repository.</p>
+<li><p class="first">Open GitHub Desktop and select the <code class="docutils literal notranslate"><span class="pre">vse_docs</span></code> repository.</p>
 </li>
 <li><p class="first">From the master branch, ensure that the repository is up to date. Click <strong>Fetch Origin</strong> and then click <strong>Pull Origin</strong>.</p>
 </li>
 <li><p class="first">Select the dropdown next to <strong>Current Branch</strong>, and then choose <strong>New Branch</strong>.</p>
 </li>
-<li><p class="first">In the <strong>Create a Branch</strong> dialog box, assign the branch a unique name, such as <code class="docutils literal notranslate"><span class="pre">user-060718-feedback</span></code>, and then click <strong>Create Branch</strong>.</p>
+<li><p class="first">In the <strong>Create a Branch</strong> dialog box, assign the branch a unique name, such as <code class="docutils literal notranslate"><span class="pre">jscott-060718-feedback</span></code>, and then click <strong>Create Branch</strong>.</p>
 </li>
 <li><p class="first">Using your favorite text editor–such as TextMate on a Mac or EditPad Pro on a Windows PC–open the file you want to edit and make your changes.</p>
 </li>
@@ -2074,9 +2105,12 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </li>
 </ol>
 </div>
-<p class="toggle-header"><strong>How do I set up Localhost on a Mac?</strong></p>
-<div class="toggle-content docutils container">
-<p>The <code class="docutils literal notranslate"><span class="pre">markup</span></code> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I set up Localhost on a Mac?</strong></div>
+<div class="content docutils container">
+<p>The <code class="docutils literal notranslate"><span class="pre">esentire</span></code> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
 <p>Mac OS machines have built-in localhost abilities that can be enabled.</p>
 <ol class="arabic">
 <li><p class="first">Run the following command:</p>
@@ -2103,8 +2137,8 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <p>and then update <code class="docutils literal notranslate"><span class="pre">DocumentRoot</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;Directory</span></code> to have the path to the <code class="docutils literal notranslate"><span class="pre">/output</span></code> directory for the project:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/project/output/&quot;
-  &lt;Directory &quot;/path/to/project/output/&quot;&gt;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/esentire_project/output/&quot;
+  &lt;Directory &quot;/path/to/esentire_project/output/&quot;&gt;
 </pre></div>
 </div>
 </li>
@@ -2116,11 +2150,14 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </ol>
 </div>
 </div>
+</div>
 <div class="section" id="example-content-patterns">
 <span id="format-content-expando-example-content-party"></span><h3>Example: Content Patterns<a class="headerlink" href="#example-content-patterns" title="Permalink to this headline">¶</a></h3>
 <p>This example shows various standard content elements–paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms–included under expandos:</p>
-<p class="toggle-header">Glossary terms!</p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+Glossary terms!</div>
+<div class="content docutils container">
 <p>This is a test. Can expandos have content tabs?</p>
 <div class="content-tabs style-guide-content-tab-terms docutils container">
 <div class="tab-content docutils container" id="tab-term-a-record">
@@ -2142,8 +2179,11 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </div>
 <p>Looks like the answer is: YES.</p>
 </div>
-<p class="toggle-header">Simple procedures</p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Simple procedures</div>
+<div class="content docutils container">
 <p>This is text. And</p>
 <ol class="arabic">
 <li><p class="first">This</p>
@@ -2161,8 +2201,11 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 </li>
 </ol>
 </div>
-<p class="toggle-header">Grouped procedures</p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Grouped procedures</div>
+<div class="content docutils container">
 <p>This section groups a series of procedures as tabbed content.</p>
 <div class="content-tabs style-guide-content-tab-terms docutils container">
 <div class="tab-content docutils container" id="tab-term-a-record">
@@ -2200,6 +2243,7 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 <li>Doing.</li>
 <li>Done.</li>
 </ol>
+</div>
 </div>
 </div>
 </div>
@@ -2791,12 +2835,17 @@ True   True   True
 
 
           </div>
-          <div class="footer" role="contentinfo">
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
 
-<!--
--->
-            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
-            </div>
         </div>
       </div>
 

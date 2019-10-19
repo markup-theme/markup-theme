@@ -1958,42 +1958,68 @@ An expando is defined inside the `.. expando::` directive. Each expando must be 
 ```eval_rst
 .. code-block:: rst
 
-   .. expando::
-      :title: **This is the title**
+   .. container:: toggle
 
-      Content goes here, indented correctly, as anywhere else in a rST document.
+       .. container:: header
+
+          **This is the title**
+
+       .. container:: content
+
+          Content goes here, indented correctly, as anywhere else in
+          a rST document.
 ```
 
 will appear similar to:
 
 ```eval_rst
-.. expando::
-   :title: **This is the title**
+.. container:: toggle
 
-   Content goes here, indented correctly, as anywhere else in a rST document.
+    .. container:: header
+
+       **This is the title**
+
+    .. container:: content
+
+       Content goes here, indented correctly, as anywhere else in a rST document.
 ```
 
 The `:title:` may contain **bold** text, *italics* text, plain text, or a **combination** of *styles*:
 
 ```eval_rst
-.. expando::
-   :title: **BOLD**
+.. container:: toggle
 
-   The title for this expando is **BOLD**.
+    .. container:: header
+
+       **BOLD**
+
+    .. container:: content
+
+       The title for this expando is **BOLD**.
 ```
 
 ```eval_rst
-.. expando::
-   :title: *italics*
+.. container:: toggle
 
-   The title for this expando is *italics*.
+    .. container:: header
+
+       *italics*
+
+    .. container:: content
+
+       The title for this expando is *italics*.
 ```
 
 ```eval_rst
-.. expando::
-   :title: **combination** of *styles*
+.. container:: toggle
 
-   The title for this expando has a **combination** of *styles*.
+    .. container:: header
+
+       **combination** of *styles*
+
+    .. container:: content
+
+       The title for this expando has a **combination** of *styles*.
 ```
 
 ```eval_rst
@@ -2006,261 +2032,174 @@ The `:title:` may contain **bold** text, *italics* text, plain text, or a **comb
 FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.
 
 ```eval_rst
-.. expando::
-   :title: **How do I set up a Sphinx documentation environment?**
+.. container:: toggle
 
-   The following setup instructions assume the following:
+   .. container:: header
 
-   * You are installing on Mac OS
-   * You are able to run the `pip` command (for non-Sass applications)
-   * You are able to install Rubygems (for Sass)
+      **How do I set up a Sphinx documentation environment?**
 
-   For all other installation scenarios, the steps are similarly easy. Please refer to the linked setup docs for each application for the correct information.
+   .. container:: content
 
-   **To set up a theme environment**
+      The following setup instructions assume the following:
 
-   #. `Install Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`__:
+      * You are installing on Mac OS
+      * You are able to run the `pip` command (for non-Sass applications)
+      * You are able to install Rubygems (for Sass)
 
-      .. code-block:: console
+      For all other installation scenarios, the steps are similarly easy. Please refer to the linked setup docs for each application for the correct information.
 
-         $ pip install sphinx
+      **To set up a theme environment**
 
-   #. `Install Sass <https://sass-lang.com/install>`__:
+      #. `Install Sphinx <http://www.sphinx-doc.org/en/stable/install.html>`__:
 
-      .. code-block:: console
+         .. code-block:: console
 
-         $ sudo gem install sass
+            $ pip install sphinx
 
-   #. `Install the RevealJS docutils plugin <https://github.com/tell-k/sphinxjp.themes.revealjs#set-up>`__:
+      #. `Install Sass <https://sass-lang.com/install>`__:
 
-      .. code-block:: console
+         .. code-block:: console
 
-         $ pip install sphinxjp.themes.revealjs 
+            $ sudo gem install sass
 
-   #. `Install the Recommonmark docutils-compatibility bridge <http://recommonmark.readthedocs.io>`__:
+      #. `Install the RevealJS docutils plugin <https://github.com/tell-k/sphinxjp.themes.revealjs#set-up>`__:
 
-      .. code-block:: console
+         .. code-block:: console
 
-         $ pip install recommonmark
+            $ pip install sphinxjp.themes.revealjs 
 
-      A documentation project that supports Markdown authoring must add the following elements to the `conf.py` file:
+      #. `Install the Recommonmark docutils-compatibility bridge <http://recommonmark.readthedocs.io>`__:
 
-      Under `import sys, os` add:
+         .. code-block:: console
 
-      .. code-block:: python
+            $ pip install recommonmark
 
-         from recommonmark.parser import CommonMarkParser
-         from recommonmark.transform import AutoStructify
+         A documentation project that supports Markdown authoring must add the following elements to the `conf.py` file:
 
-         source_parsers = {
-           '.md': CommonMarkParser,
-         }
+         Under ``import sys, os`` add:
 
-      Change `source_suffix = '.rst'` to `source_suffix = ['.rst', '.md']`.
+         .. code-block:: python
 
-      At the bottom of the `Options for HTML output` configuration section, add:
+            from recommonmark.parser import CommonMarkParser
+            from recommonmark.transform import AutoStructify
 
-      .. code-block:: python
+            source_parsers = {
+              '.md': CommonMarkParser,
+            }
 
-         def setup(app):
-         app.add_config_value('recommonmark_config', {
-           'enable_eval_rst': True,
-         }, True)
-         app.add_transform(AutoStructify)
+         Change ``source_suffix = '.rst'`` to ``source_suffix = ['.rst', '.md']``.
 
-   #. `Install WeasyPrint <http://weasyprint.readthedocs.io/en/latest/install.html>`__:
+         At the bottom of the `Options for HTML output` configuration section, add:
 
-      .. code-block:: console
+         .. code-block:: python
 
-         $ pip install weasyprint
+            def setup(app):
+            app.add_config_value('recommonmark_config', {
+              'enable_eval_rst': True,
+            }, True)
+            app.add_transform(AutoStructify)
 
-      and then run `$ weasyprint --version` to verify.
+      #. `Install WeasyPrint <http://weasyprint.readthedocs.io/en/latest/install.html>`__:
 
-      .. note:: In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: `$ sudo chown -R $USER:admin /usr/local`.
-```
+         .. code-block:: console
 
-```eval_rst
-.. expando::
-   :title: **How do I submit a pull request via GitHub Desktop?**
+            $ pip install weasyprint
 
-   The following steps describe how to create a pull request when using GitHub Desktop:
+         and then run ``$ weasyprint --version`` to verify.
 
-   **To create a pull request via GitHub desktop**
+         .. note:: In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: ``$ sudo chown -R $USER:admin /usr/local``.
 
-   #. Open GitHub Desktop and select the repository.
-   #. From the master branch, ensure that the repository is up to date. Click **Fetch Origin** and then click **Pull Origin**.
-   #. Select the dropdown next to **Current Branch**, and then choose **New Branch**.
-   #. In the **Create a Branch** dialog box, assign the branch a unique name, such as `user-060718-feedback`, and then click **Create Branch**.
-   #. Using your favorite text editor--such as TextMate on a Mac or EditPad Pro on a Windows PC--open the file you want to edit and make your changes.
-   #. In GitHub Desktop, under **Current Repository** choose the **Changes** tab. This will show the changes you just made.
-   #. Add short description to the **Summary** box, and optionally add a description. Select all of the files to be commited with this branch.
-   #. Click **Commit to [name of branch]**.
-   #. Select the dropdown next to **Current Branch**, choose **Pull Requests**, and then click the **Create a pull request** link.
-   #. In the **Publish Branch** dialog box, click **Publish Branch**. This will open the GitHub web user interface.
-   #. On the **Open a pull request** page, add reviewers if necessary. When finished, click **Create pull request**.
-
-      You're done!
-```
-
-```eval_rst
-.. expando::
-   :title: **How do I set up Localhost on a Mac?**
-
-   The `markup` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
-
-   Mac OS machines have built-in localhost abilities that can be enabled.
-
-   #. Run the following command:
-
-      .. code-block:: console
-
-         $ sudo apachectl restart
-
-   #. Open the configuration file:
-
-      .. code-block:: console
-
-         $ sudo nano /etc/apache2/httpd.conf
-
-      Enable PHP 7.1 by removing the `#` from this line:
-
-      .. code-block:: text
-
-         #LoadModule php7_module libexec/apache2/libphp7.so
-
-   #. Restart Apache.
-
-      .. code-block:: console
-
-         $ sudo apachectl restart
-
-   #. Open the configuration file:
-
-      .. code-block:: console
-
-         $ sudo nano /etc/apache2/httpd.conf
-
-      and then update `DocumentRoot` and `<Directory` to have the path to the `/output` directory for the project:
-
-      .. code-block:: text
-
-         $ DocumentRoot "/path/to/project/output/"
-           <Directory "/path/to/project/output/">
-
-   #. Restart Apache.
-
-      .. code-block:: console
-
-         $ sudo apachectl restart
-```
-
-
-### Example: Content Patterns
-
-This example shows various standard content elements--paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms--included under expandos:
-
-```eval_rst
-.. expando::
-   :title: Glossary terms!
-
-   This is a test. Can expandos have content tabs?
-
-   .. content-tabs:: style-guide-content-tab-terms
-
-      .. tab-container:: term-a-record
-         :title: Term A
-
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
-
-      .. tab-container:: term-aaaa-record
-         :title: Term B
-
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
-
-      .. tab-container:: term-axfr-record
-         :title: Term C
-
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
-
-      .. tab-container:: term-ptr-record
-         :title: Term D
-
-         .. include:: ../../shared/terms.rst
-            :start-after: .. term-test-start
-            :end-before: .. term-test-end
-
-   Looks like the answer is: YES.
 ```
 
 
 ```eval_rst
-.. expando::
-   :title: Simple procedures
+.. container:: toggle
 
-   This is text. And
+   .. container:: header
 
-   #. This
-   #. Is
-   #. An
-   #. Ordered
-   #. List
+      **How do I submit a pull request via GitHub Desktop?**
 
-      .. code-block:: python
+   .. container:: content
 
-         with_a = 'code sample'
+      The following steps describe how to create a pull request when using GitHub Desktop:
+
+      **To create a pull request via GitHub desktop**
+
+      #. Open GitHub Desktop and select the ``vse_docs`` repository.
+      #. From the master branch, ensure that the repository is up to date. Click **Fetch Origin** and then click **Pull Origin**.
+      #. Select the dropdown next to **Current Branch**, and then choose **New Branch**.
+      #. In the **Create a Branch** dialog box, assign the branch a unique name, such as ``jscott-060718-feedback``, and then click **Create Branch**.
+      #. Using your favorite text editor--such as TextMate on a Mac or EditPad Pro on a Windows PC--open the file you want to edit and make your changes.
+      #. In GitHub Desktop, under **Current Repository** choose the **Changes** tab. This will show the changes you just made.
+      #. Add short description to the **Summary** box, and optionally add a description. Select all of the files to be commited with this branch.
+      #. Click **Commit to [name of branch]**.
+      #. Select the dropdown next to **Current Branch**, choose **Pull Requests**, and then click the **Create a pull request** link.
+      #. In the **Publish Branch** dialog box, click **Publish Branch**. This will open the GitHub web user interface.
+      #. On the **Open a pull request** page, add reviewers if necessary. When finished, click **Create pull request**.
+
+         You're done!
 ```
-
 
 ```eval_rst
-.. expando::
-   :title: Grouped procedures
+.. container:: toggle
 
-   This section groups a series of procedures as tabbed content.
+   .. container:: header
 
-   .. content-tabs:: style-guide-content-tab-terms
+      **How do I set up Localhost on a Mac?**
 
-      .. tab-container:: term-a-record
-         :title: This is
+   .. container:: content
 
-         **To do the first step**
+      The ``esentire`` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
 
-         #. Do.
-         #. Doing.
-         #. Done.
+      Mac OS machines have built-in localhost abilities that can be enabled.
 
-      .. tab-container:: term-aaaa-record
-         :title: a procedure
+      #. Run the following command:
 
-         **To do the second step**
+         .. code-block:: console
 
-         #. Do.
-         #. Doing.
-         #. Done.
+            $ sudo apachectl restart
 
-      .. tab-container:: term-axfr-record
-         :title: with a series
+      #. Open the configuration file:
 
-         **To do the third step**
+         .. code-block:: console
 
-         #. Do.
-         #. Doing.
-         #. Done.
+            $ sudo nano /etc/apache2/httpd.conf
 
-      .. tab-container:: term-ptr-record
-         :title: of steps
+         Enable PHP 7.1 by removing the ``#`` from this line:
 
-         **To do the fourth step**
+         .. code-block:: text
 
-         #. Do.
-         #. Doing.
-         #. Done.
+            #LoadModule php7_module libexec/apache2/libphp7.so
+
+      #. Restart Apache.
+
+         .. code-block:: console
+
+            $ sudo apachectl restart
+
+      #. Open the configuration file:
+
+         .. code-block:: console
+
+            $ sudo nano /etc/apache2/httpd.conf
+
+         and then update ``DocumentRoot`` and ``<Directory`` to have the path to the ``/output`` directory for the project:
+
+         .. code-block:: text
+
+            $ DocumentRoot "/path/to/esentire_project/output/"
+              <Directory "/path/to/esentire_project/output/">
+
+      #. Restart Apache.
+
+         .. code-block:: console
+
+            $ sudo apachectl restart
 ```
+
+
+
+
 
 
 

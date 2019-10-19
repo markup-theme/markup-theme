@@ -949,6 +949,14 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
          <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
+          <a class="nav-docs-link" href="/markup-theme/md/md.html#expandos" title="Expandos">
+            Expandos
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
           <a class="nav-docs-link" href="/markup-theme/md/md.html#tokens" title="Tokens">
             Tokens
           </a>
@@ -1051,7 +1059,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </li>
 <li><a class="reference internal" href="#expandos">Expandos</a><ul>
 <li><a class="reference internal" href="#example-faq">Example: FAQ</a></li>
-<li><a class="reference internal" href="#example-content-patterns">Example: Content Patterns</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#font-awesome">Font Awesome</a></li>
@@ -2638,26 +2645,44 @@ config:
 <p>Expandos enable content to be grouped under a title bar. When the title bar is clicked, the content expands under the title bar and is visible to the reader. When a title bar with expanded content is clicked, the content collapses under the title bar and is no longer visible.</p>
 <p>The content appears inside a box to distinguish expanded content from normal content. Use expandos for things like FAQ pages, support and troubleshooting topics, certain tutorials, and to hide certain types of content from the reader until the reader chooses to view it.</p>
 <p>An expando is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">expando::</span></code> directive. Each expando must be assigned a <code class="docutils literal notranslate"><span class="pre">:title:</span></code>, which is the string that appears in the expandable title bar on the page:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">expando</span><span class="p">::</span>
-   <span class="nc">:title:</span> <span class="nf">**This is the title**</span>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
 
-   Content goes here, indented correctly, as anywhere else in a rST document.
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+
+       <span class="gs">**This is the title**</span>
+
+<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+
+       Content goes here, indented correctly, as anywhere else in
+       a rST document.
 </pre></div>
 </div>
 <p>will appear similar to:</p>
-<p class="toggle-header"><strong>This is the title</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>This is the title</strong></div>
+<div class="content docutils container">
 Content goes here, indented correctly, as anywhere else in a rST document.</div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may contain <strong>bold</strong> text, <em>italics</em> text, plain text, or a <strong>combination</strong> of <em>styles</em>:</p>
-<p class="toggle-header"><strong>BOLD</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>BOLD</strong></div>
+<div class="content docutils container">
 The title for this expando is <strong>BOLD</strong>.</div>
-<p class="toggle-header"><em>italics</em></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<em>italics</em></div>
+<div class="content docutils container">
 The title for this expando is <em>italics</em>.</div>
-<p class="toggle-header"><strong>combination</strong> of <em>styles</em></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>combination</strong> of <em>styles</em></div>
+<div class="content docutils container">
 The title for this expando has a <strong>combination</strong> of <em>styles</em>.</div>
+</div>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p class="last">Don’t use expandos within large reference topics. One of the primary use cases for a large reference topic is to enable the reader to CMD+F, and then search for a string on the page. Content that is inside a hidden expando may not be searchable in this scenario.</p>
@@ -2665,8 +2690,10 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <div class="section" id="example-faq">
 <h3>Example: FAQ<a class="headerlink" href="#example-faq" title="Permalink to this headline">¶</a></h3>
 <p>FAQs are typically lists of questions. People read the questions before they read the answers. Use expandos to show people the questions, and then the answers.</p>
-<p class="toggle-header"><strong>How do I set up a Sphinx documentation environment?</strong></p>
-<div class="toggle-content docutils container">
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I set up a Sphinx documentation environment?</strong></div>
+<div class="content docutils container">
 <p>The following setup instructions assume the following:</p>
 <ul class="simple">
 <li>You are installing on Mac OS</li>
@@ -2696,7 +2723,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </pre></div>
 </div>
 <p>A documentation project that supports Markdown authoring must add the following elements to the <cite>conf.py</cite> file:</p>
-<p>Under <cite>import sys, os</cite> add:</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys,</span> <span class="pre">os</span></code> add:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="kn">import</span> <span class="n">CommonMarkParser</span>
 <span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
 
@@ -2705,7 +2732,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Change <cite>source_suffix = ‘.rst’</cite> to <cite>source_suffix = [‘.rst’, ‘.md’]</cite>.</p>
+<p>Change <code class="docutils literal notranslate"><span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">'.rst'</span></code> to <code class="docutils literal notranslate"><span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">['.rst',</span> <span class="pre">'.md']</span></code>.</p>
 <p>At the bottom of the <cite>Options for HTML output</cite> configuration section, add:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;recommonmark_config&#39;</span><span class="p">,</span> <span class="p">{</span>
@@ -2719,26 +2746,29 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install weasyprint
 </pre></div>
 </div>
-<p>and then run <cite>$ weasyprint –version</cite> to verify.</p>
+<p>and then run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">weasyprint</span> <span class="pre">--version</span></code> to verify.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: <cite>$ sudo chown -R $USER:admin /usr/local</cite>.</p>
+<p class="last">In some cases, you will need to make sure that the user running the WeasyPrint installation command can write to the install directory. By default, that requires a command similar to: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">chown</span> <span class="pre">-R</span> <span class="pre">$USER:admin</span> <span class="pre">/usr/local</span></code>.</p>
 </div>
 </li>
 </ol>
 </div>
-<p class="toggle-header"><strong>How do I submit a pull request via GitHub Desktop?</strong></p>
-<div class="toggle-content docutils container">
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I submit a pull request via GitHub Desktop?</strong></div>
+<div class="content docutils container">
 <p>The following steps describe how to create a pull request when using GitHub Desktop:</p>
 <p><strong>To create a pull request via GitHub desktop</strong></p>
 <ol class="arabic">
-<li><p class="first">Open GitHub Desktop and select the repository.</p>
+<li><p class="first">Open GitHub Desktop and select the <code class="docutils literal notranslate"><span class="pre">vse_docs</span></code> repository.</p>
 </li>
 <li><p class="first">From the master branch, ensure that the repository is up to date. Click <strong>Fetch Origin</strong> and then click <strong>Pull Origin</strong>.</p>
 </li>
 <li><p class="first">Select the dropdown next to <strong>Current Branch</strong>, and then choose <strong>New Branch</strong>.</p>
 </li>
-<li><p class="first">In the <strong>Create a Branch</strong> dialog box, assign the branch a unique name, such as <cite>user-060718-feedback</cite>, and then click <strong>Create Branch</strong>.</p>
+<li><p class="first">In the <strong>Create a Branch</strong> dialog box, assign the branch a unique name, such as <code class="docutils literal notranslate"><span class="pre">jscott-060718-feedback</span></code>, and then click <strong>Create Branch</strong>.</p>
 </li>
 <li><p class="first">Using your favorite text editor–such as TextMate on a Mac or EditPad Pro on a Windows PC–open the file you want to edit and make your changes.</p>
 </li>
@@ -2757,9 +2787,12 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </li>
 </ol>
 </div>
-<p class="toggle-header"><strong>How do I set up Localhost on a Mac?</strong></p>
-<div class="toggle-content docutils container">
-<p>The <cite>markup</cite> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+<strong>How do I set up Localhost on a Mac?</strong></div>
+<div class="content docutils container">
+<p>The <code class="docutils literal notranslate"><span class="pre">esentire</span></code> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
 <p>Mac OS machines have built-in localhost abilities that can be enabled.</p>
 <ol class="arabic">
 <li><p class="first">Run the following command:</p>
@@ -2771,7 +2804,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo nano /etc/apache2/httpd.conf
 </pre></div>
 </div>
-<p>Enable PHP 7.1 by removing the <cite>#</cite> from this line:</p>
+<p>Enable PHP 7.1 by removing the <code class="docutils literal notranslate"><span class="pre">#</span></code> from this line:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#LoadModule php7_module libexec/apache2/libphp7.so
 </pre></div>
 </div>
@@ -2785,9 +2818,9 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo nano /etc/apache2/httpd.conf
 </pre></div>
 </div>
-<p>and then update <cite>DocumentRoot</cite> and <cite>&lt;Directory</cite> to have the path to the <cite>/output</cite> directory for the project:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/project/output/&quot;
-  &lt;Directory &quot;/path/to/project/output/&quot;&gt;
+<p>and then update <code class="docutils literal notranslate"><span class="pre">DocumentRoot</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;Directory</span></code> to have the path to the <code class="docutils literal notranslate"><span class="pre">/output</span></code> directory for the project:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/esentire_project/output/&quot;
+  &lt;Directory &quot;/path/to/esentire_project/output/&quot;&gt;
 </pre></div>
 </div>
 </li>
@@ -2797,93 +2830,6 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="example-content-patterns">
-<h3>Example: Content Patterns<a class="headerlink" href="#example-content-patterns" title="Permalink to this headline">¶</a></h3>
-<p>This example shows various standard content elements–paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms–included under expandos:</p>
-<p class="toggle-header">Glossary terms!</p>
-<div class="toggle-content docutils container">
-<p>This is a test. Can expandos have content tabs?</p>
-<div class="content-tabs style-guide-content-tab-terms docutils container">
-<div class="tab-content docutils container" id="tab-term-a-record">
-<p class="tab-title">Term A</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
-</div>
-<div class="tab-content docutils container" id="tab-term-aaaa-record">
-<p class="tab-title">Term B</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
-</div>
-<div class="tab-content docutils container" id="tab-term-axfr-record">
-<p class="tab-title">Term C</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
-</div>
-<div class="tab-content docutils container" id="tab-term-ptr-record">
-<p class="tab-title">Term D</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
-</div>
-</div>
-<p>Looks like the answer is: YES.</p>
-</div>
-<p class="toggle-header">Simple procedures</p>
-<div class="toggle-content docutils container">
-<p>This is text. And</p>
-<ol class="arabic">
-<li><p class="first">This</p>
-</li>
-<li><p class="first">Is</p>
-</li>
-<li><p class="first">An</p>
-</li>
-<li><p class="first">Ordered</p>
-</li>
-<li><p class="first">List</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">with_a</span> <span class="o">=</span> <span class="s1">&#39;code sample&#39;</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-<p class="toggle-header">Grouped procedures</p>
-<div class="toggle-content docutils container">
-<p>This section groups a series of procedures as tabbed content.</p>
-<div class="content-tabs style-guide-content-tab-terms docutils container">
-<div class="tab-content docutils container" id="tab-term-a-record">
-<p class="tab-title">This is</p>
-<p><strong>To do the first step</strong></p>
-<ol class="arabic simple">
-<li>Do.</li>
-<li>Doing.</li>
-<li>Done.</li>
-</ol>
-</div>
-<div class="tab-content docutils container" id="tab-term-aaaa-record">
-<p class="tab-title">a procedure</p>
-<p><strong>To do the second step</strong></p>
-<ol class="arabic simple">
-<li>Do.</li>
-<li>Doing.</li>
-<li>Done.</li>
-</ol>
-</div>
-<div class="tab-content docutils container" id="tab-term-axfr-record">
-<p class="tab-title">with a series</p>
-<p><strong>To do the third step</strong></p>
-<ol class="arabic simple">
-<li>Do.</li>
-<li>Doing.</li>
-<li>Done.</li>
-</ol>
-</div>
-<div class="tab-content docutils container" id="tab-term-ptr-record">
-<p class="tab-title">of steps</p>
-<p><strong>To do the fourth step</strong></p>
-<ol class="arabic simple">
-<li>Do.</li>
-<li>Doing.</li>
-<li>Done.</li>
-</ol>
-</div>
 </div>
 </div>
 </div>
@@ -3436,12 +3382,17 @@ True   True   True
 
 
           </div>
-          <div class="footer" role="contentinfo">
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
 
-<!--
--->
-            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
-            </div>
         </div>
       </div>
 

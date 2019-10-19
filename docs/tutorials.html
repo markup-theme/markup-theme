@@ -1335,12 +1335,17 @@ This page contains an awesome glossary!
 
 
           </div>
-          <div class="footer" role="contentinfo">
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
 
-<!--
--->
-            <!--<a href="/feedback.html">Provide feedback on Context Relevant documentation</a>.-->
-            </div>
         </div>
       </div>
 
