@@ -2149,7 +2149,7 @@ FAQs are typically lists of questions. People read the questions before they rea
 
    .. container:: content
 
-      The ``esentire`` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
+      MARKUP must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
 
       Mac OS machines have built-in localhost abilities that can be enabled.
 
@@ -2187,8 +2187,8 @@ FAQs are typically lists of questions. People read the questions before they rea
 
          .. code-block:: text
 
-            $ DocumentRoot "/path/to/esentire_project/output/"
-              <Directory "/path/to/esentire_project/output/">
+            $ DocumentRoot "/path/to/markup_project/output/"
+              <Directory "/path/to/markup_project/output/">
 
       #. Restart Apache.
 
@@ -2199,6 +2199,127 @@ FAQs are typically lists of questions. People read the questions before they rea
 
 
 
+### Example: Content Patterns
+
+This example shows various standard content elements--paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms--included under expandos:
+
+```eval_rst
+.. container:: toggle
+
+   .. container:: header
+
+      Glossary terms!
+
+   .. container:: content
+
+      This is a test. Can expandos have content tabs?
+
+      .. content-tabs:: style-guide-content-tab-terms
+
+         .. tab-container:: term-a-record
+            :title: A record
+
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
+
+         .. tab-container:: term-aaaa-record
+            :title: AAAA record
+
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
+
+         .. tab-container:: term-axfr-record
+            :title: AXFR record
+
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
+
+         .. tab-container:: term-ptr-record
+            :title: PTR record
+
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
+
+      Looks like the answer is: YES.
+```
+
+
+```eval_rst
+.. container:: toggle
+
+   .. container:: header
+
+      Simple procedures
+
+   .. container:: content
+
+      This is text. And
+
+      #. This
+      #. Is
+      #. An
+      #. Ordered
+      #. List
+
+         .. code-block:: python
+
+            with_a = 'code sample'
+```
+
+
+```eval_rst
+.. container:: toggle
+
+   .. container:: header
+
+      Grouped procedures
+
+   .. container:: content
+
+      This section groups a series of procedures as tabbed content.
+
+      .. content-tabs:: style-guide-content-tab-terms
+
+         .. tab-container:: term-a-record
+            :title: This is
+
+            **To do the first step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-aaaa-record
+            :title: a procedure
+
+            **To do the second step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-axfr-record
+            :title: with a series
+
+            **To do the third step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-ptr-record
+            :title: of steps
+
+            **To do the fourth step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+```
 
 
 

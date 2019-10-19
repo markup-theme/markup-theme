@@ -1575,7 +1575,7 @@ FAQs are typically lists of questions. People read the questions before they rea
 
     .. container:: content
 
-	   The ``esentire`` theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
+	   |theme| must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves---notes, warnings, code blocks, tables, etc.---but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.
 
 	   Mac OS machines have built-in localhost abilities that can be enabled.
 
@@ -1613,8 +1613,8 @@ FAQs are typically lists of questions. People read the questions before they rea
 
 	      .. code-block:: text
 
-	         $ DocumentRoot "/path/to/esentire_project/output/"
-	           <Directory "/path/to/esentire_project/output/">
+	         $ DocumentRoot "/path/to/markup_project/output/"
+	           <Directory "/path/to/markup_project/output/">
 
 	   #. Restart Apache.
 
@@ -1636,114 +1636,114 @@ This example shows various standard content elements--paragraphs, bold, italic, 
 
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       Glossary terms!
+      Glossary terms!
 
-    .. container:: content
+   .. container:: content
 
-	   This is a test. Can expandos have content tabs?
+      This is a test. Can expandos have content tabs?
 
-	   .. content-tabs:: style-guide-content-tab-terms
+      .. content-tabs:: style-guide-content-tab-terms
 
-	      .. tab-container:: term-a-record
-	         :title: A record
+         .. tab-container:: term-a-record
+            :title: A record
 
-	         .. include:: ../../shared/terms.rst
-	            :start-after: .. term-test-start
-	            :end-before: .. term-test-end
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
 
-	      .. tab-container:: term-aaaa-record
-	         :title: AAAA record
+         .. tab-container:: term-aaaa-record
+            :title: AAAA record
 
-	         .. include:: ../../shared/terms.rst
-	            :start-after: .. term-test-start
-	            :end-before: .. term-test-end
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
 
-	      .. tab-container:: term-axfr-record
-	         :title: AXFR record
+         .. tab-container:: term-axfr-record
+            :title: AXFR record
 
-	         .. include:: ../../shared/terms.rst
-	            :start-after: .. term-test-start
-	            :end-before: .. term-test-end
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
 
-	      .. tab-container:: term-ptr-record
-	         :title: PTR record
+         .. tab-container:: term-ptr-record
+            :title: PTR record
 
-	         .. include:: ../../shared/terms.rst
-	            :start-after: .. term-test-start
-	            :end-before: .. term-test-end
+            .. include:: ../../shared/terms.rst
+               :start-after: .. term-test-start
+               :end-before: .. term-test-end
 
-	   Looks like the answer is: YES.
-
-.. container:: toggle
-
-    .. container:: header
-
-       Simple procedures
-
-    .. container:: content
-
-	   This is text. And
-
-	   #. This
-	   #. Is
-	   #. An
-	   #. Ordered
-	   #. List
-
-	      .. code-block:: python
-
-	         with_a = 'code sample'
-
+      Looks like the answer is: YES.
 
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       Grouped procedures
+      Simple procedures
 
-    .. container:: content
+   .. container:: content
 
-	   This section groups a series of procedures as tabbed content.
+      This is text. And
 
-	   .. content-tabs:: style-guide-content-tab-terms
+      #. This
+      #. Is
+      #. An
+      #. Ordered
+      #. List
 
-	      .. tab-container:: term-a-record
-	         :title: This is
+         .. code-block:: python
 
-	         **To do the first step**
+            with_a = 'code sample'
 
-	         #. Do.
-	         #. Doing.
-	         #. Done.
 
-	      .. tab-container:: term-aaaa-record
-	         :title: a procedure
+.. container:: toggle
 
-	         **To do the second step**
+   .. container:: header
 
-	         #. Do.
-	         #. Doing.
-	         #. Done.
+      Grouped procedures
 
-	      .. tab-container:: term-axfr-record
-	         :title: with a series
+   .. container:: content
 
-	         **To do the third step**
+      This section groups a series of procedures as tabbed content.
 
-	         #. Do.
-	         #. Doing.
-	         #. Done.
+      .. content-tabs:: style-guide-content-tab-terms
 
-	      .. tab-container:: term-ptr-record
-	         :title: of steps
+         .. tab-container:: term-a-record
+            :title: This is
 
-	         **To do the fourth step**
+            **To do the first step**
 
-	         #. Do.
-	         #. Doing.
-	         #. Done.
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-aaaa-record
+            :title: a procedure
+
+            **To do the second step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-axfr-record
+            :title: with a series
+
+            **To do the third step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
+
+         .. tab-container:: term-ptr-record
+            :title: of steps
+
+            **To do the fourth step**
+
+            #. Do.
+            #. Doing.
+            #. Done.
 
 .. format-content-expando-example-content-party-end
 
