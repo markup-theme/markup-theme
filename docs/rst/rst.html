@@ -28,6 +28,53 @@
 <script type="text/javascript" src="_static/all.js"></script>
 
 
+<script type="text/javascript">
+	$(function() {
+
+	    var top_sel = {}
+
+	    $('div.content-tabs').each(function() {
+	        var contenttab_sel = $('<ul />', { class: "contenttab-selector" });
+	        var i = 0;
+
+	        $('.tab-content', this).each(function() {
+	            var sel_item = $('<li />', {
+	                class: $(this).attr('id'),
+	                text: $(this).find('.tab-title').text()
+	            });
+	            $(this).find('.tab-title').remove();
+	            if (i++) {
+	                $(this).hide();
+	            } else {
+	                sel_item.addClass('selected');
+	            }
+	            contenttab_sel.append(sel_item);
+	            $(this).addClass('contenttab');
+	        });
+
+	        $('.tab-content', this).eq(0).before(contenttab_sel);
+	        contenttab_sel = null;
+	        i = null;
+	    });
+
+
+	    $('.contenttab-selector li').click(function(evt) {
+	        evt.preventDefault();
+
+	        var tabsblock = $(this).parents('.content-tabs');
+	        var sel_class = $(this).attr('class');
+	        $('div.contenttab',tabsblock).hide();
+	        $('div#' + sel_class,tabsblock).show();
+
+	        $('ul.contenttab-selector li', tabsblock).removeClass('selected');
+	        $('ul.contenttab-selector li.' + sel_class, tabsblock).addClass('selected');
+
+	        sel_class = null;
+	    });
+
+	});
+</script>
+
 <!--
 The all.js added here is for FontAwesome. If you want to use the CDN instead, remove the line for all.js and uncomment the section at the bottom of _config.scss and update for the correct path to the version of FontAwesome you want to use via their CDN.
 -->
@@ -1837,33 +1884,57 @@ end
 </div>
 <div class="section" id="usage">
 <span id="format-content-tabs-usage"></span><h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
-<p>A set of content tabs is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">content-tabs::</span></code> directive. This directive should be given a filename-based naming pattern, e.g. <code class="docutils literal notranslate"><span class="pre">style-guide-content-tab-usage</span></code>:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">content-tabs</span><span class="p">::</span> style-guide-content-tab-usage
+<p>Content tabs are defined by a series of <code class="docutils literal notranslate"><span class="pre">container</span></code> directives that work together to assign CSS and HTML properties. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> content-tabs
+   <span class="nc">:name:</span> <span class="nf">unique-name</span>
+
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> tab-content
+      <span class="nc">:name:</span> <span class="nf">required-name-1</span>
+
+<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span> tab-title
+
+         Tab 1
+
+<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span>
+
+         This is the content for tab1.
+
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> tab-content
+      <span class="nc">:name:</span> <span class="nf">required-name-2</span>
+
+<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span> tab-title
+
+         Tab 2
+
+<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span>
+
+         This is the content for tab2.
 </pre></div>
 </div>
-<p>Each tab is then defined inside <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">content-tabs::</span></code> using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">tab-container::</span> <span class="pre">name</span></code> directive, where <code class="docutils literal notranslate"><span class="pre">name</span></code> is a short string that will appear in the tab and <code class="docutils literal notranslate"><span class="pre">:title:</span> <span class="pre">title-name</span></code> define the string that will appear in the tab itself:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">tab-container</span><span class="p">::</span> name1
-   <span class="nc">:title:</span> <span class="nf">name1</span>
-
-   content for tab
-
-<span class="p">..</span> <span class="ow">tab-container</span><span class="p">::</span> name2
-   <span class="nc">:title:</span> <span class="nf">name2</span>
-
-   content for tab
-
-<span class="cp">... etc.</span>
-</pre></div>
+<p>where:</p>
+<ul class="simple">
+<li>The <code class="docutils literal notranslate"><span class="pre">content-tabs</span></code> container declares a group of content tabs. The <code class="docutils literal notranslate"><span class="pre">:name:</span></code> property is required and must be unique. This container expects a list of one (or more) containers that specify <cite>tab-content</cite>.</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">tab-content</span></code> container specifies the contents for each individual tab in the tab group. This container <strong>must</strong> specify a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> property and this value <strong>must</strong> be unique, as this value is assigned to a hidden radio button that tells the JavaScript how to knows which tab is selected by the user. Each <code class="docutils literal notranslate"><span class="pre">tab-content</span></code> container must specify a <code class="docutils literal notranslate"><span class="pre">tab-title</span></code> and a container that is not assigned a CSS property.</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">tab-title</span></code> container specifies the string that will appear in the tab.</li>
+<li>The container that is not assigned a CSS property is the container that holds the content that will appear in the tab. This is a normal paragraph, in that it supports most of the same options as a paragraph would support if it were anywhere else in the documentation.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The formatting for content tabs is picky. Be sure to get everything aligned and indented under each of the <cite>.. container::</cite> directives.</p>
 </div>
 <p>When it’s all together, it should be similar to:</p>
-<div class="content-tabs style-guide-content-tab-usage docutils container">
-<div class="tab-content docutils container" id="tab-name1">
-<p class="tab-title">name1</p>
-<p>content for tab1</p>
+<div class="content-tabs docutils container" id="content-tabs-example">
+<div class="tab-content docutils container" id="required-name-1">
+<div class="tab-title docutils container">
+Tab 1</div>
+<div class="docutils container">
+This is the content for tab1.</div>
 </div>
-<div class="tab-content docutils container" id="tab-name2">
-<p class="tab-title">name2</p>
-<p>content for tab2</p>
+<div class="tab-content docutils container" id="required-name-2">
+<div class="tab-title docutils container">
+Tab 2</div>
+<div class="docutils container">
+This is the content for tab2.</div>
 </div>
 </div>
 <div class="admonition tip">
@@ -1876,9 +1947,11 @@ end
 <p>The following example shows use cases for a very sophisticated user interface supported by a few exceptionally well-written task-based topics organized as a series of content tabs.</p>
 <p><strong>Example</strong></p>
 <p>This user interface is just amazing. Users can do stuff:</p>
-<div class="content-tabs style-guide-content-tab-evidence docutils container">
-<div class="tab-content docutils container" id="tab-button">
-<p class="tab-title">Click Button</p>
+<div class="content-tabs docutils container" id="ui-tasks-example">
+<div class="tab-content docutils container" id="button">
+<div class="tab-title docutils container">
+Click Button</div>
+<div class="docutils container">
 <p><strong>To click a button</strong></p>
 <ol class="arabic simple">
 <li>Open the application.</li>
@@ -1887,8 +1960,11 @@ end
 <li>In the <strong>ITEM</strong> pane, scroll to the bottom, and then click <strong>BUTTON</strong>.</li>
 </ol>
 </div>
-<div class="tab-content docutils container" id="tab-box">
-<p class="tab-title">Check Box</p>
+</div>
+<div class="tab-content docutils container" id="box">
+<div class="tab-title docutils container">
+Check Box</div>
+<div class="docutils container">
 <p><strong>To check a box</strong></p>
 <ol class="arabic simple">
 <li>Open the application.</li>
@@ -1897,8 +1973,11 @@ end
 <li>In the <strong>ITEM</strong> pane, scroll to the bottom, and then select the <strong>CHECKBOX</strong>.</li>
 </ol>
 </div>
-<div class="tab-content docutils container" id="tab-field">
-<p class="tab-title">Type Something</p>
+</div>
+<div class="tab-content docutils container" id="field">
+<div class="tab-title docutils container">
+Type Something</div>
+<div class="docutils container">
 <p><strong>To type something</strong></p>
 <ol class="arabic simple">
 <li>Open the application.</li>
@@ -1909,27 +1988,36 @@ end
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="example-terms">
 <span id="format-content-tabs-example-terms"></span><h3>Example: Terms<a class="headerlink" href="#example-terms" title="Permalink to this headline">¶</a></h3>
-<p>This example represents an intro near the start of a longer conceptual topic that needs to introduce some important terminology. You’d use a short paragraph (like this one!), and then put each of the terms in a tab below the paragraph. This example also shows how to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to pull in paragraphs from the source glossary file.</p>
+<p>This example represents an intro near the start of a longer conceptual topic that needs to introduce some important terminology. You’d use a short paragraph (like this one!), and then put each of the terms in a tab below the paragraph. This example also shows how to use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">includes::</span></code> directive to pull in paragraphs from the source glossary file, which is located at <code class="docutils literal notranslate"><span class="pre">/shared/terms.rst</span></code>.</p>
 <p><strong>Example</strong></p>
 <p>Blah blah, the following terms are important for this topic:</p>
-<div class="content-tabs style-guide-content-tab-terms docutils container">
-<div class="tab-content docutils container" id="tab-term-a">
-<p class="tab-title">Aaaaa</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="content-tabs docutils container" id="terms-example">
+<div class="tab-content docutils container" id="term-a">
+<div class="tab-title docutils container">
+Aaaaa</div>
+<div class="docutils container">
+Aaaaa is a word built using only the first letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-b">
-<p class="tab-title">Bbbbb</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-b">
+<div class="tab-title docutils container">
+Bbbbb</div>
+<div class="docutils container">
+Bbbbb is a word built using only the second letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-c">
-<p class="tab-title">Ccccc</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-c">
+<div class="tab-title docutils container">
+Ccccc</div>
+<div class="docutils container">
+Ccccc is a word built using only the third letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-d">
-<p class="tab-title">Ddddd</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-d">
+<div class="tab-title docutils container">
+Ddddd</div>
+<div class="docutils container">
+Ddddd is a word built using only the fourth letter of the alphabet.</div>
 </div>
 </div>
 </div>
@@ -2159,22 +2247,30 @@ This title uses the <code class="docutils literal notranslate"><span class="pre"
 Glossary terms!</div>
 <div class="content docutils container">
 <p>This is a test. Can expandos have content tabs?</p>
-<div class="content-tabs style-guide-content-tab-terms docutils container">
-<div class="tab-content docutils container" id="tab-term-a-record">
-<p class="tab-title">A record</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="content-tabs docutils container" id="terms-example2">
+<div class="tab-content docutils container" id="term-aa">
+<div class="tab-title docutils container">
+Aaaaa</div>
+<div class="docutils container">
+Aaaaa is a word built using only the first letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-aaaa-record">
-<p class="tab-title">AAAA record</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-bb">
+<div class="tab-title docutils container">
+Bbbbb</div>
+<div class="docutils container">
+Bbbbb is a word built using only the second letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-axfr-record">
-<p class="tab-title">AXFR record</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-cc">
+<div class="tab-title docutils container">
+Ccccc</div>
+<div class="docutils container">
+Ccccc is a word built using only the third letter of the alphabet.</div>
 </div>
-<div class="tab-content docutils container" id="tab-term-ptr-record">
-<p class="tab-title">PTR record</p>
-<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+<div class="tab-content docutils container" id="term-dd">
+<div class="tab-title docutils container">
+Ddddd</div>
+<div class="docutils container">
+Ddddd is a word built using only the fourth letter of the alphabet.</div>
 </div>
 </div>
 <p>Looks like the answer is: YES.</p>
@@ -2205,11 +2301,13 @@ Simple procedures</div>
 <div class="toggle docutils container">
 <div class="header docutils container">
 Grouped procedures</div>
-<div class="content docutils container">
+<div class="docutils container">
 <p>This section groups a series of procedures as tabbed content.</p>
-<div class="content-tabs style-guide-content-tab-terms docutils container">
-<div class="tab-content docutils container" id="tab-term-a-record">
-<p class="tab-title">This is</p>
+<div class="content-tabs docutils container" id="grouped-procedures">
+<div class="tab-content docutils container" id="step-1">
+<div class="tab-title docutils container">
+This is</div>
+<div class="docutils container">
 <p><strong>To do the first step</strong></p>
 <ol class="arabic simple">
 <li>Do.</li>
@@ -2217,8 +2315,11 @@ Grouped procedures</div>
 <li>Done.</li>
 </ol>
 </div>
-<div class="tab-content docutils container" id="tab-term-aaaa-record">
-<p class="tab-title">a procedure</p>
+</div>
+<div class="tab-content docutils container" id="step-2">
+<div class="tab-title docutils container">
+a procedure</div>
+<div class="docutils container">
 <p><strong>To do the second step</strong></p>
 <ol class="arabic simple">
 <li>Do.</li>
@@ -2226,8 +2327,11 @@ Grouped procedures</div>
 <li>Done.</li>
 </ol>
 </div>
-<div class="tab-content docutils container" id="tab-term-axfr-record">
-<p class="tab-title">with a series</p>
+</div>
+<div class="tab-content docutils container" id="step-3">
+<div class="tab-title docutils container">
+with a series</div>
+<div class="docutils container">
 <p><strong>To do the third step</strong></p>
 <ol class="arabic simple">
 <li>Do.</li>
@@ -2235,14 +2339,18 @@ Grouped procedures</div>
 <li>Done.</li>
 </ol>
 </div>
-<div class="tab-content docutils container" id="tab-term-ptr-record">
-<p class="tab-title">of steps</p>
+</div>
+<div class="tab-content docutils container" id="term-d-record">
+<div class="tab-title docutils container">
+of steps</div>
+<div class="docutils container">
 <p><strong>To do the fourth step</strong></p>
 <ol class="arabic simple">
 <li>Do.</li>
 <li>Doing.</li>
 <li>Done.</li>
 </ol>
+</div>
 </div>
 </div>
 </div>
