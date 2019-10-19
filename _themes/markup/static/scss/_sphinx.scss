@@ -1418,8 +1418,8 @@ ul.contenttab-selector li.selected:hover {
     margin: 5px 5px 0px 0px;
     width: 100%;
 	padding: 5px 10px;
-	background-color: $esentire-expando-border-color;
-    color: $esentire-expando-text-color;
+	background-color: $markup-expando-border-color;
+    color: $markup-expando-text-color;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
     -webkit-border-bottom-left-radius: 0px;
@@ -1436,7 +1436,7 @@ ul.contenttab-selector li.selected:hover {
 
 .toggle .header:before {
     content: " \276F\276F\00a0\00a0";
-    color: $esentire-expando-openclose-color;
+    color: $markup-expando-openclose-color;
     font-size: 12px;
 }
 
@@ -1449,9 +1449,9 @@ ul.contenttab-selector li.selected:hover {
     margin-bottom: 20px;
     width: 100%;
 	padding: 5px 10px;
-	border-bottom: 2px solid $esentire-expando-border-color;
-    border-left: 2px solid $esentire-expando-border-color;
-    border-right: 2px solid $esentire-expando-border-color;
+	border-bottom: 2px solid $markup-expando-border-color;
+    border-left: 2px solid $markup-expando-border-color;
+    border-right: 2px solid $markup-expando-border-color;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
     -webkit-border-bottom-left-radius: 3px;
