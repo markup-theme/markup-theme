@@ -1408,22 +1408,18 @@ ul.contenttab-selector li.selected:hover {
 /* The previous group of styles controls the content tab directive */
 
 
-/* The following group of styles controls the expando directive */
-/* The following group of styles controls the expando directive */
+/* Start CSS for expando toggles. */
+/* Start CSS for expando toggles. */
 
-.toggle-tab {
-    margin-bottom: 40px;
-}
-
-.toggle-header {
+.toggle .header {
     display: block;
-    clear: none;
+    clear: both;
     cursor: pointer;
     margin: 5px 5px 0px 0px;
     width: 100%;
 	padding: 5px 10px;
-	background-color: $markup-expando-border-color;
-    color: $markup-expando-text-color;
+	background-color: $esentire-expando-border-color;
+    color: $esentire-expando-text-color;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
     -webkit-border-bottom-left-radius: 0px;
@@ -1438,28 +1434,24 @@ ul.contenttab-selector li.selected:hover {
     border-bottom-right-radius: 0px;
 }
 
-/* toggle content values are from https://www.toptal.com/designers/htmlarrows/
- * using heavy right/left pointing angle quotation mark ornament
-*/
-
-.toggle-header:before {
+.toggle .header:before {
     content: " \276F\276F\00a0\00a0";
-    color: $markup-expando-openclose-color;
+    color: $esentire-expando-openclose-color;
     font-size: 12px;
 }
 
-.toggle-header.open:before {
+.toggle .header.open:before {
     content: " \276E\276E\00a0\00a0";
 }
 
-.toggle-content {
+.toggle .content {
     display: none;
     margin-bottom: 20px;
     width: 100%;
 	padding: 5px 10px;
-	border-bottom: 2px solid $markup-expando-border-color;
-    border-left: 2px solid $markup-expando-border-color;
-    border-right: 2px solid $markup-expando-border-color;
+	border-bottom: 2px solid $esentire-expando-border-color;
+    border-left: 2px solid $esentire-expando-border-color;
+    border-right: 2px solid $esentire-expando-border-color;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
     -webkit-border-bottom-left-radius: 3px;
@@ -1474,8 +1466,8 @@ ul.contenttab-selector li.selected:hover {
     border-bottom-right-radius: 3px;
 }
 
-/* The previous group of styles controls the expando directive */
-/* The previous group of styles controls the expando directive */
+/* End CSS for expando toggles. */
+/* End CSS for expando toggles. */
 
 
 /* The following group of styles controls the various card wall options */
