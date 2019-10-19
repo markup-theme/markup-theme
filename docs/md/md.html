@@ -1059,6 +1059,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </li>
 <li><a class="reference internal" href="#expandos">Expandos</a><ul>
 <li><a class="reference internal" href="#example-faq">Example: FAQ</a></li>
+<li><a class="reference internal" href="#example-content-patterns">Example: Content Patterns</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#font-awesome">Font Awesome</a></li>
@@ -2792,7 +2793,7 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <div class="header docutils container">
 <strong>How do I set up Localhost on a Mac?</strong></div>
 <div class="content docutils container">
-<p>The <code class="docutils literal notranslate"><span class="pre">esentire</span></code> theme must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
+<p>MARKUP must be run as an actual website to ensure certain behaviors, especially for top-level navigation linking, left-side navigation linking, correct highlighting in the left-side navigation. This is true even for local development. You can view any HTML page in any browser to read and verify rendering of formatting elements on the pages themselves—notes, warnings, code blocks, tables, etc.—but linking to other pages and/or using the navigation will not behave correctly. Use localhost to enable correct website behaviors on your local machine.</p>
 <p>Mac OS machines have built-in localhost abilities that can be enabled.</p>
 <ol class="arabic">
 <li><p class="first">Run the following command:</p>
@@ -2819,8 +2820,8 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </pre></div>
 </div>
 <p>and then update <code class="docutils literal notranslate"><span class="pre">DocumentRoot</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;Directory</span></code> to have the path to the <code class="docutils literal notranslate"><span class="pre">/output</span></code> directory for the project:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/esentire_project/output/&quot;
-  &lt;Directory &quot;/path/to/esentire_project/output/&quot;&gt;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ DocumentRoot &quot;/path/to/markup_project/output/&quot;
+  &lt;Directory &quot;/path/to/markup_project/output/&quot;&gt;
 </pre></div>
 </div>
 </li>
@@ -2830,6 +2831,103 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="section" id="example-content-patterns">
+<h3>Example: Content Patterns<a class="headerlink" href="#example-content-patterns" title="Permalink to this headline">¶</a></h3>
+<p>This example shows various standard content elements–paragraphs, bold, italic, tables, content tabs, code blocks, images, includes, glossary terms–included under expandos:</p>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Glossary terms!</div>
+<div class="content docutils container">
+<p>This is a test. Can expandos have content tabs?</p>
+<div class="content-tabs style-guide-content-tab-terms docutils container">
+<div class="tab-content docutils container" id="tab-term-a-record">
+<p class="tab-title">A record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content docutils container" id="tab-term-aaaa-record">
+<p class="tab-title">AAAA record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content docutils container" id="tab-term-axfr-record">
+<p class="tab-title">AXFR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+<div class="tab-content docutils container" id="tab-term-ptr-record">
+<p class="tab-title">PTR record</p>
+<p>This is an example paragraph that shows how to use snippets to include content in more than one spot. Sometimes it’s easier to manage lots of snippets when they can be alongside each other, like in this file. This works great for glossary terms (that are also usable as top-level introductions). List them alphabetically for fun and profit.</p>
+</div>
+</div>
+<p>Looks like the answer is: YES.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Simple procedures</div>
+<div class="content docutils container">
+<p>This is text. And</p>
+<ol class="arabic">
+<li><p class="first">This</p>
+</li>
+<li><p class="first">Is</p>
+</li>
+<li><p class="first">An</p>
+</li>
+<li><p class="first">Ordered</p>
+</li>
+<li><p class="first">List</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">with_a</span> <span class="o">=</span> <span class="s1">&#39;code sample&#39;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="header docutils container">
+Grouped procedures</div>
+<div class="content docutils container">
+<p>This section groups a series of procedures as tabbed content.</p>
+<div class="content-tabs style-guide-content-tab-terms docutils container">
+<div class="tab-content docutils container" id="tab-term-a-record">
+<p class="tab-title">This is</p>
+<p><strong>To do the first step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content docutils container" id="tab-term-aaaa-record">
+<p class="tab-title">a procedure</p>
+<p><strong>To do the second step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content docutils container" id="tab-term-axfr-record">
+<p class="tab-title">with a series</p>
+<p><strong>To do the third step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+<div class="tab-content docutils container" id="tab-term-ptr-record">
+<p class="tab-title">of steps</p>
+<p><strong>To do the fourth step</strong></p>
+<ol class="arabic simple">
+<li>Do.</li>
+<li>Doing.</li>
+<li>Done.</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
