@@ -120,7 +120,7 @@ The following example shows how to add code block styles for everybody's favorit
 **Add code block styles for Haskell**
 
 #. Identify the shortname for the lexer in Pygments. In this case, it's ``haskell``.
-##. Open a command prompt and navigate to the ``_themes/markup/static/`` directory.
+#. Open a command prompt and navigate to the ``_themes/markup/static/`` directory.
 #. Run the following command:
 
    .. code-block:: console
