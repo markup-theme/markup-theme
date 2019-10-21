@@ -2589,30 +2589,32 @@ config:
 <p class="last">Content tabs may only be used in HTML outputs. For content that is output to PDF format, the content tabs will “fail gracefully” by presenting the tab title similar to an H5 header.</p>
 </div>
 <p>Content tabs are defined by a series of <code class="docutils literal notranslate"><span class="pre">container</span></code> directives that work together to assign CSS and HTML properties. For example:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> content-tabs
-   <span class="nc">:name:</span> <span class="nf">unique-name</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. container:: content-tabs
+   :name: unique-name
 
-<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> tab-content
-      <span class="nc">:name:</span> <span class="nf">required-name-1</span>
+   .. container:: tab-content
+      :name: required-name-1
 
-<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span> tab-title
+      .. container:: tab-title
 
          Tab 1
 
-<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span>
+      .. container::
 
          This is the content for tab1.
 
-<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> tab-content
-      <span class="nc">:name:</span> <span class="nf">required-name-2</span>
+   .. container:: tab-content
+      :name: required-name-2
 
-<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span> tab-title
+      .. container:: tab-title
 
          Tab 2
 
-<span class="p">      ..</span> <span class="ow">container</span><span class="p">::</span>
+      .. container::
 
          This is the content for tab2.
+```
 </pre></div>
 </div>
 <p>where:</p>
@@ -2734,16 +2736,18 @@ Ddddd is a word built using only the fourth letter of the alphabet.</div>
 <p>Expandos enable content to be grouped under a title bar. When the title bar is clicked, the content expands under the title bar and is visible to the reader. When a title bar with expanded content is clicked, the content collapses under the title bar and is no longer visible.</p>
 <p>The content appears inside a box to distinguish expanded content from normal content. Use expandos for things like FAQ pages, support and troubleshooting topics, certain tutorials, and to hide certain types of content from the reader until the reader chooses to view it.</p>
 <p>An expando is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">expando::</span></code> directive. Each expando must be assigned a <code class="docutils literal notranslate"><span class="pre">:title:</span></code>, which is the string that appears in the expandable title bar on the page:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```eval_rst
+.. container:: toggle
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+   .. container:: header
 
-       <span class="gs">**This is the title**</span>
+      **This is the title**
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+   .. container:: content
 
-       Content goes here, indented correctly, as anywhere else in
-       a rST document.
+      Content goes here, indented correctly, as anywhere else in
+      a rST document.
+```
 </pre></div>
 </div>
 <p>will appear similar to:</p>
@@ -2984,7 +2988,7 @@ Simple procedures</div>
 <div class="toggle docutils container">
 <div class="header docutils container">
 Grouped procedures</div>
-<div class="docutils container">
+<div class="content docutils container">
 <p>This section groups a series of procedures as tabbed content.</p>
 <div class="content-tabs docutils container" id="grouped-procedures">
 <div class="tab-content docutils container" id="step-1">

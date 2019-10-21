@@ -2029,14 +2029,14 @@ Ddddd is a word built using only the fourth letter of the alphabet.</div>
 <p>An expando is defined inside the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">expando::</span></code> directive. Each expando must be assigned a <code class="docutils literal notranslate"><span class="pre">:title:</span></code>, which is the string that appears in the expandable title bar on the page:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> header
 
-       <span class="gs">**This is the title**</span>
+      <span class="gs">**This is the title**</span>
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> content
 
-       Content goes here, indented correctly, as anywhere else in
-       a rST document.
+      Content goes here, indented correctly, as anywhere else in
+      a rST document.
 </pre></div>
 </div>
 <p>will appear similar to:</p>
@@ -2068,14 +2068,14 @@ The title for this expando has a <strong>combination</strong> of <em>styles</em>
 <p>The <code class="docutils literal notranslate"><span class="pre">:title:</span></code> may even contain a <a class="reference internal" href="#format-content-fontawesome"><span class="std std-ref">Font Awesome icon</span></a> that has been set up as a token. For example:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">container</span><span class="p">::</span> toggle
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> header
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> header
 
-       We like the Font Awesome |fa-expando-checkbox|!
+      We like the Font Awesome |fa-expando-checkbox|!
 
-<span class="p">    ..</span> <span class="ow">container</span><span class="p">::</span> content
+<span class="p">   ..</span> <span class="ow">container</span><span class="p">::</span> content
 
-       This title uses the <span class="s">``|fa-expando-checkbox|``</span> token:
-       |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
+      This title uses the <span class="s">``|fa-expando-checkbox|``</span> token:
+      |fa-expando-checkbox| |fa-expando-checkbox| |fa-expando-checkbox|!
 </pre></div>
 </div>
 <p>will appear similar to:</p>
@@ -2301,7 +2301,7 @@ Simple procedures</div>
 <div class="toggle docutils container">
 <div class="header docutils container">
 Grouped procedures</div>
-<div class="docutils container">
+<div class="content docutils container">
 <p>This section groups a series of procedures as tabbed content.</p>
 <div class="content-tabs docutils container" id="grouped-procedures">
 <div class="tab-content docutils container" id="step-1">
