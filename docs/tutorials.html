@@ -977,15 +977,16 @@ div.note p.admonition-title {
 <p>A new color style for code blocks can be easily added. There are three spots in the <code class="docutils literal notranslate"><span class="pre">_sphinx.scss</span></code> file that require updates for new code blocks, along with a new entry in <code class="docutils literal notranslate"><span class="pre">_config.scss</span></code>.</p>
 <p>The following example shows how to add code block styles for everybody’s favorite statically-typed purely functional programming language: Haskell!</p>
 <p><strong>Add code block styles for Haskell</strong></p>
-<p>#. Identify the shortname for the lexer in Pygments. In this case, it’s <code class="docutils literal notranslate"><span class="pre">haskell</span></code>.
-##. Open a command prompt and navigate to the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/</span></code> directory.
-#. Run the following command:</p>
-<blockquote>
-<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sass --watch scss/markup.scss:markup.css_t
+<ol class="arabic">
+<li><p class="first">Identify the shortname for the lexer in Pygments. In this case, it’s <code class="docutils literal notranslate"><span class="pre">haskell</span></code>.</p>
+</li>
+<li><p class="first">Open a command prompt and navigate to the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/</span></code> directory.</p>
+</li>
+<li><p class="first">Run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sass --watch scss/markup.scss:markup.css_t
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic">
+</li>
 <li><p class="first">Open the <code class="docutils literal notranslate"><span class="pre">_themes/markup/static/_config.scss</span></code> file in a text editor and update the list of code block-specific variables to add the highlighted entry for Haskell, along with choosing a color:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$markup-code-block-none: #93a1aa;
 $markup-code-block-bash: #345995;
