@@ -1811,34 +1811,34 @@ Content tabs enable a way to group topics together in a compact way. Each topic 
 
 Content tabs are defined by a series of `container` directives that work together to assign CSS and HTML properties. For example:
 
+~~~
 ```eval_rst
-.. code-block:: rst
+.. container:: content-tabs
+   :name: unique-name
 
-   .. container:: content-tabs
-      :name: unique-name
+   .. container:: tab-content
+      :name: required-name-1
 
-      .. container:: tab-content
-         :name: required-name-1
+      .. container:: tab-title
 
-         .. container:: tab-title
+         Tab 1
 
-            Tab 1
+      .. container::
 
-         .. container::
+         This is the content for tab1.
 
-            This is the content for tab1.
+   .. container:: tab-content
+      :name: required-name-2
 
-      .. container:: tab-content
-         :name: required-name-2
+      .. container:: tab-title
 
-         .. container:: tab-title
+         Tab 2
 
-            Tab 2
+      .. container::
 
-         .. container::
-
-            This is the content for tab2.
+         This is the content for tab2.
 ```
+~~~
 
 where:
 
@@ -2028,33 +2028,33 @@ The content appears inside a box to distinguish expanded content from normal con
 
 An expando is defined inside the `.. expando::` directive. Each expando must be assigned a `:title:`, which is the string that appears in the expandable title bar on the page:
 
+~~~
 ```eval_rst
-.. code-block:: rst
+.. container:: toggle
 
-   .. container:: toggle
+   .. container:: header
 
-       .. container:: header
+      **This is the title**
 
-          **This is the title**
+   .. container:: content
 
-       .. container:: content
-
-          Content goes here, indented correctly, as anywhere else in
-          a rST document.
+      Content goes here, indented correctly, as anywhere else in
+      a rST document.
 ```
+~~~
 
 will appear similar to:
 
 ```eval_rst
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       **This is the title**
+      **This is the title**
 
-    .. container:: content
+   .. container:: content
 
-       Content goes here, indented correctly, as anywhere else in a rST document.
+      Content goes here, indented correctly, as anywhere else in a rST document.
 ```
 
 The `:title:` may contain **bold** text, *italics* text, plain text, or a **combination** of *styles*:
@@ -2062,37 +2062,37 @@ The `:title:` may contain **bold** text, *italics* text, plain text, or a **comb
 ```eval_rst
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       **BOLD**
+      **BOLD**
 
-    .. container:: content
+   .. container:: content
 
-       The title for this expando is **BOLD**.
+      The title for this expando is **BOLD**.
 ```
 
 ```eval_rst
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       *italics*
+      *italics*
 
-    .. container:: content
+   .. container:: content
 
-       The title for this expando is *italics*.
+      The title for this expando is *italics*.
 ```
 
 ```eval_rst
 .. container:: toggle
 
-    .. container:: header
+   .. container:: header
 
-       **combination** of *styles*
+      **combination** of *styles*
 
-    .. container:: content
+   .. container:: content
 
-       The title for this expando has a **combination** of *styles*.
+      The title for this expando has a **combination** of *styles*.
 ```
 
 ```eval_rst
@@ -2376,7 +2376,7 @@ This example shows various standard content elements--paragraphs, bold, italic, 
 
       Grouped procedures
 
-   .. container::
+   .. container:: content
 
       This section groups a series of procedures as tabbed content.
 
