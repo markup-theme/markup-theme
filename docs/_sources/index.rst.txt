@@ -169,10 +169,10 @@ Style Guide
 .. toctree::
    :hidden:
 
+   404
    about
    css
    faq
-   page_not_found
    resources
    setup
    style_guide
