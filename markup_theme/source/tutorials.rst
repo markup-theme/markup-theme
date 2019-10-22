@@ -271,8 +271,7 @@ You can host the output of a Sphinx project on GitHub pages:
 .. _tutorials-github-pages-404:
 
 404.html
-==================================================
-
+--------------------------------------------------
 You can add a 404.html page to the output of a Sphinx project on GitHub pages:
 
 #. Create a file named ``404.rst`` in the docs collection that is used for the root of the documentation website. For example, |theme| uses the ``/markup_theme/`` as its top-level for GitHub pages.
