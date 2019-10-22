@@ -172,6 +172,7 @@ Style Guide
    about
    css
    faq
+   page_not_found
    resources
    setup
    style_guide
