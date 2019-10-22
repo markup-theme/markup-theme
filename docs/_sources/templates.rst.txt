@@ -275,7 +275,7 @@ The ``active_version`` setting specifies the application version to which this d
 
    {% set active_version = "current" %}
 
-.. note:: The active version relies on a currently-disabled version picker that can be enabled in the left-side navigation. This version picker is not as cool and fancy as other version pickers out there and it doesn't populate itself automatically, but it works if you need it to. Uncomment the following in the global nav-docs.html file:
+.. note:: The active version relies on a currently-disabled version picker that can be enabled in the left-side navigation. This version picker is not as cool and fancy as other version pickers out there and it doesn't populate itself automatically, but it works when you need it to. Uncomment the following in the global nav-docs.html file:
 
    .. code-block:: none
 
@@ -284,6 +284,6 @@ The ``active_version`` setting specifies the application version to which this d
         {% include 'version-picker.html' with context %}
       </li>
 
-   and then open ``/_themes/markup/version-picker.html`` and configure that file to populate the structure of the drop-down menu. This file is a simple HTML unordered list that groups content sets together. It's flexible. Play around with it and see what you prefer.
+   and then open ``/_themes/markup/version-picker.html`` and configure that file to populate the structure of the drop-down menu. This file is a simple HTML unordered list that groups content sets together. It's flexible. It'll be built to every docs collection in the site. Play around with it and see what you prefer.
 
 
