@@ -1155,11 +1155,11 @@ $markup-code-block-django: #8fcb9b;
 </div>
 <div class="section" id="page-not-found">
 <span id="tutorials-github-pages-page-not-found"></span><h3>Page not Found<a class="headerlink" href="#page-not-found" title="Permalink to this headline">¶</a></h3>
-<p>You can add a 404.html page to the output of a Sphinx project on GitHub pages:</p>
+<p>You can add a 404.html page to the output of a Sphinx project on GitHub pages. This can be a Markdown or reStructuredText file, depending on your preference.</p>
 <p><strong>To add a 404.html file</strong></p>
 <ol class="arabic">
-<li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">404.rst</span></code> in the docs collection that is used for the root of the documentation website. For example, MARKUP uses the <code class="docutils literal notranslate"><span class="pre">/markup_theme/</span></code> as its top-level for GitHub pages.</p>
-<p>For the initial creation, make the page like this:</p>
+<li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">404.rst</span></code> or <code class="docutils literal notranslate"><span class="pre">404.md</span></code> in the docs collection that is used for the root of the documentation website. For example, MARKUP uses the <code class="docutils literal notranslate"><span class="pre">/markup_theme/</span></code> as its top-level for GitHub pages.</p>
+<p>For example, an initial 404 page using reStructuredText would be similar to:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">==================================================</span>
 <span class="gh">Page not found ...</span>
 <span class="gh">==================================================</span>
@@ -1167,9 +1167,9 @@ $markup-code-block-django: #8fcb9b;
 The page you were looking for is not here.
 </pre></div>
 </div>
-<p>You can change this later to be anything you want. It’s a reStructuredText page that follows all of the same rules as any other reStructuredText page in MARKUP.</p>
+<p>You can change this later to be anything you want. It’s a page that follows all of the same rules as any other page in MARKUP.</p>
 </li>
-<li><p class="first">Add <code class="docutils literal notranslate"><span class="pre">404</span></code> to the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list in <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file that is located in the same collection.</p>
+<li><p class="first">Add <code class="docutils literal notranslate"><span class="pre">404</span></code> to the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list in the index file that is located in the same collection.</p>
 </li>
 <li><p class="first">Build your Sphinx output to the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory.</p>
 </li>
