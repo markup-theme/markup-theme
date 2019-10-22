@@ -1,4 +1,5 @@
-User-agent: *
-Disallow: /folder/
-Disallow: /folder/folder/
-Disallow: /file.html
+User-agent: #
+Disallow:
+
+
+SITEMAP: https://markup-theme.github.io/markup-theme/sitemap.xml
