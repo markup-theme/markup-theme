@@ -272,13 +272,13 @@ You can host the output of a Sphinx project on GitHub pages:
 
 Page not Found
 --------------------------------------------------
-You can add a 404.html page to the output of a Sphinx project on GitHub pages:
+You can add a 404.html page to the output of a Sphinx project on GitHub pages. This can be a Markdown or reStructuredText file, depending on your preference.
 
 **To add a 404.html file**
 
-#. Create a file named ``404.rst`` in the docs collection that is used for the root of the documentation website. For example, |theme| uses the ``/markup_theme/`` as its top-level for GitHub pages.
+#. Create a file named ``404.rst`` or ``404.md`` in the docs collection that is used for the root of the documentation website. For example, |theme| uses the ``/markup_theme/`` as its top-level for GitHub pages.
 
-   For the initial creation, make the page like this:
+   For example, an initial 404 page using reStructuredText would be similar to:
 
    .. code-block:: rst
 
@@ -288,9 +288,9 @@ You can add a 404.html page to the output of a Sphinx project on GitHub pages:
 
       The page you were looking for is not here.
 
-   You can change this later to be anything you want. It's a reStructuredText page that follows all of the same rules as any other reStructuredText page in |theme|.
+   You can change this later to be anything you want. It's a page that follows all of the same rules as any other page in |theme|.
 
-#. Add ``404`` to the ``toctree`` list in ``index.html`` file that is located in the same collection.
+#. Add ``404`` to the ``toctree`` list in the index file that is located in the same collection.
 #. Build your Sphinx output to the ``/docs`` directory.
 #. Push the changes to GitHub.
 #. Verify the changes by entering a page name you know does not exist. That page should show the contents of ``404.html``.
