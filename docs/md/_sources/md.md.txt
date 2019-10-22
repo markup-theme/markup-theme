@@ -2504,7 +2504,7 @@ The length of header markup strings is recommended to not be greater than ~40 ch
 .. _horizontal-rule:
 ```
 
-## Horizontal Rule
+## Horizontal Rules
 
 A horizontal rule is defined using three dashes:
 
