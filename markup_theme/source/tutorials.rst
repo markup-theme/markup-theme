@@ -274,6 +274,8 @@ You can host the output of a Sphinx project on GitHub pages:
 --------------------------------------------------
 You can add a 404.html page to the output of a Sphinx project on GitHub pages:
 
+**To add a 404.html file**
+
 #. Create a file named ``404.rst`` in the docs collection that is used for the root of the documentation website. For example, |theme| uses the ``/markup_theme/`` as its top-level for GitHub pages.
 
    For the initial creation, make the page like this:
@@ -292,6 +294,102 @@ You can add a 404.html page to the output of a Sphinx project on GitHub pages:
 #. Build your Sphinx output to the ``/docs`` directory.
 #. Push the changes to GitHub.
 #. Verify the changes by entering a page name you know does not exist. That page should show the contents of ``404.html``.
+
+
+.. _tutorials-github-pages-robots-txt:
+
+robots.txt
+--------------------------------------------------
+
+The `robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt <https://en.wikipedia.org/wiki/Robots_exclusion_standard>`__, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites.
+
+.. important:: Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites. 
+
+**To add a robots.txt file**
+
+#. Create a file named ``robots.txt`` in the ``/misc`` directory similar to:
+
+   .. code-block:: text
+
+	  Sitemap: https://markup-theme.github.io/markup-theme/sitemap.xml
+	  User-agent: *
+	  Disallow:
+
+   where the URL for ``Sitemap`` should be the URL for :ref:`tutorials-github-pages-sitemap-xml` on your site. This example allows web robots to look at the entire site, including subdirectories. You can allow or disallow web robots access to specific areas of your site. See https://www.robotstxt.org/robotstxt.html for more information about how to do this.
+
+#. This example uses a file that is independent of a Sphinx build and is not an official part of any document collection. As such, you will need to choose a process for getting a copy of this file from the ``/misc`` directory to the ``/docs`` directory whenever this file is updated. In some situations, this can be automated. For example, a Jenkinsfile could have an entry similar to:
+
+   .. code-block:: console
+
+      sh "cp -r ./misc/robots.txt ./docs/"
+
+   |theme| just uses the old-fashioned copy and paste method. It's more risky, in that sometimes we forget, but 100% of the rest of the time it works!
+
+
+
+
+.. _tutorials-github-pages-sitemap-xml:
+
+sitemap.xml
+--------------------------------------------------
+
+The `Sitemaps protocol <https://en.wikipedia.org/wiki/Sitemaps>`__ allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each URL: when it was last updated, how often it changes, and how important it is in relation to other URLs in the site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from rest of the site's content.
+
+**To add a sitemap.xml file**
+
+#. Create a file named ``sitemap.xml`` in the ``/misc`` directory similar to:
+
+   .. code-block:: text
+
+	  <?xml version="1.0" encoding="utf-8"?>
+        <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/index.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/about.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/css.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/faq.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/resources.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/setup.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/style_guide.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/templates.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/tutorials.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/upgrades.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/md/md.html</loc>
+          </url>
+          <url>
+            <loc>https://markup-theme.github.io/markup-theme/rst/rst.html</loc>
+          </url>
+        </urlset>
+
+   where a ``<url>`` group exists for each page in the site.
+
+#. This example uses a file that is independent of a Sphinx build and is not an official part of any document collection. As such, you will need to choose a process for getting a copy of this file from the ``/misc`` directory to the ``/docs`` directory whenever this file is updated. In some situations, this can be automated. For example, a Jenkinsfile could have an entry similar to:
+
+   .. code-block:: console
+
+      sh "cp -r ./misc/sitemap.xml ./docs/"
+
+   |theme| just uses the old-fashioned copy and paste method. It's more risky, in that sometimes we forget, but 100% of the rest of the time it works!
 
 
 .. _tutorials-glossary:
