@@ -441,15 +441,42 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+         <!-- /if subItem2.hasSubItems -->
 
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#github-pages" title="GitHub Pages">
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="GitHub Pages">
             GitHub Pages
-          </a>
-        </li>
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
 
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#github-pages" title="About GitHub Pages">
+                About GitHub Pages
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#404-html" title="404.html">
+                404.html
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#robots-txt" title="robots.txt">
+                robots.txt
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#sitemap-xml" title="sitemap.xml">
+                sitemap.xml
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
 
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#glossary" title="Glossary">
@@ -864,6 +891,8 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <li><a class="reference internal" href="#font-awesome-icons">Font Awesome Icons</a></li>
 <li><a class="reference internal" href="#github-pages">GitHub Pages</a><ul>
 <li><a class="reference internal" href="#html">404.html</a></li>
+<li><a class="reference internal" href="#robots-txt">robots.txt</a></li>
+<li><a class="reference internal" href="#sitemap-xml">sitemap.xml</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#glossary">Glossary</a></li>
@@ -1127,6 +1156,7 @@ $markup-code-block-django: #8fcb9b;
 <div class="section" id="html">
 <span id="tutorials-github-pages-404"></span><h3>404.html<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
 <p>You can add a 404.html page to the output of a Sphinx project on GitHub pages:</p>
+<p><strong>To add a 404.html file</strong></p>
 <ol class="arabic">
 <li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">404.rst</span></code> in the docs collection that is used for the root of the documentation website. For example, MARKUP uses the <code class="docutils literal notranslate"><span class="pre">/markup_theme/</span></code> as its top-level for GitHub pages.</p>
 <p>For the initial creation, make the page like this:</p>
@@ -1146,6 +1176,88 @@ The page you were looking for is not here.
 <li><p class="first">Push the changes to GitHub.</p>
 </li>
 <li><p class="first">Verify the changes by entering a page name you know does not exist. That page should show the contents of <code class="docutils literal notranslate"><span class="pre">404.html</span></code>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="robots-txt">
+<span id="tutorials-github-pages-robots-txt"></span><h3>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Robots_exclusion_standard">robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt</a>, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites.</p>
+</div>
+<p><strong>To add a robots.txt file</strong></p>
+<ol class="arabic">
+<li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> in the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory similar to:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Sitemap: https://markup-theme.github.io/markup-theme/sitemap.xml
+User-agent: *
+Disallow:
+</pre></div>
+</div>
+<p>where the URL for <code class="docutils literal notranslate"><span class="pre">Sitemap</span></code> should be the URL for <a class="reference internal" href="#tutorials-github-pages-sitemap-xml"><span class="std std-ref">sitemap.xml</span></a> on your site. This example allows web robots to look at the entire site, including subdirectories. You can allow or disallow web robots access to specific areas of your site. See <a class="reference external" href="https://www.robotstxt.org/robotstxt.html">https://www.robotstxt.org/robotstxt.html</a> for more information about how to do this.</p>
+</li>
+<li><p class="first">This example uses a file that is independent of a Sphinx build and is not an official part of any document collection. As such, you will need to choose a process for getting a copy of this file from the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory to the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory whenever this file is updated. In some situations, this can be automated. For example, a Jenkinsfile could have an entry similar to:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sh &quot;cp -r ./misc/robots.txt ./docs/&quot;</span>
+</pre></div>
+</div>
+<p>MARKUP just uses the old-fashioned copy and paste method. It’s more risky, in that sometimes we forget, but 100% of the rest of the time it works!</p>
+</li>
+</ol>
+</div>
+<div class="section" id="sitemap-xml">
+<span id="tutorials-github-pages-sitemap-xml"></span><h3>sitemap.xml<a class="headerlink" href="#sitemap-xml" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sitemaps">Sitemaps protocol</a> allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each URL: when it was last updated, how often it changes, and how important it is in relation to other URLs in the site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from rest of the site’s content.</p>
+<p><strong>To add a sitemap.xml file</strong></p>
+<ol class="arabic">
+<li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> in the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory similar to:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;urlset xmlns=&#39;http://www.sitemaps.org/schemas/sitemap/0.9&#39;&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/index.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/about.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/css.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/faq.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/resources.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/setup.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/style_guide.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/templates.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/tutorials.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/upgrades.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/md/md.html&lt;/loc&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://markup-theme.github.io/markup-theme/rst/rst.html&lt;/loc&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;
+</pre></div>
+</div>
+<p>where a <code class="docutils literal notranslate"><span class="pre">&lt;url&gt;</span></code> group exists for each page in the site.</p>
+</li>
+<li><p class="first">This example uses a file that is independent of a Sphinx build and is not an official part of any document collection. As such, you will need to choose a process for getting a copy of this file from the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory to the <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory whenever this file is updated. In some situations, this can be automated. For example, a Jenkinsfile could have an entry similar to:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sh &quot;cp -r ./misc/sitemap.xml ./docs/&quot;</span>
+</pre></div>
+</div>
+<p>MARKUP just uses the old-fashioned copy and paste method. It’s more risky, in that sometimes we forget, but 100% of the rest of the time it works!</p>
 </li>
 </ol>
 </div>
