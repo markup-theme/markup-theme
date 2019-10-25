@@ -441,6 +441,22 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#file-names" title="File Names">
+            File Names
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
+            Font Awesome Icons
+          </a>
+        </li>
+
          <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
@@ -481,14 +497,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#glossary" title="Glossary">
             Glossary
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
-            Font Awesome Icons
           </a>
         </li>
 
@@ -614,12 +622,76 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
               <a class="nav-docs-link" href="/markup-theme/templates.html#site-specific-navigation" title="Site-specific Navigation">
                 Site-specific Navigation
               </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+            </li> <!-- /if subItem2.hasSubItems -->
 
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-structure" title="Navigation Structure">
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="Navigation Structure">
                 Navigation Structure
-              </a>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#navigation-structure" title="About Navigation Structure">
+                    About Navigation Structure
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#levels" title="About Levels">
+                    About Levels
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-1-group" title="Level 1 (Group)">
+                    Level 1 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-2-standalone" title="Level 2 (Standalone)">
+                    Level 2 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-2-group" title="Level 2 (Group)">
+                    Level 2 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-3-standalone" title="Level 3 (Standalone)">
+                    Level 3 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-3-group" title="Level 3 (Group)">
+                    Level 3 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-4-standalone" title="Level 4 (Standalone)">
+                    Level 4 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#section-icons" title="Section Icons">
+                    Section Icons
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#navigation-paths" title="Navigation Paths">
+                    Navigation Paths
+                  </a>
+                </li> <!-- /for subItem3 in subItem2.subItems -->
+
+              </ul>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
@@ -892,8 +964,20 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <li><a class="reference internal" href="#nav-docs-html">nav-docs.html</a><ul>
 <li><a class="reference internal" href="#global-navigation">Global Navigation</a></li>
 <li><a class="reference internal" href="#site-specific-navigation">Site-specific Navigation</a></li>
-<li><a class="reference internal" href="#navigation-structure">Navigation Structure</a></li>
+<li><a class="reference internal" href="#navigation-structure">Navigation Structure</a><ul>
+<li><a class="reference internal" href="#levels">Levels</a><ul>
+<li><a class="reference internal" href="#level-1-group">Level 1 (Group)</a></li>
+<li><a class="reference internal" href="#level-2-standalone">Level 2 (Standalone)</a></li>
+<li><a class="reference internal" href="#level-2-group">Level 2 (Group)</a></li>
+<li><a class="reference internal" href="#level-3-standalone">Level 3 (Standalone)</a></li>
+<li><a class="reference internal" href="#level-3-group">Level 3 (Group)</a></li>
+<li><a class="reference internal" href="#level-4-standalone">Level 4 (Standalone)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#section-icons">Section Icons</a></li>
 <li><a class="reference internal" href="#navigation-paths">Navigation Paths</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#active-product">Active Product</a></li>
 <li><a class="reference internal" href="#active-page-name">Active Page Name</a></li>
 <li><a class="reference internal" href="#active-version">Active Version</a></li>
@@ -1023,7 +1107,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <span class="hll"><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
 </span>  <span class="o">{</span>
     <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Section&quot;</span><span class="o">,</span>
-    <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;markup-mark-grey.svg&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
     <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
       <span class="o">{</span>
         <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Title&quot;</span><span class="o">,</span>
@@ -1043,70 +1127,409 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 </div>
 <div class="section" id="navigation-structure">
 <span id="templates-navigation-structure"></span><h3>Navigation Structure<a class="headerlink" href="#navigation-structure" title="Permalink to this headline">¶</a></h3>
-<p>The left navigation structure is limited to up to four levels, the first being a mandatory (and arbitrary) group name. Levels two through four are available for linking to topics and/or anchor references in the doc collection or for defining additional groups of topics. The following example shows the available structural options, with the various level options highlighted:</p>
-<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="x">{</span>
-<span class="hll"><span class="x">  &quot;title&quot;: &quot;Level 1 Group&quot;,</span>
-</span><span class="x">  &quot;image&quot;: &quot;markup-mark-grey.svg&quot;,</span>
-<span class="x">  &quot;subItems&quot;: [</span>
-<span class="x">    {</span>
-<span class="hll"><span class="x">      &quot;title&quot;: &quot;Level 2 Group&quot;,</span>
-</span><span class="x">      &quot;hasSubItems&quot;: true,</span>
-<span class="x">      &quot;subItems&quot;: [</span>
-<span class="x">        {</span>
-<span class="hll"><span class="x">          &quot;title&quot;: &quot;Level 3 Group&quot;,</span>
-</span><span class="x">          &quot;hasSubItems&quot;: true,</span>
-<span class="x">          &quot;subItems&quot;: [</span>
-<span class="x">            {</span>
-<span class="hll"><span class="x">              &quot;title&quot;: &quot;Level 4 Standalone&quot;,</span>
-</span><span class="x">              &quot;hasSubItems&quot;: false,</span>
-<span class="x">              &quot;url&quot;: &quot;/topic_name.html#anchor&quot;</span>
-<span class="x">            },</span>
-<span class="x">            {</span>
-<span class="hll"><span class="x">              &quot;title&quot;: &quot;Level 4 Standalone&quot;,</span>
-</span><span class="x">              &quot;hasSubItems&quot;: false,</span>
-<span class="x">              &quot;url&quot;: &quot;/topic_name.html#anchor&quot;</span>
-<span class="x">            },</span>
-<span class="x">          ]</span>
-<span class="x">        },</span>
-<span class="x">        {</span>
-<span class="hll"><span class="x">          &quot;title&quot;: &quot;Level 3 Standalone&quot;,</span>
-</span><span class="x">          &quot;hasSubItems&quot;: false,</span>
-<span class="x">          &quot;url&quot;: &quot;/topic_name.html#anchor&quot;</span>
-<span class="x">        },</span>
-<span class="x">      ]</span>
-<span class="x">    },</span>
-<span class="x">    {</span>
-<span class="hll"><span class="x">      &quot;title&quot;: &quot;Level 2 Standalone&quot;,</span>
-</span><span class="x">      &quot;hasSubItems&quot;: false,</span>
-<span class="x">      &quot;url&quot;: &quot;/topic_name.html#anchor&quot;</span>
-<span class="x">    },</span>
-<span class="x">  ]</span>
-<span class="x">},</span>
-</pre></div>
+<p>The navigation structure for the left-side navigation is defined as a JSON structure. It’s a site-specific component of the Jinja templating that defines the static site that is generated by Sphinx. Each document collection must have a site-specific topic structure.</p>
+<p>The topic structure in the left-side navigation can have as many topics as you want. The links will generally point to topics within the document collection, but they may also point to other targets, such as topics in other document collections, or even to pages that are external to the document website.</p>
+<p>Sphinx will validate the structure and format of this file during build time, but will not verify that the link itself opens the intended target. It is up to the author of the topic to validate each link to be sure they work as intended.</p>
+<p>The left-side navigation structure is defined within the <code class="docutils literal notranslate"><span class="pre">navItems</span></code> element within <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code>:</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_product</span> <span class="o">=</span> <span class="s2">&quot;STUB&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_page_name</span> <span class="o">=</span> <span class="s2">&quot;STUB&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_version</span> <span class="o">=</span> <span class="s2">&quot;current&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_page_icon</span> <span class="o">=</span> <span class="s1">&#39;&lt;i class=&quot;far fa-parachute-box fa-fw icon-left&quot;&gt;&lt;/i&gt;&#39;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">active_search_path</span> <span class="o">=</span> <span class="s2">&quot;../path_goes_here/search.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="hll"><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+</span><span class="hll">
+</span><span class="hll"><span class="p">...</span>
+</span><span class="hll">
+</span><span class="hll"><span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</span></pre></div>
 </div>
-<p>Up to four levels may be specified, in just about any order you want.</p>
-<ol class="arabic">
-<li><p class="first">The first level (Level 1) is not a link to content, but rather a grouping of content.</p>
-</li>
-<li><p class="first">The second and third levels may specify a grouping of content.</p>
-</li>
-<li><p class="first">The second through fourth levels may specify standalone links to topics and/or headers within topics in the documentation collection. Links to topics must specify the filename and links to headers must specify the link as an anchor reference.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This link is a path to a file in the document site.</p>
-</div>
-</li>
+</div></blockquote>
+<div class="section" id="levels">
+<span id="readme-nav-docs-levels"></span><h4>Levels<a class="headerlink" href="#levels" title="Permalink to this headline">¶</a></h4>
+<p>Up to four levels may be defined:</p>
+<ol class="arabic simple">
+<li>Level 1 may only contain groups of topics</li>
+<li>Levels 2 and 3 may contain groups of topics and/or standalone topics</li>
+<li>Level 4 may only contain standalone topics</li>
+<li>Levels 2, 3, and 4 are the levels from which you may link to topics; links are typically to topics and anchors within this document collection, but may also be links to other document collections or even locations external to the site</li>
+<li>Level 1 is assigned an icon from Font Awesome or a custom icon; levels 2, 3, and 4 may not be assigned an icon</li>
+<li>Level 1 is visible when the group is closed; levels 2, 3, and 4 are only visible when level 1 is opened</li>
+<li>Level 5 does not exist. You can <em>add</em> a level 5 to the <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> tree, but it won’t render in the left-side navigation. Sorry.</li>
 </ol>
 <p>How you decide to define the left-side structure is up to you. One approach the MARKUP theme takes is to rougly map the headers in the topics to the left-side navigation, where a topic title might be a level 1 grouping. But this depends on how you decide to organize your content.</p>
+<div class="section" id="level-1-group">
+<span id="readme-nav-docs-level-one"></span><h5>Level 1 (Group)<a class="headerlink" href="#level-1-group" title="Permalink to this headline">¶</a></h5>
+<p>Level one must be a group of topics. Any number of level two standalone topics and level two groups may be defined.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+<span class="hll">  <span class="o">{</span>
+</span><span class="hll">    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+</span><span class="hll">    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+</span><span class="hll">    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+</span>      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+          <span class="o">},</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+            <span class="o">]</span>
+          <span class="o">},</span>
+        <span class="o">]</span>
+      <span class="o">},</span>
+<span class="hll">    <span class="o">]</span>
+</span><span class="hll">  <span class="o">},</span>
+</span><span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="level-2-standalone">
+<span id="readme-nav-docs-level-two-standalone"></span><h5>Level 2 (Standalone)<a class="headerlink" href="#level-2-standalone" title="Permalink to this headline">¶</a></h5>
+<p>Level 2 standalone topics are linkable to topics in the document collection.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+<span class="hll">      <span class="o">{</span>
+</span><span class="hll">        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+</span><span class="hll">        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+</span><span class="hll">        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+</span><span class="hll">      <span class="o">},</span>
+</span>      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+          <span class="o">},</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+            <span class="o">]</span>
+          <span class="o">},</span>
+        <span class="o">]</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="level-2-group">
+<span id="readme-nav-docs-level-two-group"></span><h5>Level 2 (Group)<a class="headerlink" href="#level-2-group" title="Permalink to this headline">¶</a></h5>
+<p>A level 2 group contains one (or more) level 3 standalone topics and/or level 3 groups.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+      <span class="o">},</span>
+<span class="hll">      <span class="o">{</span>
+</span><span class="hll">        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+</span><span class="hll">        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+</span><span class="hll">        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+</span>          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+          <span class="o">},</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+            <span class="o">]</span>
+          <span class="o">},</span>
+<span class="hll">        <span class="o">]</span>
+</span><span class="hll">      <span class="o">},</span>
+</span>    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="level-3-standalone">
+<span id="readme-nav-docs-level-three-standalone"></span><h5>Level 3 (Standalone)<a class="headerlink" href="#level-3-standalone" title="Permalink to this headline">¶</a></h5>
+<p>Level 3 standalone topics are linkable to topics in the document collection.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+<span class="hll">          <span class="o">{</span>
+</span><span class="hll">            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+</span><span class="hll">            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+</span><span class="hll">            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+</span><span class="hll">          <span class="o">},</span>
+</span>          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+            <span class="o">]</span>
+          <span class="o">},</span>
+        <span class="o">]</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="level-3-group">
+<span id="readme-nav-docs-level-three-group"></span><h5>Level 3 (Group)<a class="headerlink" href="#level-3-group" title="Permalink to this headline">¶</a></h5>
+<p>A level 3 group contains one (or more) level 4 standalone topics.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+          <span class="o">},</span>
+<span class="hll">          <span class="o">{</span>
+</span><span class="hll">            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+</span><span class="hll">            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+</span><span class="hll">            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+</span>              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+<span class="hll">            <span class="o">]</span>
+</span><span class="hll">          <span class="o">},</span>
+</span>        <span class="o">]</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="level-4-standalone">
+<span id="readme-nav-docs-level-four"></span><h5>Level 4 (Standalone)<a class="headerlink" href="#level-4-standalone" title="Permalink to this headline">¶</a></h5>
+<p>Level 4 standalone topics are linkable to topics in the document collection.</p>
+<blockquote>
+<div><div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level One (Group Only)&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Standalone)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Two (Group)&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+        <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Standalone)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+          <span class="o">},</span>
+          <span class="o">{</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Three (Group)&quot;</span><span class="o">,</span>
+            <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">true</span><span class="o">,</span>
+            <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+<span class="hll">              <span class="o">{</span>
+</span><span class="hll">                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+</span><span class="hll">                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+</span><span class="hll">                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+</span><span class="hll">              <span class="o">},</span>
+</span>              <span class="o">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Level Four (Standalone)&quot;</span><span class="o">,</span>
+                <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/path_goes_here/filename.rst#anchor&quot;</span>
+              <span class="o">},</span>
+            <span class="o">]</span>
+          <span class="o">},</span>
+        <span class="o">]</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="section-icons">
+<span id="readme-nav-docs-section-icons"></span><h4>Section Icons<a class="headerlink" href="#section-icons" title="Permalink to this headline">¶</a></h4>
+<p>Level one items are associated with an icon.</p>
+<p>Font Awesome icons are associated using the <code class="docutils literal notranslate"><span class="pre">iconClass</span></code> value:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Section&quot;</span><span class="o">,</span>
+<span class="hll">    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-award&quot;</span><span class="o">,</span>
+</span>    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Title&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Other File&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_other_file.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>For example, let’s say you wanted to <a class="reference external" href="https://fontawesome.com/icons/dizzy?style=solid">use the Dizzy icon</a>, then the change would look like this:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Section&quot;</span><span class="o">,</span>
+<span class="hll">    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-dizzy&quot;</span><span class="o">,</span>
+</span>    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Title&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Other File&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_other_file.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Custom icons are supported. To use a custom icon, first add that icon to the <code class="docutils literal notranslate"><span class="pre">/_static</span></code> directory for the document collection, and then replace the <code class="docutils literal notranslate"><span class="pre">iconClass</span></code> entry with an <code class="docutils literal notranslate"><span class="pre">image</span></code> entry, similar to:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Section&quot;</span><span class="o">,</span>
+<span class="hll">    <span class="s2">&quot;image&quot;</span><span class="o">:</span> <span class="s2">&quot;markup-mark-grey.svg&quot;</span><span class="o">,</span>
+</span>    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Title&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Some Other File&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_other_file.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="navigation-paths">
-<span id="templates-navigation-paths"></span><h3>Navigation Paths<a class="headerlink" href="#navigation-paths" title="Permalink to this headline">¶</a></h3>
+<span id="templates-navigation-paths"></span><h4>Navigation Paths<a class="headerlink" href="#navigation-paths" title="Permalink to this headline">¶</a></h4>
 <p>The navigation paths specified by the <code class="docutils literal notranslate"><span class="pre">url</span></code> setting are HTML paths:</p>
 <ul class="simple">
 <li>For topics in the same collection, use <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;/topic_name.html&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;/topic_name.html#anchor&quot;</span></code>.</li>
 <li>For topics in a different collection that’s part of the larger docs site use a path similar to <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;../../path-to/topic-name.html&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;../../path-to/topic-name.html#anchor&quot;</span></code>.</li>
 <li>The URL may also be an arbitrary URL that links to anywhere else: <code class="docutils literal notranslate"><span class="pre">&quot;url&quot;:</span> <span class="pre">&quot;https://your-site.com/topic-name.html&quot;</span></code>.</li>
 </ul>
+</div>
 </div>
 <div class="section" id="active-product">
 <span id="templates-active-product"></span><h3>Active Product<a class="headerlink" href="#active-product" title="Permalink to this headline">¶</a></h3>

@@ -441,6 +441,22 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
           </a>
         </li>
 
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#file-names" title="File Names">
+            File Names
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
+            Font Awesome Icons
+          </a>
+        </li>
+
          <!-- /if subItem2.hasSubItems -->
 
         <li class="has-sub-items">
@@ -481,14 +497,6 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
         <li>
           <a class="nav-docs-link" href="/markup-theme/tutorials.html#glossary" title="Glossary">
             Glossary
-          </a>
-        </li>
-
-         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
-
-        <li>
-          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
-            Font Awesome Icons
           </a>
         </li>
 
@@ -614,12 +622,76 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
               <a class="nav-docs-link" href="/markup-theme/templates.html#site-specific-navigation" title="Site-specific Navigation">
                 Site-specific Navigation
               </a>
-            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+            </li> <!-- /if subItem2.hasSubItems -->
 
-            <li>
-              <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-structure" title="Navigation Structure">
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="Navigation Structure">
                 Navigation Structure
-              </a>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#navigation-structure" title="About Navigation Structure">
+                    About Navigation Structure
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#levels" title="About Levels">
+                    About Levels
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-1-group" title="Level 1 (Group)">
+                    Level 1 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-2-standalone" title="Level 2 (Standalone)">
+                    Level 2 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-2-group" title="Level 2 (Group)">
+                    Level 2 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-3-standalone" title="Level 3 (Standalone)">
+                    Level 3 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-3-group" title="Level 3 (Group)">
+                    Level 3 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#level-4-standalone" title="Level 4 (Standalone)">
+                    Level 4 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#section-icons" title="Section Icons">
+                    Section Icons
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/tutorials.html#navigation-paths" title="Navigation Paths">
+                    Navigation Paths
+                  </a>
+                </li> <!-- /for subItem3 in subItem2.subItems -->
+
+              </ul>
             </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
 
             <li>
@@ -888,6 +960,7 @@ The all.js added here is for FontAwesome. If you want to use the CDN instead, re
 <li><a class="reference internal" href="#blockquotes">Blockquotes</a></li>
 <li><a class="reference internal" href="#change-colors">Change Colors</a></li>
 <li><a class="reference internal" href="#code-block-styles">Code Block Styles</a></li>
+<li><a class="reference internal" href="#file-names">File Names</a></li>
 <li><a class="reference internal" href="#font-awesome-icons">Font Awesome Icons</a></li>
 <li><a class="reference internal" href="#github-pages">GitHub Pages</a><ul>
 <li><a class="reference internal" href="#page-not-found">Page not Found</a></li>
@@ -1114,6 +1187,27 @@ $markup-code-block-django: #8fcb9b;
 </li>
 </ol>
 </div>
+<div class="section" id="file-names">
+<span id="tutorials-file-names"></span><h2>File Names<a class="headerlink" href="#file-names" title="Permalink to this headline">¶</a></h2>
+<p>File names should be short, direct, and obvious. They should contain fully-spelled out words as often as possible. For example:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">install.rst</span></code> for a topic about installing an application.</li>
+<li><code class="docutils literal notranslate"><span class="pre">configure.rst</span></code> for a topic about configuring an application.</li>
+<li><code class="docutils literal notranslate"><span class="pre">readme.rst</span></code> for a topic about what you might need to know first.</li>
+<li><code class="docutils literal notranslate"><span class="pre">faq.rst</span></code> for a topic that contains FAQs.</li>
+</ul>
+<p>and so on.</p>
+<p>If you need to use multiple words in a file name, use an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) to delimit each word. For example:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">install_windows.rst</span></code> for a topic about installing an application on Microsoft Windows.</li>
+<li><code class="docutils literal notranslate"><span class="pre">install_macos.rst</span></code> for a topic about installing an application on Mac OS.</li>
+<li><code class="docutils literal notranslate"><span class="pre">install_linux.rst</span></code> for a topic about installing an application on Linux.</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Files in a directory are typically sorted alphabetically. So use the most common word first, and then be more specific in subsequent words. This will keep topics grouped together, as opposed to if they were named <code class="docutils literal notranslate"><span class="pre">windows_install.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">macos_install.rst</span></code>, and <code class="docutils literal notranslate"><span class="pre">linux_install.rst</span></code>.</p>
+</div>
+</div>
 <div class="section" id="font-awesome-icons">
 <span id="tutorials-font-awesome-icons"></span><h2>Font Awesome Icons<a class="headerlink" href="#font-awesome-icons" title="Permalink to this headline">¶</a></h2>
 <p>Font Awesome is an <a class="reference external" href="https://fontawesome.com/license/free">open source icon library</a> that offers a free standard set of icons. MARKUP uses a single unmodified CSS and a single unmodified JavaScript file from the Font Awesome Free for the Web library.</p>
@@ -1181,10 +1275,10 @@ The page you were looking for is not here.
 </div>
 <div class="section" id="robots-txt">
 <span id="tutorials-github-pages-robots-txt"></span><h3>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Robots_exclusion_standard">robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt</a>, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Robots_exclusion_standard">robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt</a>, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites.</p>
+<p class="last">Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out.</p>
 </div>
 <p><strong>To add a robots.txt file</strong></p>
 <ol class="arabic">
@@ -1206,11 +1300,17 @@ Disallow:
 </div>
 <div class="section" id="sitemap-xml">
 <span id="tutorials-github-pages-sitemap-xml"></span><h3>sitemap.xml<a class="headerlink" href="#sitemap-xml" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sitemaps">Sitemaps protocol</a> allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each URL: when it was last updated, how often it changes, and how important it is in relation to other URLs in the site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from rest of the site’s content.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Sitemaps">Sitemaps protocol</a> allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site and allows webmasters to include additional information about each URL, such as:</p>
+<ul class="simple">
+<li>When it was last updated</li>
+<li>How often it changes</li>
+<li>How important it is in relation to other URLs in the site</li>
+</ul>
+<p>A sitemap.xml file helps search engines crawl the site more efficiently and to find URLs that may be isolated from rest of the site’s content.</p>
 <p><strong>To add a sitemap.xml file</strong></p>
 <ol class="arabic">
 <li><p class="first">Create a file named <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> in the <code class="docutils literal notranslate"><span class="pre">/misc</span></code> directory similar to:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;urlset xmlns=&#39;http://www.sitemaps.org/schemas/sitemap/0.9&#39;&gt;
   &lt;url&gt;
     &lt;loc&gt;

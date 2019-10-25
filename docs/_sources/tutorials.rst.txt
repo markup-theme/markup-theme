@@ -225,6 +225,29 @@ The following example shows how to add code block styles for everybody's favorit
    .. tip:: For darker background colors use ``$markup-white`` for the text color; for lighter background colors use ``$markup-almost-black``. The text color is defined by ``color`` in the first CSS block.
 
 
+.. _tutorials-file-names:
+
+File Names
+==================================================
+
+File names should be short, direct, and obvious. They should contain fully-spelled out words as often as possible. For example:
+
+* ``install.rst`` for a topic about installing an application.
+* ``configure.rst`` for a topic about configuring an application.
+* ``readme.rst`` for a topic about what you might need to know first.
+* ``faq.rst`` for a topic that contains FAQs.
+
+and so on.
+
+If you need to use multiple words in a file name, use an underscore (``_``) to delimit each word. For example:
+
+* ``install_windows.rst`` for a topic about installing an application on Microsoft Windows.
+* ``install_macos.rst`` for a topic about installing an application on Mac OS.
+* ``install_linux.rst`` for a topic about installing an application on Linux.
+
+.. tip:: Files in a directory are typically sorted alphabetically. So use the most common word first, and then be more specific in subsequent words. This will keep topics grouped together, as opposed to if they were named ``windows_install.rst``, ``macos_install.rst``, and ``linux_install.rst``.
+
+
 .. _tutorials-font-awesome-icons:
 
 Font Awesome Icons
@@ -301,9 +324,9 @@ You can add a 404.html page to the output of a Sphinx project on GitHub pages. T
 robots.txt
 --------------------------------------------------
 
-The `robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt <https://en.wikipedia.org/wiki/Robots_exclusion_standard>`__, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites.
+The `robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt <https://en.wikipedia.org/wiki/Robots_exclusion_standard>`__, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned. Robots are often used by search engines to categorize websites. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites. 
 
-.. important:: Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out. The standard can be used in conjunction with a sitemap.xml file, a robot inclusion standard for websites. 
+.. important:: Not all robots cooperate with the standard; email harvesters, spambots, malware and robots that scan for security vulnerabilities may even start with the portions of the website where they have been told to stay out.
 
 **To add a robots.txt file**
 
@@ -333,13 +356,19 @@ The `robots exclusion standard, also known as the robots exclusion protocol or s
 sitemap.xml
 --------------------------------------------------
 
-The `Sitemaps protocol <https://en.wikipedia.org/wiki/Sitemaps>`__ allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each URL: when it was last updated, how often it changes, and how important it is in relation to other URLs in the site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from rest of the site's content.
+The `Sitemaps protocol <https://en.wikipedia.org/wiki/Sitemaps>`__ allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site and allows webmasters to include additional information about each URL, such as:
+
+* When it was last updated
+* How often it changes
+* How important it is in relation to other URLs in the site
+
+A sitemap.xml file helps search engines crawl the site more efficiently and to find URLs that may be isolated from rest of the site's content.
 
 **To add a sitemap.xml file**
 
 #. Create a file named ``sitemap.xml`` in the ``/misc`` directory similar to:
 
-   .. code-block:: text
+   .. code-block:: none
 
 	  <?xml version="1.0" encoding="utf-8"?>
         <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
