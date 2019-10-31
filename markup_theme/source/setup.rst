@@ -18,12 +18,10 @@ Required
 
 |theme| requires the following applications to be installed on your machine:
 
-* Sphinx 1.8.5: https://pypi.org/project/Sphinx/1.8.5/.
-
-  .. note:: Newer versions of Sphinx are (currently) unsupported.
-* Recommonmark: https://recommonmark.readthedocs.io/en/latest/ (A plugin that enables the use of Markdown that follows the Commonmark standard: http://spec.commonmark.org/.)
+* Sphinx: https://pypi.org/project/Sphinx.
 * Sass: https://sass-lang.com/ (A tool that enables easy management of CSS.)
-
+* Hieroglyph: http://docs.hieroglyph.io/en/latest/index.html (A tool that enables building slide decks from reStructuredText via a dedicated "slides" builder.)
+* Recommonmark: https://recommonmark.readthedocs.io/en/latest/ (A plugin that enables the use of Markdown that follows the Commonmark standard: http://spec.commonmark.org/.)
 
 .. _setup-recommended:
 
@@ -79,11 +77,11 @@ For all other installation scenarios, the steps are similarly easy. Please refer
 
       $ sudo gem install sass
 
-#. `Install the RevealJS docutils plugin <https://github.com/tell-k/sphinxjp.themes.revealjs#set-up>`__:
+#. `Install Hieroglyph <http://docs.hieroglyph.io/en/latest/getting-started.html#install-hieroglyph-and-dependencies>`__:
 
    .. code-block:: console
 
-      $ pip install sphinxjp.themes.revealjs 
+      $ pip install hieroglyph 
 
 #. `Install the Recommonmark docutils-compatibility bridge <http://recommonmark.readthedocs.io>`__:
 
@@ -276,7 +274,7 @@ The output directories are the locations to which Sphinx will put successfully b
      $ weasyprint http://localhost/pdf/rst.html markup_theme/docs/pdf/rst.pdf
 
 
-This should build a website that looks like this:
+This should build a website that looks similar to:
 
 .. image:: ../../images/markupproject.png
    :width: 600 px

@@ -21,6 +21,7 @@ This site shows off the capabilities of |theme|, including:
 * Search
 * Hosted on GitHub pages
 * Formatting guides for both Markdown and reStructuredText authoring
+* Formatting guide for slides built via Hieroglyph
 * Tutorials for extending |theme|
 * Documentation of various components within |theme|
 
@@ -42,6 +43,8 @@ Start Here
 
    :ref:`Navigation Icons <tutorials-navigation-icons>` |fa-index-circle| :ref:`Left-side <tutorials-navigation-icons-left-side>` |fa-index-circle| :ref:`Right-side <tutorials-navigation-icons-right-side>` |fa-index-circle| :ref:`Hamburger <tutorials-navigation-icons-hamburger>` |fa-index-circle| :ref:`Inline <tutorials-navigation-icons-inline>`
 
+**Slide decks**
+   :doc:`slides` |fa-index-circle| :ref:`Sassy CSS <css-sassy>` |fa-index-circle| :ref:`slides-setup` |fa-index-circle| :ref:`slides-how-to` |fa-index-circle| :ref:`slides-supported-formatting` |fa-index-circle| :ref:`slides-supported-formats-what-works` |fa-index-circle| :ref:`slides-supported-formats-what-does-not` |fa-index-circle| :ref:`slides-supported-formats-do-not-use` |fa-index-circle| :ref:`slides-directive` |fa-index-circle| :ref:`slides-directive-title` |fa-index-circle| :ref:`slides-directive-section` |fa-index-circle| :ref:`slides-directive-noheader` |fa-index-circle| :ref:`slides-directive-group` |fa-index-circle| :ref:`slides-directive-build` |fa-index-circle| :ref:`slides-example`
 
 **Site templates**
    :doc:`templates` |fa-index-circle| :ref:`layout.html <templates-layout>` |fa-index-circle| :ref:`{% block nav_main %} <templates-block-nav-main>` |fa-index-circle| :ref:`nav-docs.html <templates-nav-docs>` |fa-index-circle| :ref:`Global navigation <templates-global-navigation>` |fa-index-circle| :ref:`Site navigation <templates-site-navigation>` |fa-index-circle| :ref:`Navigation structure <templates-navigation-structure>` |fa-index-circle| :ref:`Navigation paths <templates-navigation-paths>` |fa-index-circle| :ref:`Active product <templates-active-product>` |fa-index-circle| :ref:`Active page name <templates-active-page-name>` |fa-index-circle| :ref:`Active version <templates-active-version>`
@@ -175,7 +178,8 @@ Style Guide
    faq
    resources
    setup
+   slides
+   sphinx
    style_guide
    templates
    tutorials
-   upgrades
