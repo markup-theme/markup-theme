@@ -3,39 +3,40 @@ MARKUP Theme
 ================================================
 
 
-.. revealjs::
+.. slide:: 
+   :level: 2
 
- .. revealjs:: MARKUP Theme
-    :data-transition: none
+   .. image:: ../../images/slides_splash.png
 
-    .. image:: ../../images/markupproject.png
+.. slide:: What is it?
+   :level: 2
 
- .. revealjs:: What is it?
-    :data-transition: none
+   The MARKUP theme is a Sphinx documentation project that
 
-    The MARKUP theme is a Sphinx documentation project that
-
-    * Supports both RST and MD authoring
-    * Tightly integrates multiple documentation sets via bespoke navigation
-    * Supports RevealJS HTML presentations (similar to PowerPoint, but in HTML)
-    * Supports using Docutils directives in Markdown!
-    * Supports printing HTML output to PDF via a sub-theme
+   * Supports both RST and MD authoring
+   * Tightly integrates multiple documentation sets via bespoke navigation
+   * Supports RevealJS HTML presentations (similar to PowerPoint, but in HTML)
+   * Supports using Docutils directives in Markdown!
+   * Supports printing HTML output to PDF via a sub-theme
 
 
- .. revealjs:: What does it require?
-    :data-transition: none
+.. slide:: What does it require?
+   :level: 2
 
-    The MARKUP theme requires:
+   The MARKUP theme requires:
 
-    * **Sphinx**: http://www.sphinx-doc.org/en/stable/install.html
-    * **Recommonmark**: https://recommonmark.readthedocs.io/en/latest/
-    * **WeasyPrint**: http://weasyprint.org/
-    * **Sass**: https://sass-lang.com/
-    * A good text editor
-    * Willpower, commitment, dedication
+   * **Sphinx**: http://www.sphinx-doc.org/en/stable/install.html
+   * **Sass**: https://sass-lang.com/
+   * **Hieroglyph**: http://docs.hieroglyph.io/en/latest/index.html
+   * **Recommonmark**: https://recommonmark.readthedocs.io/en/latest/
+   * **WeasyPrint**: http://weasyprint.org/
+   * A good text editor
+   * Willpower, commitment, dedication
 
- .. revealjs:: Why the MARKUP Theme?
-    :data-transition: none
+.. slide:: Why the MARKUP Theme?
+   :level: 2
 
-    Why not? This project and theme exist to enable an open source documentation platform with simple tooling that has a better starting point than most other Sphinx projects. The MARKUP theme embraces single-source principles found in more traditional content management systems used by technical writers and technical writing teams, but without requiring proprietary lock-in or dedicated editing interfaces or XML formatting.
+   Why not? This project and theme exist to enable an open source documentation platform with simple tooling that has a better starting point than most other Sphinx projects.
+
+   The MARKUP theme embraces single-source principles found in more traditional content management systems used by technical writers and technical writing teams, but without requiring proprietary lock-in or dedicated editing interfaces or XML formatting.
 

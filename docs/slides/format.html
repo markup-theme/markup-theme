@@ -1,200 +1,1061 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title align="left">About Slide Decks &mdash; Presentations</title>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
+    <title>Slide Title Page &mdash; MARKUP Theme  documentation</title>
     
-<link rel="stylesheet" href="_static/css/reveal.min.css">
-<link rel="stylesheet" href="_static/css/theme/default.css" id="theme">
-<link rel="stylesheet" href="_static/lib/css/zenburn.css">
-<link rel="stylesheet" href="_static/revealjs.css" type="text/css" />
-      <link rel="shortcut icon" href="_static/favicon.ico"/>
-
-    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-    <script>
-        if(window.location.search.match(/print-pdf/gi)) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '_static/css/print/pdf.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
     </script>
-
-    <!--[if lt IE 9]>
-    <script src="_static/lib/js/html5shiv.js"></script>
-    <![endif]-->
-      <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="MARKUP Theme  documentation" href="index.html" />
+    <link rel="next" title="MARKUP Theme" href="about_markup.html" />
+    <link rel="prev" title="MARKUP Theme Slide Decks" href="index.html" /> 
   </head>
   <body>
-    <div class="reveal">
-      <div class="slides" align="left">
-        
-  <div class="section" id="about-slide-decks">
-<h1>About Slide Decks<a class="headerlink" href="#about-slide-decks" title="Permalink to this headline">¶</a></h1>
-<section>
-<section class="first" data-transition="none">
-<img alt="_images/slides_splash.png" class="first" src="_images/slides_splash.png" />
-<aside class="last notes">
-This is a speaker note. Hit “s” on the keyboard to view them.</aside>
-</section>
-<section data-transition="none">
-<h2>What are slide decks?</h2>
-Slide decks built from with the MARKUP theme can build simple reveal.js presentations using the same authoring and build processes as the MARKUP theme</section>
-<section data-transition="none">
-<h2>Some Slide Basics</h2>
-<p class="first">Slides use a very small subset of the Sphinx directive set:</p>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="slide-title-page">
+
+<h1>Slide Title Page<a class="headerlink" href="../format.html#slide-title-page" title="View HTML">§</a></h1>
+
+<p>This is a slide title page. While this slide title page has a paragraph on it, typically a slide title page is left blank (except for the title). When a short paragraph is here, it’s effectively a subtitle.</p>
+<p>This slide deck also serves as a sort-of smoke test for the supported formatting options.</p>
+
+
+
+<div class="slide-no">1</div>
+
+
+</article>
+<article class="admonition-supported-formatting slide level-1">
+
+<h1>Supported Formatting</h1>
+
+<p>The following slides show the recommended subset of supported formatting options. These are identical to the formatting options available with MARKUP.</p>
+
+
+
+<div class="slide-no">2</div>
+
+
+</article>
+<article class="admonition-paragraphs slide level-2">
+
+<h2>Paragraphs</h2>
+
+<p>A simple paragraph.</p>
+<p>You can have more than one.</p>
+
+
+
+<div class="slide-no">3</div>
+
+
+</article>
+<article class="admonition-ordered-lists slide level-2">
+
+<h2>Ordered Lists</h2>
+
+<p>Always introduce an ordered list:</p>
+<ol class="arabic simple">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+
+
+
+<div class="slide-no">4</div>
+
+
+</article>
+<article class="admonition-unordered-lists slide level-2">
+
+<h2>Unordered lists</h2>
+
+<p>Always introduce an unordered list:</p>
 <ul class="simple">
-<li>Paragraphs, including <strong>bold</strong>, <em>italics</em>, and <code class="docutils literal notranslate"><span class="pre">code</span></code></li>
-<li>Ordered and unordered lists</li>
-<li>Fully qualified URLs</li>
-<li>Code blocks, both by themselves and within ordered lists</li>
-<li>Images</li>
-<li>Notes, warnings</li>
-<li>Fragments, which load part of a slide page</li>
-<li>Speaker notes via <code class="docutils literal notranslate"><span class="pre">rv_note</span></code> directive. Hit the “s” key on the keyboard to view speaker notes.</li>
+<li>one</li>
+<li>two</li>
+<li>three</li>
 </ul>
-<aside class="last notes">
-This is a speaker note.</aside>
-</section>
-<section data-transition="none">
-<h2>Code Blocks</h2>
-<p class="first">Code blocks use the same directives as the reStructuredText pages. For example, YAML code:</p>
-<div class="last highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">section</span><span class="p">:</span>
-  <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value</span>
-  <span class="l l-Scalar l-Scalar-Plain">etc...</span>
+
+
+
+<div class="slide-no">5</div>
+
+
+</article>
+<article class="admonition-definition-lists slide level-2">
+
+<h2>Definition Lists</h2>
+
+<p>A definition list works great for things like terminology:</p>
+<dl class="docutils">
+<dt><strong>some term</strong></dt>
+<dd>Indent three spaces, and then keep typing.</dd>
+<dt><strong>another term</strong></dt>
+<dd>Indent three spaces, and then type some more!</dd>
+</dl>
+
+
+
+<div class="slide-no">6</div>
+
+
+</article>
+<article class="admonition-incremented-list-items slide level-2">
+
+<h2>Incremented List Items</h2>
+
+<ul class="build simple">
+<li>The first list item is shown automatically.</li>
+<li>Press the spacebar to add the next one.</li>
+<li>Press the spacebar (again) for the next list item.</li>
+<li>Press the space (again) to add the final list item.</li>
+</ul>
+
+
+
+<div class="slide-no">7</div>
+
+
+</article>
+<article class="admonition-images-with-titles slide level-2">
+
+<h2>Images with Titles</h2>
+
+<p>Images work best preceded by a single-line introduction:</p>
+<a class="reference internal image-reference" href="_images/slides_splash.png"><img alt="_images/slides_splash.png" class="align-center" src="_images/slides_splash.png" style="width: 600px;" /></a>
+<p>They may be followed by a short list:</p>
+<ol class="arabic simple">
+<li>one</li>
+<li>two, depending on the image size</li>
+</ol>
+
+
+
+<div class="slide-no">8</div>
+
+
+</article>
+<article class="admonition-images-without-titles slide level-2">
+
+<h2>Images without Titles</h2>
+
+<p>Image slides can be shown without titles simply by omitting the slide name, as shown in the next slide example.</p>
+
+
+
+<div class="slide-no">9</div>
+
+
+</article>
+<article class="admonition- slide level-2">
+
+<h2></h2>
+
+<a class="reference internal image-reference" href="_images/slides_splash.png"><img alt="_images/slides_splash.png" class="align-center" src="_images/slides_splash.png" style="width: 700px;" /></a>
+
+
+
+<div class="slide-no">10</div>
+
+
+</article>
+<article class="admonition-simple-code-blocks slide level-2">
+
+<h2>Simple Code Blocks</h2>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">retrieve_instruction</span><span class="p">(</span>
+  <span class="bp">self</span><span class="p">,</span>
+  <span class="n">name</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section data-transition="none">
-<h2>Fragments</h2>
-<p class="fragment first">Hit the next arrow…</p>
-<div class="fragment last"><ol>
-<li class="fragment"><code>fragment one</code></li>
-<li class="fragment"><em>fragment two</em></li>
-<li class="fragment"><strong>fragment three</strong></li>
-</ol></div></section>
-<section data-transition="none">
-<h2>Images</h2>
-<img alt="_images/busycorp.png" class="first last" src="_images/busycorp.png" />
-</section>
-<section data-transition="none">
-<h2>Notes and Warnings</h2>
-<p class="first">Notes and warnings! (Use sparingly.)</p>
+
+
+
+<div class="slide-no">11</div>
+
+
+</article>
+<article class="admonition-notes-warnings-and-tips slide level-2">
+
+<h2>Notes, warnings, and tips</h2>
+
+<p>These are notes, warnings, and tips:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This is a note.</p>
+<p class="last">Use notes sparingly.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">This is a warning!</p>
+<p class="last">Use warnings even more sparingly.</p>
 </div>
-<p class="last">(You can use other admonitions as well.)</p>
-</section>
-<section data-transition="none">
-<h2>Speaker Notes</h2>
-<p class="first">You can use speaker notes by adding the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">rv_note::</span></code> directive to a slide.</p>
-<p>Hit “s” on your keyboard to view the notes.</p>
-<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>.. rv_note::
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Maybe use a tip once in a while.</p>
+</div>
 
-   This is a speaker note. You found this from your keyboard&#39;s &quot;s&quot; key.
+
+
+<div class="slide-no">12</div>
+
+
+</article>
+<article class="admonition-tables-2x6 slide level-2">
+
+<h2>Tables, 2x6</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column 1</th>
+<th class="head">Column 2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Row 1</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 2</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 3</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 4</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 5</strong></td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 6</strong></td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">13</div>
+
+
+</article>
+<article class="admonition-tables-3x6 slide level-2">
+
+<h2>Tables, 3x6</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column 1</th>
+<th class="head">Column 2</th>
+<th class="head">Column 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Row 1</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 2</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 3</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 4</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 5</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 6</strong></td>
+<td>description</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">14</div>
+
+
+</article>
+<article class="admonition-tables-4x6 slide level-2">
+
+<h2>Tables, 4x6</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column 1</th>
+<th class="head">Column 2</th>
+<th class="head">Column 3</th>
+<th class="head">Column 4</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Row 1</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 2</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 3</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 4</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 5</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 6</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">15</div>
+
+
+</article>
+<article class="admonition-tables-5x6 slide level-2">
+
+<h2>Tables, 5x6</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column 1</th>
+<th class="head">Column 2</th>
+<th class="head">Column 3</th>
+<th class="head">Column 4</th>
+<th class="head">Column 5</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Row 1</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 2</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 3</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 4</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 5</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 6</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">16</div>
+
+
+</article>
+<article class="admonition-tables-6x6 slide level-2">
+
+<h2>Tables, 6x6</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column 1</th>
+<th class="head">Column 2</th>
+<th class="head">Column 3</th>
+<th class="head">Column 4</th>
+<th class="head">Column 5</th>
+<th class="head">Column 6</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Row 1</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 2</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 3</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 4</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-even"><td><strong>Row 5</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+<tr class="row-odd"><td><strong>Row 6</strong></td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">17</div>
+
+
+</article>
+<article class="admonition-more-formatting-options slide level-1">
+
+<h1>More Formatting Options</h1>
+
+<p>The following slides show all supported formatting options. It is recommended to stick with the smaller subset of recommended formatting options.</p>
+
+
+
+<div class="slide-no">18</div>
+
+
+</article>
+<article class="admonition-admonition-attention slide level-2">
+
+<h2>Admonition: Attention</h2>
+
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">The words for the attention itself.</p>
+</div>
+
+
+
+<div class="slide-no">19</div>
+
+
+</article>
+<article class="admonition-admonition-caution slide level-2">
+
+<h2>Admonition: Caution</h2>
+
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">The words for the caution itself.</p>
+</div>
+
+
+
+<div class="slide-no">20</div>
+
+
+</article>
+<article class="admonition-admonition-danger slide level-2">
+
+<h2>Admonition: Danger</h2>
+
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">The words for the danger itself.</p>
+</div>
+
+
+
+<div class="slide-no">21</div>
+
+
+</article>
+<article class="admonition-admonition-error slide level-2">
+
+<h2>Admonition: Error</h2>
+
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">The words for the error itself.</p>
+</div>
+
+
+
+<div class="slide-no">22</div>
+
+
+</article>
+<article class="admonition-admonition-hint slide level-2">
+
+<h2>Admonition: Hint</h2>
+
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">The words for the hint itself.</p>
+</div>
+
+
+
+<div class="slide-no">23</div>
+
+
+</article>
+<article class="admonition-admonition-important slide level-2">
+
+<h2>Admonition: Important</h2>
+
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The words for the important itself.</p>
+</div>
+
+
+
+<div class="slide-no">24</div>
+
+
+</article>
+<article class="admonition-admonition-note slide level-2">
+
+<h2>Admonition: Note</h2>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The words for the note itself.</p>
+</div>
+
+
+
+<div class="slide-no">25</div>
+
+
+</article>
+<article class="admonition-admonition-tip slide level-2">
+
+<h2>Admonition: Tip</h2>
+
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The words for the tip itself.</p>
+</div>
+
+
+
+<div class="slide-no">26</div>
+
+
+</article>
+<article class="admonition-admonition-warning slide level-2">
+
+<h2>Admonition: Warning</h2>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The words for the warning itself.</p>
+</div>
+
+
+
+<div class="slide-no">27</div>
+
+
+</article>
+<article class="admonition-code-block-line-emphasis slide level-2">
+
+<h2>Code Block: Line Emphasis</h2>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+<span class="hll">  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+</span>    <span class="k">return</span> <span class="n">bar</span>
 </pre></div>
 </div>
-</section>
-<section data-transition="none">
-<h2>What else?</h2>
-Slide decks can use most of the formatting available to reStructuredText authoring. The CSS for the slide decks is more sparse than the CSS for the Markdown and reStructuredText pages, but still shares a similar look and feel.</section>
-<section data-transition="none">
-<h2>Questions?</h2>
-<img alt="_images/slides_questions.png" class="first last" src="_images/slides_questions.png" />
-</section>
-<section class="last" data-transition="none">
-<h2>Let's Hack!</h2>
-<img alt="_images/slides_hack.png" class="first last" src="_images/slides_hack.png" />
-</section>
-</section>
+
+
+
+<div class="slide-no">28</div>
+
+
+</article>
+<article class="admonition-code-block-command-shell slide level-2">
+
+<h2>Code Block: Command Shell</h2>
+
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cr service stop
+</pre></div>
 </div>
 
 
-      </div>
-    </div>
-    
-<script src="_static/js/jquery.min.js"></script>
-<script src="_static/lib/js/head.min.js"></script>
-<script src="_static/js/reveal.min.js"></script>
-<script src="_static/js/fontawesome-all.js"></script>
-    <script>
 
-      // change DOM for reveal.js
-      $("div.section h1").remove();
-      var content = $("div.section").html();
-      $("div.section").remove();
-      $("div.slides").html(content);
+<div class="slide-no">29</div>
 
-      Reveal.initialize({
-        width: 1440,
-        height: 900,
 
-        margin: 0.3,
+</article>
+<article class="admonition-code-block-config-file slide level-2">
 
-        minScale: 0.2,
-        maxScale: 1.0,
+<h2>Code Block: Config File</h2>
 
-        controls: true,
-        progress: false,
-        history: false,
-        center: false,
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>spark.setting.hours 1h
+spark.setting.option -Duser.timezone=UTC
+spark.setting.memory 20g
+</pre></div>
+</div>
 
-        keyboard : true,
-        overview: false,
-        touch: true,
-        loop: false,
-        rtl: false,
-        fragments: true,
 
-        autoSlide: 0,
-        mouseWheel: false,
-        rollingLinks: true,
-        previewLinks: false,
 
-        transitionSpeed: "default",
-        backgroundTransition: "default",
+<div class="slide-no">30</div>
 
-        slideNumber: false,
-        embedded: false,
-        autoSlideStoppable: true,
-        hideAddressBar: true,
 
-        parallaxBackgroundImage: "",
-        parallaxBackgroundSize: "",
+</article>
+<article class="admonition-code-block-css slide level-2">
 
-        focusBodyOnPageVisiblityChange: true,
+<h2>Code Block: CSS</h2>
 
-        viewDistance: 3,
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ul</span><span class="p">.</span><span class="nc">tab-selector</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 
-        theme: Reveal.getQueryHash().theme || "slides",
-        transition: Reveal.getQueryHash().transition || "default",
 
-        
 
-        dependencies: [
-           { src: '_static/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-           { src: '_static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-           { src: '_static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-           { src: '_static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-           { src: '_static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-           { src: '_static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
-      });
-    </script>
-    
+<div class="slide-no">31</div>
+
+
+</article>
+<article class="admonition-code-block-data-table slide level-2">
+
+<h2>Code Block: Data Table</h2>
+
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">--------- ---------</span>
+ <span class="n">column1</span>   <span class="n">column2</span>
+<span class="c1">--------- ---------</span>
+ <span class="n">value</span>     <span class="n">value</span>
+ <span class="n">value</span>     <span class="n">value</span>
+ <span class="n">value</span>     <span class="n">value</span>
+<span class="c1">--------- ---------</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">32</div>
+
+
+</article>
+<article class="admonition-code-block-javascript slide level-2">
+
+<h2>Code Block: JavaScript</h2>
+
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div.content-tabs&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">tab_sel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;ul /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="kr">class</span><span class="o">:</span> <span class="s2">&quot;tab-selector&quot;</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.tab-content&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="nx">contenttab_sel</span><span class="p">);</span>
+    <span class="nx">contenttab_sel</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">33</div>
+
+
+</article>
+<article class="admonition-code-block-json slide level-2">
+
+<h2>Code Block: JSON</h2>
+
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;foo&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;one&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;two&quot;</span><span class="p">:</span> <span class="s2">&quot;abcde&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;three&quot;</span><span class="p">:</span> <span class="s2">&quot;words&quot;</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">34</div>
+
+
+</article>
+<article class="admonition-code-block-json-w-jinja slide level-2">
+
+<h2>Code Block: JSON w/Jinja</h2>
+
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!nav-docs.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">set</span> <span class="nv">navItems</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="o">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;iconClass&quot;</span><span class="o">:</span> <span class="s2">&quot;fas fa-arrow-alt-circle-right fa-fw&quot;</span><span class="o">,</span>
+    <span class="s2">&quot;subItems&quot;</span><span class="o">:</span> <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Start Here&quot;</span><span class="o">,</span>
+        <span class="s2">&quot;hasSubItems&quot;</span><span class="o">:</span> <span class="kp">false</span><span class="o">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;/some_file.html&quot;</span>
+      <span class="o">},</span>
+    <span class="o">]</span>
+  <span class="o">},</span>
+<span class="o">]</span> -<span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">35</div>
+
+
+</article>
+<article class="admonition-code-block-none slide level-2">
+
+<h2>Code Block: None</h2>
+
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is a none block. It&#39;s formatted as if it were code,
+but isn&#39;t actually code.
+
+Can include code-like things:
+
+function_foo()
+  does: something
+end
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">36</div>
+
+
+</article>
+<article class="admonition-code-block-python slide level-2">
+
+<h2>Code Block: Python</h2>
+
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">some_thing</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">bar</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">37</div>
+
+
+</article>
+<article class="admonition-code-block-rest-api slide level-2">
+
+<h2>Code Block: REST API</h2>
+
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>https://www.yoursite.com/endpoint/{some_endpoint}
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">38</div>
+
+
+</article>
+<article class="admonition-code-block-restructured-text slide level-2">
+
+<h2>Code Block: ReStructured Text</h2>
+
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>This is some <span class="ge">*ReStructured*</span> <span class="gs">**Text**</span> formatting.
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> none
+
+   that has some(code);
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">39</div>
+
+
+</article>
+<article class="admonition-code-block-scala slide level-2">
+
+<h2>Code Block: Scala</h2>
+
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">40</div>
+
+
+</article>
+<article class="admonition-code-block-shell-script slide level-2">
+
+<h2>Code Block: Shell Script</h2>
+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># The product and version information.</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_PRODUCT</span><span class="o">=</span><span class="s2">&quot;markup-app&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_VERSION</span><span class="o">=</span><span class="s2">&quot;1.23.45-6&quot;</span>
+<span class="nb">readonly</span> <span class="nv">MARKUP_RELEASE_DATE</span><span class="o">=</span><span class="s2">&quot;2019-04-01&quot;</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">41</div>
+
+
+</article>
+<article class="admonition-code-block-yaml slide level-2">
+
+<h2>Code Block: YAML</h2>
+
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12345</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">42</div>
+
+
+</article>
+<article class="admonition-code-block-yaml-w-jinja slide level-2">
+
+<h2>Code Block: YAML w/Jinja</h2>
+
+<div class="highlight-salt notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">set</span> <span class="nv">some_jinja</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span> <span class="cp">%}</span>
+
+<span class="nt">config</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_setting</span><span class="p">:</span> <span class="s">&#39;value&#39;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">some_other_setting</span><span class="p">:</span> <span class="cp">{{</span> <span class="nv">some_jinja</span> <span class="cp">}}</span>
+</pre></div>
+</div>
+
+
+
+<div class="slide-no">43</div>
+
+
+</article>
+<article class="admonition-images slide level-2">
+
+<h2>Images</h2>
+
+<a class="reference internal image-reference" href="_images/tableflip.svg"><div align="center" class="align-center"><img alt="_images/tableflip.svg" src="_images/tableflip.svg" width="600px" /></div>
+</a>
+
+
+
+<div class="slide-no">44</div>
+
+
+</article>
+<article class="admonition-inline-paragraph-formatting slide level-2">
+
+<h2>Inline Paragraph Formatting</h2>
+
+<ul class="simple">
+<li>Use two asterisks around the word to apply <strong>bold formatting</strong>.</li>
+<li>Use a single asterisk around the word to apply <em>italics formatting</em>.</li>
+<li>Use two backticks around the code string to apply <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">block</span> <span class="pre">formatting</span></code>.</li>
+</ul>
+
+
+
+<div class="slide-no">45</div>
+
+
+</article>
+<article class="admonition-links slide level-2">
+
+<h2>Links</h2>
+
+<p>These types of links should work the same way as anywhere else:</p>
+<ul class="simple">
+<li>External</li>
+<li>Internal (rerference)</li>
+<li>Topic</li>
+</ul>
+
+
+
+<div class="slide-no">46</div>
+
+
+</article>
+<article class="admonition-tables-csv slide level-2">
+
+<h2>Tables: CSV</h2>
+
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header1</th>
+<th class="head">Header2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>12345</td>
+<td>67890</td>
+</tr>
+<tr class="row-odd"><td>abcdefghijklmnopqrstuvwxyz</td>
+<td>abcdefghijklmnopqrstuvwxyz</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="slide-no">47</div>
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
   </body>
 </html>

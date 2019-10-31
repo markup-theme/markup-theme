@@ -1,151 +1,136 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title align="left">MARKUP Theme &mdash; Presentations</title>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
+    <title>MARKUP Theme &mdash; MARKUP Theme  documentation</title>
     
-<link rel="stylesheet" href="_static/css/reveal.min.css">
-<link rel="stylesheet" href="_static/css/theme/default.css" id="theme">
-<link rel="stylesheet" href="_static/lib/css/zenburn.css">
-<link rel="stylesheet" href="_static/revealjs.css" type="text/css" />
-      <link rel="shortcut icon" href="_static/favicon.ico"/>
-
-    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-    <script>
-        if(window.location.search.match(/print-pdf/gi)) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '_static/css/print/pdf.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
     </script>
-
-    <!--[if lt IE 9]>
-    <script src="_static/lib/js/html5shiv.js"></script>
-    <![endif]-->
-      <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="MARKUP Theme  documentation" href="index.html" />
+    <link rel="prev" title="Slide Title Page" href="format.html" /> 
   </head>
   <body>
-    <div class="reveal">
-      <div class="slides" align="left">
-        
-  <div class="section" id="markup-theme">
-<h1>MARKUP Theme<a class="headerlink" href="#markup-theme" title="Permalink to this headline">¶</a></h1>
-<section>
-<section class="first" data-transition="none">
-<h2>MARKUP Theme</h2>
-<img alt="_images/markupproject.png" class="first last" src="_images/markupproject.png" />
-</section>
-<section data-transition="none">
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="markup-theme">
+
+<h1>MARKUP Theme<a class="headerlink" href="../about_markup.html#markup-theme" title="View HTML">§</a></h1>
+
+
+
+
+<div class="slide-no">1</div>
+
+
+</article>
+<article class="admonition- slide level-2">
+
+<h2></h2>
+
+<img alt="_images/slides_splash.png" src="_images/slides_splash.png" />
+
+
+
+<div class="slide-no">2</div>
+
+
+</article>
+<article class="admonition-what-is-it slide level-2">
+
 <h2>What is it?</h2>
-<p class="first">The MARKUP theme is a Sphinx documentation project that</p>
-<ul class="last simple">
+
+<p>The MARKUP theme is a Sphinx documentation project that</p>
+<ul class="simple">
 <li>Supports both RST and MD authoring</li>
 <li>Tightly integrates multiple documentation sets via bespoke navigation</li>
 <li>Supports RevealJS HTML presentations (similar to PowerPoint, but in HTML)</li>
 <li>Supports using Docutils directives in Markdown!</li>
 <li>Supports printing HTML output to PDF via a sub-theme</li>
 </ul>
-</section>
-<section data-transition="none">
+
+
+
+<div class="slide-no">3</div>
+
+
+</article>
+<article class="admonition-what-does-it-require slide level-2">
+
 <h2>What does it require?</h2>
-<p class="first">The MARKUP theme requires:</p>
-<ul class="last simple">
+
+<p>The MARKUP theme requires:</p>
+<ul class="simple">
 <li><strong>Sphinx</strong>: <a class="reference external" href="http://www.sphinx-doc.org/en/stable/install.html">http://www.sphinx-doc.org/en/stable/install.html</a></li>
+<li><strong>Sass</strong>: <a class="reference external" href="https://sass-lang.com/">https://sass-lang.com/</a></li>
+<li><strong>Hieroglyph</strong>: <a class="reference external" href="http://docs.hieroglyph.io/en/latest/index.html">http://docs.hieroglyph.io/en/latest/index.html</a></li>
 <li><strong>Recommonmark</strong>: <a class="reference external" href="https://recommonmark.readthedocs.io/en/latest/">https://recommonmark.readthedocs.io/en/latest/</a></li>
 <li><strong>WeasyPrint</strong>: <a class="reference external" href="http://weasyprint.org/">http://weasyprint.org/</a></li>
-<li><strong>Sass</strong>: <a class="reference external" href="https://sass-lang.com/">https://sass-lang.com/</a></li>
 <li>A good text editor</li>
 <li>Willpower, commitment, dedication</li>
 </ul>
-</section>
-<section class="last" data-transition="none">
+
+
+
+<div class="slide-no">4</div>
+
+
+</article>
+<article class="admonition-why-the-markup-theme slide level-2">
+
 <h2>Why the MARKUP Theme?</h2>
-Why not? This project and theme exist to enable an open source documentation platform with simple tooling that has a better starting point than most other Sphinx projects. The MARKUP theme embraces single-source principles found in more traditional content management systems used by technical writers and technical writing teams, but without requiring proprietary lock-in or dedicated editing interfaces or XML formatting.</section>
+
+<p>Why not? This project and theme exist to enable an open source documentation platform with simple tooling that has a better starting point than most other Sphinx projects.</p>
+<p>The MARKUP theme embraces single-source principles found in more traditional content management systems used by technical writers and technical writing teams, but without requiring proprietary lock-in or dedicated editing interfaces or XML formatting.</p>
+
+
+
+<div class="slide-no">5</div>
+
+
+</article>
+
 </section>
-</div>
 
+<section id="slide_notes">
 
-      </div>
-    </div>
-    
-<script src="_static/js/jquery.min.js"></script>
-<script src="_static/lib/js/head.min.js"></script>
-<script src="_static/js/reveal.min.js"></script>
-<script src="_static/js/fontawesome-all.js"></script>
-    <script>
+</section>
 
-      // change DOM for reveal.js
-      $("div.section h1").remove();
-      var content = $("div.section").html();
-      $("div.section").remove();
-      $("div.slides").html(content);
-
-      Reveal.initialize({
-        width: 1440,
-        height: 900,
-
-        margin: 0.3,
-
-        minScale: 0.2,
-        maxScale: 1.0,
-
-        controls: true,
-        progress: false,
-        history: false,
-        center: false,
-
-        keyboard : true,
-        overview: false,
-        touch: true,
-        loop: false,
-        rtl: false,
-        fragments: true,
-
-        autoSlide: 0,
-        mouseWheel: false,
-        rollingLinks: true,
-        previewLinks: false,
-
-        transitionSpeed: "default",
-        backgroundTransition: "default",
-
-        slideNumber: false,
-        embedded: false,
-        autoSlideStoppable: true,
-        hideAddressBar: true,
-
-        parallaxBackgroundImage: "",
-        parallaxBackgroundSize: "",
-
-        focusBodyOnPageVisiblityChange: true,
-
-        viewDistance: 3,
-
-        theme: Reveal.getQueryHash().theme || "slides",
-        transition: Reveal.getQueryHash().transition || "default",
-
-        
-
-        dependencies: [
-           { src: '_static/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-           { src: '_static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-           { src: '_static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-           { src: '_static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-           { src: '_static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-           { src: '_static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
-      });
-    </script>
-    
   </body>
 </html>

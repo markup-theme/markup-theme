@@ -1,0 +1,1469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>Slide Decks &mdash; MARKUP Theme</title>
+    <link rel="stylesheet" href="_static/markup.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    './',
+    VERSION:     '',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+//    HAS_SOURCE:  true
+  };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/searchtools.js"></script>
+<script type="text/javascript" src="_static/script.js"></script>
+<script type="text/javascript" src="_static/expando.js"></script>
+<script type="text/javascript" src="_static/tabs.js"></script>
+<script type="text/javascript" src="_static/all.js"></script>
+
+
+<script type="text/javascript">
+	$(function() {
+
+	    var top_sel = {}
+
+	    $('div.content-tabs').each(function() {
+	        var contenttab_sel = $('<ul />', { class: "contenttab-selector" });
+	        var i = 0;
+
+	        $('.tab-content', this).each(function() {
+	            var sel_item = $('<li />', {
+	                class: $(this).attr('id'),
+	                text: $(this).find('.tab-title').text()
+	            });
+	            $(this).find('.tab-title').remove();
+	            if (i++) {
+	                $(this).hide();
+	            } else {
+	                sel_item.addClass('selected');
+	            }
+	            contenttab_sel.append(sel_item);
+	            $(this).addClass('contenttab');
+	        });
+
+	        $('.tab-content', this).eq(0).before(contenttab_sel);
+	        contenttab_sel = null;
+	        i = null;
+	    });
+
+
+	    $('.contenttab-selector li').click(function(evt) {
+	        evt.preventDefault();
+
+	        var tabsblock = $(this).parents('.content-tabs');
+	        var sel_class = $(this).attr('class');
+	        $('div.contenttab',tabsblock).hide();
+	        $('div#' + sel_class,tabsblock).show();
+
+	        $('ul.contenttab-selector li', tabsblock).removeClass('selected');
+	        $('ul.contenttab-selector li.' + sel_class, tabsblock).addClass('selected');
+
+	        sel_class = null;
+	    });
+
+	});
+</script>
+
+<!--
+The all.js added here is for FontAwesome. If you want to use the CDN instead, remove the line for all.js and uncomment the section at the bottom of _config.scss and update for the correct path to the version of FontAwesome you want to use via their CDN.
+-->
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="MARKUP Theme" href="index.html" />
+    <link rel="next" title="Sphinx" href="sphinx.html" />
+    <link rel="prev" title="MARKUP Setup" href="setup.html" /> 
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+
+
+  <nav class="nav-main" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <a href="/markup-theme/index.html">
+            <img id="markup" height="34" src="_static/markup-logo.png" onerror="_static/markup-logo.svg"/>
+          </a>
+        </h1>
+      </div>
+
+      <div id="nav-icon"><i class="fas fa-bars"></i></div>
+
+      <a href="https://github.com/markup-theme/markup-theme">
+        <img id="logo" src="_static/markup-topnav.svg" onerror="_static/markup-topnav.png"/>
+      </a>
+
+      <ul class="nav-links links-main">
+        <li class="nav-link is-active">
+          <a href="../markup-theme/index.html">About MARKUP</a>
+        </li>
+
+        <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/markup-theme/index.html">Formatting Guides</a>
+            <div class="nav-dropdown-content">
+              <div class="menu-link">
+                <a href="/markup-theme/md/md.html"> &nbsp; <i class="fab fa-markdown fa-fw icon-left"></i> &nbsp; Markdown</a>
+              </div>
+              <div class="menu-link">
+                <a href="/markup-theme/rst/rst.html"> &nbsp; <i class="fab fa-python fa-fw icon-left"></i> &nbsp; reStructuredText</a>
+              </div>
+            </div>
+        </li>
+
+        <li class="nav-link">
+          <a href="../markup-theme/style_guide.html">Style Guide</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+    <div class="document markup-docs">
+    <!---->
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fas fa-arrow-alt-circle-up fa-fw icon-left"></i></i>MARKUP Theme</img></a>
+    </li>
+
+    <li class="main-item has-sub-items docs-search">
+      <form action=/markup-theme/search.html method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+
+<!-- disabled in favor of right-side search block; if public docs, this option is much better? you decide! 
+
+    <li class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+-->
+
+<!--
+    <li class="version-picker">
+      Filter by product and version
+      <div class="dropdown-wrapper">
+  <div class="dropdown-select">
+    <span id="dropdown-select-product">MARKUP Theme</span>: <span id="dropdown-select-version">current</span>
+    <i class="fa fa-chevron-down"></i>
+  </div>
+  <ul class="dropdown-items">
+    <li class="dropdown-item">
+    <a href="/">Documentation Releases</a>
+    </li>
+    <li class="dropdown-item has-sub-items">AppName<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/abc/1-0-0/">1.0.0</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-1/">1.0.1</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-2/">1.0.2</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-3/">1.0.3</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/foo/">Release Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items">Release Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/bar_1-0">Bar 1.0</a></li>
+        <li class="dropdown-item"><a href="/release/bar_1-1">Bar 1.1</a></li>
+      </ul>
+    </li>
+    <li class="legacy-heading">Archived Docs</li>
+    <li class="dropdown-item">
+      <a href="/release/analytics/">Archived Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items legacy-item">Archived Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-8/">Bar 0.8</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-9/">Bar 0.9</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </li>
+-->   
+
+    
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="MARKUP Overview">
+            MARKUP Overview
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About MARKUP">
+                About MARKUP
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-theme" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
+                Goals
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
+                Non-goals
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/faq.html" title="FAQs">
+            FAQs
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="MARKUP Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> MARKUP Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About MARKUP Setup">
+            About MARKUP Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download MARKUP">
+            Download MARKUP
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
+            Environment Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
+            Localhost Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-theme" title="Build MARKUP">
+            Build MARKUP
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Style Guide"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-award icon-left"></i> Style Guide <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html" title="About the Style Guide">
+            About the Style Guide
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#code-blocks" title="Code Blocks">
+            Code Blocks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#command-prompts" title="Command Prompts">
+            Command Prompts
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#copypasta" title="Copypasta">
+            Copypasta
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#field-names-vs-field-values" title="Field Names vs. Field Values">
+            Field Names vs. Field Values
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#future-features" title="Future Features">
+            Future Features
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#gerunds" title="Gerunds">
+            Gerunds
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#glossary" title="Glossary">
+            Glossary
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#jargon" title="Jargon">
+            Jargon
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#lists-within-lists" title="Lists within Lists">
+            Lists within Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#long-titles-headers" title="Long Titles, Headers">
+            Long Titles, Headers
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#oxford-or-serial-comma" title="Oxford (or Serial) Comma">
+            Oxford (or Serial) Comma
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#procedures" title="Procedures">
+            Procedures
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#screen-shots" title="Screen Shots">
+            Screen Shots
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#table-of-contents" title="Table of Contents">
+            Table of Contents
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#tables-and-columns" title="Tables and Columns">
+            Tables and Columns
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#tabs-vs-evil" title="Tabs vs. Evil">
+            Tabs vs. Evil
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#text-editor" title="Text Editor">
+            Text Editor
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#title-vs-sentence-case" title="Title vs. Sentence Case">
+            Title vs. Sentence Case
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
+            Blockquotes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#change-colors" title="Change Colors">
+            Change Colors
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#code-block-styles" title="Code Block Styles">
+            Code Block Styles
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#file-names" title="File Names">
+            File Names
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
+            Font Awesome Icons
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="GitHub Pages">
+            GitHub Pages
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#github-pages" title="About GitHub Pages">
+                About GitHub Pages
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#page-not-found" title="Page not Found">
+                Page not Found
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#robots-txt" title="robots.txt">
+                robots.txt
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#sitemap-xml" title="sitemap.xml">
+                sitemap.xml
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#glossary" title="Glossary">
+            Glossary
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#large-topics-single-source" title="Large Topics, Single Source">
+            Large Topics, Single Source
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#local-pygments-css" title="Local Pygments CSS">
+            Local Pygments CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Navigation Icons">
+            Navigation Icons
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#left-side" title="Left Side">
+                Left Side
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#right-side" title="Right Side">
+                Right Side
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#hamburger-button" title="Hamburger Buttom">
+                Hamburger Buttom
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#inline" title="Inline">
+                Inline
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#pdf-cover-pages" title="PDF Cover Pages">
+            PDF Cover Pages
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
+            Tokens
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Slide Decks"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-desktop icon-left"></i> Slide Decks <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html" title="About Slide Decks">
+            About Slide Decks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#slides-setup" title="Setup">
+            Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#how-to-use-slides" title="How to Use Slides">
+            How to Use Slides
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Supported Formatting">
+            Supported Formatting
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#what-works" title="What Works">
+                What Works
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#what-does-not" title="What Does Not">
+                What Does Not
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#do-not-use" title="Do Not Use">
+                Do Not Use
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="slides Directive">
+            slides Directive
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#title-slides" title="Title Slides">
+                Title Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#section-slides" title="Section Slides">
+                Section Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#slides-w-o-headers" title="Slides w/o Headers">
+                Slides w/o Headers
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#group-slides" title="Group Slides">
+                Group Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#build-directive" title="build Directive">
+            build Directive
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#example" title="Example">
+            Example
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Site Templates"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-clone icon-left"></i> Site Templates <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/templates.html" title="About Site Templates">
+            About Site Templates
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/templates.html#layout-html" title="layout.html">
+            layout.html
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="nav-docs.html">
+            nav-docs.html
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#nav-docs-html" title="About nav-docs.html">
+                About nav-docs.html
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#global-navigation" title="Global Navigation">
+                Global Navigation
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#site-specific-navigation" title="Site-specific Navigation">
+                Site-specific Navigation
+              </a>
+            </li> <!-- /if subItem2.hasSubItems -->
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="Navigation Structure">
+                Navigation Structure
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-structure" title="About Navigation Structure">
+                    About Navigation Structure
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#levels" title="About Levels">
+                    About Levels
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-1-group" title="Level 1 (Group)">
+                    Level 1 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-2-standalone" title="Level 2 (Standalone)">
+                    Level 2 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-2-group" title="Level 2 (Group)">
+                    Level 2 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-3-standalone" title="Level 3 (Standalone)">
+                    Level 3 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-3-group" title="Level 3 (Group)">
+                    Level 3 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-4-standalone" title="Level 4 (Standalone)">
+                    Level 4 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#section-icons" title="Section Icons">
+                    Section Icons
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-paths" title="Navigation Paths">
+                    Navigation Paths
+                  </a>
+                </li> <!-- /for subItem3 in subItem2.subItems -->
+
+              </ul>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-product" title="Active Product">
+                Active Product
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-page-name" title="Active Page Name">
+                Active Page Name
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-version" title="Active Version">
+                Active Version
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/resources.html" title="PDFs and Slide Decks">
+            PDFs and Slide Decks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/sphinx.html" title="Errors and Warnings">
+            Errors and Warnings
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li> <!-- /for item in navItems -->
+    
+
+<!--
+    <li class="main-item dark-item">
+      <a href="feedback.html"><i class="fas fa-question-circle fa-fw icon-left"></i>Send Feedback</a>
+    </li>
+-->
+<!--
+    <li class="main-item dark-item">
+      <a href="support.html"><i class="fal fa-life-ring fa-fw icon-left"></i>Support</a>
+    </li>
+-->
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fas fa-sitemap fa-fw icon-left"></i>Site Map</a>
+    </li>
+  </ul>
+</nav>
+      <div class="documentwrapper"><div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+
+<!-- Uncomment to add an image above the right-side nav bar -->
+
+<!--  <a class="sphinxsidebar-ad" href="https://www.yoursitename.com" target="_blank">
+    <img src="_static/12345.svg" alt="alt" />
+  </a>
+-->
+
+
+<!--
+    <div id="searchbox" class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="Go">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+-->
+
+
+
+  <div class="sphinxsidebarwrapper">
+  <h3><i class="fas fa-newspaper" aria-hidden="true"></i><a href="index.html">&nbsp;ON THIS PAGE</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Slide Decks</a><ul>
+<li><a class="reference internal" href="#slides-setup">Slides Setup</a></li>
+<li><a class="reference internal" href="#how-to-use-slides">How to Use Slides</a></li>
+<li><a class="reference internal" href="#supported-formatting">Supported Formatting</a><ul>
+<li><a class="reference internal" href="#what-works">What Works</a></li>
+<li><a class="reference internal" href="#what-does-not">What Does Not</a></li>
+<li><a class="reference internal" href="#do-not-use">Do Not Use</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#slides-directive">slides Directive</a><ul>
+<li><a class="reference internal" href="#title-slides">Title Slides</a></li>
+<li><a class="reference internal" href="#section-slides">Section Slides</a></li>
+<li><a class="reference internal" href="#slides-w-o-headers">Slides w/o Headers</a></li>
+<li><a class="reference internal" href="#group-slides">Group Slides</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-directive">build Directive</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="slide-decks">
+<h1>Slide Decks<a class="headerlink" href="#slide-decks" title="Permalink to this headline">¶</a></h1>
+<p>Slide decks are built using Hieroglyph, a plugin for Sphinx. Slide pages are built using reStructuredText and are styled to support a useful subset of the standard MARKUP formatting guidelines.</p>
+<p>Slides provide a simple and easy way to leverage technical content into a presentation-like format and should be used to support and enhance the technical documentation.</p>
+<div class="section" id="slides-setup">
+<span id="id1"></span><h2>Slides Setup<a class="headerlink" href="#slides-setup" title="Permalink to this headline">¶</a></h2>
+<p>Slide decks require Hieroglyph, a slide deck generator that uses Sphinx and reStructuredText and a dedicated topic collection with a <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file configured to support the <code class="docutils literal notranslate"><span class="pre">slides</span></code> builder.</p>
+<ol class="arabic">
+<li><p class="first">Install <a class="reference external" href="http://docs.hieroglyph.io/en/latest/index.html">Hieroglyph</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install hieroglyph
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> in a project that will be used to generate slide decks:</p>
+<p>Add Hieroglyph to <code class="docutils literal notranslate"><span class="pre">extensions</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hieroglyph&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>and then add slides-dedicated configuration settings:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Options for HTML Slide output ---------------------------------------------------</span>
+
+<span class="n">autoslides</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">slide_theme</span> <span class="o">=</span> <span class="s1">&#39;slides-hieroglyph&#39;</span>
+<span class="n">slide_levels</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">slide_numbers</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="c1">#slide_footer = &quot;Welcome to Slides!&quot;</span>
+<span class="c1">#slide_theme_options = {&#39;custom_css&#39;:&#39;slides.css&#39;}</span>
+<span class="n">slide_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;../../_themes/&#39;</span><span class="p">]</span>
+<span class="n">slide_link_to_html</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">slide_link_html_to_slides</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">slide_link_html_sections_to_slides</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">slide_relative_path</span> <span class="o">=</span> <span class="s2">&quot;./slides/&quot;</span>
+<span class="n">slide_html_relative_path</span> <span class="o">=</span> <span class="s2">&quot;../&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">See the <a class="reference external" href="http://docs.hieroglyph.io/en/latest/config.html">Hieroglyph documentation</a> for more information about these configuration settings.</p>
+</div>
+</li>
+<li><p class="first">Run a slide decks Sphinx build using the <code class="docutils literal notranslate"><span class="pre">slides</span></code> builder that is installed with Hieroglyph:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b slides path/to/source path/to/slides/output
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="how-to-use-slides">
+<span id="slides-how-to"></span><h2>How to Use Slides<a class="headerlink" href="#how-to-use-slides" title="Permalink to this headline">¶</a></h2>
+<p>Slides are an HTML page output to a directory as part of the static website structure. Because slides are generated using a specific theme (named <code class="docutils literal notranslate"><span class="pre">slides-heiroglyph</span></code>) they are output to a dedicated directory.</p>
+<p>Slides open in a web browser (Chrome, Firefox, Safari).</p>
+<p>To navigate between pages in a slide deck:</p>
+<ol class="arabic simple">
+<li>Press the left/right keyboard arrows to move to previous/next slides</li>
+<li>Press the spacebar to move to the next slide</li>
+<li>Click the top left/right corners of the slide area to move to previous/next slides</li>
+</ol>
+</div>
+<div class="section" id="supported-formatting">
+<span id="slides-supported-formatting"></span><h2>Supported Formatting<a class="headerlink" href="#supported-formatting" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx slides built via Heiroglyph support most of the formatting options built into MARKUP and have CSS style and output parity with the standard theme.</p>
+<div class="section" id="what-works">
+<span id="slides-supported-formats-what-works"></span><h3>What Works<a class="headerlink" href="#what-works" title="Permalink to this headline">¶</a></h3>
+<p>Keep content to its most simple elements:</p>
+<ul class="simple">
+<li>Simple paragraphs, along with <strong>bold</strong>, <em>italics</em>, and <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">code</span></code></li>
+<li>Short ordered, unordered, and definition lists</li>
+<li>Small tables, as long as the contents fit within the visible slide area</li>
+<li>Standalone images; large images should be centered</li>
+<li>Small code blocks</li>
+<li>The occasional admonition (note, warning, tip, etc.).</li>
+<li>Making sure the contents fit within the slide</li>
+<li>Links, though most of the links will be formatted as external links</li>
+<li>Inclusions</li>
+<li>Tokens (verify them!)</li>
+</ul>
+</div>
+<div class="section" id="what-does-not">
+<span id="slides-supported-formats-what-does-not"></span><h3>What Does Not<a class="headerlink" href="#what-does-not" title="Permalink to this headline">¶</a></h3>
+<p>What works, but may not work well:</p>
+<ul class="simple">
+<li>Larger code blocks</li>
+<li>Tables with more than ~6 columns and/or ~6 rows, but ideally 2-3 columns and up to 6 rows</li>
+<li>Admonitions that appear more often than “occasionally” or more than once per slide</li>
+<li>The built-in Heiroglyph <code class="docutils literal notranslate"><span class="pre">figure</span></code> class stretches images every which way and generally looks bad</li>
+</ul>
+</div>
+<div class="section" id="do-not-use">
+<span id="slides-supported-formats-do-not-use"></span><h3>Do Not Use<a class="headerlink" href="#do-not-use" title="Permalink to this headline">¶</a></h3>
+<p>The following items are unsupported for various reasons: wrong type of deliverable, Sphinx directive doesn’t work in Heiroglyph, CSS issues, etc. Please don’t use any of the following formatting options:</p>
+<ul class="simple">
+<li>Content tabs</li>
+<li>Expandos</li>
+<li>Custom admonitions</li>
+<li>The <code class="docutils literal notranslate"><span class="pre">note</span></code> admonition for the purpose of adding presenter notes. (For some reason, they … don’t work!)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="slides-directive">
+<span id="id2"></span><h2>slides Directive<a class="headerlink" href="#slides-directive" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">slides</span></code> directive defines each slide in the slide deck. It is a normal Sphinx directive and requires all content in that slide to be formatted correctly and be aligned with the <code class="docutils literal notranslate"><span class="pre">s</span></code> in the directive.</p>
+<div class="section" id="title-slides">
+<span id="slides-directive-title"></span><h3>Title Slides<a class="headerlink" href="#title-slides" title="Permalink to this headline">¶</a></h3>
+<p>Title slides are used at the beginning of a slide deck.</p>
+<p>To define a title slide, use the <code class="docutils literal notranslate"><span class="pre">slide</span></code> directive and assign its <code class="docutils literal notranslate"><span class="pre">level</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">==================================================</span>
+<span class="gh">Title Slide</span>
+<span class="gh">==================================================</span>
+
+<span class="nt">&lt;no content&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The contents of a title slide should be empty.</p>
+</div>
+</div>
+<div class="section" id="section-slides">
+<span id="slides-directive-section"></span><h3>Section Slides<a class="headerlink" href="#section-slides" title="Permalink to this headline">¶</a></h3>
+<p>Section slides are the slides that contain actual content.</p>
+<p>To define a section slide, use the <code class="docutils literal notranslate"><span class="pre">slide</span></code> directive and assign its <code class="docutils literal notranslate"><span class="pre">level</span></code> to <code class="docutils literal notranslate"><span class="pre">2</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Slide Name
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   This is the content of a section slide.
+</pre></div>
+</div>
+</div>
+<div class="section" id="slides-w-o-headers">
+<span id="slides-directive-noheader"></span><h3>Slides w/o Headers<a class="headerlink" href="#slides-w-o-headers" title="Permalink to this headline">¶</a></h3>
+<p>You may use slides without headers, when necessary. For example, slides that contain a series of images that want to focus on the differences between individual images work best when the slide does not have a header.</p>
+<p>To define a slide with no header, use the <code class="docutils literal notranslate"><span class="pre">slide</span></code> directive, assign its <code class="docutils literal notranslate"><span class="pre">level</span></code> to <code class="docutils literal notranslate"><span class="pre">2</span></code>, and leave the slide name empty:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">slide</span><span class="p">::</span>
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   This is the content of a no-title section slide.
+</pre></div>
+</div>
+<p>For example, a slide that defines an image that is part of a series of images:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">slide</span><span class="p">::</span>
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">image</span><span class="p">::</span> ../../images/filename.png
+      <span class="nc">:width:</span> <span class="nf">700 px</span>
+      <span class="nc">:align:</span> <span class="nf">center</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-slides">
+<span id="slides-directive-group"></span><h3>Group Slides<a class="headerlink" href="#group-slides" title="Permalink to this headline">¶</a></h3>
+<p>Group slides are used within a slide deck to add a title-like slide that can be used to create groups of slides.</p>
+<p>To define a group slide, use the <code class="docutils literal notranslate"><span class="pre">slide</span></code> directive and assign its <code class="docutils literal notranslate"><span class="pre">level</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Slide Group Name
+   <span class="nc">:level:</span> <span class="nf">1</span>
+
+   &lt;no content&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The contents of a group slide should be empty.</p>
+</div>
+</div>
+</div>
+<div class="section" id="build-directive">
+<span id="slides-directive-build"></span><h2>build Directive<a class="headerlink" href="#build-directive" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">build</span></code> directive defines a series of list items to are added incrementally to the slide each time the space bar is pressed.</p>
+<p>For example, to define four steps on a slide:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">rst-class</span><span class="p">::</span> build
+
+   <span class="m">-</span> The first list item is shown automatically.
+   <span class="m">-</span> Press the spacebar to add the next one.
+   <span class="m">-</span> Press the spacebar (again) for the next list item.
+   <span class="m">-</span> Press the space (again) to add the final list item.
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<span id="slides-example"></span><h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The following shows an example slide deck:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">..</span>
+<span class="gh">.. /slides/</span>
+<span class="gh">..</span>
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Slide Title Page
+   <span class="nc">:level:</span> <span class="nf">1</span>
+
+   This is a slide title page. While this slide title page has a paragraph on it, typically a slide title page is left blank (except for the title).
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Examples
+   <span class="nc">:level:</span> <span class="nf">1</span>
+
+   The following slides show examples of the recommended subset for use with slide decks:
+
+   <span class="m">*</span> Paragraphs, including inline formatting
+   <span class="m">*</span> Lists
+   <span class="m">*</span> Small tables (2x6, 3x6, 4x6, 5x6, 6x6)
+   <span class="m">*</span> Small code blocks
+   <span class="m">*</span> Images (with or without section titles)
+   <span class="m">*</span> Admonitions, such as notes, warnings, or tips
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Paragraphs
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   A simple paragraph.
+
+   You can have more than one.
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Ordered Lists
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   Always introduce an ordered list:
+
+   <span class="m">#.</span> one
+   <span class="m">#.</span> two
+   <span class="m">#.</span> three
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Unordered lists
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   Always introduce an unordered list:
+
+   <span class="m">-</span> one
+   <span class="m">-</span> two
+   <span class="m">-</span> three
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Definition Lists
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   A definition list works great for things like terminology:
+
+   <span class="gs">**some term**</span>
+      Indent three spaces, and then keep typing.
+
+   <span class="gs">**another term**</span>
+      Indent three spaces, and then type some more!
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Incremented List Items
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">rst-class</span><span class="p">::</span> build
+
+      <span class="m">-</span> The first list item is shown automatically.
+      <span class="m">-</span> Press the spacebar to add the next one.
+      <span class="m">-</span> Press the spacebar (again) for the next list item.
+      <span class="m">-</span> Press the space (again) to add the final list item.
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Images with Titles
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   Images work best preceded by a single-line introduction:
+
+<span class="p">   ..</span> <span class="ow">image</span><span class="p">::</span> ../../images/stages_all.svg
+      <span class="nc">:width:</span> <span class="nf">600 px</span>
+      <span class="nc">:align:</span> <span class="nf">center</span>
+
+   They may be followed by a short list:
+
+   <span class="m">#.</span> one
+   <span class="m">#.</span> two
+   <span class="m">#.</span> three
+   <span class="m">#.</span> four
+   <span class="m">#.</span> five, or so, depending on the image size
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Images without Titles
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   Image slides can be shown without titles simply by omitting the slide name, as shown in the next two slide examples.
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span>
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">image</span><span class="p">::</span> ../../images/mdr_pipeline_components.png
+      <span class="nc">:width:</span> <span class="nf">700 px</span>
+      <span class="nc">:align:</span> <span class="nf">center</span>
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span>
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">image</span><span class="p">::</span> ../../images/mdr_pipeline_architecture_aws.png
+      <span class="nc">:width:</span> <span class="nf">700 px</span>
+      <span class="nc">:align:</span> <span class="nf">center</span>
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Simple Code Blocks
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
+
+      <span class="n">retrieve_instructions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">,</span>
+      <span class="p">)</span>
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Notes, warnings, and tips
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+   These are notes, warnings, and tips:
+
+<span class="p">   ..</span> <span class="ow">note</span><span class="p">::</span> Use notes sparingly.
+
+<span class="p">   ..</span> <span class="ow">warning</span><span class="p">::</span> Use warnings even more sparingly.
+
+<span class="p">   ..</span> <span class="ow">tip</span><span class="p">::</span> Maybe use a tip once in a while.
+
+
+<span class="p">..</span> <span class="ow">slide</span><span class="p">::</span> Tables, 2x6
+   <span class="nc">:level:</span> <span class="nf">2</span>
+
+<span class="p">   ..</span> <span class="ow">list-table</span><span class="p">::</span>
+      <span class="nc">:widths:</span> <span class="nf">200 200</span>
+      <span class="nc">:header-rows:</span> <span class="nf">1</span>
+
+      <span class="m">*</span> - Column 1
+        <span class="m">-</span> Column 2
+      <span class="m">*</span> - <span class="gs">**Row 1**</span>
+        <span class="m">-</span> description
+      <span class="m">*</span> - <span class="gs">**Row 2**</span>
+        <span class="m">-</span> description
+      <span class="m">*</span> - <span class="gs">**Row 3**</span>
+        <span class="m">-</span> description
+      <span class="m">*</span> - <span class="gs">**Row 4**</span>
+        <span class="m">-</span> description
+      <span class="m">*</span> - <span class="gs">**Row 5**</span>
+        <span class="m">-</span> description
+      <span class="m">*</span> - <span class="gs">**Row 6**</span>
+        <span class="m">-</span> description
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <title>Sphinx &mdash; MARKUP Theme</title>
+    <link rel="stylesheet" href="_static/markup.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT:    './',
+    VERSION:     '',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+//    HAS_SOURCE:  true
+  };
+</script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/searchtools.js"></script>
+<script type="text/javascript" src="_static/script.js"></script>
+<script type="text/javascript" src="_static/expando.js"></script>
+<script type="text/javascript" src="_static/tabs.js"></script>
+<script type="text/javascript" src="_static/all.js"></script>
+
+
+<script type="text/javascript">
+	$(function() {
+
+	    var top_sel = {}
+
+	    $('div.content-tabs').each(function() {
+	        var contenttab_sel = $('<ul />', { class: "contenttab-selector" });
+	        var i = 0;
+
+	        $('.tab-content', this).each(function() {
+	            var sel_item = $('<li />', {
+	                class: $(this).attr('id'),
+	                text: $(this).find('.tab-title').text()
+	            });
+	            $(this).find('.tab-title').remove();
+	            if (i++) {
+	                $(this).hide();
+	            } else {
+	                sel_item.addClass('selected');
+	            }
+	            contenttab_sel.append(sel_item);
+	            $(this).addClass('contenttab');
+	        });
+
+	        $('.tab-content', this).eq(0).before(contenttab_sel);
+	        contenttab_sel = null;
+	        i = null;
+	    });
+
+
+	    $('.contenttab-selector li').click(function(evt) {
+	        evt.preventDefault();
+
+	        var tabsblock = $(this).parents('.content-tabs');
+	        var sel_class = $(this).attr('class');
+	        $('div.contenttab',tabsblock).hide();
+	        $('div#' + sel_class,tabsblock).show();
+
+	        $('ul.contenttab-selector li', tabsblock).removeClass('selected');
+	        $('ul.contenttab-selector li.' + sel_class, tabsblock).addClass('selected');
+
+	        sel_class = null;
+	    });
+
+	});
+</script>
+
+<!--
+The all.js added here is for FontAwesome. If you want to use the CDN instead, remove the line for all.js and uncomment the section at the bottom of _config.scss and update for the correct path to the version of FontAwesome you want to use via their CDN.
+-->
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="MARKUP Theme" href="index.html" />
+    <link rel="next" title="Style Guide" href="style_guide.html" />
+    <link rel="prev" title="Slide Decks" href="slides.html" /> 
+  </head>
+  <body role="document">
+    <div class="body-wrap">
+
+
+
+  <nav class="nav-main" role="navigation" data-topbar>
+    <div class="nav-inner">
+      <div class="left">
+        <h1>
+          <a href="/markup-theme/index.html">
+            <img id="markup" height="34" src="_static/markup-logo.png" onerror="_static/markup-logo.svg"/>
+          </a>
+        </h1>
+      </div>
+
+      <div id="nav-icon"><i class="fas fa-bars"></i></div>
+
+      <a href="https://github.com/markup-theme/markup-theme">
+        <img id="logo" src="_static/markup-topnav.svg" onerror="_static/markup-topnav.png"/>
+      </a>
+
+      <ul class="nav-links links-main">
+        <li class="nav-link is-active">
+          <a href="../markup-theme/index.html">About MARKUP</a>
+        </li>
+
+        <li class="nav-link">
+          <div class="nav-dropdown">
+            <a href="/markup-theme/index.html">Formatting Guides</a>
+            <div class="nav-dropdown-content">
+              <div class="menu-link">
+                <a href="/markup-theme/md/md.html"> &nbsp; <i class="fab fa-markdown fa-fw icon-left"></i> &nbsp; Markdown</a>
+              </div>
+              <div class="menu-link">
+                <a href="/markup-theme/rst/rst.html"> &nbsp; <i class="fab fa-python fa-fw icon-left"></i> &nbsp; reStructuredText</a>
+              </div>
+            </div>
+        </li>
+
+        <li class="nav-link">
+          <a href="../markup-theme/style_guide.html">Style Guide</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+    <div class="document markup-docs">
+    <!---->
+<nav class="nav-docs">
+  <ul class="nav-docs-items" id="nav-docs-list">
+
+
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fas fa-arrow-alt-circle-up fa-fw icon-left"></i></i>MARKUP Theme</img></a>
+    </li>
+
+    <li class="main-item has-sub-items docs-search">
+      <form action=/markup-theme/search.html method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+
+<!-- disabled in favor of right-side search block; if public docs, this option is much better? you decide! 
+
+    <li class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </li>
+-->
+
+<!--
+    <li class="version-picker">
+      Filter by product and version
+      <div class="dropdown-wrapper">
+  <div class="dropdown-select">
+    <span id="dropdown-select-product">MARKUP Theme</span>: <span id="dropdown-select-version">current</span>
+    <i class="fa fa-chevron-down"></i>
+  </div>
+  <ul class="dropdown-items">
+    <li class="dropdown-item">
+    <a href="/">Documentation Releases</a>
+    </li>
+    <li class="dropdown-item has-sub-items">AppName<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/abc/1-0-0/">1.0.0</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-1/">1.0.1</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-2/">1.0.2</a></li>
+        <li class="dropdown-item"><a href="/abc/1-0-3/">1.0.3</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-item">
+      <a href="/release/foo/">Release Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items">Release Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item"><a href="/release/bar_1-0">Bar 1.0</a></li>
+        <li class="dropdown-item"><a href="/release/bar_1-1">Bar 1.1</a></li>
+      </ul>
+    </li>
+    <li class="legacy-heading">Archived Docs</li>
+    <li class="dropdown-item">
+      <a href="/release/analytics/">Archived Foo</a>
+    </li>
+    <li class="dropdown-item has-sub-items legacy-item">Archived Bar<i class="fa fa-chevron-right"></i>
+      <ul class="dropdown-sub-items">
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-8/">Bar 0.8</a></li>
+        <li class="dropdown-item legacy-item"><a href="/release/bar_0-9/">Bar 0.9</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </li>
+-->   
+
+    
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Start Here"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-arrow-alt-circle-right fa-fw icon-left"></i> Start Here <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/index.html" title="Site Index">
+            Site Index
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="MARKUP Overview">
+            MARKUP Overview
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html" title="About MARKUP">
+                About MARKUP
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#why-theme" title="Why MARKUP?">
+                Why MARKUP?
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#goals" title="Goals">
+                Goals
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/about.html#non-goals" title="Non-goals">
+                Non-goals
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/faq.html" title="FAQs">
+            FAQs
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="MARKUP Setup"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa far fa-check-circle icon-left"></i> MARKUP Setup <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html" title="About MARKUP Setup">
+            About MARKUP Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#required" title="Required">
+            Required
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#recommended" title="Recommended">
+            Recommended
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#download-theme" title="Download MARKUP">
+            Download MARKUP
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#environment-setup" title="Environment Setup">
+            Environment Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#localhost-setup" title="Localhost Setup">
+            Localhost Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#build-theme" title="Build MARKUP">
+            Build MARKUP
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/setup.html#output-directories" title="Output Directories">
+            Output Directories
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Sass"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fab fa-sass icon-left"></i> Sass <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html" title="About Sass">
+            About Sass
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/css.html#sassy-css" title="Sassy CSS">
+            Sassy CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Sass Updates for MARKUP">
+            Sass Updates for MARKUP
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#site-colors" title="Site Colors">
+                Site Colors
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/css.html#config-path" title="Config Path">
+                Config Path
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Style Guide"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-award icon-left"></i> Style Guide <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html" title="About the Style Guide">
+            About the Style Guide
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#code-blocks" title="Code Blocks">
+            Code Blocks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#command-prompts" title="Command Prompts">
+            Command Prompts
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#copypasta" title="Copypasta">
+            Copypasta
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#field-names-vs-field-values" title="Field Names vs. Field Values">
+            Field Names vs. Field Values
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#future-features" title="Future Features">
+            Future Features
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#gerunds" title="Gerunds">
+            Gerunds
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#glossary" title="Glossary">
+            Glossary
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#jargon" title="Jargon">
+            Jargon
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#lists-within-lists" title="Lists within Lists">
+            Lists within Lists
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#long-titles-headers" title="Long Titles, Headers">
+            Long Titles, Headers
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#oxford-or-serial-comma" title="Oxford (or Serial) Comma">
+            Oxford (or Serial) Comma
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#procedures" title="Procedures">
+            Procedures
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#screen-shots" title="Screen Shots">
+            Screen Shots
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#table-of-contents" title="Table of Contents">
+            Table of Contents
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#tables-and-columns" title="Tables and Columns">
+            Tables and Columns
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#tabs-vs-evil" title="Tabs vs. Evil">
+            Tabs vs. Evil
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#text-editor" title="Text Editor">
+            Text Editor
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/style_guide.html#title-vs-sentence-case" title="Title vs. Sentence Case">
+            Title vs. Sentence Case
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Tutorials"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-chalkboard-teacher icon-left"></i> Tutorials <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#blockquotes" title="Blockquotes">
+            Blockquotes
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#change-colors" title="Change Colors">
+            Change Colors
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#code-block-styles" title="Code Block Styles">
+            Code Block Styles
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#file-names" title="File Names">
+            File Names
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#font-awesome-icons" title="Font Awesome Icons">
+            Font Awesome Icons
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="GitHub Pages">
+            GitHub Pages
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#github-pages" title="About GitHub Pages">
+                About GitHub Pages
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#page-not-found" title="Page not Found">
+                Page not Found
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#robots-txt" title="robots.txt">
+                robots.txt
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#sitemap-xml" title="sitemap.xml">
+                sitemap.xml
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#glossary" title="Glossary">
+            Glossary
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#large-topics-single-source" title="Large Topics, Single Source">
+            Large Topics, Single Source
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#local-pygments-css" title="Local Pygments CSS">
+            Local Pygments CSS
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Navigation Icons">
+            Navigation Icons
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#left-side" title="Left Side">
+                Left Side
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#right-side" title="Right Side">
+                Right Side
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#hamburger-button" title="Hamburger Buttom">
+                Hamburger Buttom
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/tutorials.html#inline" title="Inline">
+                Inline
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#pdf-cover-pages" title="PDF Cover Pages">
+            PDF Cover Pages
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/tutorials.html#tokens" title="Tokens">
+            Tokens
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Slide Decks"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fas fa-desktop icon-left"></i> Slide Decks <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html" title="About Slide Decks">
+            About Slide Decks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#slides-setup" title="Setup">
+            Setup
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#how-to-use-slides" title="How to Use Slides">
+            How to Use Slides
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="Supported Formatting">
+            Supported Formatting
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#what-works" title="What Works">
+                What Works
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#what-does-not" title="What Does Not">
+                What Does Not
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#do-not-use" title="Do Not Use">
+                Do Not Use
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="slides Directive">
+            slides Directive
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#title-slides" title="Title Slides">
+                Title Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#section-slides" title="Section Slides">
+                Section Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#slides-w-o-headers" title="Slides w/o Headers">
+                Slides w/o Headers
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/slides.html#group-slides" title="Group Slides">
+                Group Slides
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#build-directive" title="build Directive">
+            build Directive
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/slides.html#example" title="Example">
+            Example
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Site Templates"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-clone icon-left"></i> Site Templates <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/templates.html" title="About Site Templates">
+            About Site Templates
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/templates.html#layout-html" title="layout.html">
+            layout.html
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems -->
+
+        <li class="has-sub-items">
+          <div class="has-sub-items-content" title="nav-docs.html">
+            nav-docs.html
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <ul class="sub-items level-2"> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#nav-docs-html" title="About nav-docs.html">
+                About nav-docs.html
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#global-navigation" title="Global Navigation">
+                Global Navigation
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#site-specific-navigation" title="Site-specific Navigation">
+                Site-specific Navigation
+              </a>
+            </li> <!-- /if subItem2.hasSubItems -->
+
+            <li class="has-sub-items">
+              <div class="has-sub-items-content" title="Navigation Structure">
+                Navigation Structure
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="sub-items level-3">
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-structure" title="About Navigation Structure">
+                    About Navigation Structure
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#levels" title="About Levels">
+                    About Levels
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-1-group" title="Level 1 (Group)">
+                    Level 1 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-2-standalone" title="Level 2 (Standalone)">
+                    Level 2 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-2-group" title="Level 2 (Group)">
+                    Level 2 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-3-standalone" title="Level 3 (Standalone)">
+                    Level 3 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-3-group" title="Level 3 (Group)">
+                    Level 3 (Group)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#level-4-standalone" title="Level 4 (Standalone)">
+                    Level 4 (Standalone)
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#section-icons" title="Section Icons">
+                    Section Icons
+                  </a>
+                </li>
+
+                <li>
+                  <a class="nav-docs-link" href="/markup-theme/templates.html#navigation-paths" title="Navigation Paths">
+                    Navigation Paths
+                  </a>
+                </li> <!-- /for subItem3 in subItem2.subItems -->
+
+              </ul>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-product" title="Active Product">
+                Active Product
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-page-name" title="Active Page Name">
+                Active Page Name
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- if subItem2 does not have sub items -->
+
+            <li>
+              <a class="nav-docs-link" href="/markup-theme/templates.html#active-version" title="Active Version">
+                Active Version
+              </a>
+            </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem2 in subItem.subItems -->
+
+          </ul>
+        
+        </li> <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li>
+    <li class="main-item has-sub-items">
+
+      <div class="has-sub-items-content" title="Additional Resources"> <!-- else item does not have custom image and should use FontAwesome icon -->
+
+        <i class="fa fa-archive icon-left"></i> Additional Resources <!-- endif -->
+
+        <i class="fa fa-chevron-down"></i>
+      </div>
+
+
+      <ul class="sub-items"> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/resources.html" title="PDFs and Slide Decks">
+            PDFs and Slide Decks
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- if subItem does not have sub items  -->
+
+        <li>
+          <a class="nav-docs-link" href="/markup-theme/sphinx.html" title="Errors and Warnings">
+            Errors and Warnings
+          </a>
+        </li>
+
+         <!-- /if subItem2.hasSubItems --> <!-- /for subItem in subItems -->
+
+      </ul>
+    </li> <!-- /for item in navItems -->
+    
+
+<!--
+    <li class="main-item dark-item">
+      <a href="feedback.html"><i class="fas fa-question-circle fa-fw icon-left"></i>Send Feedback</a>
+    </li>
+-->
+<!--
+    <li class="main-item dark-item">
+      <a href="support.html"><i class="fal fa-life-ring fa-fw icon-left"></i>Support</a>
+    </li>
+-->
+
+    <li class="main-item dark-item">
+      <a href="index.html"><i class="fas fa-sitemap fa-fw icon-left"></i>Site Map</a>
+    </li>
+  </ul>
+</nav>
+      <div class="documentwrapper"><div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+
+<!-- Uncomment to add an image above the right-side nav bar -->
+
+<!--  <a class="sphinxsidebar-ad" href="https://www.yoursitename.com" target="_blank">
+    <img src="_static/12345.svg" alt="alt" />
+  </a>
+-->
+
+
+<!--
+    <div id="searchbox" class="main-item dark-item docs-search">
+      <form action="/search.html" method="get">
+        <input type="text" placeholder="Search" id="docs-search" name="q">
+        <input type="submit" class="submit-button" value="Go">
+        <i class="fa fa-search icon-search"></i>
+      </form>
+    </div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+-->
+
+
+
+  <div class="sphinxsidebarwrapper">
+  <h3><i class="fas fa-newspaper" aria-hidden="true"></i><a href="index.html">&nbsp;ON THIS PAGE</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sphinx</a><ul>
+<li><a class="reference internal" href="#sphinx-errors">Sphinx Errors</a></li>
+<li><a class="reference internal" href="#sphinx-issues">Sphinx Issues</a></li>
+<li><a class="reference internal" href="#sphinx-warnings">Sphinx Warnings</a></li>
+<li><a class="reference internal" href="#theme-issues">Theme Issues</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sphinx">
+<h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<p>This topic captures errors and warnings and other issues you may see while running Sphinx builds, including suggestions for resolution. This is not a complete list of errors and warnings that may be seen with Sphinx builds.</p>
+<div class="section" id="sphinx-errors">
+<span id="sphinx-errors-errors"></span><h2>Sphinx Errors<a class="headerlink" href="#sphinx-errors" title="Permalink to this headline">¶</a></h2>
+<p>You may see the following errors:</p>
+<dl class="docutils">
+<dt><strong>Sphinx error: Builder name slides not registered or available through entry point</strong></dt>
+<dd><p class="first">This happens when the builder specified in the <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> command does not match any of the available builders. For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-build -b slides markup-theme/markup_slides/source markup-theme/test/slides
+</pre></div>
+</div>
+<p>is the command to build Hieroglyph slides. But if the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file does not specify anything in the <code class="docutils literal notranslate"><span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">[]</span></code> configuration setting you will see this error.</p>
+<p class="last">Solution: In addition to running the <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> command with the correct builder, be sure to specify the correct extension, if required. In the case of Hieroglyph: <code class="docutils literal notranslate"><span class="pre">extensions</span> <span class="pre">=</span> <span class="pre">['hieroglyph']</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sphinx-issues">
+<span id="sphinx-errors-application"></span><h2>Sphinx Issues<a class="headerlink" href="#sphinx-issues" title="Permalink to this headline">¶</a></h2>
+<p>You may see the following warnings:</p>
+<dl class="docutils">
+<dt><strong>Application error: config directory doesn’t contain a conf.py file</strong></dt>
+<dd><p class="first">This happens when Sphinx cannot find the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file at the specified source location.</p>
+<p>Solution: Verify the location from which you are running the command and make sure that it is in the correct path to the source directory from the context of the location in the directory from which the command is run. This path is shown in the ALL CAPS section of the command below:</p>
+<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sphinx-build -b html PATH/TO/SOURCE/DIRECTORY path/to/output/directory
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="sphinx-warnings">
+<span id="sphinx-errors-warnings"></span><h2>Sphinx Warnings<a class="headerlink" href="#sphinx-warnings" title="Permalink to this headline">¶</a></h2>
+<p>When running Sphinx, you may see the following warnings:</p>
+<dl class="docutils">
+<dt><strong>WARNING: Block quote ends without a blank line; unexpected unindent</strong></dt>
+<dd><p class="first">This happens typically when some type of list isn’t formatted correctly. This warning is <em>often</em> (but not always) accompanied by a more specific error that indicates the type of list that is formatted incorrectly.</p>
+<p class="last">Solution: Find the row stated in the error message, find the row stated in the associated error message, and then examine the formatting in that section of the file.</p>
+</dd>
+<dt><strong>WARNING: Bullet list ends without a blank line; unexpected unindent</strong></dt>
+<dd><p class="first">This happens when a list isn’t formatted correctly, in particular the alignment of the characters that define the list: <code class="docutils literal notranslate"><span class="pre">#.</span></code> for ordered lists, <code class="docutils literal notranslate"><span class="pre">*</span></code> for unordered lists, a three-space indent for definition lists, and an indented</p>
+<p>Solution: Find the row stated in the error message. Lists can be ordered, unordered, or definition. Look for misaligned list items. But they may also be in a list-table. For example, note the vertical hyphen alignment in the following list-table:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. list-table::
+   :widths: 200 400
+   :header-rows: 1
+
+   * - columnName
+     - columnName
+   * - **item1**
+     - description
+   * - **item2**
+    - description
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The list-table is a list defined by the asterisks. It then uses a hyphenated list to define each column in the table.</p>
+</div>
+<p>Another situation you may see this warning is a list that looks like this:</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>* One
+ * Two
+* Three
+</pre></div>
+</div>
+</dd>
+<dt><strong>WARNING: document isn’t included in any toctree</strong></dt>
+<dd><p class="first">This happens when a topic is added to the <code class="docutils literal notranslate"><span class="pre">/source</span></code> directory, but not also added to the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p>
+<p class="last">Solution: Verify the list of topics in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p>
+</dd>
+<dt><strong>WARNING: Enumerated list ends without a blank line; unexpected unindent.</strong></dt>
+<dd><p class="first">This happens when a list is formatted incorrectly.</p>
+<p>Solution: Find the row stated in the error message. You might see something like this:</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>#. One
+ #. Two
+#. Three
+</pre></div>
+</div>
+</dd>
+<dt><strong>WARNING: Error parsing content block for the “list-table” directive: uniform two-level bullet list expected, but row 2 does not contain the same number of items as row 1 (2 vs 3)</strong></dt>
+<dd><p class="first">This happens when the stated row does not contain the same number of columns as declared at the top of the list-table via the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> property.</p>
+<p class="last">Solution: Double-check the columns declared at the top of the list-table vs. the number of columns declared in each row in the table.</p>
+</dd>
+<dt><strong>WARNING: Inline strong start-string without end-string</strong></dt>
+<dd><p class="first">This often is because a word (or string) has been applied bold elements (starting and ending double-asterisk) incorrectly.</p>
+<p>Solution: Find the row stated in the error message. This may be in a paragraph, a column in a table, or any other area where paragraph-level content is acceptable in the topic. Look for a bolded string that has spaces immediately before or after the double-asterisk. For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>** string**
+</pre></div>
+</div>
+<p>or:</p>
+<div class="last highlight-none notranslate"><div class="highlight"><pre><span></span>**string **
+</pre></div>
+</div>
+</dd>
+<dt><strong>WARNING: “list-table” widths do not match the number of columns in table</strong></dt>
+<dd><p class="first">This happens when there is a mismatch between the number of columns declared at the top of the list-table via the <code class="docutils literal notranslate"><span class="pre">:widths:</span></code> property vs. the number of columns declared somewhere else in the table.</p>
+<p class="last">Solution: Double-check the columns declared at the top of the list-table vs. the number of columns declared in each row in the table.</p>
+</dd>
+<dt><strong>WARNING: Pygments lexer name u’’ is not known</strong></dt>
+<dd><p class="first">This happens when the lexer name is misspelled or does not exist.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only use the supported formatting options for code blocks.</p>
+</div>
+<p>Solution: Verify the name of the code-block formatting option specified in the code block. For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+</pre></div>
+</div>
+<p>If the name has a typo:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> pythom
+</pre></div>
+</div>
+<p class="last">you will see a warning like this: <cite>Pygments lexer name u’pythom’ is not known</cite></p>
+</dd>
+<dt><strong>WARNING: toctree contains reference to nonexisting document u’FILENAME’</strong></dt>
+<dd><p class="first">This happens when a topic is added to the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file, but does not exist in the <code class="docutils literal notranslate"><span class="pre">/source</span></code> directory.</p>
+<p class="last">Solution: Verify the list of files in the <code class="docutils literal notranslate"><span class="pre">/source</span></code> directory. Look for typos in both the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> list and the list of files or some other type of mismatch. Use lowercase characters for filenames and <code class="docutils literal notranslate"><span class="pre">toctree</span></code> lists.</p>
+</dd>
+</dl>
+<p>WARNING: Explicit markup ends without a blank line; unexpected unindent.</p>
+<dl class="docutils">
+<dt><strong>WARNING: undefined label: &lt;label-name&gt; (if the link has no caption the label must precede a section header)</strong></dt>
+<dd><p class="first">This happens when there is no space between the anchor reference and the header title. This warning is often accompanied by another warning:</p>
+<p><strong>WARNING: Explicit markup ends without a blank line; unexpected unindent.</strong></p>
+<p>Solution: Find the label name specified by <code class="docutils literal notranslate"><span class="pre">&lt;label-name&gt;</span></code> and verify the formatting for the anchor reference and the following header. For example, this will break:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_format-content-admonitions:</span>
+<span class="gh">Admonitions</span>
+<span class="gh">==================================================</span>
+</pre></div>
+</div>
+<p>because there is not a blank line between the anchor reference and the section title. This will not break:</p>
+<div class="last highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_format-content-admonitions:</span>
+
+<span class="gh">Admonitions</span>
+<span class="gh">==================================================</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="theme-issues">
+<span id="sphinx-theme-errors"></span><h2>Theme Issues<a class="headerlink" href="#theme-issues" title="Permalink to this headline">¶</a></h2>
+<p>When running Sphinx, you may see the following issues that are related to the Sphinx theme:</p>
+<dl class="docutils">
+<dt><strong>Reason: TemplateSyntaxError(“expected token ‘:’, got ‘,’”,)</strong></dt>
+<dd><p class="first">This is because the <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> file for the topic collection is malformed.</p>
+<p>Solution: The <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> file can be tricky, in part because it looks like JSON, but also because it’s part of a Jinja template that is only fully rendered during a Sphinx build. The various structures within the <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> file are important and they are particular.</p>
+<p>Examine the structure of the <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> file, especially with regard to very recent changes. If there are missing or misplaced characters (square brackets, curly brackets, quotes, colons, commas, etc.) the file may not be renderable and you will get a syntax error when the character isn’t the one that is expected.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sphinx generally will not tell you <em>where</em> in the <code class="docutils literal notranslate"><span class="pre">nav-docs.html</span></code> file the error is. You will have to examine the file, starting with the areas in which you most recently made changes.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+        </div>
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+  </body>
+</html>
