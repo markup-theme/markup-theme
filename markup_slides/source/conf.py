@@ -16,7 +16,7 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
-sys.path.append(os.path.abspath('../../_ext'))
+#sys.path.append(os.path.abspath('../../_ext'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -25,7 +25,7 @@ sys.path.append(os.path.abspath('../../_ext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['markup.sphinx.slides']
+extensions = ['hieroglyph']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates', '../../_templates']
@@ -93,115 +93,79 @@ rst_prolog = """
 .. include:: ../../tokens/names.txt
 """
 
-# -- Options for HTML output ---------------------------------------------------
+# -- Options for HTML Slide output ---------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-html_theme = 'slides'
-#html_theme = 'default'
+# Default: True
+# When autoslides is True, Hieroglyph will generate slides from the document sections. If autoslides is set to False, only generate slides from the slide directive.
+# This can be overridden on a per-document basis using the slideconf directive.
 
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#html_theme_options = {}
-html_theme_options = {
- "lang": "en",
- "width": 1440,
- "height": 900,
- "margin": 0.3,
- "controls": True,
- "progress": False,
- "history": False,
- "keyboard": True,
- "overview": False,
- "center": False,
- "touch": True,
- "loop": False,
- "rtl": False,
- "fragments": True,
- "auto_slide": 0,
- "mouse_wheel": False,
- "rolling_links": True,
- "preview_links": False,
- "theme": "slides",
- "transition": "default",
- "transition_speed": "default",
- "background_transition": "default",
- "slide_number": False,
- "embedded": False,
- "auto_slide_stoppable": True,
- "hide_address_bar": True,
-}
+autoslides = True
 
-# Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['../../_themes/']
 
-# The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
-html_title = "Presentations"
+# Default: slides
+# The theme to use when generating slides. Hieroglyph includes two themes, slides and single-level.
+# This can be overridden on a per-document basis using the slideconf directive.
 
-# A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+slide_theme = 'slides-hieroglyph'
 
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-#html_logo = "../../images/logo.png"
 
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
-html_favicon = "_static/favicon.ico"
+# Default: 3
+# Number of Sphinx section levels to convert to slides; note that the document title is level 1. Heading levels greater than slide levels will simply be treated as slide content.
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+slide_levels = 3
 
-#html_last_updated_fmt = 'Slide Decks'
 
-# If true, SmartyPants will be used to convert quotes and dashes to
-# typographically correct entities.
-#html_use_smartypants = True
+# Default: False
+# If set to True, slide numbers will be added to the HTML output.
 
-# Custom sidebar templates, maps document names to template names.
-#html_sidebars = {
-#   '**': ['localtoc.html'],
-#}
+slide_numbers = True
 
-# Additional templates that should be rendered to pages, maps page names to
-# template names.
-#html_additional_pages = {
-#    'search': 'search.html',
-#}
 
-# If false, no module index is generated.
-#html_domain_indices = False
+# Default: None
+# Text that will be added to the bottom of every slide.
+# This is disabled on purpose
+#slide_footer = "Welcome to Slides!"
+slide_footer = ""
 
-# If false, no index is generated.
-html_use_index = False
+# Default: {}
+# Theme specific options as a dict.
 
-# If true, the index is split into individual pages for each letter.
-#html_split_index = False
+#slide_theme_options = {'custom_css':'slides.css'}
 
-# If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
 
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+# Default: [].
+# A list of paths to look for themes in.
 
-# This is set to "False" because we don't want to show the default copyright, but
-# do want to show the custom string defined by the "copyright" general setting (above).
+slide_theme_path = ['../../_themes/']
 
-#html_show_copyright = True
 
-# If true, an OpenSearch description file will be output, and all pages will
-# contain a <link> tag referring to it.  The value of this option must be the
-# base URL from which the finished HTML is served.
-#html_use_opensearch = ''
+# Default: False
+# Link from slides to HTML.
 
-# This is the file name suffix for HTML files (e.g. ".xhtml").
-#html_file_suffix = None
+slide_link_to_html = True
 
-# Output file base name for HTML help builder.
-#htmlhelp_basename = 'Slide Decks'
+
+# Default: False
+# Link from HTML to slides.
+# For example: slide_link_html_to_slides = not on_rtd
+
+slide_link_html_to_slides = False
+
+
+# Default: False
+# Link individual HTML sections to specific slides.
+# Note that slide_link_html_to_slides must be enabled for this to have any effect.
+# For example: slide_link_html_sections_to_slides = not on_rtd
+
+slide_link_html_sections_to_slides = False
+
+
+# Relative path from HTML to slides; default: ../slides/
+
+slide_relative_path = "./slides/"
+
+
+# Relative path from slides to HTML; default: ../html/
+
+slide_html_relative_path = "../"
 
