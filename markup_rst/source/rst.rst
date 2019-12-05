@@ -43,6 +43,12 @@ Admonitions
 
 Admonitions are notes and warnings, and other types of alerts to give to readers. Use notes for a simple callout and warnings for things that will break if not followed correctly. Use the other adminitions sparingly, or at least in a consistent manner.
 
+This is an example pull request. Type type:
+
+#. List
+#. List
+#. List
+
 .. format-content-admonitions-end
 
 
