@@ -12,6 +12,8 @@
 Formatting Guide: reStructuredText
 ==================================================
 
+Type your changes here. Whatever.
+
 This is the formatting guide for |rst| as it may be used with |theme|.
 
 * :ref:`format-content-admonitions`
